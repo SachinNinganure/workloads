@@ -1,23 +1,20 @@
-provider: local
-ClusterLoader:
-  cleanup: false
-  projects:
-    - num: {{NUM_PROJECTS}}
-      basename: {{PROJECT_BASENAME}}
-      ifexists: delete
-      tuning: default
-      templates:
-        - num: 1
-          file: ./logtest-rc.json
-          parameters:
-           - REPLICAS: "1"
-           - INITIAL_FLAGS: "--num-lines {{NUM_LINES}} --line-length {{LINE_LENGTH}} --word-length 9 --rate {{RATE}} --fixed-line\n"
+projects:
+  - num: {{NUM_PROJECTS}}
+    basename: {{PROJECT_BASENAME}}
+    ifexists: delete
+    tuning: default
+    templates:
+      - num: 1
+        file: ./content/logtest/logtest-rc.json
+        parameters:
+         - REPLICAS: "{{REPLICAS}}"
+         - INITIAL_FLAGS: "--num-lines {{NUM_LINES}} --line-length {{LINE_LENGTH}} --word-length 9 --rate {{RATE}} --fixed-line\n"
 
-  tuningsets:
-    - name: default
-      pods:
-        stepping:
-          stepsize: 5
-          pause: 0
-        rate_limit:
-          delay: 0
+tuningsets:
+  - name: default
+    pods:
+      stepping:
+        stepsize: 5
+        pause: 0 min
+      rate_limit:
+        delay: 0 ms

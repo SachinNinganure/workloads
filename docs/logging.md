@@ -77,11 +77,6 @@ Messages per minute for logtest pod to generate.
 default: `5`  
 Time to wait (in minutes) after logtest is done before verifying all messages showed up in elasticsearch.
 
-### ORIGIN_TESTS_VERSION
-
-default: `latest`  
-Version of quay.io/openshift/origin-tests to pull.
-
 ### WORKLOAD_DIR:
 default: assumes the HOME directory of the machine where ansible is running
 The place from which to source the kubeconfig and mount it into the the running container. You may wish to set to PWD if using `ansible_connection=local`

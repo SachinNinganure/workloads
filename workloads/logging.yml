@@ -61,29 +61,26 @@
         path: "{{WORKLOAD_DIR}}/workloads"
         state: directory
         mode: '0755'
-    - name: Template cluster-loader logtest logging config file
+    - name: Git clone SVT repo
+      ansible.builtin.git:
+        repo: 'https://github.com/openshift/svt.git'
+        dest: "{{WORKLOAD_DIR}}/workloads/svt"
+    - name: Template cluster-loader logtest.yml
       template:
         src: templates/logtest.yml.j2
-        dest: "{{WORKLOAD_DIR}}/workloads/logtest.yml"
-    - name: Template logtest-rc.json
-      template:
-        src: templates/logtest-rc.json.j2
-        dest: "{{WORKLOAD_DIR}}/workloads/logtest-rc.json"
-    - name: Podman pull cluster-loader image
-      podman_image:
-        name: quay.io/openshift/origin-tests
-        tag: "{{ORIGIN_TESTS_VERSION}}"
-    - name: Launch cluster-loader
-      shell: |
-        podman run --rm \
-        -v {{ KUBECONFIG }}:/root/.kube/config:z \
-        -v {{WORKLOAD_DIR}}/workloads/:/root/workloads/:z \
-        -i quay.io/openshift/origin-tests:{{ORIGIN_TESTS_VERSION}} \
-        /bin/bash -c 'export KUBECONFIG=/root/.kube/config && \
-        export VIPERCONFIG=/root/workloads/logtest.yml && \
-        openshift-tests run-test "{{ CLUSTER_LOADER_STRING }} concurrently with templates [Suite:openshift]"' \
-        |& tee {{WORKLOAD_DIR}}/workloads/cluster-loader.log
-      tags: clusterloader
+        dest: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/config/logtest.yml"
+    - name: Create venv in SVT
+      ansible.builtin.command: python3 -m venv venv
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
+    - name: Install requirements in venv
+      ansible.builtin.command: venv/bin/pip install -r requirements.txt
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
+    - name: Launch SVT cluster-loader
+      ansible.builtin.command: venv/bin/python cluster-loader.py -f config/logtest.yml
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
     - set_fact:
         test_start: "{{ lookup('pipe','date +%s') }}"
     - name: Output node placement
@@ -102,7 +99,7 @@
       delay: 5
     - set_fact:
         test_end: "{{ lookup('pipe','date +%s') }}"
-    - name: Assert number of messages is equal to NUM_LINES*NUM_PROJECTS 
+    - name: Assert number of messages is equal to NUM_LINES*NUM_PROJECTS
       assert:
         that:
           - "{{ num_indexed.stdout }} == {{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}"
