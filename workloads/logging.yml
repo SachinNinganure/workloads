@@ -78,7 +78,7 @@
       args:
         chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
     - name: Launch SVT cluster-loader
-      ansible.builtin.command: "venv/bin/python cluster-loader.py -f config/logtest.yml --kubeconfig {{KUBECONFIG}} -v"
+      ansible.builtin.command: "venv/bin/python cluster-loader.py -f config/logtest.yml --kubeconfig {{KUBECONFIG}}"
       args:
         chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
     - set_fact:
