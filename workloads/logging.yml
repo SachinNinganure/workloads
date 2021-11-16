@@ -69,6 +69,10 @@
       template:
         src: templates/logtest.yml.j2
         dest: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/config/logtest.yml"
+    - name: Template logtest-rc.json
+      template:
+        src: templates/logtest-rc.json.j2
+        dest: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/content/logtest-rc.json"
     - name: Create venv in SVT
       ansible.builtin.command: python3 -m venv venv
       args:
