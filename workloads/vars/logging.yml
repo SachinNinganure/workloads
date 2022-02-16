@@ -13,6 +13,8 @@ RATE: "{{ lookup('env', 'RATE')|default(60000, true) }}"
 # Time to wait (in minutes) after logtest is done before verifying all messages showed up in elasticsearch
 PAUSE_OFFSET: "{{ lookup('env', 'PAUSE_OFFSET')|default(5, true) }}"
 
+QUERY_PATH: "{{ lookup('env', 'QUERY_PATH')|default(kubernetes.namespace_name, true) }}"
+
 FLUENT_CONF: "{{ lookup('env', 'FLUENT_CONF')|default('files/logging-fluentd-wo-infra.conf', true) }}"
 
 KUBECONFIG: "{{ lookup('env', 'KUBECONFIG')|default(lookup('env','HOME') + '/.kube/config', true) }}"

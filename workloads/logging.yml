@@ -95,7 +95,7 @@
     - name: Check for test completion for up to "{{ PAUSE_OFFSET }}" min -  "{{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}" logs
       shell: |
         oc exec -n openshift-logging -c elasticsearch {{ es_pod.stdout }} -- es_util --query=app*/_count \
-          -d '{"query":{"wildcard":{"kubernetes.namespace_name":{"value":"{{PROJECT_BASENAME}}*","boost":1,"rewrite":"constant_score"}}}}' | jq '.count'
+          -d '{"query":{"wildcard":{"{{QUERY_PATH}}":{"value":"{{PROJECT_BASENAME}}*","boost":1,"rewrite":"constant_score"}}}}' | jq '.count'
       register: num_indexed
       until: num_indexed.stdout|int  ==  (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int)
       retries: "{{ (12 * PAUSE_OFFSET | int) }}"
