@@ -79,8 +79,8 @@
         minutes: "{{ (NUM_LINES|int / RATE|int) | round(0, 'floor') | int }}"
     - name: Check for test completion for up to "{{ PAUSE_OFFSET }}" min -  "{{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}" logs
       shell: |
-        oc exec -n openshift-logging -c elasticsearch {{ es_pod.stdout }} -- es_util --query=app*/_count \
-          -d '{"query":{"wildcard":{"{{QUERY_PATH}}":{"value":"{{PROJECT_BASENAME}}*","boost":1,"rewrite":"constant_score"}}}}' | jq '.count'
+        logcli -o raw --tls-skip-verify --bearer-token="${bearer_token}" --addr="https://${lokistack_route}/api/logs/v1/application" \ 
+        query 'count_over_time({log_type="application",kubernetes_namespace_name="logtesta0"}[24h])'|jq '.[].values[-1][1]'      
       register: num_indexed
       until: num_indexed.stdout|int  ==  (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int)
       retries: "{{ (12 * PAUSE_OFFSET | int) }}"
