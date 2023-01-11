@@ -1,0 +1,104 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: ebs.csi.aws.com
+    volume.kubernetes.io/provisioner-deletion-secret-name: ""
+    volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+  creationTimestamp: "2023-01-09T06:12:44Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  - external-attacher/ebs-csi-aws-com
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:pv.kubernetes.io/provisioned-by: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-name: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-namespace: {}
+      f:spec:
+        f:accessModes: {}
+        f:capacity:
+          .: {}
+          f:storage: {}
+        f:claimRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+          f:resourceVersion: {}
+          f:uid: {}
+        f:csi:
+          .: {}
+          f:driver: {}
+          f:fsType: {}
+          f:volumeAttributes:
+            .: {}
+            f:storage.kubernetes.io/csiProvisionerIdentity: {}
+          f:volumeHandle: {}
+        f:nodeAffinity:
+          .: {}
+          f:required: {}
+        f:persistentVolumeReclaimPolicy: {}
+        f:storageClassName: {}
+        f:volumeMode: {}
+    manager: csi-provisioner
+    operation: Update
+    time: "2023-01-09T06:12:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-01-09T06:12:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          v:"external-attacher/ebs-csi-aws-com": {}
+    manager: csi-attacher
+    operation: Update
+    time: "2023-01-09T06:12:45Z"
+  name: pvc-140634c2-e37b-42e6-91b6-a1fd82ea3d6f
+  resourceVersion: "60340"
+  uid: ce65f626-5b8c-4bf9-b4c0-7a6fc77f8eff
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: storage-lokistack-sample-ingester-0
+    namespace: openshift-logging
+    resourceVersion: "59994"
+    uid: 140634c2-e37b-42e6-91b6-a1fd82ea3d6f
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeAttributes:
+      storage.kubernetes.io/csiProvisionerIdentity: 1673239314277-8081-ebs.csi.aws.com
+    volumeHandle: vol-0727e15f098b089fb
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: topology.ebs.csi.aws.com/zone
+          operator: In
+          values:
+          - us-east-2a
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: gp2-csi
+  volumeMode: Filesystem
+status:
+  phase: Bound

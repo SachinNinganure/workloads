@@ -1,0 +1,144 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T06:26:30Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T06:26:30Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:01:21Z"
+  name: oauthclientauthorizations.v1.oauth.openshift.io
+  resourceVersion: "253759"
+  uid: c0018598-9c59-4c17-8b14-22a8b6ebbf63
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2
+          verb: get
+        requestCount: 2
+        userAgent: oauth-server/v0.0.0
+        username: system:serviceaccount:openshift-authentication:oauth-openshift
+      nodeName: 10.0.145.4
+      requestCount: 2
+    requestCount: 2
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    requestCount: 0
+  requestCount: 2

@@ -1,0 +1,26 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2023-01-09T04:41:06Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2023-01-09T04:41:06Z"
+  name: aws-ebs-csi-driver-operator-aws-config-clusterrolebinding
+  namespace: openshift-config-managed
+  resourceVersion: "4929"
+  uid: acc85bdf-83f2-42b5-b2c0-751d24a97816
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: aws-ebs-csi-driver-operator-aws-config-role
+subjects:
+- kind: ServiceAccount
+  name: aws-ebs-csi-driver-operator
+  namespace: openshift-cluster-csi-drivers

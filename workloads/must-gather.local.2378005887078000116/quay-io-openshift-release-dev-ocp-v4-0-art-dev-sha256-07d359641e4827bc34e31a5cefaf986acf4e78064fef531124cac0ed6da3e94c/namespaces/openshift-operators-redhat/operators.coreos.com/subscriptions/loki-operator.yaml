@@ -1,0 +1,142 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  creationTimestamp: "2023-01-09T05:32:05Z"
+  generation: 1
+  labels:
+    operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:channel: {}
+        f:installPlanApproval: {}
+        f:name: {}
+        f:source: {}
+        f:sourceNamespace: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:32:05Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:05Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:catalogHealth: {}
+        f:conditions: {}
+        f:currentCSV: {}
+        f:installPlanGeneration: {}
+        f:installPlanRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+          f:resourceVersion: {}
+          f:uid: {}
+        f:installedCSV: {}
+        f:installplan:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:name: {}
+          f:uuid: {}
+        f:lastUpdated: {}
+        f:state: {}
+    manager: catalog
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:32:21Z"
+  name: loki-operator
+  namespace: openshift-operators-redhat
+  resourceVersion: "44003"
+  uid: 1ded697f-2fa3-4f9f-b3f3-2c59a4bbcd98
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: loki-operator
+  source: qe-app-registry
+  sourceNamespace: openshift-marketplace
+status:
+  catalogHealth:
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: certified-operators
+      namespace: openshift-marketplace
+      resourceVersion: "43413"
+      uid: 9db5b57c-4f8e-470b-a4fd-436b0f110e60
+    healthy: true
+    lastUpdated: "2023-01-09T05:32:05Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: community-operators
+      namespace: openshift-marketplace
+      resourceVersion: "39925"
+      uid: f1cd1c2a-e4a6-4504-be08-41364750f8e3
+    healthy: true
+    lastUpdated: "2023-01-09T05:32:05Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: qe-app-registry
+      namespace: openshift-marketplace
+      resourceVersion: "42822"
+      uid: 03763f71-3ef3-461b-a2df-e0449d212989
+    healthy: true
+    lastUpdated: "2023-01-09T05:32:05Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: redhat-marketplace
+      namespace: openshift-marketplace
+      resourceVersion: "41535"
+      uid: 8a3ca23e-4c87-4f6b-af87-3d30ed508aed
+    healthy: true
+    lastUpdated: "2023-01-09T05:32:05Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: redhat-operators
+      namespace: openshift-marketplace
+      resourceVersion: "41141"
+      uid: 07b6a9a1-c0f0-4bfe-b7f1-d7cd8360f80d
+    healthy: true
+    lastUpdated: "2023-01-09T05:32:05Z"
+  conditions:
+  - lastTransitionTime: "2023-01-09T05:32:05Z"
+    message: all available catalogsources are healthy
+    reason: AllCatalogSourcesHealthy
+    status: "False"
+    type: CatalogSourcesUnhealthy
+  currentCSV: loki-operator.v5.6.0
+  installPlanGeneration: 1
+  installPlanRef:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-k755v
+    namespace: openshift-operators-redhat
+    resourceVersion: "43606"
+    uid: d32aa153-0289-4986-b9c0-858319964158
+  installedCSV: loki-operator.v5.6.0
+  installplan:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-k755v
+    uuid: d32aa153-0289-4986-b9c0-858319964158
+  lastUpdated: "2023-01-09T05:32:20Z"
+  state: AtLatestKnown

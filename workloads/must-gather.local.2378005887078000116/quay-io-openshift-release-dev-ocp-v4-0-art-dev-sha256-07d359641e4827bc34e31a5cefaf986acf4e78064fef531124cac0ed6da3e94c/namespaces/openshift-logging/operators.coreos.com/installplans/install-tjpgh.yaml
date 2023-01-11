@@ -1,0 +1,237 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: InstallPlan
+metadata:
+  creationTimestamp: "2023-01-09T05:30:59Z"
+  generateName: install-
+  generation: 1
+  labels:
+    operators.coreos.com/cluster-logging.openshift-logging: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"853174ce-78bf-4b61-a750-c01f3ded288f"}: {}
+      f:spec:
+        .: {}
+        f:approval: {}
+        f:approved: {}
+        f:clusterServiceVersionNames: {}
+        f:generation: {}
+    manager: catalog
+    operation: Update
+    time: "2023-01-09T05:30:59Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operators.coreos.com/cluster-logging.openshift-logging: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:31:00Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:bundleLookups: {}
+        f:catalogSources: {}
+        f:conditions: {}
+        f:phase: {}
+        f:plan: {}
+        f:startTime: {}
+    manager: catalog
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:31:21Z"
+  name: install-tjpgh
+  namespace: openshift-logging
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: Subscription
+    name: cluster-logging
+    uid: 853174ce-78bf-4b61-a750-c01f3ded288f
+  resourceVersion: "43199"
+  uid: 3cc40e56-9cf5-4b0d-955c-a1ac9abbcec0
+spec:
+  approval: Automatic
+  approved: true
+  clusterServiceVersionNames:
+  - cluster-logging.v5.6.0
+  generation: 1
+status:
+  bundleLookups:
+  - catalogSourceRef:
+      name: qe-app-registry
+      namespace: openshift-marketplace
+    identifier: cluster-logging.v5.6.0
+    path: brew.registry.redhat.io/rh-osbs/openshift-logging-cluster-logging-operator-bundle@sha256:1f5d70026281840130f445d733a190ba9591befa6f72ff4317020d20c68919f5
+    properties: '{"properties":[{"type":"olm.gvk","value":{"group":"logging.openshift.io","kind":"ClusterLogForwarder","version":"v1"}},{"type":"olm.gvk","value":{"group":"logging.openshift.io","kind":"ClusterLogging","version":"v1"}},{"type":"olm.maxOpenShiftVersion","value":4.12},{"type":"olm.package","value":{"packageName":"cluster-logging","version":"5.6.0"}}]}'
+    replaces: ""
+  catalogSources: []
+  conditions:
+  - lastTransitionTime: "2023-01-09T05:31:20Z"
+    lastUpdateTime: "2023-01-09T05:31:20Z"
+    status: "True"
+    type: Installed
+  phase: Complete
+  plan:
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: operators.coreos.com
+      kind: ClusterServiceVersion
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging.v5.6.0
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1alpha1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: clusterloggings.logging.openshift.io
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: clusterlogforwarders.logging.openshift.io
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: prometheus
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: log-collector-privileged-binding
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: monitoring.coreos.com
+      kind: ServiceMonitor
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging-operator-metrics-monitor
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: metadata-reader
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: prometheus
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging-operator-metrics
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: log-collector-privileged
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: ""
+      kind: ServiceAccount
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging-operator
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging.v5.6.0-cluster-logging-operator-7dc79bf9b7
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging.v5.6.0-cluster-logging-operator-7dc79bf9b7
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging.v5.6.0-5dc9df7dfc
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: cluster-logging.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951eb076b","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogForwarder\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"logging.openshift.io\",\"kind\":\"ClusterLogging\",\"version\":\"v1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"cluster-logging\",\"version\":\"5.6.0\"}}]}"}'
+      name: cluster-logging.v5.6.0-5dc9df7dfc
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  startTime: "2023-01-09T05:31:17Z"

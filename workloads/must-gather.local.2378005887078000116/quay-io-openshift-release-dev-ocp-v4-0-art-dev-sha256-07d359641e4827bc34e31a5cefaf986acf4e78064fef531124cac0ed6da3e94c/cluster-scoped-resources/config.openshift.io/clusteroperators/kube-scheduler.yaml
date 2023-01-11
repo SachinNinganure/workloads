@@ -1,0 +1,110 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:36:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:36:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:36:45Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:50:59Z"
+  name: kube-scheduler
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "25875"
+  uid: f0636f3b-f8ad-4311-8fc3-3a9963c91708
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:49:05Z"
+    message: 'NodeControllerDegraded: All master nodes are ready'
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-01-09T04:50:59Z"
+    message: 'NodeInstallerProgressing: 3 nodes are at revision 6'
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-01-09T04:44:53Z"
+    message: 'StaticPodsAvailable: 3 nodes are active; 3 nodes are at revision 6'
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-09T04:41:03Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubeschedulers
+  - group: config.openshift.io
+    name: ""
+    resource: schedulers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-scheduler
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-scheduler-operator
+    resource: namespaces
+  - group: controlplane.operator.openshift.io
+    name: ""
+    namespace: openshift-kube-apiserver
+    resource: podnetworkconnectivitychecks
+  versions:
+  - name: raw-internal
+    version: 4.12.0-0.nightly-2023-01-08-142418
+  - name: kube-scheduler
+    version: 1.25.4
+  - name: operator
+    version: 4.12.0-0.nightly-2023-01-08-142418

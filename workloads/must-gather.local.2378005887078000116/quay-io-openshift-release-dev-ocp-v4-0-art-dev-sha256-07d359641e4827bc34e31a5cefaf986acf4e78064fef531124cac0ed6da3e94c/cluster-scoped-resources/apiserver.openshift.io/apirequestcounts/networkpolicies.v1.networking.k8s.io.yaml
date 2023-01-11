@@ -1,0 +1,615 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:43:04Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:43:04Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:40:05Z"
+  name: networkpolicies.v1.networking.k8s.io
+  resourceVersion: "268058"
+  uid: bd9990a9-bcb7-49d6-babd-ff8a9566483e
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 19
+    requestCount: 19
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:admin
+      nodeName: 10.0.18.164
+      requestCount: 6
+    - byUser:
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 16
+    requestCount: 22
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 32
+    requestCount: 32
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 33
+    requestCount: 33
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      nodeName: 10.0.199.219
+      requestCount: 34
+    requestCount: 34
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 30
+    requestCount: 30
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 31
+    requestCount: 31
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      nodeName: 10.0.199.219
+      requestCount: 32
+    requestCount: 32
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 32
+    requestCount: 32
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 33
+    requestCount: 33
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 30
+    requestCount: 30
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 34
+    requestCount: 34
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: ip-10-0-145-4/ovnkube@6b955c7a322d
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 19
+    requestCount: 19
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 362

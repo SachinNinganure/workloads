@@ -1,0 +1,126 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:04Z"
+    generation: 1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:maxUnavailable: {}
+          f:selector: {}
+      manager: csi-snapshot-controller-operator
+      operation: Update
+      time: "2023-01-09T04:41:04Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T04:41:07Z"
+    name: csi-snapshot-controller-pdb
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "5062"
+    uid: dd21e31b-09a4-4193-8250-f36ff076fc1e
+  spec:
+    maxUnavailable: 1
+    selector:
+      matchLabels:
+        app: csi-snapshot-controller
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T04:41:07Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:04Z"
+    generation: 1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:maxUnavailable: {}
+          f:selector: {}
+      manager: csi-snapshot-controller-operator
+      operation: Update
+      time: "2023-01-09T04:41:04Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T04:41:23Z"
+    name: csi-snapshot-webhook-pdb
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "6556"
+    uid: 3894a01b-1407-4216-a7ae-3295f98d25fa
+  spec:
+    maxUnavailable: 1
+    selector:
+      matchLabels:
+        app: csi-snapshot-webhook
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T04:41:23Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "268378"

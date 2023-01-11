@@ -1,0 +1,8 @@
+2023-01-09T04:39:49.884774252Z 2023-01-09T04:39:49+00:00 INFO: ovn-master-metrics-cert not mounted. Waiting 20 minutes.
+2023-01-09T04:41:24.956497681Z 2023-01-09T04:41:24+00:00 INFO: ovn-master-metrics-certs mounted, starting kube-rbac-proxy
+2023-01-09T04:41:24.979168167Z I0109 04:41:24.979113       1 main.go:187] Valid token audiences: 
+2023-01-09T04:41:24.979206177Z I0109 04:41:24.979196       1 main.go:337] Reading certificate files
+2023-01-09T04:41:24.979391992Z I0109 04:41:24.979378       1 main.go:371] Starting TCP socket on :9102
+2023-01-09T04:41:24.979642239Z I0109 04:41:24.979626       1 main.go:378] Listening securely on :9102
+2023-01-09T04:52:46.787831951Z E0109 04:52:46.787764       1 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:46.787873073Z E0109 04:52:46.787831       1 proxy.go:74] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused

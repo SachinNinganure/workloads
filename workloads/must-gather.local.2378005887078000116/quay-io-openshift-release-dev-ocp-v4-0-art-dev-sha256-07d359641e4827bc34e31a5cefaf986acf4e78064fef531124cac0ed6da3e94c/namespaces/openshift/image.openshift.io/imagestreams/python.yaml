@@ -1,0 +1,409 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Python
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:57Z"
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:47:51Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"2.7-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.6-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.8-ubi7"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.8-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.9-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.9-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:51Z"
+  name: python
+  namespace: openshift
+  resourceVersion: "22348"
+  uid: f10d5007-f6fa-4154-ba9c-1f58f08d80e7
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Python 2.7 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/2.7/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 2.7 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:2.7,python
+      tags: builder,python
+      version: "2.7"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/python-27:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 2.7-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.6 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.6/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.6 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.6,python
+      tags: builder,python
+      version: "3.6"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/python-36:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.6-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.8 applications on RHEL 7. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.8/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.8
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.8,python
+      tags: builder,python,hidden
+      version: "3.8"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/python-38-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "3.8"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.8 applications on UBI 7. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.8/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.8 (UBI 7)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.8,python
+      tags: builder,python
+      version: "3.8"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi7/python-38:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.8-ubi7
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.8 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.8/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.8 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.8,python
+      tags: builder,python
+      version: "3.8"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/python-38:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.8-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.9 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.9/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.9 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.9,python
+      tags: builder,python
+      version: "3.9"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/python-39:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.9-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Python 3.9 applications on UBI 9. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.9/README.md.
+      iconClass: icon-python
+      openshift.io/display-name: Python 3.9 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python:3.9,python
+      tags: builder,python
+      version: "3.9"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/python-39:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.9-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |-
+        Build and run Python applications on UBI. For more information about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-python-container/blob/master/3.9/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version of Python available on OpenShift, including major version updates.
+      iconClass: icon-python
+      openshift.io/display-name: Python (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/django-ex.git
+      supports: python
+      tags: builder,python
+    from:
+      kind: ImageStreamTag
+      name: 3.9-ubi8
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/python
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/python-27@sha256:5b26085eb1f23ba612a158aab266c4158efb186d18ddb66e30de7e85ab963a3a
+      generation: 2
+      image: sha256:5b26085eb1f23ba612a158aab266c4158efb186d18ddb66e30de7e85ab963a3a
+    tag: 2.7-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/python-36@sha256:1397e1dbd4cf9ebaf4217b383fbd479d1aeac749fb2034c9e75fa64d2f07a6f8
+      generation: 2
+      image: sha256:1397e1dbd4cf9ebaf4217b383fbd479d1aeac749fb2034c9e75fa64d2f07a6f8
+    tag: 3.6-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/rhscl/python-38-rhel7@sha256:f8586d5abc2b3bf7153dad087daaa4f1cda95fc7c72ff130bef755791d8e1239
+      generation: 2
+      image: sha256:f8586d5abc2b3bf7153dad087daaa4f1cda95fc7c72ff130bef755791d8e1239
+    tag: "3.8"
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi7/python-38@sha256:f8586d5abc2b3bf7153dad087daaa4f1cda95fc7c72ff130bef755791d8e1239
+      generation: 2
+      image: sha256:f8586d5abc2b3bf7153dad087daaa4f1cda95fc7c72ff130bef755791d8e1239
+    tag: 3.8-ubi7
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/python-38@sha256:686a1042c97c1131f661a496826a4fb015d0f9ed73eacbfba9c6739359860279
+      generation: 2
+      image: sha256:686a1042c97c1131f661a496826a4fb015d0f9ed73eacbfba9c6739359860279
+    tag: 3.8-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/python-39@sha256:8d28954e80aae58c27dab01c906e30e65d10cbf4766bb10921f65c0bf4f1c364
+      generation: 2
+      image: sha256:8d28954e80aae58c27dab01c906e30e65d10cbf4766bb10921f65c0bf4f1c364
+    tag: 3.9-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi9/python-39@sha256:fe5e61df902bd607b3935f21b1e746d15f1ac3c176f4f91d203c2798df923b1a
+      generation: 2
+      image: sha256:fe5e61df902bd607b3935f21b1e746d15f1ac3c176f4f91d203c2798df923b1a
+    tag: 3.9-ubi9
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/python-39@sha256:8d28954e80aae58c27dab01c906e30e65d10cbf4766bb10921f65c0bf4f1c364
+      generation: 2
+      image: sha256:8d28954e80aae58c27dab01c906e30e65d10cbf4766bb10921f65c0bf4f1c364
+    tag: latest

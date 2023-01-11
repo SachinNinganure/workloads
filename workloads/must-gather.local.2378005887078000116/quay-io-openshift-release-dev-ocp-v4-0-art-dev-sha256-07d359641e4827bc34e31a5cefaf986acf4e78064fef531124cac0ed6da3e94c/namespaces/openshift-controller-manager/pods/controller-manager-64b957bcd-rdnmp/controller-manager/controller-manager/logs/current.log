@@ -1,0 +1,68 @@
+2023-01-09T04:48:32.314095513Z I0109 04:48:32.314028       1 controller_manager.go:39] Starting controllers on 0.0.0.0:8443 (4.12.0-202301042354.p0.gb6528f9.assembly.stream-b6528f9)
+2023-01-09T04:48:32.316086241Z I0109 04:48:32.316050       1 controller_manager.go:50] DeploymentConfig controller using images from "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d08a4fed20e6f9fe569f173fc039a6cc6e5f7875566e1b3a4c5cddcbf0c827"
+2023-01-09T04:48:32.316086241Z I0109 04:48:32.316073       1 controller_manager.go:56] Build controller using images from "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:91496407bea46c76443337eb7fb54aa9ddf9f69856940c2d5ec1df4220d0f8fb"
+2023-01-09T04:48:32.316206043Z I0109 04:48:32.316179       1 leaderelection.go:248] attempting to acquire leader lease openshift-controller-manager/openshift-master-controllers...
+2023-01-09T04:48:32.316206043Z I0109 04:48:32.316189       1 standalone_apiserver.go:104] Started health checks at 0.0.0.0:8443
+2023-01-09T04:48:32.341809066Z I0109 04:48:32.341770       1 leaderelection.go:258] successfully acquired lease openshift-controller-manager/openshift-master-controllers
+2023-01-09T04:48:32.342015745Z I0109 04:48:32.341918       1 event.go:285] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"openshift-controller-manager", Name:"openshift-master-controllers", UID:"f23c1205-bb42-4da8-b4d2-ba1082b1a159", APIVersion:"v1", ResourceVersion:"23382", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' controller-manager-64b957bcd-rdnmp became leader
+2023-01-09T04:48:32.342542603Z I0109 04:48:32.342007       1 event.go:285] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-controller-manager", Name:"openshift-master-controllers", UID:"86c74bd4-4493-4a08-bcaf-502e9e062f46", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"23383", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' controller-manager-64b957bcd-rdnmp became leader
+2023-01-09T04:48:32.342888134Z I0109 04:48:32.342864       1 controller_manager.go:145] Starting "openshift.io/serviceaccount"
+2023-01-09T04:48:32.347891055Z I0109 04:48:32.347860       1 controller_manager.go:155] Started "openshift.io/serviceaccount"
+2023-01-09T04:48:32.347891055Z I0109 04:48:32.347882       1 controller_manager.go:145] Starting "openshift.io/origin-namespace"
+2023-01-09T04:48:32.347942244Z I0109 04:48:32.347924       1 serviceaccounts_controller.go:117] Starting service account controller
+2023-01-09T04:48:32.347957753Z I0109 04:48:32.347948       1 shared_informer.go:255] Waiting for caches to sync for service account
+2023-01-09T04:48:32.352496976Z I0109 04:48:32.352475       1 controller_manager.go:155] Started "openshift.io/origin-namespace"
+2023-01-09T04:48:32.352496976Z I0109 04:48:32.352487       1 controller_manager.go:145] Starting "openshift.io/image-signature-import"
+2023-01-09T04:48:32.357290410Z I0109 04:48:32.357265       1 controller_manager.go:155] Started "openshift.io/image-signature-import"
+2023-01-09T04:48:32.357290410Z I0109 04:48:32.357282       1 controller_manager.go:145] Starting "openshift.io/templateinstance"
+2023-01-09T04:48:32.375952128Z I0109 04:48:32.375923       1 controller_manager.go:155] Started "openshift.io/templateinstance"
+2023-01-09T04:48:32.375952128Z I0109 04:48:32.375937       1 controller_manager.go:145] Starting "openshift.io/templateinstancefinalizer"
+2023-01-09T04:48:32.382415836Z I0109 04:48:32.382388       1 controller_manager.go:155] Started "openshift.io/templateinstancefinalizer"
+2023-01-09T04:48:32.382415836Z I0109 04:48:32.382401       1 controller_manager.go:145] Starting "openshift.io/unidling"
+2023-01-09T04:48:32.382479360Z I0109 04:48:32.382462       1 templateinstance_finalizer.go:189] TemplateInstanceFinalizer controller waiting for cache sync
+2023-01-09T04:48:32.388765311Z I0109 04:48:32.388744       1 controller_manager.go:155] Started "openshift.io/unidling"
+2023-01-09T04:48:32.388765311Z I0109 04:48:32.388756       1 controller_manager.go:145] Starting "openshift.io/build"
+2023-01-09T04:48:32.397588538Z I0109 04:48:32.397556       1 controller_manager.go:155] Started "openshift.io/build"
+2023-01-09T04:48:32.397588538Z I0109 04:48:32.397569       1 controller_manager.go:145] Starting "openshift.io/build-config-change"
+2023-01-09T04:48:32.405024228Z I0109 04:48:32.404997       1 controller_manager.go:155] Started "openshift.io/build-config-change"
+2023-01-09T04:48:32.405024228Z I0109 04:48:32.405009       1 controller_manager.go:145] Starting "openshift.io/image-import"
+2023-01-09T04:48:32.408324883Z I0109 04:48:32.408302       1 imagestream_controller.go:66] Starting image stream controller
+2023-01-09T04:48:32.411640809Z I0109 04:48:32.411619       1 controller_manager.go:155] Started "openshift.io/image-import"
+2023-01-09T04:48:32.411640809Z I0109 04:48:32.411633       1 controller_manager.go:145] Starting "openshift.io/deploymentconfig"
+2023-01-09T04:48:32.411729976Z I0109 04:48:32.411700       1 scheduled_image_controller.go:68] Starting scheduled import controller
+2023-01-09T04:48:32.420453144Z I0109 04:48:32.420410       1 controller_manager.go:155] Started "openshift.io/deploymentconfig"
+2023-01-09T04:48:32.420453144Z I0109 04:48:32.420427       1 controller_manager.go:145] Starting "openshift.io/default-rolebindings"
+2023-01-09T04:48:32.420508322Z I0109 04:48:32.420480       1 factory.go:78] Starting deploymentconfig controller
+2023-01-09T04:48:32.426190839Z I0109 04:48:32.426166       1 controller_manager.go:155] Started "openshift.io/default-rolebindings"
+2023-01-09T04:48:32.426244546Z I0109 04:48:32.426219       1 controller_manager.go:145] Starting "openshift.io/serviceaccount-pull-secrets"
+2023-01-09T04:48:32.426378291Z I0109 04:48:32.426353       1 defaultrolebindings.go:149] Starting DefaultRoleBindingController
+2023-01-09T04:48:32.426435793Z I0109 04:48:32.426412       1 shared_informer.go:255] Waiting for caches to sync for DefaultRoleBindingController
+2023-01-09T04:48:32.430249121Z I0109 04:48:32.430160       1 deleted_dockercfg_secrets.go:68] Starting DockercfgDeletedController controller
+2023-01-09T04:48:32.430274477Z I0109 04:48:32.430182       1 deleted_token_secrets.go:63] Starting DockercfgTokenDeletedController controller
+2023-01-09T04:48:32.430274477Z I0109 04:48:32.430261       1 create_dockercfg_secrets.go:208] Starting DockercfgController controller
+2023-01-09T04:48:32.430322431Z I0109 04:48:32.430306       1 controller_manager.go:155] Started "openshift.io/serviceaccount-pull-secrets"
+2023-01-09T04:48:32.430365491Z I0109 04:48:32.430322       1 controller_manager.go:145] Starting "openshift.io/deployer"
+2023-01-09T04:48:32.430425992Z I0109 04:48:32.430404       1 docker_registry_service.go:145] Starting DockerRegistryServiceController controller
+2023-01-09T04:48:32.434490587Z I0109 04:48:32.434462       1 controller_manager.go:155] Started "openshift.io/deployer"
+2023-01-09T04:48:32.434490587Z I0109 04:48:32.434482       1 controller_manager.go:145] Starting "openshift.io/image-trigger"
+2023-01-09T04:48:32.434580141Z I0109 04:48:32.434555       1 factory.go:73] Starting deployer controller
+2023-01-09T04:48:32.447816940Z I0109 04:48:32.447792       1 controller_manager.go:155] Started "openshift.io/image-trigger"
+2023-01-09T04:48:32.447816940Z I0109 04:48:32.447806       1 controller_manager.go:157] Started Origin Controllers
+2023-01-09T04:48:32.448124661Z I0109 04:48:32.448094       1 image_trigger_controller.go:229] Starting trigger controller
+2023-01-09T04:48:32.505381763Z I0109 04:48:32.505314       1 buildconfig_controller.go:212] Starting buildconfig controller
+2023-01-09T04:48:32.521322710Z I0109 04:48:32.521278       1 factory.go:85] deploymentconfig controller caches are synced. Starting workers.
+2023-01-09T04:48:32.526591534Z I0109 04:48:32.526541       1 shared_informer.go:262] Caches are synced for DefaultRoleBindingController
+2023-01-09T04:48:32.548123896Z I0109 04:48:32.548082       1 shared_informer.go:262] Caches are synced for service account
+2023-01-09T04:48:32.578793896Z I0109 04:48:32.578757       1 templateinstance_controller.go:297] Starting TemplateInstance controller
+2023-01-09T04:48:32.582633169Z I0109 04:48:32.582580       1 templateinstance_finalizer.go:194] Starting TemplateInstanceFinalizer controller
+2023-01-09T04:48:32.634845742Z I0109 04:48:32.634803       1 factory.go:80] Deployer controller caches are synced. Starting workers.
+2023-01-09T04:48:32.730385818Z I0109 04:48:32.730315       1 deleted_dockercfg_secrets.go:75] caches synced
+2023-01-09T04:48:32.730385818Z I0109 04:48:32.730318       1 deleted_token_secrets.go:70] caches synced
+2023-01-09T04:48:32.731368113Z I0109 04:48:32.731306       1 docker_registry_service.go:156] caches synced
+2023-01-09T04:48:32.731368113Z I0109 04:48:32.731312       1 create_dockercfg_secrets.go:219] urls found
+2023-01-09T04:48:32.731396622Z I0109 04:48:32.731369       1 create_dockercfg_secrets.go:225] caches synced
+2023-01-09T04:48:32.731458054Z I0109 04:48:32.731401       1 docker_registry_service.go:298] Updating registry URLs from map[172.30.96.54:5000:{} image-registry.openshift-image-registry.svc.cluster.local:5000:{} image-registry.openshift-image-registry.svc:5000:{}] to map[172.30.96.54:5000:{} image-registry.openshift-image-registry.svc.cluster.local:5000:{} image-registry.openshift-image-registry.svc:5000:{}]
+2023-01-09T04:48:33.097837624Z I0109 04:48:33.097803       1 build_controller.go:479] Starting build controller
+2023-01-09T04:48:33.097837624Z I0109 04:48:33.097820       1 build_controller.go:481] OpenShift image registry hostname: image-registry.openshift-image-registry.svc:5000
+2023-01-09T04:50:40.865741105Z W0109 04:50:40.865690       1 reflector.go:347] k8s.io/client-go@v0.25.2/tools/cache/reflector.go:169: watch of *v1.BuildConfig ended with: an error on the server ("unable to decode an event from the watch stream: stream error: stream ID 29; INTERNAL_ERROR; received from peer") has prevented the request from succeeding
+2023-01-09T04:50:40.866926767Z W0109 04:50:40.866877       1 reflector.go:347] k8s.io/client-go@v0.25.2/tools/cache/reflector.go:169: watch of *v1.DeploymentConfig ended with: an error on the server ("unable to decode an event from the watch stream: stream error: stream ID 55; INTERNAL_ERROR; received from peer") has prevented the request from succeeding

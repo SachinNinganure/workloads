@@ -1,0 +1,42 @@
+apiVersion: operators.coreos.com/v2
+kind: OperatorCondition
+metadata:
+  creationTimestamp: "2023-01-09T05:31:17Z"
+  generation: 1
+  labels:
+    operators.coreos.com/cluster-logging.openshift-logging: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operators.coreos.com/cluster-logging.openshift-logging: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1a3cc03c-803b-4d72-8795-af0ba3315f20"}: {}
+      f:spec:
+        .: {}
+        f:deployments: {}
+        f:serviceAccounts: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:31:17Z"
+  name: cluster-logging.v5.6.0
+  namespace: openshift-logging
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ClusterServiceVersion
+    name: cluster-logging.v5.6.0
+    uid: 1a3cc03c-803b-4d72-8795-af0ba3315f20
+  resourceVersion: "43101"
+  uid: 0c10aeb1-1167-460d-91c5-a1c24abde523
+spec:
+  deployments:
+  - cluster-logging-operator
+  serviceAccounts:
+  - cluster-logging-operator
+  - cluster-logging-operator

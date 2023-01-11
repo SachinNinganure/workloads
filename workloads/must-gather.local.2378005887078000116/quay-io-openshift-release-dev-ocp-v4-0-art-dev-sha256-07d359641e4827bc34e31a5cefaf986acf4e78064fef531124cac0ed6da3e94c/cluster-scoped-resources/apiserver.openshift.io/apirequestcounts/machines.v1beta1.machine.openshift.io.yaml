@@ -1,0 +1,1056 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:42:27Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:42:27Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:35:27Z"
+  name: machines.v1beta1.machine.openshift.io
+  resourceVersion: "266363"
+  uid: 0074a6f3-ed62-4851-b80e-e5761ba875d4
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 48
+          verb: patch
+        - requestCount: 4
+          verb: watch
+        requestCount: 52
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      nodeName: 10.0.199.219
+      requestCount: 87
+    requestCount: 87
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 17
+          verb: create
+        - requestCount: 17
+          verb: get
+        - requestCount: 3
+          verb: update
+        requestCount: 37
+        userAgent: cluster-bootstrap/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      nodeName: 10.0.18.164
+      requestCount: 39
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 14
+          verb: patch
+        - requestCount: 2
+          verb: watch
+        requestCount: 17
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 5
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      nodeName: 10.0.199.219
+      requestCount: 49
+    requestCount: 88
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 136
+          verb: patch
+        - requestCount: 5
+          verb: update
+        - requestCount: 8
+          verb: watch
+        requestCount: 149
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 4
+          verb: update
+        - requestCount: 9
+          verb: watch
+        requestCount: 13
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 2
+          verb: delete
+        - requestCount: 9
+          verb: watch
+        requestCount: 12
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        requestCount: 2
+        userAgent: machine-approver/v0.0.0
+        username: system:serviceaccount:openshift-cluster-machine-approver:machine-approver-sa
+      nodeName: 10.0.199.219
+      requestCount: 224
+    requestCount: 224
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        requestCount: 1
+        userAgent: oc/4.9.0
+        username: system:admin
+      nodeName: 10.0.160.211
+      requestCount: 1
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 69
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      nodeName: 10.0.199.219
+      requestCount: 134
+    requestCount: 135
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 72
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 80
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      nodeName: 10.0.199.219
+      requestCount: 142
+    requestCount: 142
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 67
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      nodeName: 10.0.199.219
+      requestCount: 132
+    requestCount: 132
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 72
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 81
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      nodeName: 10.0.199.219
+      requestCount: 148
+    requestCount: 148
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 68
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 130
+    requestCount: 130
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 72
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 79
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      nodeName: 10.0.199.219
+      requestCount: 144
+    requestCount: 144
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 69
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      nodeName: 10.0.199.219
+      requestCount: 135
+    requestCount: 135
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 72
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 80
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 143
+    requestCount: 143
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 69
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      nodeName: 10.0.199.219
+      requestCount: 131
+    requestCount: 131
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 48
+          verb: patch
+        - requestCount: 4
+          verb: watch
+        requestCount: 52
+        userAgent: machine-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:control-plane-machine-set-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: machineset-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: machine-api-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: machine-healthcheck/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: nodelink-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-controllers
+      nodeName: 10.0.199.219
+      requestCount: 87
+    requestCount: 87
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 1639

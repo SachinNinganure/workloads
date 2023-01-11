@@ -1,0 +1,945 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:41:23Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:41:23Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:39:27Z"
+  name: cronjobs.v1.batch
+  resourceVersion: "267803"
+  uid: 835ab5f1-f35b-4d14-a3f0-6f534cb9b68a
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 162
+          verb: delete
+        requestCount: 162
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 13
+          verb: get
+        - requestCount: 13
+          verb: update
+        requestCount: 26
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 11
+          verb: update
+        requestCount: 11
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 224
+    requestCount: 224
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 4
+          verb: get
+        - requestCount: 3
+          verb: update
+        requestCount: 8
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      nodeName: 10.0.18.164
+      requestCount: 12
+    - byUser:
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        - requestCount: 3
+          verb: update
+        requestCount: 6
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 27
+    requestCount: 39
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 13
+          verb: update
+        requestCount: 13
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 95
+    requestCount: 95
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 178
+          verb: delete
+        requestCount: 178
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 15
+          verb: update
+        requestCount: 15
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 275
+    requestCount: 275
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 224
+          verb: delete
+        requestCount: 224
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 13
+          verb: update
+        requestCount: 13
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 318
+    requestCount: 318
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 229
+          verb: delete
+        requestCount: 229
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 20
+          verb: get
+        - requestCount: 20
+          verb: update
+        requestCount: 40
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 13
+          verb: update
+        requestCount: 13
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      nodeName: 10.0.199.219
+      requestCount: 323
+    requestCount: 323
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 238
+          verb: delete
+        requestCount: 238
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 15
+          verb: update
+        requestCount: 15
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 332
+    requestCount: 332
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 239
+          verb: delete
+        requestCount: 239
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 13
+          verb: update
+        requestCount: 13
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 334
+    requestCount: 334
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 237
+          verb: delete
+        requestCount: 237
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 16
+          verb: update
+        requestCount: 16
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 334
+    requestCount: 334
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 240
+          verb: delete
+        requestCount: 240
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 12
+          verb: update
+        requestCount: 12
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 334
+    requestCount: 334
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 237
+          verb: delete
+        requestCount: 237
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 13
+          verb: update
+        requestCount: 13
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 332
+    requestCount: 332
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 249
+          verb: delete
+        requestCount: 249
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 21
+          verb: get
+        - requestCount: 21
+          verb: update
+        requestCount: 42
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 14
+          verb: update
+        requestCount: 14
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 347
+    requestCount: 347
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 162
+          verb: delete
+        requestCount: 162
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 13
+          verb: get
+        - requestCount: 13
+          verb: update
+        requestCount: 26
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 11
+          verb: update
+        requestCount: 11
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:cronjob-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 224
+    requestCount: 224
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 3287

@@ -1,0 +1,1202 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:44:12Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:44:12Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:38:28Z"
+  name: servicemonitors.v1.monitoring.coreos.com
+  resourceVersion: "267468"
+  uid: eedccfca-9e15-4c25-9b63-0607cf93b544
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 5
+    - byUser:
+      - byVerb:
+        - requestCount: 520
+          verb: get
+        requestCount: 520
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 90
+          verb: delete
+        - requestCount: 195
+          verb: get
+        - requestCount: 15
+          verb: list
+        - requestCount: 195
+          verb: update
+        requestCount: 495
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 115
+          verb: patch
+        requestCount: 115
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 38
+          verb: get
+        requestCount: 38
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 4
+          verb: get
+        requestCount: 4
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      nodeName: 10.0.199.219
+      requestCount: 1201
+    requestCount: 1206
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        - requestCount: 111
+          verb: get
+        requestCount: 141
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 10
+          verb: patch
+        requestCount: 10
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      nodeName: 10.0.18.164
+      requestCount: 153
+    - byUser:
+      - byVerb:
+        - requestCount: 24
+          verb: delete
+        - requestCount: 52
+          verb: get
+        - requestCount: 4
+          verb: list
+        - requestCount: 52
+          verb: update
+        requestCount: 132
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 120
+          verb: get
+        requestCount: 120
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 83
+          verb: get
+        requestCount: 83
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 20
+          verb: patch
+        requestCount: 20
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: get
+        requestCount: 8
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        requestCount: 3
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      nodeName: 10.0.199.219
+      requestCount: 382
+    requestCount: 535
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 144
+          verb: delete
+        - requestCount: 312
+          verb: get
+        - requestCount: 24
+          verb: list
+        - requestCount: 312
+          verb: update
+        requestCount: 792
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 195
+          verb: patch
+        requestCount: 195
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        requestCount: 64
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 13
+          verb: get
+        requestCount: 13
+        userAgent: dns-operator/v0.0.0
+        username: system:serviceaccount:openshift-dns-operator:dns-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 6
+          verb: get
+        requestCount: 6
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      nodeName: 10.0.199.219
+      requestCount: 1944
+    requestCount: 1944
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        - requestCount: 1
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 16
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 16
+    - byUser:
+      - byVerb:
+        - requestCount: 156
+          verb: delete
+        - requestCount: 338
+          verb: get
+        - requestCount: 26
+          verb: list
+        - requestCount: 338
+          verb: update
+        requestCount: 858
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 185
+          verb: patch
+        requestCount: 185
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 1
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      nodeName: 10.0.199.219
+      requestCount: 1983
+    requestCount: 1999
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 156
+          verb: delete
+        - requestCount: 338
+          verb: get
+        - requestCount: 26
+          verb: list
+        - requestCount: 338
+          verb: update
+        requestCount: 858
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 835
+          verb: get
+        requestCount: 835
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 185
+          verb: patch
+        requestCount: 185
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 1978
+    requestCount: 1987
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 150
+          verb: delete
+        - requestCount: 325
+          verb: get
+        - requestCount: 25
+          verb: list
+        - requestCount: 325
+          verb: update
+        requestCount: 825
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 823
+          verb: get
+        requestCount: 823
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 180
+          verb: patch
+        requestCount: 180
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 1927
+    requestCount: 1935
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 7
+    - byUser:
+      - byVerb:
+        - requestCount: 150
+          verb: delete
+        - requestCount: 325
+          verb: get
+        - requestCount: 25
+          verb: list
+        - requestCount: 325
+          verb: update
+        requestCount: 825
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 822
+          verb: get
+        requestCount: 822
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 182
+          verb: patch
+        requestCount: 182
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 1929
+    requestCount: 1936
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 144
+          verb: delete
+        - requestCount: 312
+          verb: get
+        - requestCount: 24
+          verb: list
+        - requestCount: 312
+          verb: update
+        requestCount: 792
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 188
+          verb: patch
+        requestCount: 188
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      nodeName: 10.0.199.219
+      requestCount: 1919
+    requestCount: 1928
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 156
+          verb: delete
+        - requestCount: 338
+          verb: get
+        - requestCount: 26
+          verb: list
+        - requestCount: 338
+          verb: update
+        requestCount: 858
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 180
+          verb: patch
+        requestCount: 180
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 1979
+    requestCount: 1987
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 150
+          verb: delete
+        - requestCount: 325
+          verb: get
+        - requestCount: 25
+          verb: list
+        - requestCount: 325
+          verb: update
+        requestCount: 825
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 180
+          verb: patch
+        requestCount: 180
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      nodeName: 10.0.199.219
+      requestCount: 1947
+    requestCount: 1956
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 7
+    - byUser:
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 150
+          verb: delete
+        - requestCount: 325
+          verb: get
+        - requestCount: 25
+          verb: list
+        - requestCount: 325
+          verb: update
+        requestCount: 825
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 185
+          verb: patch
+        requestCount: 185
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      nodeName: 10.0.199.219
+      requestCount: 1952
+    requestCount: 1959
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 840
+          verb: get
+        requestCount: 840
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 150
+          verb: delete
+        - requestCount: 325
+          verb: get
+        - requestCount: 25
+          verb: list
+        - requestCount: 325
+          verb: update
+        requestCount: 825
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 185
+          verb: patch
+        requestCount: 185
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: dns-operator/v0.0.0
+        username: system:serviceaccount:openshift-dns-operator:dns-operator
+      nodeName: 10.0.199.219
+      requestCount: 1953
+    requestCount: 1961
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 5
+    - byUser:
+      - byVerb:
+        - requestCount: 520
+          verb: get
+        requestCount: 520
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 90
+          verb: delete
+        - requestCount: 195
+          verb: get
+        - requestCount: 15
+          verb: list
+        - requestCount: 195
+          verb: update
+        requestCount: 495
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 115
+          verb: patch
+        requestCount: 115
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 38
+          verb: get
+        requestCount: 38
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-storage-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:cluster-storage-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-autoscaler-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-logging-operator/v0.0.0
+        username: system:serviceaccount:openshift-logging:cluster-logging-operator
+      - byVerb:
+        - requestCount: 4
+          verb: get
+        requestCount: 4
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      nodeName: 10.0.199.219
+      requestCount: 1201
+    requestCount: 1206
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 21333

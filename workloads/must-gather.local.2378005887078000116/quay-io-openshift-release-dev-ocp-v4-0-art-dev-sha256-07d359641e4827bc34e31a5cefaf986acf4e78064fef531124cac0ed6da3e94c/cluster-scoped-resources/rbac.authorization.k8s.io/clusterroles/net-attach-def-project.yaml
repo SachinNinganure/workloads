@@ -1,0 +1,39 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-01-09T04:38:52Z"
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:rbac.authorization.k8s.io/aggregate-to-admin: {}
+        f:ownerReferences:
+          k:{"uid":"b8592153-d60b-43d6-8417-eb32b9b3af15"}: {}
+      f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-01-09T04:38:52Z"
+  name: net-attach-def-project
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+  resourceVersion: "2655"
+  uid: e88e664e-fec9-4cc2-beef-c44046255f4e
+rules:
+- apiGroups:
+  - k8s.cni.cncf.io
+  resources:
+  - network-attachment-definitions
+  verbs:
+  - watch
+  - list
+  - get

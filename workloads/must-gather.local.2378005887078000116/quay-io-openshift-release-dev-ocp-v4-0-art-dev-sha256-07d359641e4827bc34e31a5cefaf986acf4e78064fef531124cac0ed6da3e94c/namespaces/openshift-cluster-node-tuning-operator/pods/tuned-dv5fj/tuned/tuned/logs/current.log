@@ -1,0 +1,50 @@
+2023-01-09T05:33:22.585619454Z I0109 05:33:22.585414    2756 controller.go:1274] starting openshift-tuned v4.12.0-202301042354.p0.g2488b98.assembly.stream-0-g6840ad9-dirty
+2023-01-09T05:33:29.758591268Z I0109 05:33:29.758549    2756 controller.go:348] disabling system tuned...
+2023-01-09T05:33:29.787186228Z I0109 05:33:29.787155    2756 controller.go:1068] started events processors
+2023-01-09T05:33:29.787211962Z I0109 05:33:29.787181    2756 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-01-09T05:33:29.787541578Z I0109 05:33:29.787527    2756 controller.go:1106] started controller
+2023-01-09T05:33:29.787632310Z I0109 05:33:29.787616    2756 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-node
+2023-01-09T05:33:29.787662194Z I0109 05:33:29.787650    2756 controller.go:378] extracting TuneD profiles
+2023-01-09T05:33:29.787869628Z I0109 05:33:29.787848    2756 controller.go:522] starting tuned...
+2023-01-09T05:33:29.815944379Z I0109 05:33:29.815912    2756 controller.go:410] recommended TuneD profile openshift-node content changed [openshift]
+2023-01-09T05:33:29.816010196Z E0109 05:33:29.815992    2756 controller.go:854] unable to sync(daemon/) requeued (0)
+2023-01-09T05:33:29.916350377Z E0109 05:33:29.916294    2756 controller.go:854] unable to sync(daemon/) requeued (1)
+2023-01-09T05:33:30.074599971Z 2023-01-09 05:33:30,074 INFO     tuned.daemon.application: TuneD: 2.19.0, kernel: 4.18.0-372.40.1.el8_6.x86_64
+2023-01-09T05:33:30.074599971Z 2023-01-09 05:33:30,074 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2023-01-09T05:33:30.090215124Z 2023-01-09 05:33:30,090 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2023-01-09T05:33:30.090491930Z 2023-01-09 05:33:30,090 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2023-01-09T05:33:30.091035343Z 2023-01-09 05:33:30,090 INFO     tuned.daemon.daemon: Using 'openshift-node' profile
+2023-01-09T05:33:30.091884247Z 2023-01-09 05:33:30,091 INFO     tuned.profiles.loader: loading profile: openshift-node
+2023-01-09T05:33:30.117081992Z E0109 05:33:30.117054    2756 controller.go:854] unable to sync(daemon/) requeued (2)
+2023-01-09T05:33:30.128317645Z 2023-01-09 05:33:30,128 INFO     tuned.daemon.controller: starting controller
+2023-01-09T05:33:30.128360273Z 2023-01-09 05:33:30,128 INFO     tuned.daemon.daemon: starting tuning
+2023-01-09T05:33:30.138278344Z 2023-01-09 05:33:30,138 INFO     tuned.plugins.base: instance cpu: assigning devices cpu3, cpu6, cpu4, cpu2, cpu1, cpu0, cpu5, cpu7
+2023-01-09T05:33:30.143172903Z 2023-01-09 05:33:30,143 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2023-01-09T05:33:30.145334266Z 2023-01-09 05:33:30,145 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2023-01-09T05:33:30.148611694Z 2023-01-09 05:33:30,148 INFO     tuned.plugins.plugin_disk: Device 'nvme0n1' not supported by hdparm
+2023-01-09T05:33:30.149157676Z 2023-01-09 05:33:30,149 INFO     tuned.plugins.base: instance disk: assigning devices nvme0n1
+2023-01-09T05:33:30.150988052Z 2023-01-09 05:33:30,150 INFO     tuned.plugins.base: instance net: assigning devices ens5
+2023-01-09T05:33:30.200884180Z 2023-01-09 05:33:30,200 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2023-01-09T05:33:30.241341595Z 2023-01-09 05:33:30,241 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-node' applied
+2023-01-09T05:33:30.273155557Z I0109 05:33:30.273125    2756 controller.go:949] updated Profile ip-10-0-190-242.us-east-2.compute.internal bootcmdline: 
+2023-01-09T05:33:30.273155557Z I0109 05:33:30.273143    2756 controller.go:668] reloading tuned...
+2023-01-09T05:33:30.273155557Z I0109 05:33:30.273150    2756 controller.go:671] sending HUP to PID 4187
+2023-01-09T05:33:30.273330672Z 2023-01-09 05:33:30,273 INFO     tuned.daemon.daemon: stopping tuning
+2023-01-09T05:33:30.305733953Z I0109 05:33:30.305689    2756 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-01-09T05:33:30.311150709Z I0109 05:33:30.311123    2756 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-node
+2023-01-09T05:33:30.311190904Z E0109 05:33:30.311175    2756 controller.go:854] unable to sync(daemon/) requeued (0)
+2023-01-09T05:33:30.318440505Z 2023-01-09 05:33:30,318 INFO     tuned.daemon.daemon: terminating TuneD, rolling back all changes
+2023-01-09T05:33:30.355270647Z 2023-01-09 05:33:30,355 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2023-01-09T05:33:30.355720377Z 2023-01-09 05:33:30,355 INFO     tuned.daemon.daemon: Using 'openshift-node' profile
+2023-01-09T05:33:30.356289609Z 2023-01-09 05:33:30,356 INFO     tuned.profiles.loader: loading profile: openshift-node
+2023-01-09T05:33:30.390794615Z 2023-01-09 05:33:30,390 INFO     tuned.daemon.daemon: starting tuning
+2023-01-09T05:33:30.406267764Z 2023-01-09 05:33:30,406 INFO     tuned.plugins.base: instance cpu: assigning devices cpu3, cpu6, cpu4, cpu2, cpu1, cpu0, cpu5, cpu7
+2023-01-09T05:33:30.407025301Z 2023-01-09 05:33:30,406 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2023-01-09T05:33:30.409249842Z 2023-01-09 05:33:30,409 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2023-01-09T05:33:30.411442418Z E0109 05:33:30.411422    2756 controller.go:854] unable to sync(daemon/) requeued (1)
+2023-01-09T05:33:30.412454757Z 2023-01-09 05:33:30,412 INFO     tuned.plugins.plugin_disk: Device 'nvme0n1' not supported by hdparm
+2023-01-09T05:33:30.413013187Z 2023-01-09 05:33:30,412 INFO     tuned.plugins.base: instance disk: assigning devices nvme0n1
+2023-01-09T05:33:30.414337361Z 2023-01-09 05:33:30,414 INFO     tuned.plugins.base: instance net: assigning devices ens5
+2023-01-09T05:33:30.419850579Z 2023-01-09 05:33:30,419 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2023-01-09T05:33:30.454127302Z 2023-01-09 05:33:30,454 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-node' applied
+2023-01-09T05:33:30.454239842Z I0109 05:33:30.454221    2756 controller.go:795] active and recommended profile (openshift-node) match; profile change will not trigger profile reload

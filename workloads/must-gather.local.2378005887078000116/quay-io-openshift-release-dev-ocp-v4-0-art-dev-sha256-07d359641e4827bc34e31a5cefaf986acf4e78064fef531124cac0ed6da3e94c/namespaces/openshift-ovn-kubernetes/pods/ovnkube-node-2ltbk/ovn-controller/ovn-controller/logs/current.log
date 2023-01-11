@@ -1,0 +1,924 @@
+2023-01-09T04:45:25.322748053Z 2023-01-09T04:45:25+00:00 - starting ovn-controller
+2023-01-09T04:45:25.349429460Z 2023-01-09T04:45:25Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2023-01-09T04:45:25.350129522Z 2023-01-09T04:45:25.350Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2023-01-09T04:45:25.350154342Z 2023-01-09T04:45:25.350Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2023-01-09T04:45:25.352172583Z 2023-01-09T04:45:25.352Z|00004|main|INFO|OVN internal version is : [22.09.1-20.25.0-68.4]
+2023-01-09T04:45:25.352191150Z 2023-01-09T04:45:25.352Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2023-01-09T04:45:25.367538794Z 2023-01-09T04:45:25.367Z|00006|main|INFO|OVNSB IDL reconnected, force recompute.
+2023-01-09T04:45:28.408334162Z 2023-01-09T04:45:28.408Z|00007|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T04:45:28.414308784Z 2023-01-09T04:45:28.414Z|00008|reconnect|INFO|ssl:10.0.160.211:9642: connected
+2023-01-09T04:45:28.431634924Z 2023-01-09T04:45:28.431Z|00009|features|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:45:28.431634924Z 2023-01-09T04:45:28.431Z|00010|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:45:28.432297395Z 2023-01-09T04:45:28.432Z|00011|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:45:28.432309968Z 2023-01-09T04:45:28.432Z|00012|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2023-01-09T04:45:28.432309968Z 2023-01-09T04:45:28.432Z|00013|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T04:45:28.432327508Z 2023-01-09T04:45:28.432Z|00014|ofctrl|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:45:28.432327508Z 2023-01-09T04:45:28.432Z|00015|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:45:28.432885910Z 2023-01-09T04:45:28.432Z|00016|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:45:28.433391476Z 2023-01-09T04:45:28.433Z|00017|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T04:45:28.480185140Z 2023-01-09T04:45:28.480Z|00001|pinctrl(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:45:28.480185140Z 2023-01-09T04:45:28.480Z|00002|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:45:28.480959599Z 2023-01-09T04:45:28.480Z|00003|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:45:28.772715908Z 2023-01-09T04:45:28.772Z|00018|binding|INFO|Claiming lport cr-rtos-ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.772715908Z 2023-01-09T04:45:28.772Z|00019|binding|INFO|cr-rtos-ip-10-0-144-137.us-east-2.compute.internal: Claiming 0a:58:0a:81:02:01 10.129.2.1/23
+2023-01-09T04:45:28.852040556Z 2023-01-09T04:45:28.852Z|00020|if_status|INFO|Not updating pb chassis for k8s-ip-10-0-144-137.us-east-2.compute.internal now as sb is readonly
+2023-01-09T04:45:28.853658413Z 2023-01-09T04:45:28.853Z|00021|if_status|INFO|if_status_handle_claims for k8s-ip-10-0-144-137.us-east-2.compute.internal
+2023-01-09T04:45:28.853658413Z 2023-01-09T04:45:28.853Z|00022|binding|INFO|Claiming lport k8s-ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.853658413Z 2023-01-09T04:45:28.853Z|00023|binding|INFO|k8s-ip-10-0-144-137.us-east-2.compute.internal: Claiming de:43:34:e6:82:bd 10.129.2.2
+2023-01-09T04:45:28.854985282Z 2023-01-09T04:45:28.854Z|00024|binding|INFO|Setting lport k8s-ip-10-0-144-137.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:45:28.859466179Z 2023-01-09T04:45:28.859Z|00025|binding|INFO|Setting lport k8s-ip-10-0-144-137.us-east-2.compute.internal up in Southbound
+2023-01-09T04:45:28.892203170Z 2023-01-09T04:45:28.892Z|00026|binding|INFO|Claiming lport etor-GR_ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.892203170Z 2023-01-09T04:45:28.892Z|00027|binding|INFO|etor-GR_ip-10-0-144-137.us-east-2.compute.internal: Claiming 02:a2:b6:37:43:60
+2023-01-09T04:45:28.892226413Z 2023-01-09T04:45:28.892Z|00028|binding|INFO|Claiming lport jtor-GR_ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.892226413Z 2023-01-09T04:45:28.892Z|00029|binding|INFO|jtor-GR_ip-10-0-144-137.us-east-2.compute.internal: Claiming router
+2023-01-09T04:45:28.892252237Z 2023-01-09T04:45:28.892Z|00030|binding|INFO|Claiming lport rtoe-GR_ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.892252237Z 2023-01-09T04:45:28.892Z|00031|binding|INFO|rtoe-GR_ip-10-0-144-137.us-east-2.compute.internal: Claiming 02:a2:b6:37:43:60 10.0.144.137/19
+2023-01-09T04:45:28.892270258Z 2023-01-09T04:45:28.892Z|00032|binding|INFO|Claiming lport rtoj-GR_ip-10-0-144-137.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:28.892270258Z 2023-01-09T04:45:28.892Z|00033|binding|INFO|rtoj-GR_ip-10-0-144-137.us-east-2.compute.internal: Claiming 0a:58:64:40:00:07 100.64.0.7/16
+2023-01-09T04:45:35.599432582Z 2023-01-09T04:45:35.599Z|00034|memory|INFO|18844 kB peak resident set size after 10.2 seconds
+2023-01-09T04:45:35.599471610Z 2023-01-09T04:45:35.599Z|00035|memory|INFO|idl-cells-OVN_Southbound:23559 idl-cells-Open_vSwitch:701 if_status_mgr_ifaces_state_usage-KB:1 if_status_mgr_ifaces_usage-KB:1 lflow-cache-entries-cache-expr:277 lflow-cache-entries-cache-matches:594 lflow-cache-size-KB:745 local_datapath_usage-KB:1 ofctrl_desired_flow_usage-KB:420 ofctrl_installed_flow_usage-KB:322 ofctrl_sb_flow_ref_usage-KB:172
+2023-01-09T04:46:08.118599623Z 2023-01-09T04:46:08.118Z|00036|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-bwvwd for this chassis.
+2023-01-09T04:46:08.118599623Z 2023-01-09T04:46:08.118Z|00037|binding|INFO|openshift-multus_network-metrics-daemon-bwvwd: Claiming 0a:58:0a:81:02:04 10.129.2.4
+2023-01-09T04:46:08.120994515Z 2023-01-09T04:46:08.120Z|00038|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-bwvwd ovn-installed in OVS
+2023-01-09T04:46:08.124287799Z 2023-01-09T04:46:08.124Z|00039|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-bwvwd up in Southbound
+2023-01-09T04:46:08.419965428Z 2023-01-09T04:46:08.419Z|00040|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-wzttm for this chassis.
+2023-01-09T04:46:08.419965428Z 2023-01-09T04:46:08.419Z|00041|binding|INFO|openshift-network-diagnostics_network-check-target-wzttm: Claiming 0a:58:0a:81:02:03 10.129.2.3
+2023-01-09T04:46:08.422180790Z 2023-01-09T04:46:08.422Z|00042|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-wzttm ovn-installed in OVS
+2023-01-09T04:46:08.425929651Z 2023-01-09T04:46:08.425Z|00043|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-wzttm up in Southbound
+2023-01-09T04:46:15.610916923Z 2023-01-09T04:46:15.610Z|00044|binding|INFO|Claiming lport openshift-dns_dns-default-6phhx for this chassis.
+2023-01-09T04:46:15.610916923Z 2023-01-09T04:46:15.610Z|00045|binding|INFO|openshift-dns_dns-default-6phhx: Claiming 0a:58:0a:81:02:05 10.129.2.5
+2023-01-09T04:46:15.613763993Z 2023-01-09T04:46:15.613Z|00046|binding|INFO|Setting lport openshift-dns_dns-default-6phhx ovn-installed in OVS
+2023-01-09T04:46:15.616540544Z 2023-01-09T04:46:15.616Z|00047|binding|INFO|Setting lport openshift-dns_dns-default-6phhx up in Southbound
+2023-01-09T04:46:34.452309143Z 2023-01-09T04:46:34.452Z|00048|binding|INFO|Claiming lport openshift-ingress-canary_ingress-canary-v4t55 for this chassis.
+2023-01-09T04:46:34.452309143Z 2023-01-09T04:46:34.452Z|00049|binding|INFO|openshift-ingress-canary_ingress-canary-v4t55: Claiming 0a:58:0a:81:02:06 10.129.2.6
+2023-01-09T04:46:34.455445861Z 2023-01-09T04:46:34.455Z|00050|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-v4t55 ovn-installed in OVS
+2023-01-09T04:46:34.458295670Z 2023-01-09T04:46:34.458Z|00051|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-v4t55 up in Southbound
+2023-01-09T04:46:51.594980352Z 2023-01-09T04:46:51.594Z|00052|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887325-pl5ld for this chassis.
+2023-01-09T04:46:51.594980352Z 2023-01-09T04:46:51.594Z|00053|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887325-pl5ld: Claiming 0a:58:0a:81:02:07 10.129.2.7
+2023-01-09T04:46:51.598504434Z 2023-01-09T04:46:51.598Z|00054|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887325-pl5ld ovn-installed in OVS
+2023-01-09T04:46:51.600534209Z 2023-01-09T04:46:51.600Z|00055|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887325-pl5ld up in Southbound
+2023-01-09T04:47:00.412718566Z 2023-01-09T04:47:00.412Z|00056|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887325-pl5ld from this chassis (sb_readonly=0)
+2023-01-09T04:47:10.580112883Z 2023-01-09T04:47:10.580Z|00057|binding|INFO|Claiming lport openshift-monitoring_openshift-state-metrics-5ff95d844f-z2hkc for this chassis.
+2023-01-09T04:47:10.580112883Z 2023-01-09T04:47:10.580Z|00058|binding|INFO|openshift-monitoring_openshift-state-metrics-5ff95d844f-z2hkc: Claiming 0a:58:0a:81:02:08 10.129.2.8
+2023-01-09T04:47:10.593577431Z 2023-01-09T04:47:10.593Z|00059|binding|INFO|Setting lport openshift-monitoring_openshift-state-metrics-5ff95d844f-z2hkc ovn-installed in OVS
+2023-01-09T04:47:10.593577431Z 2023-01-09T04:47:10.593Z|00060|binding|INFO|Setting lport openshift-monitoring_openshift-state-metrics-5ff95d844f-z2hkc up in Southbound
+2023-01-09T04:47:22.469842433Z 2023-01-09T04:47:22.469Z|00061|binding|INFO|Claiming lport openshift-monitoring_thanos-querier-58b8748b48-mq4m7 for this chassis.
+2023-01-09T04:47:22.469842433Z 2023-01-09T04:47:22.469Z|00062|binding|INFO|openshift-monitoring_thanos-querier-58b8748b48-mq4m7: Claiming 0a:58:0a:81:02:0a 10.129.2.10
+2023-01-09T04:47:22.485013076Z 2023-01-09T04:47:22.484Z|00063|binding|INFO|Setting lport openshift-monitoring_thanos-querier-58b8748b48-mq4m7 ovn-installed in OVS
+2023-01-09T04:47:22.485013076Z 2023-01-09T04:47:22.484Z|00064|binding|INFO|Setting lport openshift-monitoring_thanos-querier-58b8748b48-mq4m7 up in Southbound
+2023-01-09T04:47:22.488069480Z 2023-01-09T04:47:22.488Z|00065|if_status|INFO|Not updating pb chassis for openshift-monitoring_alertmanager-main-0 now as sb is readonly
+2023-01-09T04:47:22.489899422Z 2023-01-09T04:47:22.489Z|00066|if_status|INFO|if_status_handle_claims for openshift-monitoring_alertmanager-main-0
+2023-01-09T04:47:22.489899422Z 2023-01-09T04:47:22.489Z|00067|binding|INFO|Claiming lport openshift-monitoring_alertmanager-main-0 for this chassis.
+2023-01-09T04:47:22.489899422Z 2023-01-09T04:47:22.489Z|00068|binding|INFO|openshift-monitoring_alertmanager-main-0: Claiming 0a:58:0a:81:02:09 10.129.2.9
+2023-01-09T04:47:22.501451825Z 2023-01-09T04:47:22.501Z|00069|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-0 ovn-installed in OVS
+2023-01-09T04:47:22.501451825Z 2023-01-09T04:47:22.501Z|00070|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-0 up in Southbound
+2023-01-09T04:47:32.512721029Z 2023-01-09T04:47:32.512Z|00071|binding|INFO|Claiming lport openshift-ingress_router-default-595647774c-746t4 for this chassis.
+2023-01-09T04:47:32.512721029Z 2023-01-09T04:47:32.512Z|00072|binding|INFO|openshift-ingress_router-default-595647774c-746t4: Claiming 0a:58:0a:81:02:0b 10.129.2.11
+2023-01-09T04:47:32.529208524Z 2023-01-09T04:47:32.529Z|00073|binding|INFO|Setting lport openshift-ingress_router-default-595647774c-746t4 ovn-installed in OVS
+2023-01-09T04:47:32.529208524Z 2023-01-09T04:47:32.529Z|00074|binding|INFO|Setting lport openshift-ingress_router-default-595647774c-746t4 up in Southbound
+2023-01-09T04:47:33.980403986Z 2023-01-09T04:47:33.980Z|00075|binding|INFO|Claiming lport openshift-image-registry_image-registry-78bf97d4f8-f8sj5 for this chassis.
+2023-01-09T04:47:33.980403986Z 2023-01-09T04:47:33.980Z|00076|binding|INFO|openshift-image-registry_image-registry-78bf97d4f8-f8sj5: Claiming 0a:58:0a:81:02:0c 10.129.2.12
+2023-01-09T04:47:33.996122673Z 2023-01-09T04:47:33.996Z|00077|binding|INFO|Setting lport openshift-image-registry_image-registry-78bf97d4f8-f8sj5 ovn-installed in OVS
+2023-01-09T04:47:33.996122673Z 2023-01-09T04:47:33.996Z|00078|binding|INFO|Setting lport openshift-image-registry_image-registry-78bf97d4f8-f8sj5 up in Southbound
+2023-01-09T04:48:02.806913172Z 2023-01-09T04:48:02.806Z|00079|binding|INFO|Releasing lport openshift-image-registry_image-registry-78bf97d4f8-f8sj5 from this chassis (sb_readonly=0)
+2023-01-09T04:49:20.029661326Z 2023-01-09T04:49:20.029Z|00080|binding|INFO|Claiming lport openshift-monitoring_prometheus-adapter-b766b5595-6zjpw for this chassis.
+2023-01-09T04:49:20.029691824Z 2023-01-09T04:49:20.029Z|00081|binding|INFO|openshift-monitoring_prometheus-adapter-b766b5595-6zjpw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2023-01-09T04:49:20.044980617Z 2023-01-09T04:49:20.044Z|00082|binding|INFO|Setting lport openshift-monitoring_prometheus-adapter-b766b5595-6zjpw up in Southbound
+2023-01-09T04:49:20.045446878Z 2023-01-09T04:49:20.045Z|00083|binding|INFO|Setting lport openshift-monitoring_prometheus-adapter-b766b5595-6zjpw ovn-installed in OVS
+2023-01-09T04:49:37.573729821Z 2023-01-09T04:49:37.573Z|00084|binding|INFO|Claiming lport openshift-multus_cni-sysctl-allowlist-ds-rjsq2 for this chassis.
+2023-01-09T04:49:37.573729821Z 2023-01-09T04:49:37.573Z|00085|binding|INFO|openshift-multus_cni-sysctl-allowlist-ds-rjsq2: Claiming 0a:58:0a:81:02:0e 10.129.2.14
+2023-01-09T04:49:37.588951213Z 2023-01-09T04:49:37.588Z|00086|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-rjsq2 ovn-installed in OVS
+2023-01-09T04:49:37.588951213Z 2023-01-09T04:49:37.588Z|00087|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-rjsq2 up in Southbound
+2023-01-09T04:50:23.678091907Z 2023-01-09T04:50:23.678Z|00088|binding|INFO|Releasing lport openshift-multus_cni-sysctl-allowlist-ds-rjsq2 from this chassis (sb_readonly=0)
+2023-01-09T04:54:14.617838621Z 2023-01-09T04:54:14.617Z|00089|binding|INFO|Claiming lport openshift-multus_cni-sysctl-allowlist-ds-qptrc for this chassis.
+2023-01-09T04:54:14.617838621Z 2023-01-09T04:54:14.617Z|00090|binding|INFO|openshift-multus_cni-sysctl-allowlist-ds-qptrc: Claiming 0a:58:0a:81:02:0f 10.129.2.15
+2023-01-09T04:54:14.633102149Z 2023-01-09T04:54:14.633Z|00091|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-qptrc up in Southbound
+2023-01-09T04:54:14.633399064Z 2023-01-09T04:54:14.633Z|00092|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-qptrc ovn-installed in OVS
+2023-01-09T04:54:48.496704708Z 2023-01-09T04:54:48.496Z|00093|binding|INFO|Releasing lport openshift-multus_cni-sysctl-allowlist-ds-qptrc from this chassis (sb_readonly=0)
+2023-01-09T04:57:18.201697932Z 2023-01-09T04:57:18.201Z|00094|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T04:57:59.968106120Z 2023-01-09T04:57:59.968Z|00095|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T04:58:35.769135919Z 2023-01-09T04:58:35.769Z|00096|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T04:59:13.390757454Z 2023-01-09T04:59:13.390Z|00097|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:00:00.696642524Z 2023-01-09T05:00:00.696Z|00098|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887340-jqx2b for this chassis.
+2023-01-09T05:00:00.696642524Z 2023-01-09T05:00:00.696Z|00099|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887340-jqx2b: Claiming 0a:58:0a:81:02:10 10.129.2.16
+2023-01-09T05:00:00.712036252Z 2023-01-09T05:00:00.711Z|00100|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887340-jqx2b ovn-installed in OVS
+2023-01-09T05:00:00.712036252Z 2023-01-09T05:00:00.712Z|00101|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887340-jqx2b up in Southbound
+2023-01-09T05:00:04.907076061Z 2023-01-09T05:00:04.907Z|00102|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887340-jqx2b from this chassis (sb_readonly=0)
+2023-01-09T05:01:43.860074476Z 2023-01-09T05:01:43.860Z|00103|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:04:15.279464576Z 2023-01-09T05:04:15.279Z|00104|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:08:39.025955831Z 2023-01-09T05:08:39.025Z|00105|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:15:00.942945396Z 2023-01-09T05:15:00.942Z|00106|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887355-7mkjf for this chassis.
+2023-01-09T05:15:00.942945396Z 2023-01-09T05:15:00.942Z|00107|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887355-7mkjf: Claiming 0a:58:0a:81:02:11 10.129.2.17
+2023-01-09T05:15:00.958108631Z 2023-01-09T05:15:00.958Z|00108|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887355-7mkjf ovn-installed in OVS
+2023-01-09T05:15:00.958108631Z 2023-01-09T05:15:00.958Z|00109|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887355-7mkjf up in Southbound
+2023-01-09T05:15:03.611710254Z 2023-01-09T05:15:03.611Z|00110|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887355-7mkjf from this chassis (sb_readonly=0)
+2023-01-09T05:15:34.528725697Z 2023-01-09T05:15:34.528Z|00111|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:19:04.771857857Z 2023-01-09T05:19:04.771Z|00112|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T05:22:19.227945191Z 2023-01-09T05:22:19.227Z|00113|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:25:48.921011631Z 2023-01-09T05:25:48.920Z|00114|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:29:02.131565479Z 2023-01-09T05:29:02.131Z|00115|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:29:34.554435656Z 2023-01-09T05:29:34.554Z|00116|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:30:00.664144420Z 2023-01-09T05:30:00.664Z|00117|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887370-smwf8 for this chassis.
+2023-01-09T05:30:00.664144420Z 2023-01-09T05:30:00.664Z|00118|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887370-smwf8: Claiming 0a:58:0a:81:02:12 10.129.2.18
+2023-01-09T05:30:00.682199689Z 2023-01-09T05:30:00.682Z|00119|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887370-smwf8 up in Southbound
+2023-01-09T05:30:00.682515048Z 2023-01-09T05:30:00.682Z|00120|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887370-smwf8 ovn-installed in OVS
+2023-01-09T05:30:04.339885905Z 2023-01-09T05:30:04.339Z|00121|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887370-smwf8 from this chassis (sb_readonly=0)
+2023-01-09T05:30:33.174321726Z 2023-01-09T05:30:33.174Z|00122|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-source-746dd6c885-2b6km for this chassis.
+2023-01-09T05:30:33.174321726Z 2023-01-09T05:30:33.174Z|00123|binding|INFO|openshift-network-diagnostics_network-check-source-746dd6c885-2b6km: Claiming 0a:58:0a:81:02:13 10.129.2.19
+2023-01-09T05:30:33.192730003Z 2023-01-09T05:30:33.192Z|00124|binding|INFO|Setting lport openshift-network-diagnostics_network-check-source-746dd6c885-2b6km ovn-installed in OVS
+2023-01-09T05:30:33.192730003Z 2023-01-09T05:30:33.192Z|00125|binding|INFO|Setting lport openshift-network-diagnostics_network-check-source-746dd6c885-2b6km up in Southbound
+2023-01-09T05:30:34.240800698Z 2023-01-09T05:30:34.240Z|00126|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-qzbbk for this chassis.
+2023-01-09T05:30:34.240800698Z 2023-01-09T05:30:34.240Z|00127|binding|INFO|openshift-marketplace_qe-app-registry-qzbbk: Claiming 0a:58:0a:81:02:15 10.129.2.21
+2023-01-09T05:30:34.258861923Z 2023-01-09T05:30:34.258Z|00128|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-qzbbk ovn-installed in OVS
+2023-01-09T05:30:34.258861923Z 2023-01-09T05:30:34.258Z|00129|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-qzbbk up in Southbound
+2023-01-09T05:30:34.656421315Z 2023-01-09T05:30:34.656Z|00130|binding|INFO|Claiming lport openshift-monitoring_prometheus-operator-admission-webhook-7d4759d465-x6gk6 for this chassis.
+2023-01-09T05:30:34.656421315Z 2023-01-09T05:30:34.656Z|00131|binding|INFO|openshift-monitoring_prometheus-operator-admission-webhook-7d4759d465-x6gk6: Claiming 0a:58:0a:81:02:14 10.129.2.20
+2023-01-09T05:30:34.671826721Z 2023-01-09T05:30:34.671Z|00132|binding|INFO|Setting lport openshift-monitoring_prometheus-operator-admission-webhook-7d4759d465-x6gk6 ovn-installed in OVS
+2023-01-09T05:30:34.671826721Z 2023-01-09T05:30:34.671Z|00133|binding|INFO|Setting lport openshift-monitoring_prometheus-operator-admission-webhook-7d4759d465-x6gk6 up in Southbound
+2023-01-09T05:30:35.791398331Z 2023-01-09T05:30:35.791Z|00134|binding|INFO|Claiming lport openshift-monitoring_prometheus-k8s-1 for this chassis.
+2023-01-09T05:30:35.791398331Z 2023-01-09T05:30:35.791Z|00135|binding|INFO|openshift-monitoring_prometheus-k8s-1: Claiming 0a:58:0a:81:02:16 10.129.2.22
+2023-01-09T05:30:35.807175246Z 2023-01-09T05:30:35.807Z|00136|binding|INFO|Setting lport openshift-monitoring_prometheus-k8s-1 ovn-installed in OVS
+2023-01-09T05:30:35.807175246Z 2023-01-09T05:30:35.807Z|00137|binding|INFO|Setting lport openshift-monitoring_prometheus-k8s-1 up in Southbound
+2023-01-09T05:31:00.096394641Z 2023-01-09T05:31:00.096Z|00138|binding|INFO|Claiming lport openshift-marketplace_ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951etf9mn for this chassis.
+2023-01-09T05:31:00.096394641Z 2023-01-09T05:31:00.096Z|00139|binding|INFO|openshift-marketplace_ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951etf9mn: Claiming 0a:58:0a:81:02:17 10.129.2.23
+2023-01-09T05:31:00.113183028Z 2023-01-09T05:31:00.113Z|00140|binding|INFO|Setting lport openshift-marketplace_ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951etf9mn up in Southbound
+2023-01-09T05:31:00.113722930Z 2023-01-09T05:31:00.113Z|00141|binding|INFO|Setting lport openshift-marketplace_ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951etf9mn ovn-installed in OVS
+2023-01-09T05:31:11.486205766Z 2023-01-09T05:31:11.486Z|00142|binding|INFO|Releasing lport openshift-marketplace_ec1732e48b48e3715676decd393213ccbddebc2deb66b30e8723c3951etf9mn from this chassis (sb_readonly=0)
+2023-01-09T05:31:20.699713260Z 2023-01-09T05:31:20.699Z|00143|binding|INFO|Claiming lport openshift-logging_cluster-logging-operator-8656d566b7-hmvrw for this chassis.
+2023-01-09T05:31:20.699713260Z 2023-01-09T05:31:20.699Z|00144|binding|INFO|openshift-logging_cluster-logging-operator-8656d566b7-hmvrw: Claiming 0a:58:0a:81:02:18 10.129.2.24
+2023-01-09T05:31:20.716695068Z 2023-01-09T05:31:20.716Z|00145|binding|INFO|Setting lport openshift-logging_cluster-logging-operator-8656d566b7-hmvrw up in Southbound
+2023-01-09T05:31:20.717085667Z 2023-01-09T05:31:20.717Z|00146|binding|INFO|Setting lport openshift-logging_cluster-logging-operator-8656d566b7-hmvrw ovn-installed in OVS
+2023-01-09T05:32:06.334661134Z 2023-01-09T05:32:06.334Z|00147|binding|INFO|Claiming lport openshift-marketplace_524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2p79gs for this chassis.
+2023-01-09T05:32:06.334661134Z 2023-01-09T05:32:06.334Z|00148|binding|INFO|openshift-marketplace_524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2p79gs: Claiming 0a:58:0a:81:02:19 10.129.2.25
+2023-01-09T05:32:06.352032615Z 2023-01-09T05:32:06.351Z|00149|binding|INFO|Setting lport openshift-marketplace_524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2p79gs ovn-installed in OVS
+2023-01-09T05:32:06.352032615Z 2023-01-09T05:32:06.352Z|00150|binding|INFO|Setting lport openshift-marketplace_524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2p79gs up in Southbound
+2023-01-09T05:32:11.632976667Z 2023-01-09T05:32:11.632Z|00151|binding|INFO|Releasing lport openshift-marketplace_524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2p79gs from this chassis (sb_readonly=0)
+2023-01-09T05:32:20.992700244Z 2023-01-09T05:32:20.992Z|00152|binding|INFO|Claiming lport openshift-operators-redhat_loki-operator-controller-manager-565db69ff8-lkx27 for this chassis.
+2023-01-09T05:32:20.992700244Z 2023-01-09T05:32:20.992Z|00153|binding|INFO|openshift-operators-redhat_loki-operator-controller-manager-565db69ff8-lkx27: Claiming 0a:58:0a:81:02:1a 10.129.2.26
+2023-01-09T05:32:21.009906738Z 2023-01-09T05:32:21.009Z|00154|binding|INFO|Setting lport openshift-operators-redhat_loki-operator-controller-manager-565db69ff8-lkx27 ovn-installed in OVS
+2023-01-09T05:32:21.009906738Z 2023-01-09T05:32:21.009Z|00155|binding|INFO|Setting lport openshift-operators-redhat_loki-operator-controller-manager-565db69ff8-lkx27 up in Southbound
+2023-01-09T05:32:58.071673689Z 2023-01-09T05:32:58.071Z|00156|binding|INFO|Claiming lport openshift-image-registry_image-registry-599d8489d7-97shl for this chassis.
+2023-01-09T05:32:58.071673689Z 2023-01-09T05:32:58.071Z|00157|binding|INFO|openshift-image-registry_image-registry-599d8489d7-97shl: Claiming 0a:58:0a:81:02:1b 10.129.2.27
+2023-01-09T05:32:58.089137421Z 2023-01-09T05:32:58.089Z|00158|binding|INFO|Setting lport openshift-image-registry_image-registry-599d8489d7-97shl ovn-installed in OVS
+2023-01-09T05:32:58.089137421Z 2023-01-09T05:32:58.089Z|00159|binding|INFO|Setting lport openshift-image-registry_image-registry-599d8489d7-97shl up in Southbound
+2023-01-09T05:35:13.091861297Z 2023-01-09T05:35:13.091Z|00160|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:37:17.842118468Z 2023-01-09T05:37:17.842Z|00161|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:40:55.227453570Z 2023-01-09T05:40:55.227Z|00162|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-c9ltb for this chassis.
+2023-01-09T05:40:55.227453570Z 2023-01-09T05:40:55.227Z|00163|binding|INFO|openshift-marketplace_qe-app-registry-c9ltb: Claiming 0a:58:0a:81:02:1c 10.129.2.28
+2023-01-09T05:40:55.244816822Z 2023-01-09T05:40:55.244Z|00164|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c9ltb up in Southbound
+2023-01-09T05:40:55.245295374Z 2023-01-09T05:40:55.245Z|00165|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c9ltb ovn-installed in OVS
+2023-01-09T05:41:08.042170105Z 2023-01-09T05:41:08.042Z|00166|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-c9ltb from this chassis (sb_readonly=0)
+2023-01-09T05:41:38.755982617Z 2023-01-09T05:41:38.755Z|00167|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:43:50.018974135Z 2023-01-09T05:43:50.018Z|00168|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:45:00.953774882Z 2023-01-09T05:45:00.953Z|00169|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887385-hl5pp for this chassis.
+2023-01-09T05:45:00.953774882Z 2023-01-09T05:45:00.953Z|00170|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887385-hl5pp: Claiming 0a:58:0a:81:02:1d 10.129.2.29
+2023-01-09T05:45:00.971260694Z 2023-01-09T05:45:00.971Z|00171|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887385-hl5pp up in Southbound
+2023-01-09T05:45:00.971632880Z 2023-01-09T05:45:00.971Z|00172|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887385-hl5pp ovn-installed in OVS
+2023-01-09T05:45:05.367959382Z 2023-01-09T05:45:05.367Z|00173|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887385-hl5pp from this chassis (sb_readonly=0)
+2023-01-09T05:45:36.077198377Z 2023-01-09T05:45:36.077Z|00174|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:47:32.569416921Z 2023-01-09T05:47:32.569Z|00175|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:51:07.154297952Z 2023-01-09T05:51:07.154Z|00176|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:51:17.456379734Z 2023-01-09T05:51:17.456Z|00177|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-j99jh for this chassis.
+2023-01-09T05:51:17.456379734Z 2023-01-09T05:51:17.456Z|00178|binding|INFO|openshift-marketplace_qe-app-registry-j99jh: Claiming 0a:58:0a:81:02:1e 10.129.2.30
+2023-01-09T05:51:17.473477777Z 2023-01-09T05:51:17.473Z|00179|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j99jh ovn-installed in OVS
+2023-01-09T05:51:17.473477777Z 2023-01-09T05:51:17.473Z|00180|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j99jh up in Southbound
+2023-01-09T05:51:30.431040310Z 2023-01-09T05:51:30.430Z|00181|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-j99jh from this chassis (sb_readonly=0)
+2023-01-09T05:52:01.139038655Z 2023-01-09T05:52:01.138Z|00182|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:54:08.847318525Z 2023-01-09T05:54:08.847Z|00183|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:57:47.276593927Z 2023-01-09T05:57:47.276Z|00184|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:00:00.692891436Z 2023-01-09T06:00:00.692Z|00185|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887400-rtnhq for this chassis.
+2023-01-09T06:00:00.692891436Z 2023-01-09T06:00:00.692Z|00186|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887400-rtnhq: Claiming 0a:58:0a:81:02:1f 10.129.2.31
+2023-01-09T06:00:00.710342621Z 2023-01-09T06:00:00.710Z|00187|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887400-rtnhq up in Southbound
+2023-01-09T06:00:00.710757224Z 2023-01-09T06:00:00.710Z|00188|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887400-rtnhq ovn-installed in OVS
+2023-01-09T06:00:05.395289492Z 2023-01-09T06:00:05.395Z|00189|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887400-rtnhq from this chassis (sb_readonly=0)
+2023-01-09T06:01:27.610296518Z 2023-01-09T06:01:27.610Z|00190|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:02:00.998745118Z 2023-01-09T06:02:00.998Z|00191|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:02:04.618237507Z 2023-01-09T06:02:04.618Z|00192|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-h86p6 for this chassis.
+2023-01-09T06:02:04.618237507Z 2023-01-09T06:02:04.618Z|00193|binding|INFO|openshift-marketplace_qe-app-registry-h86p6: Claiming 0a:58:0a:81:02:20 10.129.2.32
+2023-01-09T06:02:04.635610236Z 2023-01-09T06:02:04.635Z|00194|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-h86p6 up in Southbound
+2023-01-09T06:02:04.635995649Z 2023-01-09T06:02:04.635Z|00195|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-h86p6 ovn-installed in OVS
+2023-01-09T06:02:16.870219792Z 2023-01-09T06:02:16.870Z|00196|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-h86p6 from this chassis (sb_readonly=0)
+2023-01-09T06:02:47.608333459Z 2023-01-09T06:02:47.608Z|00197|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:06:50.056780392Z 2023-01-09T06:06:50.056Z|00198|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:08:34.132221624Z 2023-01-09T06:08:34.132Z|00199|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:11:42.902400597Z 2023-01-09T06:11:42.902Z|00200|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:11:58.341498327Z 2023-01-09T06:11:58.341Z|00201|binding|INFO|Claiming lport openshift-logging_collector-chhjh for this chassis.
+2023-01-09T06:11:58.341498327Z 2023-01-09T06:11:58.341Z|00202|binding|INFO|openshift-logging_collector-chhjh: Claiming 0a:58:0a:81:02:21 10.129.2.33
+2023-01-09T06:11:58.358983797Z 2023-01-09T06:11:58.358Z|00203|binding|INFO|Setting lport openshift-logging_collector-chhjh up in Southbound
+2023-01-09T06:11:58.359380008Z 2023-01-09T06:11:58.359Z|00204|binding|INFO|Setting lport openshift-logging_collector-chhjh ovn-installed in OVS
+2023-01-09T06:12:06.462964861Z 2023-01-09T06:12:06.462Z|00205|binding|INFO|Releasing lport openshift-logging_collector-chhjh from this chassis (sb_readonly=0)
+2023-01-09T06:12:08.067854882Z 2023-01-09T06:12:08.067Z|00206|binding|INFO|Claiming lport openshift-logging_collector-jdlk4 for this chassis.
+2023-01-09T06:12:08.067854882Z 2023-01-09T06:12:08.067Z|00207|binding|INFO|openshift-logging_collector-jdlk4: Claiming 0a:58:0a:81:02:22 10.129.2.34
+2023-01-09T06:12:08.085164223Z 2023-01-09T06:12:08.085Z|00208|binding|INFO|Setting lport openshift-logging_collector-jdlk4 ovn-installed in OVS
+2023-01-09T06:12:08.085164223Z 2023-01-09T06:12:08.085Z|00209|binding|INFO|Setting lport openshift-logging_collector-jdlk4 up in Southbound
+2023-01-09T06:12:41.621004902Z 2023-01-09T06:12:41.620Z|00210|binding|INFO|Claiming lport openshift-logging_lokistack-sample-querier-6c84499f88-2sh8s for this chassis.
+2023-01-09T06:12:41.621004902Z 2023-01-09T06:12:41.620Z|00211|binding|INFO|openshift-logging_lokistack-sample-querier-6c84499f88-2sh8s: Claiming 0a:58:0a:81:02:23 10.129.2.35
+2023-01-09T06:12:41.639605014Z 2023-01-09T06:12:41.639Z|00212|binding|INFO|Setting lport openshift-logging_lokistack-sample-querier-6c84499f88-2sh8s ovn-installed in OVS
+2023-01-09T06:12:41.639605014Z 2023-01-09T06:12:41.639Z|00213|binding|INFO|Setting lport openshift-logging_lokistack-sample-querier-6c84499f88-2sh8s up in Southbound
+2023-01-09T06:12:51.148552146Z 2023-01-09T06:12:51.148Z|00214|binding|INFO|Claiming lport openshift-logging_lokistack-sample-index-gateway-0 for this chassis.
+2023-01-09T06:12:51.148552146Z 2023-01-09T06:12:51.148Z|00215|binding|INFO|openshift-logging_lokistack-sample-index-gateway-0: Claiming 0a:58:0a:81:02:25 10.129.2.37
+2023-01-09T06:12:51.167604611Z 2023-01-09T06:12:51.167Z|00216|binding|INFO|Setting lport openshift-logging_lokistack-sample-index-gateway-0 up in Southbound
+2023-01-09T06:12:51.168091678Z 2023-01-09T06:12:51.168Z|00217|binding|INFO|Setting lport openshift-logging_lokistack-sample-index-gateway-0 ovn-installed in OVS
+2023-01-09T06:12:53.734792151Z 2023-01-09T06:12:53.734Z|00218|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-rx2v9 for this chassis.
+2023-01-09T06:12:53.734792151Z 2023-01-09T06:12:53.734Z|00219|binding|INFO|openshift-marketplace_qe-app-registry-rx2v9: Claiming 0a:58:0a:81:02:27 10.129.2.39
+2023-01-09T06:12:53.753027143Z 2023-01-09T06:12:53.752Z|00220|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rx2v9 ovn-installed in OVS
+2023-01-09T06:12:53.753027143Z 2023-01-09T06:12:53.753Z|00221|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rx2v9 up in Southbound
+2023-01-09T06:12:56.972534231Z 2023-01-09T06:12:56.972Z|00222|binding|INFO|Claiming lport openshift-logging_lokistack-sample-ingester-0 for this chassis.
+2023-01-09T06:12:56.972534231Z 2023-01-09T06:12:56.972Z|00223|binding|INFO|openshift-logging_lokistack-sample-ingester-0: Claiming 0a:58:0a:81:02:24 10.129.2.36
+2023-01-09T06:12:56.991126583Z 2023-01-09T06:12:56.991Z|00224|binding|INFO|Setting lport openshift-logging_lokistack-sample-ingester-0 ovn-installed in OVS
+2023-01-09T06:12:56.991126583Z 2023-01-09T06:12:56.991Z|00225|binding|INFO|Setting lport openshift-logging_lokistack-sample-ingester-0 up in Southbound
+2023-01-09T06:12:57.407005355Z 2023-01-09T06:12:57.406Z|00226|binding|INFO|Claiming lport openshift-logging_lokistack-sample-ruler-0 for this chassis.
+2023-01-09T06:12:57.407005355Z 2023-01-09T06:12:57.406Z|00227|binding|INFO|openshift-logging_lokistack-sample-ruler-0: Claiming 0a:58:0a:81:02:26 10.129.2.38
+2023-01-09T06:12:57.426092135Z 2023-01-09T06:12:57.426Z|00228|binding|INFO|Setting lport openshift-logging_lokistack-sample-ruler-0 ovn-installed in OVS
+2023-01-09T06:12:57.426092135Z 2023-01-09T06:12:57.426Z|00229|binding|INFO|Setting lport openshift-logging_lokistack-sample-ruler-0 up in Southbound
+2023-01-09T06:13:06.402243860Z 2023-01-09T06:13:06.402Z|00230|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-rx2v9 from this chassis (sb_readonly=0)
+2023-01-09T06:14:26.831089514Z 2023-01-09T06:14:26.831Z|00231|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:15:00.668889474Z 2023-01-09T06:15:00.668Z|00232|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887415-kkxvk for this chassis.
+2023-01-09T06:15:00.668889474Z 2023-01-09T06:15:00.668Z|00233|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887415-kkxvk: Claiming 0a:58:0a:81:02:28 10.129.2.40
+2023-01-09T06:15:00.693358028Z 2023-01-09T06:15:00.693Z|00234|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887415-kkxvk ovn-installed in OVS
+2023-01-09T06:15:00.693358028Z 2023-01-09T06:15:00.693Z|00235|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887415-kkxvk up in Southbound
+2023-01-09T06:15:04.502804570Z 2023-01-09T06:15:04.502Z|00236|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887415-kkxvk from this chassis (sb_readonly=0)
+2023-01-09T06:15:35.401379384Z 2023-01-09T06:15:35.401Z|00237|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:18:57.844679181Z 2023-01-09T06:18:57.844Z|00238|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:22:20.834840026Z 2023-01-09T06:22:20.834Z|00239|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:22:53.500207148Z 2023-01-09T06:22:53.500Z|00240|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:22:56.199208125Z 2023-01-09T06:22:56.199Z|00241|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-j6qlv for this chassis.
+2023-01-09T06:22:56.199208125Z 2023-01-09T06:22:56.199Z|00242|binding|INFO|openshift-marketplace_qe-app-registry-j6qlv: Claiming 0a:58:0a:81:02:29 10.129.2.41
+2023-01-09T06:22:56.223583300Z 2023-01-09T06:22:56.223Z|00243|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j6qlv ovn-installed in OVS
+2023-01-09T06:22:56.223583300Z 2023-01-09T06:22:56.223Z|00244|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j6qlv up in Southbound
+2023-01-09T06:23:08.932960153Z 2023-01-09T06:23:08.932Z|00245|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-j6qlv from this chassis (sb_readonly=0)
+2023-01-09T06:23:39.623725531Z 2023-01-09T06:23:39.623Z|00246|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:29:44.661794982Z 2023-01-09T06:29:44.661Z|00247|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:30:00.655127341Z 2023-01-09T06:30:00.655Z|00248|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887430-j7k84 for this chassis.
+2023-01-09T06:30:00.655127341Z 2023-01-09T06:30:00.655Z|00249|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887430-j7k84: Claiming 0a:58:0a:81:02:2a 10.129.2.42
+2023-01-09T06:30:00.680203997Z 2023-01-09T06:30:00.680Z|00250|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887430-j7k84 up in Southbound
+2023-01-09T06:30:00.680631866Z 2023-01-09T06:30:00.680Z|00251|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887430-j7k84 ovn-installed in OVS
+2023-01-09T06:30:04.737497935Z 2023-01-09T06:30:04.737Z|00252|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887430-j7k84 from this chassis (sb_readonly=0)
+2023-01-09T06:30:35.647279108Z 2023-01-09T06:30:35.647Z|00253|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:32:37.624866704Z 2023-01-09T06:32:37.624Z|00254|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:33:38.660377614Z 2023-01-09T06:33:38.660Z|00255|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-kxt2z for this chassis.
+2023-01-09T06:33:38.660377614Z 2023-01-09T06:33:38.660Z|00256|binding|INFO|openshift-marketplace_qe-app-registry-kxt2z: Claiming 0a:58:0a:81:02:2b 10.129.2.43
+2023-01-09T06:33:38.685384033Z 2023-01-09T06:33:38.685Z|00257|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-kxt2z up in Southbound
+2023-01-09T06:33:38.685826134Z 2023-01-09T06:33:38.685Z|00258|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-kxt2z ovn-installed in OVS
+2023-01-09T06:33:51.469518617Z 2023-01-09T06:33:51.469Z|00259|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-kxt2z from this chassis (sb_readonly=0)
+2023-01-09T06:34:32.471018917Z 2023-01-09T06:34:32.470Z|00260|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:40:09.455248308Z 2023-01-09T06:40:09.455Z|00261|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:43:10.486194026Z 2023-01-09T06:43:10.486Z|00262|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:44:43.082361070Z 2023-01-09T06:44:43.082Z|00263|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-w55v6 for this chassis.
+2023-01-09T06:44:43.082361070Z 2023-01-09T06:44:43.082Z|00264|binding|INFO|openshift-marketplace_qe-app-registry-w55v6: Claiming 0a:58:0a:81:02:2c 10.129.2.44
+2023-01-09T06:44:43.106642678Z 2023-01-09T06:44:43.106Z|00265|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-w55v6 ovn-installed in OVS
+2023-01-09T06:44:43.106642678Z 2023-01-09T06:44:43.106Z|00266|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-w55v6 up in Southbound
+2023-01-09T06:44:56.095908752Z 2023-01-09T06:44:56.095Z|00267|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-w55v6 from this chassis (sb_readonly=0)
+2023-01-09T06:45:00.655758365Z 2023-01-09T06:45:00.655Z|00268|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887445-b2psf for this chassis.
+2023-01-09T06:45:00.655758365Z 2023-01-09T06:45:00.655Z|00269|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887445-b2psf: Claiming 0a:58:0a:81:02:2d 10.129.2.45
+2023-01-09T06:45:00.680172152Z 2023-01-09T06:45:00.680Z|00270|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887445-b2psf up in Southbound
+2023-01-09T06:45:00.680553648Z 2023-01-09T06:45:00.680Z|00271|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887445-b2psf ovn-installed in OVS
+2023-01-09T06:45:03.922058971Z 2023-01-09T06:45:03.922Z|00272|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887445-b2psf from this chassis (sb_readonly=0)
+2023-01-09T06:45:43.398206545Z 2023-01-09T06:45:43.398Z|00273|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:50:43.233273444Z 2023-01-09T06:50:43.233Z|00274|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:53:27.238358860Z 2023-01-09T06:53:27.238Z|00275|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:54:29.429256640Z 2023-01-09T06:54:29.429Z|00276|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:55:39.602800380Z 2023-01-09T06:55:39.602Z|00277|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-ljxtk for this chassis.
+2023-01-09T06:55:39.602800380Z 2023-01-09T06:55:39.602Z|00278|binding|INFO|openshift-marketplace_qe-app-registry-ljxtk: Claiming 0a:58:0a:81:02:2e 10.129.2.46
+2023-01-09T06:55:39.627031130Z 2023-01-09T06:55:39.626Z|00279|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-ljxtk ovn-installed in OVS
+2023-01-09T06:55:39.627031130Z 2023-01-09T06:55:39.627Z|00280|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-ljxtk up in Southbound
+2023-01-09T06:55:52.740786519Z 2023-01-09T06:55:52.740Z|00281|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-ljxtk from this chassis (sb_readonly=0)
+2023-01-09T06:56:23.453998725Z 2023-01-09T06:56:23.453Z|00282|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:57:01.197932043Z 2023-01-09T06:57:01.197Z|00283|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:57:34.364282822Z 2023-01-09T06:57:34.364Z|00284|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:00:00.686528332Z 2023-01-09T07:00:00.686Z|00285|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887460-rp9qq for this chassis.
+2023-01-09T07:00:00.686528332Z 2023-01-09T07:00:00.686Z|00286|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887460-rp9qq: Claiming 0a:58:0a:81:02:2f 10.129.2.47
+2023-01-09T07:00:00.711474905Z 2023-01-09T07:00:00.711Z|00287|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887460-rp9qq up in Southbound
+2023-01-09T07:00:00.711900546Z 2023-01-09T07:00:00.711Z|00288|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887460-rp9qq ovn-installed in OVS
+2023-01-09T07:00:03.160593659Z 2023-01-09T07:00:03.160Z|00289|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887460-rp9qq from this chassis (sb_readonly=0)
+2023-01-09T07:00:34.067180134Z 2023-01-09T07:00:34.067Z|00290|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:01:44.070918507Z 2023-01-09T07:01:44.070Z|00291|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:05:20.351392500Z 2023-01-09T07:05:20.351Z|00292|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T07:05:57.077267432Z 2023-01-09T07:05:57.077Z|00293|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-2r6nv for this chassis.
+2023-01-09T07:05:57.077267432Z 2023-01-09T07:05:57.077Z|00294|binding|INFO|openshift-marketplace_qe-app-registry-2r6nv: Claiming 0a:58:0a:81:02:30 10.129.2.48
+2023-01-09T07:05:57.101869181Z 2023-01-09T07:05:57.101Z|00295|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2r6nv ovn-installed in OVS
+2023-01-09T07:05:57.101869181Z 2023-01-09T07:05:57.101Z|00296|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2r6nv up in Southbound
+2023-01-09T07:06:10.245048044Z 2023-01-09T07:06:10.244Z|00297|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-2r6nv from this chassis (sb_readonly=0)
+2023-01-09T07:06:40.963222381Z 2023-01-09T07:06:40.963Z|00298|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:07:47.474120706Z 2023-01-09T07:07:47.474Z|00299|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:08:20.165401924Z 2023-01-09T07:08:20.165Z|00300|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:14:34.226522992Z 2023-01-09T07:14:34.226Z|00301|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:15:00.657102140Z 2023-01-09T07:15:00.657Z|00302|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887475-zxrcc for this chassis.
+2023-01-09T07:15:00.657102140Z 2023-01-09T07:15:00.657Z|00303|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887475-zxrcc: Claiming 0a:58:0a:81:02:31 10.129.2.49
+2023-01-09T07:15:00.681557218Z 2023-01-09T07:15:00.681Z|00304|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887475-zxrcc up in Southbound
+2023-01-09T07:15:00.682118848Z 2023-01-09T07:15:00.682Z|00305|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887475-zxrcc ovn-installed in OVS
+2023-01-09T07:15:05.414684234Z 2023-01-09T07:15:05.414Z|00306|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887475-zxrcc from this chassis (sb_readonly=0)
+2023-01-09T07:15:36.069222534Z 2023-01-09T07:15:36.069Z|00307|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:16:12.857006480Z 2023-01-09T07:16:12.856Z|00308|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-c9qsw for this chassis.
+2023-01-09T07:16:12.857006480Z 2023-01-09T07:16:12.856Z|00309|binding|INFO|openshift-marketplace_qe-app-registry-c9qsw: Claiming 0a:58:0a:81:02:32 10.129.2.50
+2023-01-09T07:16:12.880890722Z 2023-01-09T07:16:12.880Z|00310|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c9qsw up in Southbound
+2023-01-09T07:16:12.881312848Z 2023-01-09T07:16:12.881Z|00311|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c9qsw ovn-installed in OVS
+2023-01-09T07:16:25.832984789Z 2023-01-09T07:16:25.832Z|00312|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-c9qsw from this chassis (sb_readonly=0)
+2023-01-09T07:16:56.527218233Z 2023-01-09T07:16:56.527Z|00313|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:01.279305362Z 2023-01-09T07:19:01.279Z|00314|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:34.085219323Z 2023-01-09T07:19:34.085Z|00315|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:26:05.950454707Z 2023-01-09T07:26:05.950Z|00316|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:26:50.079193822Z 2023-01-09T07:26:50.079Z|00317|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:26:56.514488386Z 2023-01-09T07:26:56.514Z|00318|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-w9pnz for this chassis.
+2023-01-09T07:26:56.514488386Z 2023-01-09T07:26:56.514Z|00319|binding|INFO|openshift-marketplace_qe-app-registry-w9pnz: Claiming 0a:58:0a:81:02:33 10.129.2.51
+2023-01-09T07:26:56.538891026Z 2023-01-09T07:26:56.538Z|00320|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-w9pnz up in Southbound
+2023-01-09T07:26:56.539318186Z 2023-01-09T07:26:56.539Z|00321|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-w9pnz ovn-installed in OVS
+2023-01-09T07:27:09.395904178Z 2023-01-09T07:27:09.395Z|00322|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-w9pnz from this chassis (sb_readonly=0)
+2023-01-09T07:27:40.089213420Z 2023-01-09T07:27:40.089Z|00323|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:29:14.581215723Z 2023-01-09T07:29:14.581Z|00324|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:29:47.826401780Z 2023-01-09T07:29:47.826Z|00325|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:30:00.649667666Z 2023-01-09T07:30:00.649Z|00326|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887490-nzqwc for this chassis.
+2023-01-09T07:30:00.649667666Z 2023-01-09T07:30:00.649Z|00327|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887490-nzqwc: Claiming 0a:58:0a:81:02:34 10.129.2.52
+2023-01-09T07:30:00.674158045Z 2023-01-09T07:30:00.674Z|00328|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887490-nzqwc ovn-installed in OVS
+2023-01-09T07:30:00.674158045Z 2023-01-09T07:30:00.674Z|00329|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887490-nzqwc up in Southbound
+2023-01-09T07:30:04.596837295Z 2023-01-09T07:30:04.596Z|00330|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887490-nzqwc from this chassis (sb_readonly=0)
+2023-01-09T07:30:35.508002235Z 2023-01-09T07:30:35.507Z|00331|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:37:12.628571772Z 2023-01-09T07:37:12.628Z|00332|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-xzfb6 for this chassis.
+2023-01-09T07:37:12.628571772Z 2023-01-09T07:37:12.628Z|00333|binding|INFO|openshift-marketplace_qe-app-registry-xzfb6: Claiming 0a:58:0a:81:02:35 10.129.2.53
+2023-01-09T07:37:12.655489339Z 2023-01-09T07:37:12.655Z|00334|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-xzfb6 up in Southbound
+2023-01-09T07:37:12.655892675Z 2023-01-09T07:37:12.655Z|00335|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-xzfb6 ovn-installed in OVS
+2023-01-09T07:37:24.829821575Z 2023-01-09T07:37:24.829Z|00336|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-xzfb6 from this chassis (sb_readonly=0)
+2023-01-09T07:37:55.588228599Z 2023-01-09T07:37:55.588Z|00337|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:41:08.733255598Z 2023-01-09T07:41:08.733Z|00338|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:41:41.869835847Z 2023-01-09T07:41:41.869Z|00339|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T07:45:00.655385655Z 2023-01-09T07:45:00.655Z|00340|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887505-t7vns for this chassis.
+2023-01-09T07:45:00.655385655Z 2023-01-09T07:45:00.655Z|00341|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887505-t7vns: Claiming 0a:58:0a:81:02:36 10.129.2.54
+2023-01-09T07:45:00.679687824Z 2023-01-09T07:45:00.679Z|00342|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887505-t7vns up in Southbound
+2023-01-09T07:45:00.680090204Z 2023-01-09T07:45:00.680Z|00343|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887505-t7vns ovn-installed in OVS
+2023-01-09T07:45:05.815376831Z 2023-01-09T07:45:05.815Z|00344|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887505-t7vns from this chassis (sb_readonly=0)
+2023-01-09T07:45:36.726230165Z 2023-01-09T07:45:36.726Z|00345|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:47:37.734208889Z 2023-01-09T07:47:37.734Z|00346|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:48:29.691343931Z 2023-01-09T07:48:29.691Z|00347|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-4r8bp for this chassis.
+2023-01-09T07:48:29.691343931Z 2023-01-09T07:48:29.691Z|00348|binding|INFO|openshift-marketplace_qe-app-registry-4r8bp: Claiming 0a:58:0a:81:02:37 10.129.2.55
+2023-01-09T07:48:29.714939151Z 2023-01-09T07:48:29.714Z|00349|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-4r8bp ovn-installed in OVS
+2023-01-09T07:48:29.714939151Z 2023-01-09T07:48:29.714Z|00350|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-4r8bp up in Southbound
+2023-01-09T07:48:42.536596878Z 2023-01-09T07:48:42.536Z|00351|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-4r8bp from this chassis (sb_readonly=0)
+2023-01-09T07:49:13.253001093Z 2023-01-09T07:49:13.252Z|00352|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:51:34.494951338Z 2023-01-09T07:51:34.494Z|00353|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:52:07.653684340Z 2023-01-09T07:52:07.653Z|00354|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:58:13.712211286Z 2023-01-09T07:58:13.712Z|00355|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:58:53.902058554Z 2023-01-09T07:58:53.902Z|00356|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-298rk for this chassis.
+2023-01-09T07:58:53.902058554Z 2023-01-09T07:58:53.902Z|00357|binding|INFO|openshift-marketplace_qe-app-registry-298rk: Claiming 0a:58:0a:81:02:38 10.129.2.56
+2023-01-09T07:58:53.926606354Z 2023-01-09T07:58:53.926Z|00358|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-298rk up in Southbound
+2023-01-09T07:58:53.927109709Z 2023-01-09T07:58:53.927Z|00359|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-298rk ovn-installed in OVS
+2023-01-09T07:59:07.012541308Z 2023-01-09T07:59:07.012Z|00360|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-298rk from this chassis (sb_readonly=0)
+2023-01-09T07:59:37.730208334Z 2023-01-09T07:59:37.730Z|00361|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:00:00.689022462Z 2023-01-09T08:00:00.688Z|00362|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887520-2krdl for this chassis.
+2023-01-09T08:00:00.689022462Z 2023-01-09T08:00:00.689Z|00363|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887520-2krdl: Claiming 0a:58:0a:81:02:39 10.129.2.57
+2023-01-09T08:00:00.713116248Z 2023-01-09T08:00:00.713Z|00364|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887520-2krdl ovn-installed in OVS
+2023-01-09T08:00:00.713116248Z 2023-01-09T08:00:00.713Z|00365|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887520-2krdl up in Southbound
+2023-01-09T08:00:04.961887080Z 2023-01-09T08:00:04.961Z|00366|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887520-2krdl from this chassis (sb_readonly=0)
+2023-01-09T08:00:35.866264825Z 2023-01-09T08:00:35.866Z|00367|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:02:18.949464443Z 2023-01-09T08:02:18.949Z|00368|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:02:51.462159995Z 2023-01-09T08:02:51.462Z|00369|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:08:45.473745444Z 2023-01-09T08:08:45.473Z|00370|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:09:06.142842927Z 2023-01-09T08:09:06.142Z|00371|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-zqfth for this chassis.
+2023-01-09T08:09:06.142842927Z 2023-01-09T08:09:06.142Z|00372|binding|INFO|openshift-marketplace_qe-app-registry-zqfth: Claiming 0a:58:0a:81:02:3a 10.129.2.58
+2023-01-09T08:09:06.166800729Z 2023-01-09T08:09:06.166Z|00373|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-zqfth ovn-installed in OVS
+2023-01-09T08:09:06.166800729Z 2023-01-09T08:09:06.166Z|00374|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-zqfth up in Southbound
+2023-01-09T08:09:18.476981107Z 2023-01-09T08:09:18.476Z|00375|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-zqfth from this chassis (sb_readonly=0)
+2023-01-09T08:09:49.181205556Z 2023-01-09T08:09:49.181Z|00376|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:12:21.687345734Z 2023-01-09T08:12:21.687Z|00377|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:12:54.157683232Z 2023-01-09T08:12:54.157Z|00378|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:15:00.667682326Z 2023-01-09T08:15:00.667Z|00379|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887535-dh5s7 for this chassis.
+2023-01-09T08:15:00.667682326Z 2023-01-09T08:15:00.667Z|00380|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887535-dh5s7: Claiming 0a:58:0a:81:02:3b 10.129.2.59
+2023-01-09T08:15:00.692026687Z 2023-01-09T08:15:00.691Z|00381|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887535-dh5s7 up in Southbound
+2023-01-09T08:15:00.692544616Z 2023-01-09T08:15:00.692Z|00382|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887535-dh5s7 ovn-installed in OVS
+2023-01-09T08:15:04.116954357Z 2023-01-09T08:15:04.116Z|00383|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887535-dh5s7 from this chassis (sb_readonly=0)
+2023-01-09T08:15:35.022202498Z 2023-01-09T08:15:35.022Z|00384|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:18:28.267225913Z 2023-01-09T08:18:28.267Z|00385|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:19:33.276873323Z 2023-01-09T08:19:33.276Z|00386|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:19:53.983373493Z 2023-01-09T08:19:53.983Z|00387|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-wsnwv for this chassis.
+2023-01-09T08:19:53.983373493Z 2023-01-09T08:19:53.983Z|00388|binding|INFO|openshift-marketplace_qe-app-registry-wsnwv: Claiming 0a:58:0a:81:02:3c 10.129.2.60
+2023-01-09T08:19:54.007372067Z 2023-01-09T08:19:54.007Z|00389|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-wsnwv ovn-installed in OVS
+2023-01-09T08:19:54.007372067Z 2023-01-09T08:19:54.007Z|00390|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-wsnwv up in Southbound
+2023-01-09T08:20:07.061741162Z 2023-01-09T08:20:07.061Z|00391|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-wsnwv from this chassis (sb_readonly=0)
+2023-01-09T08:20:37.879885337Z 2023-01-09T08:20:37.879Z|00392|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:23:21.895023594Z 2023-01-09T08:23:21.894Z|00393|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:23:55.031078540Z 2023-01-09T08:23:55.031Z|00394|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:29:34.005843571Z 2023-01-09T08:29:34.005Z|00395|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:30:00.644254490Z 2023-01-09T08:30:00.644Z|00396|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887550-7bn2w for this chassis.
+2023-01-09T08:30:00.644254490Z 2023-01-09T08:30:00.644Z|00397|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887550-7bn2w: Claiming 0a:58:0a:81:02:3d 10.129.2.61
+2023-01-09T08:30:00.669187981Z 2023-01-09T08:30:00.669Z|00398|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887550-7bn2w ovn-installed in OVS
+2023-01-09T08:30:00.669187981Z 2023-01-09T08:30:00.669Z|00399|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887550-7bn2w up in Southbound
+2023-01-09T08:30:05.266971827Z 2023-01-09T08:30:05.266Z|00400|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887550-7bn2w from this chassis (sb_readonly=0)
+2023-01-09T08:30:36.071127192Z 2023-01-09T08:30:36.071Z|00401|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:31:50.634324218Z 2023-01-09T08:31:50.634Z|00402|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-vpwft for this chassis.
+2023-01-09T08:31:50.634324218Z 2023-01-09T08:31:50.634Z|00403|binding|INFO|openshift-marketplace_qe-app-registry-vpwft: Claiming 0a:58:0a:81:02:3e 10.129.2.62
+2023-01-09T08:31:50.658641911Z 2023-01-09T08:31:50.658Z|00404|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-vpwft up in Southbound
+2023-01-09T08:31:50.659060813Z 2023-01-09T08:31:50.659Z|00405|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-vpwft ovn-installed in OVS
+2023-01-09T08:32:03.746494160Z 2023-01-09T08:32:03.746Z|00406|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-vpwft from this chassis (sb_readonly=0)
+2023-01-09T08:32:34.470861807Z 2023-01-09T08:32:34.470Z|00407|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T08:35:08.339026271Z 2023-01-09T08:35:08.338Z|00408|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:35:41.045206644Z 2023-01-09T08:35:41.045Z|00409|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:41:59.001877235Z 2023-01-09T08:41:59.001Z|00410|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-czzgh for this chassis.
+2023-01-09T08:41:59.001877235Z 2023-01-09T08:41:59.001Z|00411|binding|INFO|openshift-marketplace_qe-app-registry-czzgh: Claiming 0a:58:0a:81:02:3f 10.129.2.63
+2023-01-09T08:41:59.027057037Z 2023-01-09T08:41:59.027Z|00412|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-czzgh up in Southbound
+2023-01-09T08:41:59.027559869Z 2023-01-09T08:41:59.027Z|00413|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-czzgh ovn-installed in OVS
+2023-01-09T08:42:11.243297859Z 2023-01-09T08:42:11.243Z|00414|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-czzgh from this chassis (sb_readonly=0)
+2023-01-09T08:42:41.969209395Z 2023-01-09T08:42:41.969Z|00415|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:45:00.673325295Z 2023-01-09T08:45:00.673Z|00416|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887565-m2xxp for this chassis.
+2023-01-09T08:45:00.673325295Z 2023-01-09T08:45:00.673Z|00417|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887565-m2xxp: Claiming 0a:58:0a:81:02:40 10.129.2.64
+2023-01-09T08:45:00.702290515Z 2023-01-09T08:45:00.702Z|00418|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887565-m2xxp ovn-installed in OVS
+2023-01-09T08:45:00.702290515Z 2023-01-09T08:45:00.702Z|00419|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887565-m2xxp up in Southbound
+2023-01-09T08:45:06.464260066Z 2023-01-09T08:45:06.464Z|00420|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887565-m2xxp from this chassis (sb_readonly=0)
+2023-01-09T08:46:06.822296245Z 2023-01-09T08:46:06.822Z|00421|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:47:51.452430290Z 2023-01-09T08:47:51.452Z|00422|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:52:46.145123465Z 2023-01-09T08:52:46.145Z|00423|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-2c96w for this chassis.
+2023-01-09T08:52:46.145123465Z 2023-01-09T08:52:46.145Z|00424|binding|INFO|openshift-marketplace_qe-app-registry-2c96w: Claiming 0a:58:0a:81:02:41 10.129.2.65
+2023-01-09T08:52:46.169524195Z 2023-01-09T08:52:46.169Z|00425|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2c96w up in Southbound
+2023-01-09T08:52:46.169962806Z 2023-01-09T08:52:46.169Z|00426|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2c96w ovn-installed in OVS
+2023-01-09T08:52:58.738848550Z 2023-01-09T08:52:58.738Z|00427|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-2c96w from this chassis (sb_readonly=0)
+2023-01-09T08:53:29.496320922Z 2023-01-09T08:53:29.496Z|00428|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:56:39.152104405Z 2023-01-09T08:56:39.152Z|00429|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:57:59.807113646Z 2023-01-09T08:57:59.807Z|00430|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:00:01.026478355Z 2023-01-09T09:00:01.026Z|00431|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887580-hn8hl for this chassis.
+2023-01-09T09:00:01.026478355Z 2023-01-09T09:00:01.026Z|00432|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887580-hn8hl: Claiming 0a:58:0a:81:02:42 10.129.2.66
+2023-01-09T09:00:01.052042954Z 2023-01-09T09:00:01.052Z|00433|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887580-hn8hl ovn-installed in OVS
+2023-01-09T09:00:01.052042954Z 2023-01-09T09:00:01.052Z|00434|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887580-hn8hl up in Southbound
+2023-01-09T09:00:05.604913792Z 2023-01-09T09:00:05.604Z|00435|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887580-hn8hl from this chassis (sb_readonly=0)
+2023-01-09T09:00:36.075724728Z 2023-01-09T09:00:36.075Z|00436|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T09:02:21.006880893Z 2023-01-09T09:02:21.006Z|00437|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:03:05.973689406Z 2023-01-09T09:03:05.973Z|00438|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-nn76v for this chassis.
+2023-01-09T09:03:05.973689406Z 2023-01-09T09:03:05.973Z|00439|binding|INFO|openshift-marketplace_qe-app-registry-nn76v: Claiming 0a:58:0a:81:02:43 10.129.2.67
+2023-01-09T09:03:05.997926904Z 2023-01-09T09:03:05.997Z|00440|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-nn76v up in Southbound
+2023-01-09T09:03:05.998309125Z 2023-01-09T09:03:05.998Z|00441|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-nn76v ovn-installed in OVS
+2023-01-09T09:03:18.248011502Z 2023-01-09T09:03:18.247Z|00442|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-nn76v from this chassis (sb_readonly=0)
+2023-01-09T09:03:49.243256836Z 2023-01-09T09:03:49.243Z|00443|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:07:33.804999147Z 2023-01-09T09:07:33.804Z|00444|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:08:06.496365539Z 2023-01-09T09:08:06.496Z|00445|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:09:07.675056395Z 2023-01-09T09:09:07.675Z|00446|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:12:36.765561863Z 2023-01-09T09:12:36.765Z|00447|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:14:06.014202523Z 2023-01-09T09:14:06.014Z|00448|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:14:34.890179492Z 2023-01-09T09:14:34.890Z|00449|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-h42bz for this chassis.
+2023-01-09T09:14:34.890179492Z 2023-01-09T09:14:34.890Z|00450|binding|INFO|openshift-marketplace_qe-app-registry-h42bz: Claiming 0a:58:0a:81:02:44 10.129.2.68
+2023-01-09T09:14:34.914268575Z 2023-01-09T09:14:34.914Z|00451|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-h42bz up in Southbound
+2023-01-09T09:14:34.914689630Z 2023-01-09T09:14:34.914Z|00452|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-h42bz ovn-installed in OVS
+2023-01-09T09:14:47.945169145Z 2023-01-09T09:14:47.945Z|00453|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-h42bz from this chassis (sb_readonly=0)
+2023-01-09T09:15:00.651761703Z 2023-01-09T09:15:00.651Z|00454|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887595-2qqj7 for this chassis.
+2023-01-09T09:15:00.651761703Z 2023-01-09T09:15:00.651Z|00455|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887595-2qqj7: Claiming 0a:58:0a:81:02:45 10.129.2.69
+2023-01-09T09:15:00.676453991Z 2023-01-09T09:15:00.676Z|00456|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887595-2qqj7 up in Southbound
+2023-01-09T09:15:00.676877071Z 2023-01-09T09:15:00.676Z|00457|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887595-2qqj7 ovn-installed in OVS
+2023-01-09T09:15:03.786485775Z 2023-01-09T09:15:03.786Z|00458|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887595-2qqj7 from this chassis (sb_readonly=0)
+2023-01-09T09:15:34.697391143Z 2023-01-09T09:15:34.697Z|00459|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:18:05.635338169Z 2023-01-09T09:18:05.635Z|00460|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:18:38.279877104Z 2023-01-09T09:18:38.279Z|00461|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:19:36.475309421Z 2023-01-09T09:19:36.475Z|00462|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:24:19.803800052Z 2023-01-09T09:24:19.803Z|00463|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:24:44.623406756Z 2023-01-09T09:24:44.623Z|00464|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-r7k5k for this chassis.
+2023-01-09T09:24:44.623406756Z 2023-01-09T09:24:44.623Z|00465|binding|INFO|openshift-marketplace_qe-app-registry-r7k5k: Claiming 0a:58:0a:81:02:46 10.129.2.70
+2023-01-09T09:24:44.647399952Z 2023-01-09T09:24:44.647Z|00466|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-r7k5k ovn-installed in OVS
+2023-01-09T09:24:44.647399952Z 2023-01-09T09:24:44.647Z|00467|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-r7k5k up in Southbound
+2023-01-09T09:24:57.474200192Z 2023-01-09T09:24:57.474Z|00468|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-r7k5k from this chassis (sb_readonly=0)
+2023-01-09T09:25:28.150022709Z 2023-01-09T09:25:28.149Z|00469|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:29:05.127446287Z 2023-01-09T09:29:05.127Z|00470|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:29:38.200301300Z 2023-01-09T09:29:38.200Z|00471|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:30:00.657537641Z 2023-01-09T09:30:00.657Z|00472|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887610-z9vst for this chassis.
+2023-01-09T09:30:00.657537641Z 2023-01-09T09:30:00.657Z|00473|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887610-z9vst: Claiming 0a:58:0a:81:02:47 10.129.2.71
+2023-01-09T09:30:00.682324305Z 2023-01-09T09:30:00.682Z|00474|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887610-z9vst up in Southbound
+2023-01-09T09:30:00.682723219Z 2023-01-09T09:30:00.682Z|00475|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887610-z9vst ovn-installed in OVS
+2023-01-09T09:30:03.963738509Z 2023-01-09T09:30:03.963Z|00476|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887610-z9vst from this chassis (sb_readonly=0)
+2023-01-09T09:30:34.873189794Z 2023-01-09T09:30:34.873Z|00477|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:31:45.556697663Z 2023-01-09T09:31:45.556Z|00478|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:35:33.784648208Z 2023-01-09T09:35:33.784Z|00479|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:35:47.518958122Z 2023-01-09T09:35:47.518Z|00480|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-66b9x for this chassis.
+2023-01-09T09:35:47.518958122Z 2023-01-09T09:35:47.518Z|00481|binding|INFO|openshift-marketplace_qe-app-registry-66b9x: Claiming 0a:58:0a:81:02:48 10.129.2.72
+2023-01-09T09:35:47.542997462Z 2023-01-09T09:35:47.542Z|00482|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-66b9x ovn-installed in OVS
+2023-01-09T09:35:47.542997462Z 2023-01-09T09:35:47.542Z|00483|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-66b9x up in Southbound
+2023-01-09T09:36:00.002180903Z 2023-01-09T09:36:00.002Z|00484|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-66b9x from this chassis (sb_readonly=0)
+2023-01-09T09:36:30.722221001Z 2023-01-09T09:36:30.722Z|00485|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:39:35.849892618Z 2023-01-09T09:39:35.849Z|00486|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:40:08.992367062Z 2023-01-09T09:40:08.992Z|00487|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:42:59.466642462Z 2023-01-09T09:42:59.466Z|00488|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:45:00.708106913Z 2023-01-09T09:45:00.708Z|00489|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887625-hhdqk for this chassis.
+2023-01-09T09:45:00.708106913Z 2023-01-09T09:45:00.708Z|00490|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887625-hhdqk: Claiming 0a:58:0a:81:02:49 10.129.2.73
+2023-01-09T09:45:00.732071488Z 2023-01-09T09:45:00.732Z|00491|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887625-hhdqk up in Southbound
+2023-01-09T09:45:00.732457794Z 2023-01-09T09:45:00.732Z|00492|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887625-hhdqk ovn-installed in OVS
+2023-01-09T09:45:04.102435452Z 2023-01-09T09:45:04.102Z|00493|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887625-hhdqk from this chassis (sb_readonly=0)
+2023-01-09T09:46:13.697753934Z 2023-01-09T09:46:13.697Z|00494|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T09:49:59.012472076Z 2023-01-09T09:49:59.012Z|00495|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-bmfw8 for this chassis.
+2023-01-09T09:49:59.012472076Z 2023-01-09T09:49:59.012Z|00496|binding|INFO|openshift-marketplace_qe-app-registry-bmfw8: Claiming 0a:58:0a:81:02:4a 10.129.2.74
+2023-01-09T09:49:59.036757628Z 2023-01-09T09:49:59.036Z|00497|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-bmfw8 up in Southbound
+2023-01-09T09:49:59.037133534Z 2023-01-09T09:49:59.037Z|00498|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-bmfw8 ovn-installed in OVS
+2023-01-09T09:50:12.018120046Z 2023-01-09T09:50:12.018Z|00499|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-bmfw8 from this chassis (sb_readonly=0)
+2023-01-09T09:50:43.804767031Z 2023-01-09T09:50:43.804Z|00500|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:54:25.452164895Z 2023-01-09T09:54:25.452Z|00501|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:56:42.501711156Z 2023-01-09T09:56:42.501Z|00502|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:00:00.691284742Z 2023-01-09T10:00:00.691Z|00503|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887640-ln8h5 for this chassis.
+2023-01-09T10:00:00.691284742Z 2023-01-09T10:00:00.691Z|00504|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887640-ln8h5: Claiming 0a:58:0a:81:02:4b 10.129.2.75
+2023-01-09T10:00:00.715136872Z 2023-01-09T10:00:00.715Z|00505|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887640-ln8h5 up in Southbound
+2023-01-09T10:00:00.715563300Z 2023-01-09T10:00:00.715Z|00506|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887640-ln8h5 ovn-installed in OVS
+2023-01-09T10:00:05.177510784Z 2023-01-09T10:00:05.177Z|00507|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887640-ln8h5 from this chassis (sb_readonly=0)
+2023-01-09T10:00:07.901674373Z 2023-01-09T10:00:07.901Z|00508|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-846rg for this chassis.
+2023-01-09T10:00:07.901674373Z 2023-01-09T10:00:07.901Z|00509|binding|INFO|openshift-marketplace_qe-app-registry-846rg: Claiming 0a:58:0a:81:02:4c 10.129.2.76
+2023-01-09T10:00:07.925743642Z 2023-01-09T10:00:07.925Z|00510|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-846rg up in Southbound
+2023-01-09T10:00:07.926132753Z 2023-01-09T10:00:07.926Z|00511|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-846rg ovn-installed in OVS
+2023-01-09T10:00:20.427143100Z 2023-01-09T10:00:20.427Z|00512|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-846rg from this chassis (sb_readonly=0)
+2023-01-09T10:01:10.577173689Z 2023-01-09T10:01:10.577Z|00513|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:05:01.230204143Z 2023-01-09T10:05:01.230Z|00514|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:07:28.389634395Z 2023-01-09T10:07:28.389Z|00515|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:10:20.911766464Z 2023-01-09T10:10:20.911Z|00516|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-ncxld for this chassis.
+2023-01-09T10:10:20.911766464Z 2023-01-09T10:10:20.911Z|00517|binding|INFO|openshift-marketplace_qe-app-registry-ncxld: Claiming 0a:58:0a:81:02:4d 10.129.2.77
+2023-01-09T10:10:20.935895281Z 2023-01-09T10:10:20.935Z|00518|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-ncxld up in Southbound
+2023-01-09T10:10:20.936365799Z 2023-01-09T10:10:20.936Z|00519|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-ncxld ovn-installed in OVS
+2023-01-09T10:10:33.891138501Z 2023-01-09T10:10:33.891Z|00520|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-ncxld from this chassis (sb_readonly=0)
+2023-01-09T10:11:04.602292355Z 2023-01-09T10:11:04.602Z|00521|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:12:09.535315405Z 2023-01-09T10:12:09.535Z|00522|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:13:25.460329481Z 2023-01-09T10:13:25.460Z|00523|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:15:00.650441425Z 2023-01-09T10:15:00.650Z|00524|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887655-hfqm6 for this chassis.
+2023-01-09T10:15:00.650441425Z 2023-01-09T10:15:00.650Z|00525|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887655-hfqm6: Claiming 0a:58:0a:81:02:4e 10.129.2.78
+2023-01-09T10:15:00.674980367Z 2023-01-09T10:15:00.674Z|00526|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887655-hfqm6 up in Southbound
+2023-01-09T10:15:00.675348318Z 2023-01-09T10:15:00.675Z|00527|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887655-hfqm6 ovn-installed in OVS
+2023-01-09T10:15:04.312829594Z 2023-01-09T10:15:04.312Z|00528|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887655-hfqm6 from this chassis (sb_readonly=0)
+2023-01-09T10:15:38.016947171Z 2023-01-09T10:15:38.016Z|00529|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:18:06.312845264Z 2023-01-09T10:18:06.312Z|00530|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:21:14.372158158Z 2023-01-09T10:21:14.372Z|00531|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-c4qtp for this chassis.
+2023-01-09T10:21:14.372158158Z 2023-01-09T10:21:14.372Z|00532|binding|INFO|openshift-marketplace_qe-app-registry-c4qtp: Claiming 0a:58:0a:81:02:4f 10.129.2.79
+2023-01-09T10:21:14.400242827Z 2023-01-09T10:21:14.400Z|00533|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c4qtp ovn-installed in OVS
+2023-01-09T10:21:14.400242827Z 2023-01-09T10:21:14.400Z|00534|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c4qtp up in Southbound
+2023-01-09T10:21:27.434598125Z 2023-01-09T10:21:27.434Z|00535|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-c4qtp from this chassis (sb_readonly=0)
+2023-01-09T10:21:58.142193564Z 2023-01-09T10:21:58.142Z|00536|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:22:39.847188045Z 2023-01-09T10:22:39.847Z|00537|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:23:44.329200422Z 2023-01-09T10:23:44.329Z|00538|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:26:28.920254674Z 2023-01-09T10:26:28.920Z|00539|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:29:25.308598072Z 2023-01-09T10:29:25.308Z|00540|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:30:00.649271833Z 2023-01-09T10:30:00.649Z|00541|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887670-856wh for this chassis.
+2023-01-09T10:30:00.649271833Z 2023-01-09T10:30:00.649Z|00542|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887670-856wh: Claiming 0a:58:0a:81:02:50 10.129.2.80
+2023-01-09T10:30:00.674028424Z 2023-01-09T10:30:00.673Z|00543|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887670-856wh up in Southbound
+2023-01-09T10:30:00.674449848Z 2023-01-09T10:30:00.674Z|00544|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887670-856wh ovn-installed in OVS
+2023-01-09T10:30:04.500778352Z 2023-01-09T10:30:04.500Z|00545|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887670-856wh from this chassis (sb_readonly=0)
+2023-01-09T10:30:35.417180023Z 2023-01-09T10:30:35.417Z|00546|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:31:30.231157172Z 2023-01-09T10:31:30.231Z|00547|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-rcn79 for this chassis.
+2023-01-09T10:31:30.231157172Z 2023-01-09T10:31:30.231Z|00548|binding|INFO|openshift-marketplace_qe-app-registry-rcn79: Claiming 0a:58:0a:81:02:51 10.129.2.81
+2023-01-09T10:31:30.255055831Z 2023-01-09T10:31:30.255Z|00549|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rcn79 ovn-installed in OVS
+2023-01-09T10:31:30.255055831Z 2023-01-09T10:31:30.255Z|00550|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rcn79 up in Southbound
+2023-01-09T10:31:42.915020057Z 2023-01-09T10:31:42.914Z|00551|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-rcn79 from this chassis (sb_readonly=0)
+2023-01-09T10:32:13.644687261Z 2023-01-09T10:32:13.644Z|00552|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:33:32.007336373Z 2023-01-09T10:33:32.007Z|00553|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:34:05.213083638Z 2023-01-09T10:34:05.213Z|00554|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:37:35.804188220Z 2023-01-09T10:37:35.804Z|00555|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:39:59.224135605Z 2023-01-09T10:39:59.224Z|00556|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:42:29.792342295Z 2023-01-09T10:42:29.792Z|00557|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-6dkpp for this chassis.
+2023-01-09T10:42:29.792342295Z 2023-01-09T10:42:29.792Z|00558|binding|INFO|openshift-marketplace_qe-app-registry-6dkpp: Claiming 0a:58:0a:81:02:52 10.129.2.82
+2023-01-09T10:42:29.816288863Z 2023-01-09T10:42:29.816Z|00559|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-6dkpp ovn-installed in OVS
+2023-01-09T10:42:29.816288863Z 2023-01-09T10:42:29.816Z|00560|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-6dkpp up in Southbound
+2023-01-09T10:42:42.551735634Z 2023-01-09T10:42:42.551Z|00561|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-6dkpp from this chassis (sb_readonly=0)
+2023-01-09T10:43:13.267217851Z 2023-01-09T10:43:13.267Z|00562|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:44:18.882771944Z 2023-01-09T10:44:18.882Z|00563|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:44:52.047166504Z 2023-01-09T10:44:52.047Z|00564|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:45:00.652053450Z 2023-01-09T10:45:00.652Z|00565|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887685-wgz9k for this chassis.
+2023-01-09T10:45:00.652053450Z 2023-01-09T10:45:00.652Z|00566|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887685-wgz9k: Claiming 0a:58:0a:81:02:53 10.129.2.83
+2023-01-09T10:45:00.676666079Z 2023-01-09T10:45:00.676Z|00567|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887685-wgz9k up in Southbound
+2023-01-09T10:45:00.677082637Z 2023-01-09T10:45:00.677Z|00568|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887685-wgz9k ovn-installed in OVS
+2023-01-09T10:45:03.686851290Z 2023-01-09T10:45:03.686Z|00569|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887685-wgz9k from this chassis (sb_readonly=0)
+2023-01-09T10:45:34.598971231Z 2023-01-09T10:45:34.598Z|00570|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:48:25.701320176Z 2023-01-09T10:48:25.701Z|00571|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:50:27.053964893Z 2023-01-09T10:50:27.053Z|00572|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:52:29.737097928Z 2023-01-09T10:52:29.737Z|00573|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-wbnbm for this chassis.
+2023-01-09T10:52:29.737097928Z 2023-01-09T10:52:29.737Z|00574|binding|INFO|openshift-marketplace_qe-app-registry-wbnbm: Claiming 0a:58:0a:81:02:54 10.129.2.84
+2023-01-09T10:52:29.762041827Z 2023-01-09T10:52:29.762Z|00575|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-wbnbm up in Southbound
+2023-01-09T10:52:29.762481613Z 2023-01-09T10:52:29.762Z|00576|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-wbnbm ovn-installed in OVS
+2023-01-09T10:52:42.021635664Z 2023-01-09T10:52:42.021Z|00577|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-wbnbm from this chassis (sb_readonly=0)
+2023-01-09T10:53:12.734707525Z 2023-01-09T10:53:12.734Z|00578|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:55:24.540649937Z 2023-01-09T10:55:24.540Z|00579|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:55:57.946114055Z 2023-01-09T10:55:57.946Z|00580|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:59:11.606107512Z 2023-01-09T10:59:11.606Z|00581|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:00:00.695740481Z 2023-01-09T11:00:00.695Z|00582|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887700-zhrmw for this chassis.
+2023-01-09T11:00:00.695740481Z 2023-01-09T11:00:00.695Z|00583|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887700-zhrmw: Claiming 0a:58:0a:81:02:55 10.129.2.85
+2023-01-09T11:00:00.720200854Z 2023-01-09T11:00:00.720Z|00584|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887700-zhrmw up in Southbound
+2023-01-09T11:00:00.720671539Z 2023-01-09T11:00:00.720Z|00585|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887700-zhrmw ovn-installed in OVS
+2023-01-09T11:00:06.898265226Z 2023-01-09T11:00:06.898Z|00586|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887700-zhrmw from this chassis (sb_readonly=0)
+2023-01-09T11:00:37.814197932Z 2023-01-09T11:00:37.814Z|00587|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:01:24.141536772Z 2023-01-09T11:01:24.141Z|00588|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:02:46.349050091Z 2023-01-09T11:02:46.349Z|00589|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-b9chw for this chassis.
+2023-01-09T11:02:46.349050091Z 2023-01-09T11:02:46.349Z|00590|binding|INFO|openshift-marketplace_qe-app-registry-b9chw: Claiming 0a:58:0a:81:02:56 10.129.2.86
+2023-01-09T11:02:46.373016438Z 2023-01-09T11:02:46.372Z|00591|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-b9chw up in Southbound
+2023-01-09T11:02:46.373442441Z 2023-01-09T11:02:46.373Z|00592|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-b9chw ovn-installed in OVS
+2023-01-09T11:02:59.451604180Z 2023-01-09T11:02:59.451Z|00593|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-b9chw from this chassis (sb_readonly=0)
+2023-01-09T11:03:30.215237462Z 2023-01-09T11:03:30.215Z|00594|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T11:05:52.997947533Z 2023-01-09T11:05:52.997Z|00595|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:06:25.780529178Z 2023-01-09T11:06:25.780Z|00596|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:10:15.574187473Z 2023-01-09T11:10:15.574Z|00597|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:12:02.899562522Z 2023-01-09T11:12:02.899Z|00598|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:13:14.900590587Z 2023-01-09T11:13:14.900Z|00599|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-rkh6b for this chassis.
+2023-01-09T11:13:14.900590587Z 2023-01-09T11:13:14.900Z|00600|binding|INFO|openshift-marketplace_qe-app-registry-rkh6b: Claiming 0a:58:0a:81:02:57 10.129.2.87
+2023-01-09T11:13:14.928273704Z 2023-01-09T11:13:14.928Z|00601|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rkh6b up in Southbound
+2023-01-09T11:13:14.928760354Z 2023-01-09T11:13:14.928Z|00602|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-rkh6b ovn-installed in OVS
+2023-01-09T11:13:28.004113775Z 2023-01-09T11:13:28.004Z|00603|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-rkh6b from this chassis (sb_readonly=0)
+2023-01-09T11:13:58.722453407Z 2023-01-09T11:13:58.722Z|00604|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:15:00.667656413Z 2023-01-09T11:15:00.667Z|00605|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887715-4rcdd for this chassis.
+2023-01-09T11:15:00.667656413Z 2023-01-09T11:15:00.667Z|00606|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887715-4rcdd: Claiming 0a:58:0a:81:02:58 10.129.2.88
+2023-01-09T11:15:00.691853232Z 2023-01-09T11:15:00.691Z|00607|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887715-4rcdd ovn-installed in OVS
+2023-01-09T11:15:00.691853232Z 2023-01-09T11:15:00.691Z|00608|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887715-4rcdd up in Southbound
+2023-01-09T11:15:05.042326368Z 2023-01-09T11:15:05.042Z|00609|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887715-4rcdd from this chassis (sb_readonly=0)
+2023-01-09T11:15:35.958998662Z 2023-01-09T11:15:35.958Z|00610|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:16:34.811841583Z 2023-01-09T11:16:34.811Z|00611|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:17:07.602228410Z 2023-01-09T11:17:07.602Z|00612|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:20:42.253168376Z 2023-01-09T11:20:42.253Z|00613|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:23:00.840071592Z 2023-01-09T11:23:00.840Z|00614|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:23:45.117950987Z 2023-01-09T11:23:45.117Z|00615|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-2k7xg for this chassis.
+2023-01-09T11:23:45.117950987Z 2023-01-09T11:23:45.117Z|00616|binding|INFO|openshift-marketplace_qe-app-registry-2k7xg: Claiming 0a:58:0a:81:02:59 10.129.2.89
+2023-01-09T11:23:45.142944839Z 2023-01-09T11:23:45.142Z|00617|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2k7xg up in Southbound
+2023-01-09T11:23:45.143368232Z 2023-01-09T11:23:45.143Z|00618|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2k7xg ovn-installed in OVS
+2023-01-09T11:23:57.523126908Z 2023-01-09T11:23:57.523Z|00619|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-2k7xg from this chassis (sb_readonly=0)
+2023-01-09T11:24:28.214092995Z 2023-01-09T11:24:28.214Z|00620|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:26:44.715592638Z 2023-01-09T11:26:44.715Z|00621|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:27:17.328348218Z 2023-01-09T11:27:17.328Z|00622|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:30:00.654408584Z 2023-01-09T11:30:00.654Z|00623|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887730-ljsxb for this chassis.
+2023-01-09T11:30:00.654408584Z 2023-01-09T11:30:00.654Z|00624|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887730-ljsxb: Claiming 0a:58:0a:81:02:5a 10.129.2.90
+2023-01-09T11:30:00.678554186Z 2023-01-09T11:30:00.678Z|00625|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887730-ljsxb ovn-installed in OVS
+2023-01-09T11:30:00.678554186Z 2023-01-09T11:30:00.678Z|00626|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887730-ljsxb up in Southbound
+2023-01-09T11:30:04.194416039Z 2023-01-09T11:30:04.194Z|00627|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887730-ljsxb from this chassis (sb_readonly=0)
+2023-01-09T11:31:12.024063802Z 2023-01-09T11:31:12.024Z|00628|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:33:21.667318671Z 2023-01-09T11:33:21.667Z|00629|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:34:58.455589996Z 2023-01-09T11:34:58.455Z|00630|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-gmpq2 for this chassis.
+2023-01-09T11:34:58.455589996Z 2023-01-09T11:34:58.455Z|00631|binding|INFO|openshift-marketplace_qe-app-registry-gmpq2: Claiming 0a:58:0a:81:02:5b 10.129.2.91
+2023-01-09T11:34:58.479837799Z 2023-01-09T11:34:58.479Z|00632|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-gmpq2 up in Southbound
+2023-01-09T11:34:58.480229158Z 2023-01-09T11:34:58.480Z|00633|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-gmpq2 ovn-installed in OVS
+2023-01-09T11:35:11.113211120Z 2023-01-09T11:35:11.113Z|00634|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-gmpq2 from this chassis (sb_readonly=0)
+2023-01-09T11:35:49.100643442Z 2023-01-09T11:35:49.100Z|00635|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:38:09.725949756Z 2023-01-09T11:38:09.725Z|00636|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:38:42.299280867Z 2023-01-09T11:38:42.299Z|00637|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:43:23.078853032Z 2023-01-09T11:43:23.078Z|00638|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:44:18.715210304Z 2023-01-09T11:44:18.715Z|00639|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:45:00.652211760Z 2023-01-09T11:45:00.652Z|00640|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887745-g8bdk for this chassis.
+2023-01-09T11:45:00.652211760Z 2023-01-09T11:45:00.652Z|00641|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887745-g8bdk: Claiming 0a:58:0a:81:02:5c 10.129.2.92
+2023-01-09T11:45:00.676221538Z 2023-01-09T11:45:00.676Z|00642|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887745-g8bdk up in Southbound
+2023-01-09T11:45:00.676585710Z 2023-01-09T11:45:00.676Z|00643|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887745-g8bdk ovn-installed in OVS
+2023-01-09T11:45:04.339840921Z 2023-01-09T11:45:04.339Z|00644|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887745-g8bdk from this chassis (sb_readonly=0)
+2023-01-09T11:45:30.502654898Z 2023-01-09T11:45:30.502Z|00645|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-lvbfs for this chassis.
+2023-01-09T11:45:30.502654898Z 2023-01-09T11:45:30.502Z|00646|binding|INFO|openshift-marketplace_qe-app-registry-lvbfs: Claiming 0a:58:0a:81:02:5d 10.129.2.93
+2023-01-09T11:45:30.531333404Z 2023-01-09T11:45:30.531Z|00647|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-lvbfs up in Southbound
+2023-01-09T11:45:30.531769853Z 2023-01-09T11:45:30.531Z|00648|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-lvbfs ovn-installed in OVS
+2023-01-09T11:45:43.603699556Z 2023-01-09T11:45:43.603Z|00649|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-lvbfs from this chassis (sb_readonly=0)
+2023-01-09T11:46:14.349135456Z 2023-01-09T11:46:14.349Z|00650|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:49:32.117807280Z 2023-01-09T11:49:32.117Z|00651|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:53:41.827643062Z 2023-01-09T11:53:41.827Z|00652|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:55:23.674508757Z 2023-01-09T11:55:23.674Z|00653|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:56:18.189221158Z 2023-01-09T11:56:18.189Z|00654|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-fqvnc for this chassis.
+2023-01-09T11:56:18.189221158Z 2023-01-09T11:56:18.189Z|00655|binding|INFO|openshift-marketplace_qe-app-registry-fqvnc: Claiming 0a:58:0a:81:02:5e 10.129.2.94
+2023-01-09T11:56:18.213379068Z 2023-01-09T11:56:18.213Z|00656|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-fqvnc up in Southbound
+2023-01-09T11:56:18.213786007Z 2023-01-09T11:56:18.213Z|00657|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-fqvnc ovn-installed in OVS
+2023-01-09T11:56:31.226679303Z 2023-01-09T11:56:31.226Z|00658|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-fqvnc from this chassis (sb_readonly=0)
+2023-01-09T11:57:01.945211697Z 2023-01-09T11:57:01.945Z|00659|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:59:58.872344478Z 2023-01-09T11:59:58.872Z|00660|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:00:00.687045333Z 2023-01-09T12:00:00.687Z|00661|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887760-qfbr4 for this chassis.
+2023-01-09T12:00:00.687045333Z 2023-01-09T12:00:00.687Z|00662|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887760-qfbr4: Claiming 0a:58:0a:81:02:5f 10.129.2.95
+2023-01-09T12:00:00.712103847Z 2023-01-09T12:00:00.712Z|00663|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887760-qfbr4 up in Southbound
+2023-01-09T12:00:00.712688959Z 2023-01-09T12:00:00.712Z|00664|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887760-qfbr4 ovn-installed in OVS
+2023-01-09T12:00:05.564994590Z 2023-01-09T12:00:05.564Z|00665|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887760-qfbr4 from this chassis (sb_readonly=0)
+2023-01-09T12:00:36.071429606Z 2023-01-09T12:00:36.071Z|00666|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:04:17.604200404Z 2023-01-09T12:04:17.604Z|00667|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:06:22.629205752Z 2023-01-09T12:06:22.629Z|00668|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:06:29.353856809Z 2023-01-09T12:06:29.353Z|00669|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-5ld78 for this chassis.
+2023-01-09T12:06:29.353856809Z 2023-01-09T12:06:29.353Z|00670|binding|INFO|openshift-marketplace_qe-app-registry-5ld78: Claiming 0a:58:0a:81:02:60 10.129.2.96
+2023-01-09T12:06:29.378286531Z 2023-01-09T12:06:29.378Z|00671|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-5ld78 up in Southbound
+2023-01-09T12:06:29.378683176Z 2023-01-09T12:06:29.378Z|00672|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-5ld78 ovn-installed in OVS
+2023-01-09T12:06:41.677529409Z 2023-01-09T12:06:41.677Z|00673|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-5ld78 from this chassis (sb_readonly=0)
+2023-01-09T12:07:12.466210778Z 2023-01-09T12:07:12.466Z|00674|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:11:21.808247213Z 2023-01-09T12:11:21.808Z|00675|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:14:40.394773152Z 2023-01-09T12:14:40.394Z|00676|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:15:00.678227493Z 2023-01-09T12:15:00.678Z|00677|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887775-c7sc9 for this chassis.
+2023-01-09T12:15:00.678227493Z 2023-01-09T12:15:00.678Z|00678|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887775-c7sc9: Claiming 0a:58:0a:81:02:61 10.129.2.97
+2023-01-09T12:15:00.702237627Z 2023-01-09T12:15:00.702Z|00679|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887775-c7sc9 ovn-installed in OVS
+2023-01-09T12:15:00.702237627Z 2023-01-09T12:15:00.702Z|00680|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887775-c7sc9 up in Southbound
+2023-01-09T12:15:04.776039096Z 2023-01-09T12:15:04.776Z|00681|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887775-c7sc9 from this chassis (sb_readonly=0)
+2023-01-09T12:15:35.688681129Z 2023-01-09T12:15:35.688Z|00682|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:17:00.213684103Z 2023-01-09T12:17:00.213Z|00683|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-f9rtm for this chassis.
+2023-01-09T12:17:00.213684103Z 2023-01-09T12:17:00.213Z|00684|binding|INFO|openshift-marketplace_qe-app-registry-f9rtm: Claiming 0a:58:0a:81:02:62 10.129.2.98
+2023-01-09T12:17:00.238755483Z 2023-01-09T12:17:00.238Z|00685|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-f9rtm up in Southbound
+2023-01-09T12:17:00.239132140Z 2023-01-09T12:17:00.239Z|00686|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-f9rtm ovn-installed in OVS
+2023-01-09T12:17:13.259107352Z 2023-01-09T12:17:13.259Z|00687|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-f9rtm from this chassis (sb_readonly=0)
+2023-01-09T12:17:43.997195317Z 2023-01-09T12:17:43.997Z|00688|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:21:05.852220778Z 2023-01-09T12:21:05.852Z|00689|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:21:38.577214153Z 2023-01-09T12:21:38.577Z|00690|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:22:30.433886652Z 2023-01-09T12:22:30.433Z|00691|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:25:09.182182669Z 2023-01-09T12:25:09.182Z|00692|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:28:14.782779180Z 2023-01-09T12:28:14.782Z|00693|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-prwdg for this chassis.
+2023-01-09T12:28:14.782779180Z 2023-01-09T12:28:14.782Z|00694|binding|INFO|openshift-marketplace_qe-app-registry-prwdg: Claiming 0a:58:0a:81:02:63 10.129.2.99
+2023-01-09T12:28:14.806744229Z 2023-01-09T12:28:14.806Z|00695|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-prwdg up in Southbound
+2023-01-09T12:28:14.807117867Z 2023-01-09T12:28:14.807Z|00696|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-prwdg ovn-installed in OVS
+2023-01-09T12:28:27.920931010Z 2023-01-09T12:28:27.920Z|00697|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-prwdg from this chassis (sb_readonly=0)
+2023-01-09T12:28:58.656212009Z 2023-01-09T12:28:58.656Z|00698|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:30:00.660581901Z 2023-01-09T12:30:00.660Z|00699|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887790-vhtw6 for this chassis.
+2023-01-09T12:30:00.660581901Z 2023-01-09T12:30:00.660Z|00700|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887790-vhtw6: Claiming 0a:58:0a:81:02:64 10.129.2.100
+2023-01-09T12:30:00.685528504Z 2023-01-09T12:30:00.685Z|00701|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887790-vhtw6 ovn-installed in OVS
+2023-01-09T12:30:00.685528504Z 2023-01-09T12:30:00.685Z|00702|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887790-vhtw6 up in Southbound
+2023-01-09T12:30:05.977776893Z 2023-01-09T12:30:05.977Z|00703|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887790-vhtw6 from this chassis (sb_readonly=0)
+2023-01-09T12:30:36.886578576Z 2023-01-09T12:30:36.886Z|00704|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:31:07.314594066Z 2023-01-09T12:31:07.314Z|00705|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T12:31:40.296424736Z 2023-01-09T12:31:40.296Z|00706|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:32:53.260087394Z 2023-01-09T12:32:53.260Z|00707|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:35:55.048693314Z 2023-01-09T12:35:55.048Z|00708|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:39:04.377025686Z 2023-01-09T12:39:04.376Z|00709|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:40:28.298135871Z 2023-01-09T12:40:28.298Z|00710|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-vp7ns for this chassis.
+2023-01-09T12:40:28.298135871Z 2023-01-09T12:40:28.298Z|00711|binding|INFO|openshift-marketplace_qe-app-registry-vp7ns: Claiming 0a:58:0a:81:02:65 10.129.2.101
+2023-01-09T12:40:28.326639783Z 2023-01-09T12:40:28.326Z|00712|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-vp7ns ovn-installed in OVS
+2023-01-09T12:40:28.326639783Z 2023-01-09T12:40:28.326Z|00713|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-vp7ns up in Southbound
+2023-01-09T12:40:40.660343331Z 2023-01-09T12:40:40.660Z|00714|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-vp7ns from this chassis (sb_readonly=0)
+2023-01-09T12:41:26.719033120Z 2023-01-09T12:41:26.718Z|00715|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:42:00.073191568Z 2023-01-09T12:42:00.073Z|00716|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:43:53.223047880Z 2023-01-09T12:43:53.223Z|00717|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:45:00.654795088Z 2023-01-09T12:45:00.654Z|00718|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887805-pnnl8 for this chassis.
+2023-01-09T12:45:00.654795088Z 2023-01-09T12:45:00.654Z|00719|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887805-pnnl8: Claiming 0a:58:0a:81:02:66 10.129.2.102
+2023-01-09T12:45:00.679327451Z 2023-01-09T12:45:00.679Z|00720|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887805-pnnl8 up in Southbound
+2023-01-09T12:45:00.679729736Z 2023-01-09T12:45:00.679Z|00721|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887805-pnnl8 ovn-installed in OVS
+2023-01-09T12:45:03.132523790Z 2023-01-09T12:45:03.132Z|00722|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887805-pnnl8 from this chassis (sb_readonly=0)
+2023-01-09T12:45:34.046114725Z 2023-01-09T12:45:34.046Z|00723|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:49:40.212476745Z 2023-01-09T12:49:40.212Z|00724|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:52:34.806280476Z 2023-01-09T12:52:34.806Z|00725|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-48f8v for this chassis.
+2023-01-09T12:52:34.806280476Z 2023-01-09T12:52:34.806Z|00726|binding|INFO|openshift-marketplace_qe-app-registry-48f8v: Claiming 0a:58:0a:81:02:67 10.129.2.103
+2023-01-09T12:52:34.835313017Z 2023-01-09T12:52:34.835Z|00727|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-48f8v up in Southbound
+2023-01-09T12:52:34.835698957Z 2023-01-09T12:52:34.835Z|00728|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-48f8v ovn-installed in OVS
+2023-01-09T12:52:47.465419874Z 2023-01-09T12:52:47.465Z|00729|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-48f8v from this chassis (sb_readonly=0)
+2023-01-09T12:54:04.022217564Z 2023-01-09T12:54:04.022Z|00730|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:59:45.027226551Z 2023-01-09T12:59:45.027Z|00731|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:00:00.684248522Z 2023-01-09T13:00:00.684Z|00732|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887820-s6nft for this chassis.
+2023-01-09T13:00:00.684248522Z 2023-01-09T13:00:00.684Z|00733|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887820-s6nft: Claiming 0a:58:0a:81:02:68 10.129.2.104
+2023-01-09T13:00:00.708897442Z 2023-01-09T13:00:00.708Z|00734|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887820-s6nft up in Southbound
+2023-01-09T13:00:00.709374875Z 2023-01-09T13:00:00.709Z|00735|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887820-s6nft ovn-installed in OVS
+2023-01-09T13:00:04.294277590Z 2023-01-09T13:00:04.294Z|00736|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887820-s6nft from this chassis (sb_readonly=0)
+2023-01-09T13:00:35.201362930Z 2023-01-09T13:00:35.201Z|00737|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:02:58.163290637Z 2023-01-09T13:02:58.163Z|00738|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:03:55.838039642Z 2023-01-09T13:03:55.838Z|00739|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-kkx89 for this chassis.
+2023-01-09T13:03:55.838039642Z 2023-01-09T13:03:55.838Z|00740|binding|INFO|openshift-marketplace_qe-app-registry-kkx89: Claiming 0a:58:0a:81:02:69 10.129.2.105
+2023-01-09T13:03:55.862466984Z 2023-01-09T13:03:55.862Z|00741|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-kkx89 ovn-installed in OVS
+2023-01-09T13:03:55.862466984Z 2023-01-09T13:03:55.862Z|00742|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-kkx89 up in Southbound
+2023-01-09T13:04:08.080395621Z 2023-01-09T13:04:08.080Z|00743|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-kkx89 from this chassis (sb_readonly=0)
+2023-01-09T13:04:54.937612171Z 2023-01-09T13:04:54.937Z|00744|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:10:25.906888725Z 2023-01-09T13:10:25.906Z|00745|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:13:38.395019834Z 2023-01-09T13:13:38.394Z|00746|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:14:11.584325005Z 2023-01-09T13:14:11.584Z|00747|lflow_cache|INFO|Detected cache inactivity (last active 30011 ms ago): trimming cache
+2023-01-09T13:15:00.673169509Z 2023-01-09T13:15:00.673Z|00748|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887835-7lvl5 for this chassis.
+2023-01-09T13:15:00.673169509Z 2023-01-09T13:15:00.673Z|00749|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887835-7lvl5: Claiming 0a:58:0a:81:02:6a 10.129.2.106
+2023-01-09T13:15:00.698001929Z 2023-01-09T13:15:00.697Z|00750|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887835-7lvl5 up in Southbound
+2023-01-09T13:15:00.698448321Z 2023-01-09T13:15:00.698Z|00751|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887835-7lvl5 ovn-installed in OVS
+2023-01-09T13:15:07.563077747Z 2023-01-09T13:15:07.563Z|00752|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887835-7lvl5 from this chassis (sb_readonly=0)
+2023-01-09T13:15:42.879281138Z 2023-01-09T13:15:42.879Z|00753|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:23:58.887816838Z 2023-01-09T13:23:58.887Z|00754|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-sf9tj for this chassis.
+2023-01-09T13:23:58.887816838Z 2023-01-09T13:23:58.887Z|00755|binding|INFO|openshift-marketplace_qe-app-registry-sf9tj: Claiming 0a:58:0a:81:02:6b 10.129.2.107
+2023-01-09T13:23:58.912824552Z 2023-01-09T13:23:58.912Z|00756|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-sf9tj up in Southbound
+2023-01-09T13:23:58.913192970Z 2023-01-09T13:23:58.913Z|00757|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-sf9tj ovn-installed in OVS
+2023-01-09T13:24:12.063567424Z 2023-01-09T13:24:12.063Z|00758|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-sf9tj from this chassis (sb_readonly=0)
+2023-01-09T13:25:24.447190975Z 2023-01-09T13:25:24.447Z|00759|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:29:30.316869579Z 2023-01-09T13:29:30.316Z|00760|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:30:00.660317919Z 2023-01-09T13:30:00.660Z|00761|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887850-5bvlv for this chassis.
+2023-01-09T13:30:00.660317919Z 2023-01-09T13:30:00.660Z|00762|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887850-5bvlv: Claiming 0a:58:0a:81:02:6c 10.129.2.108
+2023-01-09T13:30:00.685586673Z 2023-01-09T13:30:00.685Z|00763|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887850-5bvlv up in Southbound
+2023-01-09T13:30:00.686029923Z 2023-01-09T13:30:00.686Z|00764|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887850-5bvlv ovn-installed in OVS
+2023-01-09T13:30:03.695917280Z 2023-01-09T13:30:03.695Z|00765|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887850-5bvlv from this chassis (sb_readonly=0)
+2023-01-09T13:30:34.617209649Z 2023-01-09T13:30:34.617Z|00766|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:34:11.714999936Z 2023-01-09T13:34:11.714Z|00767|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-j767k for this chassis.
+2023-01-09T13:34:11.714999936Z 2023-01-09T13:34:11.714Z|00768|binding|INFO|openshift-marketplace_qe-app-registry-j767k: Claiming 0a:58:0a:81:02:6d 10.129.2.109
+2023-01-09T13:34:11.739187042Z 2023-01-09T13:34:11.739Z|00769|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j767k up in Southbound
+2023-01-09T13:34:11.739595839Z 2023-01-09T13:34:11.739Z|00770|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-j767k ovn-installed in OVS
+2023-01-09T13:34:24.584982840Z 2023-01-09T13:34:24.584Z|00771|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-j767k from this chassis (sb_readonly=0)
+2023-01-09T13:34:55.315594103Z 2023-01-09T13:34:55.315Z|00772|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:36:51.384778519Z 2023-01-09T13:36:51.384Z|00773|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:40:23.976992124Z 2023-01-09T13:40:23.976Z|00774|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:44:24.185043107Z 2023-01-09T13:44:24.185Z|00775|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-cwvvd for this chassis.
+2023-01-09T13:44:24.185043107Z 2023-01-09T13:44:24.185Z|00776|binding|INFO|openshift-marketplace_qe-app-registry-cwvvd: Claiming 0a:58:0a:81:02:6e 10.129.2.110
+2023-01-09T13:44:24.209292532Z 2023-01-09T13:44:24.209Z|00777|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-cwvvd ovn-installed in OVS
+2023-01-09T13:44:24.209292532Z 2023-01-09T13:44:24.209Z|00778|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-cwvvd up in Southbound
+2023-01-09T13:44:37.076279288Z 2023-01-09T13:44:37.076Z|00779|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-cwvvd from this chassis (sb_readonly=0)
+2023-01-09T13:45:00.648699908Z 2023-01-09T13:45:00.648Z|00780|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887865-gplj9 for this chassis.
+2023-01-09T13:45:00.648699908Z 2023-01-09T13:45:00.648Z|00781|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887865-gplj9: Claiming 0a:58:0a:81:02:6f 10.129.2.111
+2023-01-09T13:45:00.676991483Z 2023-01-09T13:45:00.676Z|00782|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887865-gplj9 up in Southbound
+2023-01-09T13:45:00.677377481Z 2023-01-09T13:45:00.677Z|00783|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887865-gplj9 ovn-installed in OVS
+2023-01-09T13:45:03.957639588Z 2023-01-09T13:45:03.957Z|00784|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887865-gplj9 from this chassis (sb_readonly=0)
+2023-01-09T13:45:34.865107358Z 2023-01-09T13:45:34.865Z|00785|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:47:25.302060268Z 2023-01-09T13:47:25.302Z|00786|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:47:58.311276900Z 2023-01-09T13:47:58.311Z|00787|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:51:13.873581293Z 2023-01-09T13:51:13.873Z|00788|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:56:31.727554618Z 2023-01-09T13:56:31.727Z|00789|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-dlnng for this chassis.
+2023-01-09T13:56:31.727554618Z 2023-01-09T13:56:31.727Z|00790|binding|INFO|openshift-marketplace_qe-app-registry-dlnng: Claiming 0a:58:0a:81:02:70 10.129.2.112
+2023-01-09T13:56:31.751569700Z 2023-01-09T13:56:31.751Z|00791|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-dlnng up in Southbound
+2023-01-09T13:56:31.751992229Z 2023-01-09T13:56:31.751Z|00792|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-dlnng ovn-installed in OVS
+2023-01-09T13:56:44.818504063Z 2023-01-09T13:56:44.818Z|00793|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-dlnng from this chassis (sb_readonly=0)
+2023-01-09T13:57:15.537701994Z 2023-01-09T13:57:15.537Z|00794|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:59:17.860230187Z 2023-01-09T13:59:17.860Z|00795|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:59:50.334509266Z 2023-01-09T13:59:50.334Z|00796|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:00:00.681030935Z 2023-01-09T14:00:00.680Z|00797|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887880-lw8r7 for this chassis.
+2023-01-09T14:00:00.681030935Z 2023-01-09T14:00:00.681Z|00798|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887880-lw8r7: Claiming 0a:58:0a:81:02:71 10.129.2.113
+2023-01-09T14:00:00.705517207Z 2023-01-09T14:00:00.705Z|00799|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887880-lw8r7 up in Southbound
+2023-01-09T14:00:00.705961910Z 2023-01-09T14:00:00.705Z|00800|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887880-lw8r7 ovn-installed in OVS
+2023-01-09T14:00:03.105171926Z 2023-01-09T14:00:03.105Z|00801|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887880-lw8r7 from this chassis (sb_readonly=0)
+2023-01-09T14:00:34.017442488Z 2023-01-09T14:00:34.017Z|00802|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:02:22.793115173Z 2023-01-09T14:02:22.793Z|00803|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:08:10.145862563Z 2023-01-09T14:08:10.145Z|00804|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:08:46.720707946Z 2023-01-09T14:08:46.720Z|00805|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-g2qxj for this chassis.
+2023-01-09T14:08:46.720707946Z 2023-01-09T14:08:46.720Z|00806|binding|INFO|openshift-marketplace_qe-app-registry-g2qxj: Claiming 0a:58:0a:81:02:72 10.129.2.114
+2023-01-09T14:08:46.744720923Z 2023-01-09T14:08:46.744Z|00807|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-g2qxj up in Southbound
+2023-01-09T14:08:46.745128917Z 2023-01-09T14:08:46.745Z|00808|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-g2qxj ovn-installed in OVS
+2023-01-09T14:08:59.568112027Z 2023-01-09T14:08:59.568Z|00809|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-g2qxj from this chassis (sb_readonly=0)
+2023-01-09T14:09:53.070720558Z 2023-01-09T14:09:53.070Z|00810|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:13:23.657298501Z 2023-01-09T14:13:23.657Z|00811|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:15:00.660116394Z 2023-01-09T14:15:00.660Z|00812|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887895-jp8ch for this chassis.
+2023-01-09T14:15:00.660116394Z 2023-01-09T14:15:00.660Z|00813|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887895-jp8ch: Claiming 0a:58:0a:81:02:73 10.129.2.115
+2023-01-09T14:15:00.684731418Z 2023-01-09T14:15:00.684Z|00814|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887895-jp8ch up in Southbound
+2023-01-09T14:15:00.685115192Z 2023-01-09T14:15:00.685Z|00815|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887895-jp8ch ovn-installed in OVS
+2023-01-09T14:15:04.231313861Z 2023-01-09T14:15:04.231Z|00816|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887895-jp8ch from this chassis (sb_readonly=0)
+2023-01-09T14:15:35.144026622Z 2023-01-09T14:15:35.143Z|00817|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:19:27.504217099Z 2023-01-09T14:19:27.504Z|00818|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T14:20:00.893160912Z 2023-01-09T14:20:00.893Z|00819|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-2w7q8 for this chassis.
+2023-01-09T14:20:00.893160912Z 2023-01-09T14:20:00.893Z|00820|binding|INFO|openshift-marketplace_qe-app-registry-2w7q8: Claiming 0a:58:0a:81:02:74 10.129.2.116
+2023-01-09T14:20:00.917349088Z 2023-01-09T14:20:00.917Z|00821|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2w7q8 up in Southbound
+2023-01-09T14:20:00.917853830Z 2023-01-09T14:20:00.917Z|00822|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-2w7q8 ovn-installed in OVS
+2023-01-09T14:20:13.166419603Z 2023-01-09T14:20:13.166Z|00823|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-2w7q8 from this chassis (sb_readonly=0)
+2023-01-09T14:20:43.883068057Z 2023-01-09T14:20:43.883Z|00824|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:24:16.575280368Z 2023-01-09T14:24:16.575Z|00825|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:29:41.523435175Z 2023-01-09T14:29:41.523Z|00826|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:30:00.655464583Z 2023-01-09T14:30:00.655Z|00827|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887910-d8fwp for this chassis.
+2023-01-09T14:30:00.655464583Z 2023-01-09T14:30:00.655Z|00828|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887910-d8fwp: Claiming 0a:58:0a:81:02:75 10.129.2.117
+2023-01-09T14:30:00.680179086Z 2023-01-09T14:30:00.680Z|00829|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887910-d8fwp up in Southbound
+2023-01-09T14:30:00.680549986Z 2023-01-09T14:30:00.680Z|00830|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887910-d8fwp ovn-installed in OVS
+2023-01-09T14:30:06.388109082Z 2023-01-09T14:30:06.388Z|00831|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887910-d8fwp from this chassis (sb_readonly=0)
+2023-01-09T14:30:23.293517507Z 2023-01-09T14:30:23.293Z|00832|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-c2pwx for this chassis.
+2023-01-09T14:30:23.293517507Z 2023-01-09T14:30:23.293Z|00833|binding|INFO|openshift-marketplace_qe-app-registry-c2pwx: Claiming 0a:58:0a:81:02:76 10.129.2.118
+2023-01-09T14:30:23.317566469Z 2023-01-09T14:30:23.317Z|00834|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c2pwx ovn-installed in OVS
+2023-01-09T14:30:23.317566469Z 2023-01-09T14:30:23.317Z|00835|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c2pwx up in Southbound
+2023-01-09T14:30:35.661221332Z 2023-01-09T14:30:35.661Z|00836|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-c2pwx from this chassis (sb_readonly=0)
+2023-01-09T14:31:06.375685573Z 2023-01-09T14:31:06.375Z|00837|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:35:44.481173261Z 2023-01-09T14:35:44.481Z|00838|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:39:53.616073747Z 2023-01-09T14:39:53.616Z|00839|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:40:23.439863378Z 2023-01-09T14:40:23.439Z|00840|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-x6t7p for this chassis.
+2023-01-09T14:40:23.439863378Z 2023-01-09T14:40:23.439Z|00841|binding|INFO|openshift-marketplace_qe-app-registry-x6t7p: Claiming 0a:58:0a:81:02:77 10.129.2.119
+2023-01-09T14:40:23.464312195Z 2023-01-09T14:40:23.464Z|00842|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-x6t7p up in Southbound
+2023-01-09T14:40:23.464848114Z 2023-01-09T14:40:23.464Z|00843|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-x6t7p ovn-installed in OVS
+2023-01-09T14:40:36.072451526Z 2023-01-09T14:40:36.072Z|00844|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-x6t7p from this chassis (sb_readonly=0)
+2023-01-09T14:41:06.793797328Z 2023-01-09T14:41:06.793Z|00845|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:44:01.592235232Z 2023-01-09T14:44:01.592Z|00846|binding|INFO|Claiming lport openshift-multus_cni-sysctl-allowlist-ds-bh4dj for this chassis.
+2023-01-09T14:44:01.592235232Z 2023-01-09T14:44:01.592Z|00847|binding|INFO|openshift-multus_cni-sysctl-allowlist-ds-bh4dj: Claiming 0a:58:0a:81:02:78 10.129.2.120
+2023-01-09T14:44:01.616441301Z 2023-01-09T14:44:01.616Z|00848|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-bh4dj ovn-installed in OVS
+2023-01-09T14:44:01.616441301Z 2023-01-09T14:44:01.616Z|00849|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-bh4dj up in Southbound
+2023-01-09T14:44:31.595430801Z 2023-01-09T14:44:31.595Z|00850|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:44:35.591079837Z 2023-01-09T14:44:35.591Z|00851|binding|INFO|Releasing lport openshift-multus_cni-sysctl-allowlist-ds-bh4dj from this chassis (sb_readonly=0)
+2023-01-09T14:45:00.652674918Z 2023-01-09T14:45:00.652Z|00852|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887925-698np for this chassis.
+2023-01-09T14:45:00.652674918Z 2023-01-09T14:45:00.652Z|00853|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887925-698np: Claiming 0a:58:0a:81:02:79 10.129.2.121
+2023-01-09T14:45:00.676955912Z 2023-01-09T14:45:00.676Z|00854|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887925-698np up in Southbound
+2023-01-09T14:45:00.677345051Z 2023-01-09T14:45:00.677Z|00855|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887925-698np ovn-installed in OVS
+2023-01-09T14:45:05.503384730Z 2023-01-09T14:45:05.503Z|00856|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887925-698np from this chassis (sb_readonly=0)
+2023-01-09T14:46:26.285240301Z 2023-01-09T14:46:26.285Z|00857|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:50:28.429954244Z 2023-01-09T14:50:28.429Z|00858|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T14:51:01.072182831Z 2023-01-09T14:51:01.072Z|00859|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:52:39.459703890Z 2023-01-09T14:52:39.459Z|00860|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-txh7k for this chassis.
+2023-01-09T14:52:39.459703890Z 2023-01-09T14:52:39.459Z|00861|binding|INFO|openshift-marketplace_qe-app-registry-txh7k: Claiming 0a:58:0a:81:02:7a 10.129.2.122
+2023-01-09T14:52:39.487844321Z 2023-01-09T14:52:39.487Z|00862|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-txh7k ovn-installed in OVS
+2023-01-09T14:52:39.487844321Z 2023-01-09T14:52:39.487Z|00863|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-txh7k up in Southbound
+2023-01-09T14:52:51.777247426Z 2023-01-09T14:52:51.777Z|00864|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-txh7k from this chassis (sb_readonly=0)
+2023-01-09T14:53:23.168184603Z 2023-01-09T14:53:23.168Z|00865|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:56:30.000998253Z 2023-01-09T14:56:30.000Z|00866|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:00:00.692424273Z 2023-01-09T15:00:00.692Z|00867|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887940-94n2l for this chassis.
+2023-01-09T15:00:00.692424273Z 2023-01-09T15:00:00.692Z|00868|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887940-94n2l: Claiming 0a:58:0a:81:02:7b 10.129.2.123
+2023-01-09T15:00:00.716345389Z 2023-01-09T15:00:00.716Z|00869|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887940-94n2l up in Southbound
+2023-01-09T15:00:00.716777740Z 2023-01-09T15:00:00.716Z|00870|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887940-94n2l ovn-installed in OVS
+2023-01-09T15:00:04.606300666Z 2023-01-09T15:00:04.606Z|00871|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887940-94n2l from this chassis (sb_readonly=0)
+2023-01-09T15:00:58.251704605Z 2023-01-09T15:00:58.251Z|00872|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:01:30.851283573Z 2023-01-09T15:01:30.851Z|00873|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:03:58.027943166Z 2023-01-09T15:03:58.027Z|00874|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:05:33.611077241Z 2023-01-09T15:05:33.611Z|00875|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-grmh5 for this chassis.
+2023-01-09T15:05:33.611077241Z 2023-01-09T15:05:33.611Z|00876|binding|INFO|openshift-marketplace_qe-app-registry-grmh5: Claiming 0a:58:0a:81:02:7c 10.129.2.124
+2023-01-09T15:05:33.634906726Z 2023-01-09T15:05:33.634Z|00877|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-grmh5 ovn-installed in OVS
+2023-01-09T15:05:33.634906726Z 2023-01-09T15:05:33.634Z|00878|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-grmh5 up in Southbound
+2023-01-09T15:05:46.626480490Z 2023-01-09T15:05:46.626Z|00879|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-grmh5 from this chassis (sb_readonly=0)
+2023-01-09T15:06:53.776872408Z 2023-01-09T15:06:53.776Z|00880|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:12:16.042635869Z 2023-01-09T15:12:16.042Z|00881|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T15:12:48.795941941Z 2023-01-09T15:12:48.795Z|00882|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:14:59.963747490Z 2023-01-09T15:14:59.963Z|00883|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:15:00.656240271Z 2023-01-09T15:15:00.656Z|00884|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887955-scl9l for this chassis.
+2023-01-09T15:15:00.656240271Z 2023-01-09T15:15:00.656Z|00885|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887955-scl9l: Claiming 0a:58:0a:81:02:7d 10.129.2.125
+2023-01-09T15:15:00.685360865Z 2023-01-09T15:15:00.685Z|00886|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887955-scl9l ovn-installed in OVS
+2023-01-09T15:15:00.685360865Z 2023-01-09T15:15:00.685Z|00887|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887955-scl9l up in Southbound
+2023-01-09T15:15:04.742995548Z 2023-01-09T15:15:04.742Z|00888|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887955-scl9l from this chassis (sb_readonly=0)
+2023-01-09T15:15:35.654319580Z 2023-01-09T15:15:35.654Z|00889|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:15:55.405475229Z 2023-01-09T15:15:55.405Z|00890|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-c7dws for this chassis.
+2023-01-09T15:15:55.405475229Z 2023-01-09T15:15:55.405Z|00891|binding|INFO|openshift-marketplace_qe-app-registry-c7dws: Claiming 0a:58:0a:81:02:7e 10.129.2.126
+2023-01-09T15:15:55.430163412Z 2023-01-09T15:15:55.430Z|00892|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c7dws up in Southbound
+2023-01-09T15:15:55.430541171Z 2023-01-09T15:15:55.430Z|00893|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-c7dws ovn-installed in OVS
+2023-01-09T15:16:08.113853026Z 2023-01-09T15:16:08.113Z|00894|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-c7dws from this chassis (sb_readonly=0)
+2023-01-09T15:17:11.347687900Z 2023-01-09T15:17:11.347Z|00895|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:22:24.155762435Z 2023-01-09T15:22:24.155Z|00896|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:22:57.524244019Z 2023-01-09T15:22:57.524Z|00897|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:25:14.761228599Z 2023-01-09T15:25:14.761Z|00898|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:26:16.627415519Z 2023-01-09T15:26:16.627Z|00899|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-sbjsg for this chassis.
+2023-01-09T15:26:16.627415519Z 2023-01-09T15:26:16.627Z|00900|binding|INFO|openshift-marketplace_qe-app-registry-sbjsg: Claiming 0a:58:0a:81:02:7f 10.129.2.127
+2023-01-09T15:26:16.652276774Z 2023-01-09T15:26:16.652Z|00901|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-sbjsg up in Southbound
+2023-01-09T15:26:16.652658532Z 2023-01-09T15:26:16.652Z|00902|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-sbjsg ovn-installed in OVS
+2023-01-09T15:26:29.538098590Z 2023-01-09T15:26:29.538Z|00903|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-sbjsg from this chassis (sb_readonly=0)
+2023-01-09T15:27:39.360200846Z 2023-01-09T15:27:39.360Z|00904|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:30:00.656466624Z 2023-01-09T15:30:00.656Z|00905|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_collect-profiles-27887970-9svwx for this chassis.
+2023-01-09T15:30:00.656466624Z 2023-01-09T15:30:00.656Z|00906|binding|INFO|openshift-operator-lifecycle-manager_collect-profiles-27887970-9svwx: Claiming 0a:58:0a:81:02:80 10.129.2.128
+2023-01-09T15:30:00.682786192Z 2023-01-09T15:30:00.682Z|00907|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887970-9svwx ovn-installed in OVS
+2023-01-09T15:30:00.682786192Z 2023-01-09T15:30:00.682Z|00908|binding|INFO|Setting lport openshift-operator-lifecycle-manager_collect-profiles-27887970-9svwx up in Southbound
+2023-01-09T15:30:03.873730119Z 2023-01-09T15:30:03.873Z|00909|binding|INFO|Releasing lport openshift-operator-lifecycle-manager_collect-profiles-27887970-9svwx from this chassis (sb_readonly=0)
+2023-01-09T15:30:34.781247549Z 2023-01-09T15:30:34.781Z|00910|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:32:56.748893508Z 2023-01-09T15:32:56.748Z|00911|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:33:29.415365150Z 2023-01-09T15:33:29.415Z|00912|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:36:32.181539342Z 2023-01-09T15:36:32.181Z|00913|binding|INFO|Claiming lport openshift-marketplace_qe-app-registry-8kn59 for this chassis.
+2023-01-09T15:36:32.181539342Z 2023-01-09T15:36:32.181Z|00914|binding|INFO|openshift-marketplace_qe-app-registry-8kn59: Claiming 0a:58:0a:81:02:81 10.129.2.129
+2023-01-09T15:36:32.205544772Z 2023-01-09T15:36:32.205Z|00915|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-8kn59 up in Southbound
+2023-01-09T15:36:32.206009949Z 2023-01-09T15:36:32.205Z|00916|binding|INFO|Setting lport openshift-marketplace_qe-app-registry-8kn59 ovn-installed in OVS
+2023-01-09T15:36:44.946776495Z 2023-01-09T15:36:44.946Z|00917|binding|INFO|Releasing lport openshift-marketplace_qe-app-registry-8kn59 from this chassis (sb_readonly=0)
+2023-01-09T15:37:21.937640954Z 2023-01-09T15:37:21.937Z|00918|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:38:56.319182964Z 2023-01-09T15:38:56.319Z|00919|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:40:47.348886420Z 2023-01-09T15:40:47.348Z|00920|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache

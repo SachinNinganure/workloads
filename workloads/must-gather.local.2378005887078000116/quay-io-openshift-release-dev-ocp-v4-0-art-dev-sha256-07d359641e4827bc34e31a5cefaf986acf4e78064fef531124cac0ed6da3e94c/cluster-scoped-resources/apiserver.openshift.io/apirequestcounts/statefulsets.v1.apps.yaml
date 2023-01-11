@@ -1,0 +1,1049 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:41:59Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:41:59Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:36:10Z"
+  name: statefulsets.v1.apps
+  resourceVersion: "266606"
+  uid: 6493b074-f28f-4e73-82ea-3e2c792761aa
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 5
+    - byUser:
+      - byVerb:
+        - requestCount: 14
+          verb: get
+        requestCount: 14
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 13
+          verb: watch
+        requestCount: 13
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 13
+          verb: watch
+        requestCount: 13
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      nodeName: 10.0.199.219
+      requestCount: 62
+    requestCount: 67
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:admin
+      nodeName: 10.0.18.164
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 12
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 10
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 4
+          verb: get
+        requestCount: 4
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 48
+    requestCount: 56
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 4
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 24
+          verb: get
+        requestCount: 24
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 24
+          verb: watch
+        requestCount: 24
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: update
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:statefulset-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 124
+    requestCount: 128
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 4
+          verb: create
+        - requestCount: 4
+          verb: update
+        - requestCount: 8
+          verb: watch
+        requestCount: 16
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 16
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: get
+        requestCount: 26
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 23
+          verb: watch
+        requestCount: 23
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 9
+          verb: update
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:serviceaccount:kube-system:statefulset-controller
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 123
+    requestCount: 139
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: get
+        requestCount: 26
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 24
+          verb: watch
+        requestCount: 24
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      nodeName: 10.0.199.219
+      requestCount: 116
+    requestCount: 124
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: watch
+        requestCount: 26
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 25
+          verb: get
+        requestCount: 25
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 115
+    requestCount: 123
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 7
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: get
+        requestCount: 25
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 23
+          verb: watch
+        requestCount: 23
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 22
+          verb: watch
+        requestCount: 22
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 110
+    requestCount: 117
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: watch
+        requestCount: 26
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 24
+          verb: get
+        requestCount: 24
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 115
+    requestCount: 123
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: get
+        requestCount: 26
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 24
+          verb: watch
+        requestCount: 24
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 22
+          verb: watch
+        requestCount: 22
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 111
+    requestCount: 120
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: get
+        requestCount: 25
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 24
+          verb: watch
+        requestCount: 24
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      nodeName: 10.0.199.219
+      requestCount: 115
+    requestCount: 123
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: watch
+        requestCount: 26
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 25
+          verb: get
+        requestCount: 25
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 10.0.199.219
+      requestCount: 114
+    requestCount: 122
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 8
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: watch
+        requestCount: 25
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 25
+          verb: get
+        requestCount: 25
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 22
+          verb: watch
+        requestCount: 22
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 112
+    requestCount: 120
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-operators-redhat:default
+      nodeName: 10.0.160.211
+      requestCount: 5
+    - byUser:
+      - byVerb:
+        - requestCount: 14
+          verb: get
+        requestCount: 14
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 13
+          verb: watch
+        requestCount: 13
+        userAgent: PrometheusOperator/0.60.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-operator
+      - byVerb:
+        - requestCount: 13
+          verb: watch
+        requestCount: 13
+        userAgent: kube-scheduler/v1.25.4+77bec7a
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      nodeName: 10.0.199.219
+      requestCount: 62
+    requestCount: 67
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 1362

@@ -1,0 +1,49 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    networkoperator.openshift.io/ignore-errors: ""
+  creationTimestamp: "2023-01-09T04:38:56Z"
+  generation: 1
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:networkoperator.openshift.io/ignore-errors: {}
+        f:labels:
+          f:prometheus: {}
+          f:role: {}
+        f:ownerReferences:
+          k:{"uid":"b8592153-d60b-43d6-8417-eb32b9b3af15"}: {}
+      f:spec:
+        f:groups: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-01-09T04:38:56Z"
+  name: prometheus-k8s-rules
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+  resourceVersion: "2785"
+  uid: b8dfd243-455c-4734-9e55-d35c0f3d75a3
+spec:
+  groups:
+  - name: multus-admission-controller-monitor-service.rules
+    rules:
+    - expr: |
+        max  (network_attachment_definition_enabled_instance_up) by (networks)
+      record: cluster:network_attachment_definition_enabled_instance_up:max
+    - expr: |
+        max  (network_attachment_definition_instances) by (networks)
+      record: cluster:network_attachment_definition_instances:max

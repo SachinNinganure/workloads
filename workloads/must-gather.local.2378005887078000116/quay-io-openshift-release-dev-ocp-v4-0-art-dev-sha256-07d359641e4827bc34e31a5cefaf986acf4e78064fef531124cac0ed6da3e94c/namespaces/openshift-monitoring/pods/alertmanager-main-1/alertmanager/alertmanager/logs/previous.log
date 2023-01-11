@@ -1,0 +1,6 @@
+2023-01-09T05:30:39.061882706Z ts=2023-01-09T05:30:39.061Z caller=main.go:231 level=info msg="Starting Alertmanager" version="(version=0.24.0, branch=rhaos-4.12-rhel-8, revision=519cbb87494d2830821a0da0a657af69d852c93b)"
+2023-01-09T05:30:39.061952533Z ts=2023-01-09T05:30:39.061Z caller=main.go:232 level=info build_context="(go=go1.19.4, user=root@232132c11c68, date=20230105-00:26:49)"
+2023-01-09T05:30:39.088610345Z ts=2023-01-09T05:30:39.088Z caller=cluster.go:680 level=info component=cluster msg="Waiting for gossip to settle..." interval=2s
+2023-01-09T05:30:39.115335387Z ts=2023-01-09T05:30:39.115Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-01-09T05:30:39.115359970Z ts=2023-01-09T05:30:39.115Z caller=coordinator.go:118 level=error component=configuration msg="Loading configuration file failed" file=/etc/alertmanager/config_out/alertmanager.env.yaml err="open /etc/alertmanager/config_out/alertmanager.env.yaml: no such file or directory"
+2023-01-09T05:30:39.115423260Z ts=2023-01-09T05:30:39.115Z caller=cluster.go:689 level=info component=cluster msg="gossip not settled but continuing anyway" polls=0 elapsed=26.779145ms

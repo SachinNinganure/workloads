@@ -1,0 +1,60 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:01:13Z"
+    creationTimestamp: "2023-01-09T04:41:14Z"
+    labels:
+      app: oauth-openshift
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:01:13Z"
+    name: oauth-openshift
+    namespace: openshift-authentication
+    resourceVersion: "31345"
+    uid: 1a3b1b09-2ced-48f9-a1c1-81156dbf3def
+  subsets:
+  - addresses:
+    - ip: 10.128.0.60
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: oauth-openshift-7db4769fc7-hgm8d
+        namespace: openshift-authentication
+        uid: 43e4edad-6c7a-4653-bfa6-f5495359dc53
+    - ip: 10.129.0.62
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: oauth-openshift-7db4769fc7-2f2q7
+        namespace: openshift-authentication
+        uid: 79f26195-985c-40c7-b734-544517c7ee58
+    - ip: 10.130.0.82
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: oauth-openshift-7db4769fc7-xknq2
+        namespace: openshift-authentication
+        uid: 1e96bf51-8dd4-4224-9f55-d55c76b5d0a0
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268273"

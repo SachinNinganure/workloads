@@ -1,0 +1,677 @@
+2023-01-09T04:39:21.956772695Z 2023-01-09T04:39:21+00:00 - starting ovn-controller
+2023-01-09T04:39:21.994336275Z 2023-01-09T04:39:21Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2023-01-09T04:39:21.995294513Z 2023-01-09T04:39:21.995Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2023-01-09T04:39:21.995316231Z 2023-01-09T04:39:21.995Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2023-01-09T04:39:21.998079706Z 2023-01-09T04:39:21.998Z|00004|main|INFO|OVN internal version is : [22.09.1-20.25.0-68.4]
+2023-01-09T04:39:21.998103952Z 2023-01-09T04:39:21.998Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2023-01-09T04:39:22.017097717Z 2023-01-09T04:39:22.017Z|00006|main|INFO|OVNSB IDL reconnected, force recompute.
+2023-01-09T04:39:24.938070102Z 2023-01-09T04:39:24.938Z|00007|reconnect|INFO|ssl:10.0.199.219:9642: connecting...
+2023-01-09T04:39:24.938332544Z 2023-01-09T04:39:24.938Z|00008|reconnect|INFO|ssl:10.0.199.219:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:24.938403691Z 2023-01-09T04:39:24.938Z|00009|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T04:39:24.938437040Z 2023-01-09T04:39:24.938Z|00010|reconnect|INFO|ssl:10.0.160.211:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:24.938475999Z 2023-01-09T04:39:24.938Z|00011|reconnect|INFO|ssl:10.0.145.4:9642: connecting...
+2023-01-09T04:39:24.939223401Z 2023-01-09T04:39:24.939Z|00012|reconnect|INFO|ssl:10.0.145.4:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:25.940576576Z 2023-01-09T04:39:25.940Z|00013|reconnect|INFO|ssl:10.0.199.219:9642: connecting...
+2023-01-09T04:39:25.940843620Z 2023-01-09T04:39:25.940Z|00014|reconnect|INFO|ssl:10.0.199.219:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:25.940857749Z 2023-01-09T04:39:25.940Z|00015|reconnect|INFO|ssl:10.0.199.219:9642: waiting 2 seconds before reconnect
+2023-01-09T04:39:27.943294675Z 2023-01-09T04:39:27.943Z|00016|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T04:39:27.943370912Z 2023-01-09T04:39:27.943Z|00017|reconnect|INFO|ssl:10.0.160.211:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:27.943370912Z 2023-01-09T04:39:27.943Z|00018|reconnect|INFO|ssl:10.0.160.211:9642: waiting 4 seconds before reconnect
+2023-01-09T04:39:31.947657425Z 2023-01-09T04:39:31.947Z|00019|reconnect|INFO|ssl:10.0.145.4:9642: connecting...
+2023-01-09T04:39:31.948611590Z 2023-01-09T04:39:31.948Z|00020|reconnect|INFO|ssl:10.0.145.4:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:31.948611590Z 2023-01-09T04:39:31.948Z|00021|reconnect|INFO|ssl:10.0.145.4:9642: continuing to reconnect in the background but suppressing further logging
+2023-01-09T04:39:39.956737681Z 2023-01-09T04:39:39.956Z|00022|memory|INFO|14192 kB peak resident set size after 18.0 seconds
+2023-01-09T04:39:39.956737681Z 2023-01-09T04:39:39.956Z|00023|memory|INFO|idl-cells-Open_vSwitch:241
+2023-01-09T04:40:28.000573580Z 2023-01-09T04:40:28.000Z|00024|reconnect|INFO|ssl:10.0.199.219:9642: connected
+2023-01-09T04:40:28.003133293Z 2023-01-09T04:40:28.003Z|00025|features|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:40:28.003133293Z 2023-01-09T04:40:28.003Z|00026|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:40:28.003495403Z 2023-01-09T04:40:28.003Z|00027|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2023-01-09T04:40:28.003495403Z 2023-01-09T04:40:28.003Z|00028|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T04:40:28.003495403Z 2023-01-09T04:40:28.003Z|00029|ofctrl|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:40:28.003518740Z 2023-01-09T04:40:28.003Z|00030|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:40:28.003765874Z 2023-01-09T04:40:28.003Z|00031|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:40:28.004150674Z 2023-01-09T04:40:28.004Z|00032|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:40:28.004350139Z 2023-01-09T04:40:28.004Z|00033|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T04:40:28.008878183Z 2023-01-09T04:40:28.008Z|00001|pinctrl(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T04:40:28.008878183Z 2023-01-09T04:40:28.008Z|00002|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T04:40:28.020222175Z 2023-01-09T04:40:28.020Z|00003|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T04:40:41.182807767Z 2023-01-09T04:40:41.182Z|00034|binding|INFO|Claiming lport etor-GR_ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182807767Z 2023-01-09T04:40:41.182Z|00035|binding|INFO|etor-GR_ip-10-0-160-211.us-east-2.compute.internal: Claiming 06:8f:85:f2:f0:6c
+2023-01-09T04:40:41.182853134Z 2023-01-09T04:40:41.182Z|00036|binding|INFO|Claiming lport cr-rtos-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182853134Z 2023-01-09T04:40:41.182Z|00037|binding|INFO|cr-rtos-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:01 10.130.0.1/23
+2023-01-09T04:40:41.182865540Z 2023-01-09T04:40:41.182Z|00038|binding|INFO|Claiming lport rtoj-GR_ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182865540Z 2023-01-09T04:40:41.182Z|00039|binding|INFO|rtoj-GR_ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:64:40:00:03 100.64.0.3/16
+2023-01-09T04:40:41.182894139Z 2023-01-09T04:40:41.182Z|00040|binding|INFO|Claiming lport rtoe-GR_ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182894139Z 2023-01-09T04:40:41.182Z|00041|binding|INFO|rtoe-GR_ip-10-0-160-211.us-east-2.compute.internal: Claiming 06:8f:85:f2:f0:6c 10.0.160.211/19
+2023-01-09T04:40:41.182918674Z 2023-01-09T04:40:41.182Z|00042|binding|INFO|Claiming lport k8s-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182918674Z 2023-01-09T04:40:41.182Z|00043|binding|INFO|k8s-ip-10-0-160-211.us-east-2.compute.internal: Claiming 1a:02:47:20:76:0b 10.130.0.2
+2023-01-09T04:40:41.182962612Z 2023-01-09T04:40:41.182Z|00044|binding|INFO|Claiming lport jtor-GR_ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:40:41.182962612Z 2023-01-09T04:40:41.182Z|00045|binding|INFO|jtor-GR_ip-10-0-160-211.us-east-2.compute.internal: Claiming router
+2023-01-09T04:40:41.236225118Z 2023-01-09T04:40:41.236Z|00046|binding|INFO|Setting lport k8s-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:40:41.243370456Z 2023-01-09T04:40:41.243Z|00047|binding|INFO|Setting lport k8s-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:40:49.295280756Z 2023-01-09T04:40:49.295Z|00048|binding|INFO|Claiming lport openshift-service-ca-operator_service-ca-operator-bd7598bd9-drwqf for this chassis.
+2023-01-09T04:40:49.295280756Z 2023-01-09T04:40:49.295Z|00049|binding|INFO|openshift-service-ca-operator_service-ca-operator-bd7598bd9-drwqf: Claiming 0a:58:0a:82:00:0c 10.130.0.12
+2023-01-09T04:40:49.297770458Z 2023-01-09T04:40:49.297Z|00050|binding|INFO|Setting lport openshift-service-ca-operator_service-ca-operator-bd7598bd9-drwqf ovn-installed in OVS
+2023-01-09T04:40:49.301289976Z 2023-01-09T04:40:49.301Z|00051|binding|INFO|Setting lport openshift-service-ca-operator_service-ca-operator-bd7598bd9-drwqf up in Southbound
+2023-01-09T04:40:49.321257924Z 2023-01-09T04:40:49.321Z|00052|binding|INFO|Claiming lport openshift-authentication-operator_authentication-operator-649d7b9b68-k7wp6 for this chassis.
+2023-01-09T04:40:49.321257924Z 2023-01-09T04:40:49.321Z|00053|binding|INFO|openshift-authentication-operator_authentication-operator-649d7b9b68-k7wp6: Claiming 0a:58:0a:82:00:17 10.130.0.23
+2023-01-09T04:40:49.323588705Z 2023-01-09T04:40:49.323Z|00054|binding|INFO|Setting lport openshift-authentication-operator_authentication-operator-649d7b9b68-k7wp6 ovn-installed in OVS
+2023-01-09T04:40:49.326856868Z 2023-01-09T04:40:49.326Z|00055|binding|INFO|Setting lport openshift-authentication-operator_authentication-operator-649d7b9b68-k7wp6 up in Southbound
+2023-01-09T04:40:49.501744600Z 2023-01-09T04:40:49.501Z|00056|binding|INFO|Claiming lport openshift-kube-apiserver-operator_kube-apiserver-operator-57d845b467-d22t9 for this chassis.
+2023-01-09T04:40:49.501744600Z 2023-01-09T04:40:49.501Z|00057|binding|INFO|openshift-kube-apiserver-operator_kube-apiserver-operator-57d845b467-d22t9: Claiming 0a:58:0a:82:00:1e 10.130.0.30
+2023-01-09T04:40:49.516565017Z 2023-01-09T04:40:49.516Z|00058|binding|INFO|Setting lport openshift-kube-apiserver-operator_kube-apiserver-operator-57d845b467-d22t9 ovn-installed in OVS
+2023-01-09T04:40:49.516565017Z 2023-01-09T04:40:49.516Z|00059|binding|INFO|Setting lport openshift-kube-apiserver-operator_kube-apiserver-operator-57d845b467-d22t9 up in Southbound
+2023-01-09T04:40:49.599570797Z 2023-01-09T04:40:49.599Z|00060|binding|INFO|Claiming lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-77fd76c7bd-b72vl for this chassis.
+2023-01-09T04:40:49.599570797Z 2023-01-09T04:40:49.599Z|00061|binding|INFO|openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-77fd76c7bd-b72vl: Claiming 0a:58:0a:82:00:07 10.130.0.7
+2023-01-09T04:40:49.603758654Z 2023-01-09T04:40:49.603Z|00062|binding|INFO|Setting lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-77fd76c7bd-b72vl ovn-installed in OVS
+2023-01-09T04:40:49.605779920Z 2023-01-09T04:40:49.605Z|00063|binding|INFO|Setting lport openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-77fd76c7bd-b72vl up in Southbound
+2023-01-09T04:40:49.612029597Z 2023-01-09T04:40:49.611Z|00064|binding|INFO|Claiming lport openshift-cloud-network-config-controller_cloud-network-config-controller-65d4594498-jlqkq for this chassis.
+2023-01-09T04:40:49.612086061Z 2023-01-09T04:40:49.612Z|00065|binding|INFO|openshift-cloud-network-config-controller_cloud-network-config-controller-65d4594498-jlqkq: Claiming 0a:58:0a:82:00:13 10.130.0.19
+2023-01-09T04:40:49.616702921Z 2023-01-09T04:40:49.616Z|00066|binding|INFO|Setting lport openshift-cloud-network-config-controller_cloud-network-config-controller-65d4594498-jlqkq ovn-installed in OVS
+2023-01-09T04:40:49.618108420Z 2023-01-09T04:40:49.618Z|00067|binding|INFO|Setting lport openshift-cloud-network-config-controller_cloud-network-config-controller-65d4594498-jlqkq up in Southbound
+2023-01-09T04:40:49.689304176Z 2023-01-09T04:40:49.689Z|00068|binding|INFO|Claiming lport openshift-etcd-operator_etcd-operator-559f665f64-vms2h for this chassis.
+2023-01-09T04:40:49.689371687Z 2023-01-09T04:40:49.689Z|00069|binding|INFO|openshift-etcd-operator_etcd-operator-559f665f64-vms2h: Claiming 0a:58:0a:82:00:1a 10.130.0.26
+2023-01-09T04:40:49.692808982Z 2023-01-09T04:40:49.692Z|00070|binding|INFO|Setting lport openshift-etcd-operator_etcd-operator-559f665f64-vms2h ovn-installed in OVS
+2023-01-09T04:40:49.695854322Z 2023-01-09T04:40:49.695Z|00071|binding|INFO|Setting lport openshift-etcd-operator_etcd-operator-559f665f64-vms2h up in Southbound
+2023-01-09T04:40:49.737835082Z 2023-01-09T04:40:49.737Z|00072|binding|INFO|Claiming lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-798984bff7-7kwsm for this chassis.
+2023-01-09T04:40:49.737883589Z 2023-01-09T04:40:49.737Z|00073|binding|INFO|openshift-kube-controller-manager-operator_kube-controller-manager-operator-798984bff7-7kwsm: Claiming 0a:58:0a:82:00:0b 10.130.0.11
+2023-01-09T04:40:49.741714492Z 2023-01-09T04:40:49.741Z|00074|binding|INFO|Setting lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-798984bff7-7kwsm ovn-installed in OVS
+2023-01-09T04:40:49.744802993Z 2023-01-09T04:40:49.744Z|00075|binding|INFO|Setting lport openshift-kube-controller-manager-operator_kube-controller-manager-operator-798984bff7-7kwsm up in Southbound
+2023-01-09T04:40:49.809753828Z 2023-01-09T04:40:49.809Z|00076|binding|INFO|Claiming lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-5646746647-rqljw for this chassis.
+2023-01-09T04:40:49.809753828Z 2023-01-09T04:40:49.809Z|00077|binding|INFO|openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-5646746647-rqljw: Claiming 0a:58:0a:82:00:0e 10.130.0.14
+2023-01-09T04:40:49.813541312Z 2023-01-09T04:40:49.813Z|00078|binding|INFO|Setting lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-5646746647-rqljw ovn-installed in OVS
+2023-01-09T04:40:49.816238878Z 2023-01-09T04:40:49.816Z|00079|binding|INFO|Setting lport openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-5646746647-rqljw up in Southbound
+2023-01-09T04:40:49.894694798Z 2023-01-09T04:40:49.894Z|00080|binding|INFO|Claiming lport openshift-apiserver-operator_openshift-apiserver-operator-f9d986b8d-7zlfc for this chassis.
+2023-01-09T04:40:49.894694798Z 2023-01-09T04:40:49.894Z|00081|binding|INFO|openshift-apiserver-operator_openshift-apiserver-operator-f9d986b8d-7zlfc: Claiming 0a:58:0a:82:00:09 10.130.0.9
+2023-01-09T04:40:49.898914301Z 2023-01-09T04:40:49.898Z|00082|binding|INFO|Setting lport openshift-apiserver-operator_openshift-apiserver-operator-f9d986b8d-7zlfc ovn-installed in OVS
+2023-01-09T04:40:49.900953539Z 2023-01-09T04:40:49.900Z|00083|binding|INFO|Setting lport openshift-apiserver-operator_openshift-apiserver-operator-f9d986b8d-7zlfc up in Southbound
+2023-01-09T04:40:49.979772878Z 2023-01-09T04:40:49.979Z|00084|binding|INFO|Claiming lport openshift-machine-config-operator_machine-config-operator-5744796cc9-xs29l for this chassis.
+2023-01-09T04:40:49.979772878Z 2023-01-09T04:40:49.979Z|00085|binding|INFO|openshift-machine-config-operator_machine-config-operator-5744796cc9-xs29l: Claiming 0a:58:0a:82:00:15 10.130.0.21
+2023-01-09T04:40:49.986414134Z 2023-01-09T04:40:49.986Z|00086|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-operator-5744796cc9-xs29l ovn-installed in OVS
+2023-01-09T04:40:49.986464403Z 2023-01-09T04:40:49.986Z|00087|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-operator-5744796cc9-xs29l up in Southbound
+2023-01-09T04:40:50.041515883Z 2023-01-09T04:40:50.041Z|00088|binding|INFO|Claiming lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-bb565d955-nbnbl for this chassis.
+2023-01-09T04:40:50.041515883Z 2023-01-09T04:40:50.041Z|00089|binding|INFO|openshift-cluster-storage-operator_csi-snapshot-controller-operator-bb565d955-nbnbl: Claiming 0a:58:0a:82:00:21 10.130.0.33
+2023-01-09T04:40:50.047510643Z 2023-01-09T04:40:50.047Z|00090|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-bb565d955-nbnbl ovn-installed in OVS
+2023-01-09T04:40:50.047510643Z 2023-01-09T04:40:50.047Z|00091|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-operator-bb565d955-nbnbl up in Southbound
+2023-01-09T04:40:50.099983722Z 2023-01-09T04:40:50.099Z|00092|binding|INFO|Claiming lport openshift-insights_insights-operator-f4589c8c5-rcpcj for this chassis.
+2023-01-09T04:40:50.099983722Z 2023-01-09T04:40:50.099Z|00093|binding|INFO|openshift-insights_insights-operator-f4589c8c5-rcpcj: Claiming 0a:58:0a:82:00:12 10.130.0.18
+2023-01-09T04:40:50.105289269Z 2023-01-09T04:40:50.105Z|00094|binding|INFO|Setting lport openshift-insights_insights-operator-f4589c8c5-rcpcj ovn-installed in OVS
+2023-01-09T04:40:50.106284437Z 2023-01-09T04:40:50.106Z|00095|binding|INFO|Setting lport openshift-insights_insights-operator-f4589c8c5-rcpcj up in Southbound
+2023-01-09T04:40:50.150597158Z 2023-01-09T04:40:50.150Z|00096|binding|INFO|Claiming lport openshift-cluster-storage-operator_cluster-storage-operator-68fcf5bff4-xnv6z for this chassis.
+2023-01-09T04:40:50.150639769Z 2023-01-09T04:40:50.150Z|00097|binding|INFO|openshift-cluster-storage-operator_cluster-storage-operator-68fcf5bff4-xnv6z: Claiming 0a:58:0a:82:00:1f 10.130.0.31
+2023-01-09T04:40:50.155493004Z 2023-01-09T04:40:50.155Z|00098|binding|INFO|Setting lport openshift-cluster-storage-operator_cluster-storage-operator-68fcf5bff4-xnv6z ovn-installed in OVS
+2023-01-09T04:40:50.156709834Z 2023-01-09T04:40:50.156Z|00099|binding|INFO|Setting lport openshift-cluster-storage-operator_cluster-storage-operator-68fcf5bff4-xnv6z up in Southbound
+2023-01-09T04:40:50.243086404Z 2023-01-09T04:40:50.243Z|00100|binding|INFO|Claiming lport openshift-controller-manager-operator_openshift-controller-manager-operator-685985fb96-9rs9g for this chassis.
+2023-01-09T04:40:50.243137018Z 2023-01-09T04:40:50.243Z|00101|binding|INFO|openshift-controller-manager-operator_openshift-controller-manager-operator-685985fb96-9rs9g: Claiming 0a:58:0a:82:00:0d 10.130.0.13
+2023-01-09T04:40:50.247748586Z 2023-01-09T04:40:50.247Z|00102|binding|INFO|Setting lport openshift-controller-manager-operator_openshift-controller-manager-operator-685985fb96-9rs9g ovn-installed in OVS
+2023-01-09T04:40:50.249964261Z 2023-01-09T04:40:50.249Z|00103|binding|INFO|Setting lport openshift-controller-manager-operator_openshift-controller-manager-operator-685985fb96-9rs9g up in Southbound
+2023-01-09T04:40:50.259682563Z 2023-01-09T04:40:50.259Z|00104|binding|INFO|Claiming lport openshift-config-operator_openshift-config-operator-865c7ddcb-w6n76 for this chassis.
+2023-01-09T04:40:50.259682563Z 2023-01-09T04:40:50.259Z|00105|binding|INFO|openshift-config-operator_openshift-config-operator-865c7ddcb-w6n76: Claiming 0a:58:0a:82:00:19 10.130.0.25
+2023-01-09T04:40:50.266551687Z 2023-01-09T04:40:50.266Z|00106|binding|INFO|Setting lport openshift-config-operator_openshift-config-operator-865c7ddcb-w6n76 ovn-installed in OVS
+2023-01-09T04:40:50.266551687Z 2023-01-09T04:40:50.266Z|00107|binding|INFO|Setting lport openshift-config-operator_openshift-config-operator-865c7ddcb-w6n76 up in Southbound
+2023-01-09T04:40:50.329662915Z 2023-01-09T04:40:50.329Z|00108|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_package-server-manager-558778c545-kjrdc for this chassis.
+2023-01-09T04:40:50.329662915Z 2023-01-09T04:40:50.329Z|00109|binding|INFO|openshift-operator-lifecycle-manager_package-server-manager-558778c545-kjrdc: Claiming 0a:58:0a:82:00:22 10.130.0.34
+2023-01-09T04:40:50.333354393Z 2023-01-09T04:40:50.333Z|00110|binding|INFO|Setting lport openshift-operator-lifecycle-manager_package-server-manager-558778c545-kjrdc ovn-installed in OVS
+2023-01-09T04:40:50.336045467Z 2023-01-09T04:40:50.336Z|00111|binding|INFO|Setting lport openshift-operator-lifecycle-manager_package-server-manager-558778c545-kjrdc up in Southbound
+2023-01-09T04:41:14.547349231Z 2023-01-09T04:41:14.546Z|00112|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-f4gzq for this chassis.
+2023-01-09T04:41:14.547349231Z 2023-01-09T04:41:14.547Z|00113|binding|INFO|openshift-network-diagnostics_network-check-target-f4gzq: Claiming 0a:58:0a:82:00:04 10.130.0.4
+2023-01-09T04:41:14.554863803Z 2023-01-09T04:41:14.554Z|00114|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-f4gzq up in Southbound
+2023-01-09T04:41:14.555283956Z 2023-01-09T04:41:14.555Z|00115|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-f4gzq ovn-installed in OVS
+2023-01-09T04:41:20.880800550Z 2023-01-09T04:41:20.880Z|00116|binding|INFO|Claiming lport openshift-ingress-operator_ingress-operator-7b8896d7b9-67xcc for this chassis.
+2023-01-09T04:41:20.880800550Z 2023-01-09T04:41:20.880Z|00117|binding|INFO|openshift-ingress-operator_ingress-operator-7b8896d7b9-67xcc: Claiming 0a:58:0a:82:00:14 10.130.0.20
+2023-01-09T04:41:20.888555373Z 2023-01-09T04:41:20.888Z|00118|binding|INFO|Setting lport openshift-ingress-operator_ingress-operator-7b8896d7b9-67xcc ovn-installed in OVS
+2023-01-09T04:41:20.888555373Z 2023-01-09T04:41:20.888Z|00119|binding|INFO|Setting lport openshift-ingress-operator_ingress-operator-7b8896d7b9-67xcc up in Southbound
+2023-01-09T04:41:21.054785499Z 2023-01-09T04:41:21.054Z|00120|binding|INFO|Claiming lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-6c4ffc5dc5-pv46g for this chassis.
+2023-01-09T04:41:21.054785499Z 2023-01-09T04:41:21.054Z|00121|binding|INFO|openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-6c4ffc5dc5-pv46g: Claiming 0a:58:0a:82:00:16 10.130.0.22
+2023-01-09T04:41:21.080052975Z 2023-01-09T04:41:21.080Z|00122|binding|INFO|Setting lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-6c4ffc5dc5-pv46g ovn-installed in OVS
+2023-01-09T04:41:21.080052975Z 2023-01-09T04:41:21.080Z|00123|binding|INFO|Setting lport openshift-cluster-node-tuning-operator_cluster-node-tuning-operator-6c4ffc5dc5-pv46g up in Southbound
+2023-01-09T04:41:21.118263695Z 2023-01-09T04:41:21.118Z|00124|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_olm-operator-554f75fcb8-m4vww for this chassis.
+2023-01-09T04:41:21.118330785Z 2023-01-09T04:41:21.118Z|00125|binding|INFO|openshift-operator-lifecycle-manager_olm-operator-554f75fcb8-m4vww: Claiming 0a:58:0a:82:00:11 10.130.0.17
+2023-01-09T04:41:21.125615344Z 2023-01-09T04:41:21.125Z|00126|binding|INFO|Setting lport openshift-operator-lifecycle-manager_olm-operator-554f75fcb8-m4vww ovn-installed in OVS
+2023-01-09T04:41:21.126808542Z 2023-01-09T04:41:21.126Z|00127|binding|INFO|Setting lport openshift-operator-lifecycle-manager_olm-operator-554f75fcb8-m4vww up in Southbound
+2023-01-09T04:41:21.222788341Z 2023-01-09T04:41:21.222Z|00128|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_catalog-operator-5d5449d6d8-rhpql for this chassis.
+2023-01-09T04:41:21.222788341Z 2023-01-09T04:41:21.222Z|00129|binding|INFO|openshift-operator-lifecycle-manager_catalog-operator-5d5449d6d8-rhpql: Claiming 0a:58:0a:82:00:1c 10.130.0.28
+2023-01-09T04:41:21.233970636Z 2023-01-09T04:41:21.233Z|00130|binding|INFO|Setting lport openshift-operator-lifecycle-manager_catalog-operator-5d5449d6d8-rhpql ovn-installed in OVS
+2023-01-09T04:41:21.233970636Z 2023-01-09T04:41:21.233Z|00131|binding|INFO|Setting lport openshift-operator-lifecycle-manager_catalog-operator-5d5449d6d8-rhpql up in Southbound
+2023-01-09T04:41:21.311603458Z 2023-01-09T04:41:21.311Z|00132|binding|INFO|Claiming lport openshift-machine-api_control-plane-machine-set-operator-5b9d6d746b-4sgw9 for this chassis.
+2023-01-09T04:41:21.311653255Z 2023-01-09T04:41:21.311Z|00133|binding|INFO|openshift-machine-api_control-plane-machine-set-operator-5b9d6d746b-4sgw9: Claiming 0a:58:0a:82:00:1b 10.130.0.27
+2023-01-09T04:41:21.336206763Z 2023-01-09T04:41:21.336Z|00134|binding|INFO|Setting lport openshift-machine-api_control-plane-machine-set-operator-5b9d6d746b-4sgw9 ovn-installed in OVS
+2023-01-09T04:41:21.336262247Z 2023-01-09T04:41:21.336Z|00135|binding|INFO|Setting lport openshift-machine-api_control-plane-machine-set-operator-5b9d6d746b-4sgw9 up in Southbound
+2023-01-09T04:41:21.368304503Z 2023-01-09T04:41:21.368Z|00136|binding|INFO|Claiming lport openshift-machine-api_machine-api-operator-5bfd57df4c-z8nsh for this chassis.
+2023-01-09T04:41:21.368353027Z 2023-01-09T04:41:21.368Z|00137|binding|INFO|openshift-machine-api_machine-api-operator-5bfd57df4c-z8nsh: Claiming 0a:58:0a:82:00:05 10.130.0.5
+2023-01-09T04:41:21.383500153Z 2023-01-09T04:41:21.383Z|00138|binding|INFO|Setting lport openshift-machine-api_machine-api-operator-5bfd57df4c-z8nsh ovn-installed in OVS
+2023-01-09T04:41:21.383500153Z 2023-01-09T04:41:21.383Z|00139|binding|INFO|Setting lport openshift-machine-api_machine-api-operator-5bfd57df4c-z8nsh up in Southbound
+2023-01-09T04:41:21.491562054Z 2023-01-09T04:41:21.491Z|00140|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-c6c8c7b4c-sls62 for this chassis.
+2023-01-09T04:41:21.491562054Z 2023-01-09T04:41:21.491Z|00141|binding|INFO|openshift-multus_multus-admission-controller-c6c8c7b4c-sls62: Claiming 0a:58:0a:82:00:1d 10.130.0.29
+2023-01-09T04:41:21.502490485Z 2023-01-09T04:41:21.502Z|00142|binding|INFO|Setting lport openshift-multus_multus-admission-controller-c6c8c7b4c-sls62 ovn-installed in OVS
+2023-01-09T04:41:21.502548127Z 2023-01-09T04:41:21.502Z|00143|binding|INFO|Setting lport openshift-multus_multus-admission-controller-c6c8c7b4c-sls62 up in Southbound
+2023-01-09T04:41:21.599105760Z 2023-01-09T04:41:21.599Z|00144|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-c6c8c7b4c-rf2bb for this chassis.
+2023-01-09T04:41:21.599170421Z 2023-01-09T04:41:21.599Z|00145|binding|INFO|openshift-multus_multus-admission-controller-c6c8c7b4c-rf2bb: Claiming 0a:58:0a:82:00:20 10.130.0.32
+2023-01-09T04:41:21.624542698Z 2023-01-09T04:41:21.624Z|00146|binding|INFO|Setting lport openshift-multus_multus-admission-controller-c6c8c7b4c-rf2bb ovn-installed in OVS
+2023-01-09T04:41:21.624612320Z 2023-01-09T04:41:21.624Z|00147|binding|INFO|Setting lport openshift-multus_multus-admission-controller-c6c8c7b4c-rf2bb up in Southbound
+2023-01-09T04:41:21.653290638Z 2023-01-09T04:41:21.653Z|00148|binding|INFO|Claiming lport openshift-marketplace_marketplace-operator-f9895fd48-fc9hm for this chassis.
+2023-01-09T04:41:21.653343133Z 2023-01-09T04:41:21.653Z|00149|binding|INFO|openshift-marketplace_marketplace-operator-f9895fd48-fc9hm: Claiming 0a:58:0a:82:00:0f 10.130.0.15
+2023-01-09T04:41:21.662561855Z 2023-01-09T04:41:21.662Z|00150|binding|INFO|Setting lport openshift-marketplace_marketplace-operator-f9895fd48-fc9hm ovn-installed in OVS
+2023-01-09T04:41:21.662619007Z 2023-01-09T04:41:21.662Z|00151|binding|INFO|Setting lport openshift-marketplace_marketplace-operator-f9895fd48-fc9hm up in Southbound
+2023-01-09T04:41:21.744569454Z 2023-01-09T04:41:21.744Z|00152|binding|INFO|Claiming lport openshift-dns-operator_dns-operator-7468bd8b56-jcnl6 for this chassis.
+2023-01-09T04:41:21.744569454Z 2023-01-09T04:41:21.744Z|00153|binding|INFO|openshift-dns-operator_dns-operator-7468bd8b56-jcnl6: Claiming 0a:58:0a:82:00:0a 10.130.0.10
+2023-01-09T04:41:21.757975532Z 2023-01-09T04:41:21.757Z|00154|binding|INFO|Setting lport openshift-dns-operator_dns-operator-7468bd8b56-jcnl6 ovn-installed in OVS
+2023-01-09T04:41:21.757975532Z 2023-01-09T04:41:21.757Z|00155|binding|INFO|Setting lport openshift-dns-operator_dns-operator-7468bd8b56-jcnl6 up in Southbound
+2023-01-09T04:41:21.775898237Z 2023-01-09T04:41:21.775Z|00156|binding|INFO|Claiming lport openshift-cloud-credential-operator_cloud-credential-operator-6fc48b9479-sh55k for this chassis.
+2023-01-09T04:41:21.775943990Z 2023-01-09T04:41:21.775Z|00157|binding|INFO|openshift-cloud-credential-operator_cloud-credential-operator-6fc48b9479-sh55k: Claiming 0a:58:0a:82:00:10 10.130.0.16
+2023-01-09T04:41:21.785197140Z 2023-01-09T04:41:21.785Z|00158|binding|INFO|Setting lport openshift-cloud-credential-operator_cloud-credential-operator-6fc48b9479-sh55k ovn-installed in OVS
+2023-01-09T04:41:21.785277065Z 2023-01-09T04:41:21.785Z|00159|binding|INFO|Setting lport openshift-cloud-credential-operator_cloud-credential-operator-6fc48b9479-sh55k up in Southbound
+2023-01-09T04:41:21.953449055Z 2023-01-09T04:41:21.953Z|00160|binding|INFO|Claiming lport openshift-image-registry_cluster-image-registry-operator-67d4b8d78-zl5bz for this chassis.
+2023-01-09T04:41:21.953499047Z 2023-01-09T04:41:21.953Z|00161|binding|INFO|openshift-image-registry_cluster-image-registry-operator-67d4b8d78-zl5bz: Claiming 0a:58:0a:82:00:23 10.130.0.35
+2023-01-09T04:41:21.962026774Z 2023-01-09T04:41:21.961Z|00162|binding|INFO|Setting lport openshift-image-registry_cluster-image-registry-operator-67d4b8d78-zl5bz ovn-installed in OVS
+2023-01-09T04:41:21.962026774Z 2023-01-09T04:41:21.961Z|00163|binding|INFO|Setting lport openshift-image-registry_cluster-image-registry-operator-67d4b8d78-zl5bz up in Southbound
+2023-01-09T04:41:31.297036255Z 2023-01-09T04:41:31.296Z|00164|binding|INFO|Claiming lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-84748ff5b5-jwkgr for this chassis.
+2023-01-09T04:41:31.297036255Z 2023-01-09T04:41:31.296Z|00165|binding|INFO|openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-84748ff5b5-jwkgr: Claiming 0a:58:0a:82:00:26 10.130.0.38
+2023-01-09T04:41:31.324307481Z 2023-01-09T04:41:31.324Z|00166|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-84748ff5b5-jwkgr ovn-installed in OVS
+2023-01-09T04:41:31.359108462Z 2023-01-09T04:41:31.359Z|00167|binding|INFO|Setting lport openshift-cluster-csi-drivers_aws-ebs-csi-driver-controller-84748ff5b5-jwkgr up in Southbound
+2023-01-09T04:41:54.330823087Z 2023-01-09T04:41:54.330Z|00168|binding|INFO|Claiming lport openshift-machine-api_cluster-baremetal-operator-756d6fdb78-pq4wk for this chassis.
+2023-01-09T04:41:54.330823087Z 2023-01-09T04:41:54.330Z|00169|binding|INFO|openshift-machine-api_cluster-baremetal-operator-756d6fdb78-pq4wk: Claiming 0a:58:0a:82:00:06 10.130.0.6
+2023-01-09T04:41:54.339436488Z 2023-01-09T04:41:54.339Z|00170|binding|INFO|Setting lport openshift-machine-api_cluster-baremetal-operator-756d6fdb78-pq4wk ovn-installed in OVS
+2023-01-09T04:41:54.403064508Z 2023-01-09T04:41:54.402Z|00171|if_status|INFO|Not updating pb chassis for openshift-dns_dns-default-pvwwn now as sb is readonly
+2023-01-09T04:41:54.428611490Z 2023-01-09T04:41:54.428Z|00172|if_status|INFO|if_status_handle_claims for openshift-dns_dns-default-pvwwn
+2023-01-09T04:41:54.428611490Z 2023-01-09T04:41:54.428Z|00173|binding|INFO|Claiming lport openshift-dns_dns-default-pvwwn for this chassis.
+2023-01-09T04:41:54.428611490Z 2023-01-09T04:41:54.428Z|00174|binding|INFO|openshift-dns_dns-default-pvwwn: Claiming 0a:58:0a:82:00:27 10.130.0.39
+2023-01-09T04:41:54.436177896Z 2023-01-09T04:41:54.436Z|00175|binding|INFO|Setting lport openshift-machine-api_cluster-baremetal-operator-756d6fdb78-pq4wk up in Southbound
+2023-01-09T04:41:54.445292175Z 2023-01-09T04:41:54.445Z|00176|binding|INFO|Setting lport openshift-dns_dns-default-pvwwn ovn-installed in OVS
+2023-01-09T04:41:54.558173641Z 2023-01-09T04:41:54.558Z|00177|binding|INFO|Setting lport openshift-dns_dns-default-pvwwn up in Southbound
+2023-01-09T04:41:54.599096007Z 2023-01-09T04:41:54.599Z|00178|binding|INFO|Claiming lport openshift-machine-api_cluster-autoscaler-operator-694f48d46-5vb55 for this chassis.
+2023-01-09T04:41:54.599146327Z 2023-01-09T04:41:54.599Z|00179|binding|INFO|openshift-machine-api_cluster-autoscaler-operator-694f48d46-5vb55: Claiming 0a:58:0a:82:00:08 10.130.0.8
+2023-01-09T04:41:54.611881773Z 2023-01-09T04:41:54.611Z|00180|binding|INFO|Setting lport openshift-machine-api_cluster-autoscaler-operator-694f48d46-5vb55 ovn-installed in OVS
+2023-01-09T04:41:54.656618463Z 2023-01-09T04:41:54.656Z|00181|if_status|INFO|if_status_handle_claims for openshift-monitoring_cluster-monitoring-operator-688b5fc4bf-wj46c
+2023-01-09T04:41:54.656618463Z 2023-01-09T04:41:54.656Z|00182|binding|INFO|Claiming lport openshift-monitoring_cluster-monitoring-operator-688b5fc4bf-wj46c for this chassis.
+2023-01-09T04:41:54.656618463Z 2023-01-09T04:41:54.656Z|00183|binding|INFO|openshift-monitoring_cluster-monitoring-operator-688b5fc4bf-wj46c: Claiming 0a:58:0a:82:00:18 10.130.0.24
+2023-01-09T04:41:54.658240798Z 2023-01-09T04:41:54.658Z|00184|binding|INFO|Setting lport openshift-machine-api_cluster-autoscaler-operator-694f48d46-5vb55 up in Southbound
+2023-01-09T04:41:54.667671307Z 2023-01-09T04:41:54.667Z|00185|binding|INFO|Setting lport openshift-monitoring_cluster-monitoring-operator-688b5fc4bf-wj46c ovn-installed in OVS
+2023-01-09T04:41:54.733642405Z 2023-01-09T04:41:54.733Z|00186|if_status|INFO|if_status_handle_claims for openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal
+2023-01-09T04:41:54.733642405Z 2023-01-09T04:41:54.733Z|00187|binding|INFO|Claiming lport openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:41:54.733642405Z 2023-01-09T04:41:54.733Z|00188|binding|INFO|openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:28 10.130.0.40
+2023-01-09T04:41:54.735372706Z 2023-01-09T04:41:54.735Z|00189|binding|INFO|Setting lport openshift-monitoring_cluster-monitoring-operator-688b5fc4bf-wj46c up in Southbound
+2023-01-09T04:41:54.736134397Z 2023-01-09T04:41:54.736Z|00190|binding|INFO|Setting lport openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:41:54.771224446Z 2023-01-09T04:41:54.771Z|00191|binding|INFO|Setting lport openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:42:07.062505370Z 2023-01-09T04:42:07.062Z|00192|binding|INFO|Claiming lport openshift-kube-scheduler_installer-4-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:42:07.062505370Z 2023-01-09T04:42:07.062Z|00193|binding|INFO|openshift-kube-scheduler_installer-4-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:29 10.130.0.41
+2023-01-09T04:42:07.080797500Z 2023-01-09T04:42:07.080Z|00194|binding|INFO|Setting lport openshift-kube-scheduler_installer-4-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:42:07.160402018Z 2023-01-09T04:42:07.160Z|00195|binding|INFO|Setting lport openshift-kube-scheduler_installer-4-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:42:26.217066091Z 2023-01-09T04:42:26.217Z|00196|binding|INFO|Releasing lport openshift-kube-scheduler_installer-3-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:42:42.989891703Z 2023-01-09T04:42:42.989Z|00197|binding|INFO|Releasing lport openshift-multus_multus-admission-controller-c6c8c7b4c-rf2bb from this chassis (sb_readonly=0)
+2023-01-09T04:42:46.362464624Z 2023-01-09T04:42:46.362Z|00198|binding|INFO|Releasing lport openshift-multus_multus-admission-controller-c6c8c7b4c-sls62 from this chassis (sb_readonly=0)
+2023-01-09T04:43:00.526420433Z 2023-01-09T04:43:00.526Z|00199|binding|INFO|Releasing lport openshift-kube-scheduler_installer-4-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:43:10.900147045Z 2023-01-09T04:43:10.900Z|00200|binding|INFO|Claiming lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:43:10.900147045Z 2023-01-09T04:43:10.900Z|00201|binding|INFO|openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:2a 10.130.0.42
+2023-01-09T04:43:10.921479087Z 2023-01-09T04:43:10.921Z|00202|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:43:10.921479087Z 2023-01-09T04:43:10.921Z|00203|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:43:16.518256891Z 2023-01-09T04:43:16.517Z|00204|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-t5mk4 for this chassis.
+2023-01-09T04:43:16.518256891Z 2023-01-09T04:43:16.517Z|00205|binding|INFO|openshift-multus_network-metrics-daemon-t5mk4: Claiming 0a:58:0a:82:00:03 10.130.0.3
+2023-01-09T04:43:16.549019583Z 2023-01-09T04:43:16.548Z|00206|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-t5mk4 ovn-installed in OVS
+2023-01-09T04:43:16.549019583Z 2023-01-09T04:43:16.549Z|00207|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-t5mk4 up in Southbound
+2023-01-09T04:43:21.494040131Z 2023-01-09T04:43:21.493Z|00208|binding|INFO|Claiming lport openshift-kube-scheduler_installer-5-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:43:21.494040131Z 2023-01-09T04:43:21.494Z|00209|binding|INFO|openshift-kube-scheduler_installer-5-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:2c 10.130.0.44
+2023-01-09T04:43:21.515959712Z 2023-01-09T04:43:21.515Z|00210|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:43:21.515959712Z 2023-01-09T04:43:21.515Z|00211|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:43:32.687186975Z 2023-01-09T04:43:32.687Z|00212|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-7c84b45fd8-wgtjs for this chassis.
+2023-01-09T04:43:32.687268015Z 2023-01-09T04:43:32.687Z|00213|binding|INFO|openshift-oauth-apiserver_apiserver-7c84b45fd8-wgtjs: Claiming 0a:58:0a:82:00:2d 10.130.0.45
+2023-01-09T04:43:32.710591279Z 2023-01-09T04:43:32.710Z|00214|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-7c84b45fd8-wgtjs ovn-installed in OVS
+2023-01-09T04:43:32.710591279Z 2023-01-09T04:43:32.710Z|00215|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-7c84b45fd8-wgtjs up in Southbound
+2023-01-09T04:43:52.745025395Z 2023-01-09T04:43:52.744Z|00216|binding|INFO|Claiming lport openshift-etcd_installer-3-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:43:52.745025395Z 2023-01-09T04:43:52.744Z|00217|binding|INFO|openshift-etcd_installer-3-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:2e 10.130.0.46
+2023-01-09T04:43:52.769287813Z 2023-01-09T04:43:52.769Z|00218|binding|INFO|Setting lport openshift-etcd_installer-3-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:43:52.769363382Z 2023-01-09T04:43:52.769Z|00219|binding|INFO|Setting lport openshift-etcd_installer-3-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:43:54.692132144Z 2023-01-09T04:43:54.692Z|00220|binding|INFO|Releasing lport openshift-kube-scheduler_installer-5-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:43:55.954419550Z 2023-01-09T04:43:55.954Z|00221|binding|INFO|Claiming lport openshift-apiserver_apiserver-749c59cd9-wxjzk for this chassis.
+2023-01-09T04:43:55.954419550Z 2023-01-09T04:43:55.954Z|00222|binding|INFO|openshift-apiserver_apiserver-749c59cd9-wxjzk: Claiming 0a:58:0a:82:00:2f 10.130.0.47
+2023-01-09T04:43:55.978337224Z 2023-01-09T04:43:55.978Z|00223|binding|INFO|Setting lport openshift-apiserver_apiserver-749c59cd9-wxjzk ovn-installed in OVS
+2023-01-09T04:43:55.978337224Z 2023-01-09T04:43:55.978Z|00224|binding|INFO|Setting lport openshift-apiserver_apiserver-749c59cd9-wxjzk up in Southbound
+2023-01-09T04:44:02.770572697Z 2023-01-09T04:44:02.770Z|00225|binding|INFO|Claiming lport openshift-etcd_installer-4-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:44:02.770572697Z 2023-01-09T04:44:02.770Z|00226|binding|INFO|openshift-etcd_installer-4-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:30 10.130.0.48
+2023-01-09T04:44:02.795074536Z 2023-01-09T04:44:02.795Z|00227|binding|INFO|Setting lport openshift-etcd_installer-4-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:44:02.795074536Z 2023-01-09T04:44:02.795Z|00228|binding|INFO|Setting lport openshift-etcd_installer-4-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:44:18.134392882Z 2023-01-09T04:44:18.134Z|00229|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-5-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:44:18.134392882Z 2023-01-09T04:44:18.134Z|00230|binding|INFO|openshift-kube-controller-manager_installer-5-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:31 10.130.0.49
+2023-01-09T04:44:18.156793041Z 2023-01-09T04:44:18.156Z|00231|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:44:18.156793041Z 2023-01-09T04:44:18.156Z|00232|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:44:23.999804995Z 2023-01-09T04:44:23.999Z|00233|binding|INFO|Releasing lport openshift-etcd_installer-3-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:44:52.882548056Z 2023-01-09T04:44:52.882Z|00234|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-5-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:45:02.768004246Z 2023-01-09T04:45:02.767Z|00235|binding|INFO|Claiming lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:02.768071659Z 2023-01-09T04:45:02.768Z|00236|binding|INFO|openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:32 10.130.0.50
+2023-01-09T04:45:02.791057395Z 2023-01-09T04:45:02.791Z|00237|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:45:02.791057395Z 2023-01-09T04:45:02.791Z|00238|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:45:06.926021090Z 2023-01-09T04:45:06.925Z|00239|binding|INFO|Releasing lport openshift-etcd_installer-4-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:45:08.154481900Z 2023-01-09T04:45:08.154Z|00240|memory|INFO|peak resident set size grew 50% in last 328.2 seconds, from 14192 kB to 21312 kB
+2023-01-09T04:45:08.154513632Z 2023-01-09T04:45:08.154Z|00241|memory|INFO|idl-cells-OVN_Southbound:20020 idl-cells-Open_vSwitch:2696 if_status_mgr_ifaces_state_usage-KB:1 if_status_mgr_ifaces_usage-KB:5 lflow-cache-entries-cache-expr:351 lflow-cache-entries-cache-matches:682 lflow-cache-size-KB:922 local_datapath_usage-KB:2 ofctrl_desired_flow_usage-KB:912 ofctrl_installed_flow_usage-KB:678 ofctrl_sb_flow_ref_usage-KB:337
+2023-01-09T04:45:15.473246533Z 2023-01-09T04:45:15.473Z|00242|binding|INFO|Claiming lport openshift-etcd_etcd-guard-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:15.473246533Z 2023-01-09T04:45:15.473Z|00243|binding|INFO|openshift-etcd_etcd-guard-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:33 10.130.0.51
+2023-01-09T04:45:15.501446921Z 2023-01-09T04:45:15.501Z|00244|binding|INFO|Setting lport openshift-etcd_etcd-guard-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:45:15.501446921Z 2023-01-09T04:45:15.501Z|00245|binding|INFO|Setting lport openshift-etcd_etcd-guard-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:45:18.604364195Z 2023-01-09T04:45:18.604Z|00246|binding|INFO|Claiming lport openshift-route-controller-manager_route-controller-manager-76f69449f8-58nzt for this chassis.
+2023-01-09T04:45:18.604364195Z 2023-01-09T04:45:18.604Z|00247|binding|INFO|openshift-route-controller-manager_route-controller-manager-76f69449f8-58nzt: Claiming 0a:58:0a:82:00:34 10.130.0.52
+2023-01-09T04:45:18.630282425Z 2023-01-09T04:45:18.630Z|00248|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-76f69449f8-58nzt ovn-installed in OVS
+2023-01-09T04:45:18.630282425Z 2023-01-09T04:45:18.630Z|00249|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-76f69449f8-58nzt up in Southbound
+2023-01-09T04:45:26.655682027Z 2023-01-09T04:45:26.655Z|00250|binding|INFO|Claiming lport openshift-controller-manager_controller-manager-5496b58785-dbqcq for this chassis.
+2023-01-09T04:45:26.655682027Z 2023-01-09T04:45:26.655Z|00251|binding|INFO|openshift-controller-manager_controller-manager-5496b58785-dbqcq: Claiming 0a:58:0a:82:00:35 10.130.0.53
+2023-01-09T04:45:26.685866988Z 2023-01-09T04:45:26.685Z|00252|binding|INFO|Setting lport openshift-controller-manager_controller-manager-5496b58785-dbqcq ovn-installed in OVS
+2023-01-09T04:45:26.685866988Z 2023-01-09T04:45:26.685Z|00253|binding|INFO|Setting lport openshift-controller-manager_controller-manager-5496b58785-dbqcq up in Southbound
+2023-01-09T04:45:30.328523303Z 2023-01-09T04:45:30.328Z|00254|binding|INFO|Claiming lport openshift-etcd_installer-5-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:30.328523303Z 2023-01-09T04:45:30.328Z|00255|binding|INFO|openshift-etcd_installer-5-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:36 10.130.0.54
+2023-01-09T04:45:30.354586386Z 2023-01-09T04:45:30.354Z|00256|binding|INFO|Setting lport openshift-etcd_installer-5-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:45:30.354586386Z 2023-01-09T04:45:30.354Z|00257|binding|INFO|Setting lport openshift-etcd_installer-5-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:45:44.070854224Z 2023-01-09T04:45:44.070Z|00258|binding|INFO|Claiming lport openshift-etcd_installer-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:45:44.070854224Z 2023-01-09T04:45:44.070Z|00259|binding|INFO|openshift-etcd_installer-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:37 10.130.0.55
+2023-01-09T04:45:44.097589240Z 2023-01-09T04:45:44.097Z|00260|binding|INFO|Setting lport openshift-etcd_installer-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:45:44.097589240Z 2023-01-09T04:45:44.097Z|00261|binding|INFO|Setting lport openshift-etcd_installer-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:46:01.723922807Z 2023-01-09T04:46:01.723Z|00262|binding|INFO|Releasing lport openshift-etcd_installer-5-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:46:32.413699725Z 2023-01-09T04:46:32.413Z|00263|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-7c84b45fd8-wgtjs from this chassis (sb_readonly=0)
+2023-01-09T04:46:38.257877742Z 2023-01-09T04:46:38.257Z|00264|binding|INFO|Releasing lport openshift-etcd_installer-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:46:40.893406665Z 2023-01-09T04:46:40.893Z|00265|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-5d7f7fbfdb-fg58d for this chassis.
+2023-01-09T04:46:40.893406665Z 2023-01-09T04:46:40.893Z|00266|binding|INFO|openshift-oauth-apiserver_apiserver-5d7f7fbfdb-fg58d: Claiming 0a:58:0a:82:00:38 10.130.0.56
+2023-01-09T04:46:40.921890503Z 2023-01-09T04:46:40.921Z|00267|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-5d7f7fbfdb-fg58d ovn-installed in OVS
+2023-01-09T04:46:40.921890503Z 2023-01-09T04:46:40.921Z|00268|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-5d7f7fbfdb-fg58d up in Southbound
+2023-01-09T04:46:44.520341241Z 2023-01-09T04:46:44.520Z|00269|binding|INFO|Claiming lport openshift-console_console-8f86669cb-wzp9p for this chassis.
+2023-01-09T04:46:44.520341241Z 2023-01-09T04:46:44.520Z|00270|binding|INFO|openshift-console_console-8f86669cb-wzp9p: Claiming 0a:58:0a:82:00:39 10.130.0.57
+2023-01-09T04:46:44.546767517Z 2023-01-09T04:46:44.546Z|00271|binding|INFO|Setting lport openshift-console_console-8f86669cb-wzp9p ovn-installed in OVS
+2023-01-09T04:46:44.546767517Z 2023-01-09T04:46:44.546Z|00272|binding|INFO|Setting lport openshift-console_console-8f86669cb-wzp9p up in Southbound
+2023-01-09T04:47:30.514746391Z 2023-01-09T04:47:30.514Z|00273|binding|INFO|Releasing lport openshift-apiserver_apiserver-749c59cd9-wxjzk from this chassis (sb_readonly=0)
+2023-01-09T04:47:35.483487564Z 2023-01-09T04:47:35.483Z|00274|binding|INFO|Claiming lport openshift-apiserver_apiserver-77dd5f777d-hdjst for this chassis.
+2023-01-09T04:47:35.483487564Z 2023-01-09T04:47:35.483Z|00275|binding|INFO|openshift-apiserver_apiserver-77dd5f777d-hdjst: Claiming 0a:58:0a:82:00:3a 10.130.0.58
+2023-01-09T04:47:35.521347625Z 2023-01-09T04:47:35.521Z|00276|binding|INFO|Setting lport openshift-apiserver_apiserver-77dd5f777d-hdjst ovn-installed in OVS
+2023-01-09T04:47:35.521347625Z 2023-01-09T04:47:35.521Z|00277|binding|INFO|Setting lport openshift-apiserver_apiserver-77dd5f777d-hdjst up in Southbound
+2023-01-09T04:47:55.917608082Z 2023-01-09T04:47:55.917Z|00278|binding|INFO|Releasing lport openshift-apiserver_apiserver-77dd5f777d-hdjst from this chassis (sb_readonly=0)
+2023-01-09T04:47:56.398971567Z 2023-01-09T04:47:56.398Z|00279|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:47:56.398971567Z 2023-01-09T04:47:56.398Z|00280|binding|INFO|openshift-kube-controller-manager_installer-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:3b 10.130.0.59
+2023-01-09T04:47:56.428012707Z 2023-01-09T04:47:56.427Z|00281|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:47:56.428699112Z 2023-01-09T04:47:56.428Z|00282|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:47:57.637218190Z 2023-01-09T04:47:57.637Z|00283|binding|INFO|Claiming lport openshift-apiserver_apiserver-67dc8f65bb-wsgkv for this chassis.
+2023-01-09T04:47:57.637218190Z 2023-01-09T04:47:57.637Z|00284|binding|INFO|openshift-apiserver_apiserver-67dc8f65bb-wsgkv: Claiming 0a:58:0a:82:00:3c 10.130.0.60
+2023-01-09T04:47:57.668657895Z 2023-01-09T04:47:57.668Z|00285|binding|INFO|Setting lport openshift-apiserver_apiserver-67dc8f65bb-wsgkv ovn-installed in OVS
+2023-01-09T04:47:57.668657895Z 2023-01-09T04:47:57.668Z|00286|binding|INFO|Setting lport openshift-apiserver_apiserver-67dc8f65bb-wsgkv up in Southbound
+2023-01-09T04:48:07.769505072Z 2023-01-09T04:48:07.769Z|00287|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-55dcd5f85b-sllsw for this chassis.
+2023-01-09T04:48:07.769505072Z 2023-01-09T04:48:07.769Z|00288|binding|INFO|openshift-authentication_oauth-openshift-55dcd5f85b-sllsw: Claiming 0a:58:0a:82:00:3d 10.130.0.61
+2023-01-09T04:48:07.803296480Z 2023-01-09T04:48:07.803Z|00289|binding|INFO|Setting lport openshift-authentication_oauth-openshift-55dcd5f85b-sllsw ovn-installed in OVS
+2023-01-09T04:48:07.803296480Z 2023-01-09T04:48:07.803Z|00290|binding|INFO|Setting lport openshift-authentication_oauth-openshift-55dcd5f85b-sllsw up in Southbound
+2023-01-09T04:48:27.826709576Z 2023-01-09T04:48:27.826Z|00291|binding|INFO|Releasing lport openshift-route-controller-manager_route-controller-manager-76f69449f8-58nzt from this chassis (sb_readonly=0)
+2023-01-09T04:48:29.171216500Z 2023-01-09T04:48:29.171Z|00292|binding|INFO|Claiming lport openshift-route-controller-manager_route-controller-manager-6b98487767-6q9f2 for this chassis.
+2023-01-09T04:48:29.171296291Z 2023-01-09T04:48:29.171Z|00293|binding|INFO|openshift-route-controller-manager_route-controller-manager-6b98487767-6q9f2: Claiming 0a:58:0a:82:00:3e 10.130.0.62
+2023-01-09T04:48:29.212216380Z 2023-01-09T04:48:29.212Z|00294|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-6b98487767-6q9f2 ovn-installed in OVS
+2023-01-09T04:48:29.212216380Z 2023-01-09T04:48:29.212Z|00295|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-6b98487767-6q9f2 up in Southbound
+2023-01-09T04:48:31.733640651Z 2023-01-09T04:48:31.733Z|00296|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:48:32.807680207Z 2023-01-09T04:48:32.807Z|00297|binding|INFO|Claiming lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:48:32.807680207Z 2023-01-09T04:48:32.807Z|00298|binding|INFO|openshift-kube-apiserver_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:3f 10.130.0.63
+2023-01-09T04:48:32.838070781Z 2023-01-09T04:48:32.838Z|00299|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:48:32.838070781Z 2023-01-09T04:48:32.838Z|00300|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:48:35.737603302Z 2023-01-09T04:48:35.737Z|00301|binding|INFO|Releasing lport openshift-kube-apiserver_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:49:18.958364039Z 2023-01-09T04:49:18.958Z|00302|binding|INFO|Claiming lport openshift-kube-apiserver_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:49:18.958364039Z 2023-01-09T04:49:18.958Z|00303|binding|INFO|openshift-kube-apiserver_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:40 10.130.0.64
+2023-01-09T04:49:18.992259831Z 2023-01-09T04:49:18.992Z|00304|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:49:18.992259831Z 2023-01-09T04:49:18.992Z|00305|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:49:21.926464476Z 2023-01-09T04:49:21.926Z|00306|binding|INFO|Releasing lport openshift-kube-apiserver_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:49:23.138144403Z 2023-01-09T04:49:23.138Z|00307|binding|INFO|Releasing lport openshift-controller-manager_controller-manager-5496b58785-dbqcq from this chassis (sb_readonly=0)
+2023-01-09T04:49:24.464159604Z 2023-01-09T04:49:24.464Z|00308|binding|INFO|Claiming lport openshift-kube-scheduler_installer-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:49:24.464210791Z 2023-01-09T04:49:24.464Z|00309|binding|INFO|openshift-kube-scheduler_installer-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:41 10.130.0.65
+2023-01-09T04:49:24.499809835Z 2023-01-09T04:49:24.499Z|00310|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:49:24.500006724Z 2023-01-09T04:49:24.499Z|00311|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:49:25.029198841Z 2023-01-09T04:49:25.029Z|00312|binding|INFO|Claiming lport openshift-controller-manager_controller-manager-64b957bcd-5vnbt for this chassis.
+2023-01-09T04:49:25.029277246Z 2023-01-09T04:49:25.029Z|00313|binding|INFO|openshift-controller-manager_controller-manager-64b957bcd-5vnbt: Claiming 0a:58:0a:82:00:42 10.130.0.66
+2023-01-09T04:49:25.061301675Z 2023-01-09T04:49:25.061Z|00314|binding|INFO|Setting lport openshift-controller-manager_controller-manager-64b957bcd-5vnbt ovn-installed in OVS
+2023-01-09T04:49:25.061301675Z 2023-01-09T04:49:25.061Z|00315|binding|INFO|Setting lport openshift-controller-manager_controller-manager-64b957bcd-5vnbt up in Southbound
+2023-01-09T04:49:42.615977050Z 2023-01-09T04:49:42.615Z|00316|binding|INFO|Claiming lport openshift-kube-apiserver_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:49:42.615977050Z 2023-01-09T04:49:42.615Z|00317|binding|INFO|openshift-kube-apiserver_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:43 10.130.0.67
+2023-01-09T04:49:42.639846052Z 2023-01-09T04:49:42.639Z|00318|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:49:42.639846052Z 2023-01-09T04:49:42.639Z|00319|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:49:45.001047180Z 2023-01-09T04:49:45.001Z|00320|binding|INFO|Releasing lport openshift-kube-apiserver_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:49:58.070502560Z 2023-01-09T04:49:58.070Z|00321|binding|INFO|Releasing lport openshift-kube-scheduler_installer-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:50:19.930169855Z 2023-01-09T04:50:19.930Z|00322|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-55dcd5f85b-sllsw from this chassis (sb_readonly=0)
+2023-01-09T04:50:25.614174521Z 2023-01-09T04:50:25.614Z|00323|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-7b6d7d47d4-2524q for this chassis.
+2023-01-09T04:50:25.614174521Z 2023-01-09T04:50:25.614Z|00324|binding|INFO|openshift-authentication_oauth-openshift-7b6d7d47d4-2524q: Claiming 0a:58:0a:82:00:44 10.130.0.68
+2023-01-09T04:50:25.642629333Z 2023-01-09T04:50:25.642Z|00325|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7b6d7d47d4-2524q ovn-installed in OVS
+2023-01-09T04:50:25.642629333Z 2023-01-09T04:50:25.642Z|00326|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7b6d7d47d4-2524q up in Southbound
+2023-01-09T04:50:35.376581799Z 2023-01-09T04:50:35.376Z|00327|binding|INFO|Releasing lport openshift-console_console-8f86669cb-wzp9p from this chassis (sb_readonly=0)
+2023-01-09T04:50:43.608593369Z 2023-01-09T04:50:43.608Z|00328|binding|INFO|Claiming lport openshift-console_console-6cbb95b566-blr5w for this chassis.
+2023-01-09T04:50:43.608593369Z 2023-01-09T04:50:43.608Z|00329|binding|INFO|openshift-console_console-6cbb95b566-blr5w: Claiming 0a:58:0a:82:00:45 10.130.0.69
+2023-01-09T04:50:43.634427904Z 2023-01-09T04:50:43.634Z|00330|binding|INFO|Setting lport openshift-console_console-6cbb95b566-blr5w ovn-installed in OVS
+2023-01-09T04:50:43.634427904Z 2023-01-09T04:50:43.634Z|00331|binding|INFO|Setting lport openshift-console_console-6cbb95b566-blr5w up in Southbound
+2023-01-09T04:50:56.452426515Z 2023-01-09T04:50:56.452Z|00332|binding|INFO|Claiming lport openshift-kube-controller-manager_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:50:56.452426515Z 2023-01-09T04:50:56.452Z|00333|binding|INFO|openshift-kube-controller-manager_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:46 10.130.0.70
+2023-01-09T04:50:56.477572492Z 2023-01-09T04:50:56.477Z|00334|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:50:56.477572492Z 2023-01-09T04:50:56.477Z|00335|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:50:59.292017322Z 2023-01-09T04:50:59.291Z|00336|binding|INFO|Releasing lport openshift-kube-controller-manager_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:51:02.557101717Z 2023-01-09T04:51:02.557Z|00337|binding|INFO|Claiming lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:51:02.557101717Z 2023-01-09T04:51:02.557Z|00338|binding|INFO|openshift-kube-scheduler_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:47 10.130.0.71
+2023-01-09T04:51:02.582464789Z 2023-01-09T04:51:02.582Z|00339|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:51:02.582464789Z 2023-01-09T04:51:02.582Z|00340|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:51:05.298017190Z 2023-01-09T04:51:05.297Z|00341|binding|INFO|Releasing lport openshift-kube-scheduler_revision-pruner-6-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:51:17.178433078Z 2023-01-09T04:51:17.178Z|00342|binding|INFO|Claiming lport openshift-etcd_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:51:17.178433078Z 2023-01-09T04:51:17.178Z|00343|binding|INFO|openshift-etcd_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:48 10.130.0.72
+2023-01-09T04:51:17.207298035Z 2023-01-09T04:51:17.207Z|00344|binding|INFO|Setting lport openshift-etcd_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:51:17.207298035Z 2023-01-09T04:51:17.207Z|00345|binding|INFO|Setting lport openshift-etcd_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:51:20.349451701Z 2023-01-09T04:51:20.349Z|00346|binding|INFO|Releasing lport openshift-etcd_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:51:26.970940255Z 2023-01-09T04:51:26.970Z|00347|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-5d7f7fbfdb-fg58d from this chassis (sb_readonly=0)
+2023-01-09T04:51:27.430670045Z 2023-01-09T04:51:27.430Z|00348|binding|INFO|Claiming lport openshift-kube-controller-manager_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:51:27.430716131Z 2023-01-09T04:51:27.430Z|00349|binding|INFO|openshift-kube-controller-manager_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:49 10.130.0.73
+2023-01-09T04:51:27.456694881Z 2023-01-09T04:51:27.456Z|00350|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:51:27.456694881Z 2023-01-09T04:51:27.456Z|00351|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:51:28.979214486Z 2023-01-09T04:51:28.979Z|00352|binding|INFO|Claiming lport openshift-etcd_installer-7-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:51:28.979214486Z 2023-01-09T04:51:28.979Z|00353|binding|INFO|openshift-etcd_installer-7-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:4a 10.130.0.74
+2023-01-09T04:51:29.002564482Z 2023-01-09T04:51:29.002Z|00354|binding|INFO|Setting lport openshift-etcd_installer-7-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:51:29.002564482Z 2023-01-09T04:51:29.002Z|00355|binding|INFO|Setting lport openshift-etcd_installer-7-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:51:30.394118540Z 2023-01-09T04:51:30.394Z|00356|binding|INFO|Releasing lport openshift-kube-controller-manager_revision-pruner-7-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:51:39.475622346Z 2023-01-09T04:51:39.475Z|00357|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-545598cc79-ztrmn for this chassis.
+2023-01-09T04:51:39.475622346Z 2023-01-09T04:51:39.475Z|00358|binding|INFO|openshift-oauth-apiserver_apiserver-545598cc79-ztrmn: Claiming 0a:58:0a:82:00:4b 10.130.0.75
+2023-01-09T04:51:39.499380913Z 2023-01-09T04:51:39.499Z|00359|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-545598cc79-ztrmn ovn-installed in OVS
+2023-01-09T04:51:39.499380913Z 2023-01-09T04:51:39.499Z|00360|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-545598cc79-ztrmn up in Southbound
+2023-01-09T04:52:03.522852298Z 2023-01-09T04:52:03.522Z|00361|binding|INFO|Releasing lport openshift-etcd_installer-7-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:52:04.137921485Z 2023-01-09T04:52:04.137Z|00362|binding|INFO|Releasing lport openshift-apiserver_apiserver-67dc8f65bb-wsgkv from this chassis (sb_readonly=0)
+2023-01-09T04:52:15.672401548Z 2023-01-09T04:52:15.672Z|00363|binding|INFO|Claiming lport openshift-apiserver_apiserver-86b6d848c8-8ns9s for this chassis.
+2023-01-09T04:52:15.672401548Z 2023-01-09T04:52:15.672Z|00364|binding|INFO|openshift-apiserver_apiserver-86b6d848c8-8ns9s: Claiming 0a:58:0a:82:00:4c 10.130.0.76
+2023-01-09T04:52:15.695330313Z 2023-01-09T04:52:15.695Z|00365|binding|INFO|Setting lport openshift-apiserver_apiserver-86b6d848c8-8ns9s ovn-installed in OVS
+2023-01-09T04:52:15.695330313Z 2023-01-09T04:52:15.695Z|00366|binding|INFO|Setting lport openshift-apiserver_apiserver-86b6d848c8-8ns9s up in Southbound
+2023-01-09T04:52:40.358111438Z 2023-01-09T04:52:40.358Z|00367|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-7-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:52:40.358111438Z 2023-01-09T04:52:40.358Z|00368|binding|INFO|openshift-kube-controller-manager_installer-7-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:4d 10.130.0.77
+2023-01-09T04:52:40.380756156Z 2023-01-09T04:52:40.380Z|00369|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:52:40.380756156Z 2023-01-09T04:52:40.380Z|00370|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:53:14.804740904Z 2023-01-09T04:53:14.804Z|00371|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-7-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:53:46.153767840Z 2023-01-09T04:53:46.153Z|00372|binding|INFO|Claiming lport openshift-kube-apiserver_installer-8-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:53:46.153767840Z 2023-01-09T04:53:46.153Z|00373|binding|INFO|openshift-kube-apiserver_installer-8-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:4e 10.130.0.78
+2023-01-09T04:53:46.177686025Z 2023-01-09T04:53:46.177Z|00374|binding|INFO|Setting lport openshift-kube-apiserver_installer-8-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:53:46.177686025Z 2023-01-09T04:53:46.177Z|00375|binding|INFO|Setting lport openshift-kube-apiserver_installer-8-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:54:26.193748159Z 2023-01-09T04:54:26.193Z|00376|binding|INFO|Releasing lport openshift-kube-apiserver_installer-8-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:54:33.506935222Z 2023-01-09T04:54:33.506Z|00377|binding|INFO|Claiming lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:54:33.506935222Z 2023-01-09T04:54:33.506Z|00378|binding|INFO|openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:4f 10.130.0.79
+2023-01-09T04:54:33.535841856Z 2023-01-09T04:54:33.535Z|00379|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:54:33.535841856Z 2023-01-09T04:54:33.535Z|00380|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:55:30.859625532Z 2023-01-09T04:55:30.859Z|00381|binding|INFO|Claiming lport openshift-etcd_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:55:30.859625532Z 2023-01-09T04:55:30.859Z|00382|binding|INFO|openshift-etcd_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:50 10.130.0.80
+2023-01-09T04:55:30.884198937Z 2023-01-09T04:55:30.884Z|00383|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:55:30.884198937Z 2023-01-09T04:55:30.884Z|00384|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:55:33.340048603Z 2023-01-09T04:55:33.340Z|00385|binding|INFO|Releasing lport openshift-etcd_revision-pruner-8-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:57:18.202758746Z 2023-01-09T04:57:18.202Z|00386|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T04:57:30.762576375Z 2023-01-09T04:57:30.762Z|00387|binding|INFO|Claiming lport openshift-etcd_installer-8-ip-10-0-160-211.us-east-2.compute.internal for this chassis.
+2023-01-09T04:57:30.762654306Z 2023-01-09T04:57:30.762Z|00388|binding|INFO|openshift-etcd_installer-8-ip-10-0-160-211.us-east-2.compute.internal: Claiming 0a:58:0a:82:00:51 10.130.0.81
+2023-01-09T04:57:30.792870073Z 2023-01-09T04:57:30.792Z|00389|binding|INFO|Setting lport openshift-etcd_installer-8-ip-10-0-160-211.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T04:57:30.792870073Z 2023-01-09T04:57:30.792Z|00390|binding|INFO|Setting lport openshift-etcd_installer-8-ip-10-0-160-211.us-east-2.compute.internal up in Southbound
+2023-01-09T04:58:00.763772306Z 2023-01-09T04:58:00.763Z|00391|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T04:58:04.878876666Z 2023-01-09T04:58:04.878Z|00392|binding|INFO|Releasing lport openshift-etcd_installer-8-ip-10-0-160-211.us-east-2.compute.internal from this chassis (sb_readonly=0)
+2023-01-09T04:58:35.783138356Z 2023-01-09T04:58:35.783Z|00393|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T04:59:13.390735220Z 2023-01-09T04:59:13.390Z|00394|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:00:42.946163208Z 2023-01-09T05:00:42.946Z|00395|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-7b6d7d47d4-2524q from this chassis (sb_readonly=0)
+2023-01-09T05:00:44.138226424Z 2023-01-09T05:00:44.138Z|00396|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-7db4769fc7-xknq2 for this chassis.
+2023-01-09T05:00:44.138226424Z 2023-01-09T05:00:44.138Z|00397|binding|INFO|openshift-authentication_oauth-openshift-7db4769fc7-xknq2: Claiming 0a:58:0a:82:00:52 10.130.0.82
+2023-01-09T05:00:44.164652460Z 2023-01-09T05:00:44.164Z|00398|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7db4769fc7-xknq2 up in Southbound
+2023-01-09T05:00:44.165363059Z 2023-01-09T05:00:44.165Z|00399|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7db4769fc7-xknq2 ovn-installed in OVS
+2023-01-09T05:01:43.856149522Z 2023-01-09T05:01:43.856Z|00400|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:04:15.279983299Z 2023-01-09T05:04:15.279Z|00401|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:08:39.021869855Z 2023-01-09T05:08:39.021Z|00402|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:15:34.512256934Z 2023-01-09T05:15:34.512Z|00403|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:19:04.767225074Z 2023-01-09T05:19:04.767Z|00404|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:22:19.226798868Z 2023-01-09T05:22:19.226Z|00405|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:25:48.920782368Z 2023-01-09T05:25:48.920Z|00406|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:29:02.131815530Z 2023-01-09T05:29:02.131Z|00407|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:29:34.552492060Z 2023-01-09T05:29:34.552Z|00408|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:35:13.092670717Z 2023-01-09T05:35:13.092Z|00409|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:37:17.842329516Z 2023-01-09T05:37:17.842Z|00410|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:41:38.742071523Z 2023-01-09T05:41:38.742Z|00411|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:43:50.018654558Z 2023-01-09T05:43:50.018Z|00412|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:45:36.057324041Z 2023-01-09T05:45:36.057Z|00413|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:47:32.568831275Z 2023-01-09T05:47:32.568Z|00414|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:51:07.154758742Z 2023-01-09T05:51:07.154Z|00415|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:52:01.126780502Z 2023-01-09T05:52:01.126Z|00416|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T05:54:08.845814496Z 2023-01-09T05:54:08.845Z|00417|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:57:47.275738640Z 2023-01-09T05:57:47.275Z|00418|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:01:27.609824761Z 2023-01-09T06:01:27.609Z|00419|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:02:00.998959830Z 2023-01-09T06:02:00.998Z|00420|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:02:47.593798568Z 2023-01-09T06:02:47.593Z|00421|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:06:50.056757162Z 2023-01-09T06:06:50.056Z|00422|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:08:34.134856030Z 2023-01-09T06:08:34.134Z|00423|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:11:42.902361050Z 2023-01-09T06:11:42.902Z|00424|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:11:58.378018841Z 2023-01-09T06:11:58.377Z|00425|binding|INFO|Claiming lport openshift-logging_collector-57c8b for this chassis.
+2023-01-09T06:11:58.378018841Z 2023-01-09T06:11:58.377Z|00426|binding|INFO|openshift-logging_collector-57c8b: Claiming 0a:58:0a:82:00:53 10.130.0.83
+2023-01-09T06:11:58.411791962Z 2023-01-09T06:11:58.411Z|00427|binding|INFO|Setting lport openshift-logging_collector-57c8b ovn-installed in OVS
+2023-01-09T06:11:58.411791962Z 2023-01-09T06:11:58.411Z|00428|binding|INFO|Setting lport openshift-logging_collector-57c8b up in Southbound
+2023-01-09T06:12:09.866729701Z 2023-01-09T06:12:09.866Z|00429|binding|INFO|Releasing lport openshift-logging_collector-57c8b from this chassis (sb_readonly=0)
+2023-01-09T06:12:11.832655881Z 2023-01-09T06:12:11.832Z|00430|binding|INFO|Claiming lport openshift-logging_collector-pvvls for this chassis.
+2023-01-09T06:12:11.832655881Z 2023-01-09T06:12:11.832Z|00431|binding|INFO|openshift-logging_collector-pvvls: Claiming 0a:58:0a:82:00:54 10.130.0.84
+2023-01-09T06:12:11.862651569Z 2023-01-09T06:12:11.862Z|00432|binding|INFO|Setting lport openshift-logging_collector-pvvls ovn-installed in OVS
+2023-01-09T06:12:11.862651569Z 2023-01-09T06:12:11.862Z|00433|binding|INFO|Setting lport openshift-logging_collector-pvvls up in Southbound
+2023-01-09T06:14:26.830837912Z 2023-01-09T06:14:26.830Z|00434|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:15:35.388759313Z 2023-01-09T06:15:35.388Z|00435|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:18:57.843777290Z 2023-01-09T06:18:57.843Z|00436|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:22:20.834802395Z 2023-01-09T06:22:20.834Z|00437|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:22:53.500791336Z 2023-01-09T06:22:53.500Z|00438|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:23:39.610799106Z 2023-01-09T06:23:39.610Z|00439|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:29:44.660773519Z 2023-01-09T06:29:44.660Z|00440|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:30:35.632874706Z 2023-01-09T06:30:35.632Z|00441|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:32:37.624874031Z 2023-01-09T06:32:37.624Z|00442|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:34:32.469763482Z 2023-01-09T06:34:32.469Z|00443|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:40:09.454102726Z 2023-01-09T06:40:09.454Z|00444|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:43:10.484756438Z 2023-01-09T06:43:10.484Z|00445|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:45:43.394888950Z 2023-01-09T06:45:43.394Z|00446|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:50:43.231648729Z 2023-01-09T06:50:43.231Z|00447|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:53:27.238742868Z 2023-01-09T06:53:27.238Z|00448|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:54:29.431811377Z 2023-01-09T06:54:29.431Z|00449|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:56:23.440889381Z 2023-01-09T06:56:23.440Z|00450|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:57:01.197801429Z 2023-01-09T06:57:01.197Z|00451|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:57:34.365888783Z 2023-01-09T06:57:34.365Z|00452|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:00:34.053766095Z 2023-01-09T07:00:34.053Z|00453|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:01:44.072651276Z 2023-01-09T07:01:44.072Z|00454|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:05:20.352668681Z 2023-01-09T07:05:20.352Z|00455|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:06:40.949736165Z 2023-01-09T07:06:40.949Z|00456|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:07:47.473025974Z 2023-01-09T07:07:47.472Z|00457|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:08:20.165773582Z 2023-01-09T07:08:20.165Z|00458|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:14:34.226304856Z 2023-01-09T07:14:34.226Z|00459|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:15:36.055945544Z 2023-01-09T07:15:36.055Z|00460|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:16:56.513676451Z 2023-01-09T07:16:56.513Z|00461|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:01.279421045Z 2023-01-09T07:19:01.279Z|00462|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:34.085755236Z 2023-01-09T07:19:34.085Z|00463|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:26:05.950751163Z 2023-01-09T07:26:05.950Z|00464|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:26:50.079227624Z 2023-01-09T07:26:50.079Z|00465|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:27:40.074795870Z 2023-01-09T07:27:40.074Z|00466|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:29:14.580879659Z 2023-01-09T07:29:14.580Z|00467|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:29:47.824475816Z 2023-01-09T07:29:47.824Z|00468|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:30:35.494789943Z 2023-01-09T07:30:35.494Z|00469|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:37:55.574002165Z 2023-01-09T07:37:55.573Z|00470|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:41:08.733806532Z 2023-01-09T07:41:08.733Z|00471|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:41:41.867805956Z 2023-01-09T07:41:41.867Z|00472|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:45:36.707743358Z 2023-01-09T07:45:36.707Z|00473|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:47:37.734441334Z 2023-01-09T07:47:37.734Z|00474|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:49:13.240480296Z 2023-01-09T07:49:13.240Z|00475|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:51:34.493698282Z 2023-01-09T07:51:34.493Z|00476|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:52:07.657861629Z 2023-01-09T07:52:07.657Z|00477|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:58:13.712532869Z 2023-01-09T07:58:13.712Z|00478|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:59:37.715499171Z 2023-01-09T07:59:37.715Z|00479|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:00:35.853747525Z 2023-01-09T08:00:35.853Z|00480|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:02:18.949821833Z 2023-01-09T08:02:18.949Z|00481|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:02:51.460755044Z 2023-01-09T08:02:51.460Z|00482|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:08:45.473846147Z 2023-01-09T08:08:45.473Z|00483|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:09:49.167973132Z 2023-01-09T08:09:49.167Z|00484|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:12:21.688269924Z 2023-01-09T08:12:21.688Z|00485|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:12:54.157298440Z 2023-01-09T08:12:54.157Z|00486|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:15:35.007754670Z 2023-01-09T08:15:35.007Z|00487|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:18:28.266797243Z 2023-01-09T08:18:28.266Z|00488|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:19:33.277789449Z 2023-01-09T08:19:33.277Z|00489|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:20:37.854759447Z 2023-01-09T08:20:37.854Z|00490|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:23:21.894751103Z 2023-01-09T08:23:21.894Z|00491|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:23:55.031662179Z 2023-01-09T08:23:55.031Z|00492|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:29:34.004804137Z 2023-01-09T08:29:34.004Z|00493|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:30:36.056794465Z 2023-01-09T08:30:36.056Z|00494|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:32:34.453978375Z 2023-01-09T08:32:34.453Z|00495|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:35:08.339768115Z 2023-01-09T08:35:08.339Z|00496|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:35:41.043811255Z 2023-01-09T08:35:41.043Z|00497|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:42:41.953392450Z 2023-01-09T08:42:41.953Z|00498|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:46:06.822364210Z 2023-01-09T08:46:06.822Z|00499|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:47:51.452773692Z 2023-01-09T08:47:51.452Z|00500|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:53:29.482784717Z 2023-01-09T08:53:29.482Z|00501|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:56:39.150922739Z 2023-01-09T08:56:39.150Z|00502|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:57:59.803385960Z 2023-01-09T08:57:59.803Z|00503|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:00:36.058825668Z 2023-01-09T09:00:36.058Z|00504|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:02:21.007455849Z 2023-01-09T09:02:21.007Z|00505|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:03:49.243677461Z 2023-01-09T09:03:49.243Z|00506|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:07:33.804817001Z 2023-01-09T09:07:33.804Z|00507|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:08:06.493750138Z 2023-01-09T09:08:06.493Z|00508|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:09:07.673876841Z 2023-01-09T09:09:07.673Z|00509|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:12:36.764779860Z 2023-01-09T09:12:36.764Z|00510|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:14:06.014062120Z 2023-01-09T09:14:06.013Z|00511|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:15:34.682069786Z 2023-01-09T09:15:34.682Z|00512|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:18:05.636788013Z 2023-01-09T09:18:05.636Z|00513|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:18:38.278786434Z 2023-01-09T09:18:38.278Z|00514|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:19:36.473783310Z 2023-01-09T09:19:36.473Z|00515|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:24:19.802879878Z 2023-01-09T09:24:19.802Z|00516|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:25:28.135240006Z 2023-01-09T09:25:28.135Z|00517|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:29:05.125797246Z 2023-01-09T09:29:05.125Z|00518|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:29:38.200571609Z 2023-01-09T09:29:38.200Z|00519|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:30:34.859732297Z 2023-01-09T09:30:34.859Z|00520|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:31:45.556411290Z 2023-01-09T09:31:45.556Z|00521|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:35:33.783434427Z 2023-01-09T09:35:33.783Z|00522|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:36:30.707197558Z 2023-01-09T09:36:30.707Z|00523|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:39:35.849723109Z 2023-01-09T09:39:35.849Z|00524|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:40:08.992461737Z 2023-01-09T09:40:08.992Z|00525|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:42:59.466692485Z 2023-01-09T09:42:59.466Z|00526|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:46:13.697888889Z 2023-01-09T09:46:13.697Z|00527|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:50:43.804806240Z 2023-01-09T09:50:43.804Z|00528|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:54:25.451774709Z 2023-01-09T09:54:25.451Z|00529|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:56:42.499750710Z 2023-01-09T09:56:42.499Z|00530|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:01:10.577168432Z 2023-01-09T10:01:10.577Z|00531|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:05:01.231551861Z 2023-01-09T10:05:01.231Z|00532|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:07:28.388917533Z 2023-01-09T10:07:28.388Z|00533|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:11:04.584743338Z 2023-01-09T10:11:04.584Z|00534|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:12:09.534665243Z 2023-01-09T10:12:09.534Z|00535|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:13:25.463656948Z 2023-01-09T10:13:25.463Z|00536|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:15:38.016539683Z 2023-01-09T10:15:38.016Z|00537|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:18:06.311750891Z 2023-01-09T10:18:06.311Z|00538|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:21:58.129482570Z 2023-01-09T10:21:58.129Z|00539|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:22:39.847781233Z 2023-01-09T10:22:39.847Z|00540|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:23:44.328753751Z 2023-01-09T10:23:44.328Z|00541|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:26:28.919838518Z 2023-01-09T10:26:28.919Z|00542|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:29:25.309231170Z 2023-01-09T10:29:25.309Z|00543|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:30:35.401070374Z 2023-01-09T10:30:35.400Z|00544|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:32:13.629790278Z 2023-01-09T10:32:13.629Z|00545|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:33:32.007181805Z 2023-01-09T10:33:32.007Z|00546|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:34:05.210781191Z 2023-01-09T10:34:05.210Z|00547|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:37:35.810942490Z 2023-01-09T10:37:35.810Z|00548|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:39:59.223799168Z 2023-01-09T10:39:59.223Z|00549|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:43:13.254861822Z 2023-01-09T10:43:13.254Z|00550|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:44:18.884799784Z 2023-01-09T10:44:18.884Z|00551|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:44:52.046236053Z 2023-01-09T10:44:52.046Z|00552|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:45:34.585727351Z 2023-01-09T10:45:34.585Z|00553|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:48:25.701792592Z 2023-01-09T10:48:25.701Z|00554|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:50:27.057777548Z 2023-01-09T10:50:27.057Z|00555|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:53:12.720446621Z 2023-01-09T10:53:12.720Z|00556|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:55:24.540876790Z 2023-01-09T10:55:24.540Z|00557|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:55:57.946787265Z 2023-01-09T10:55:57.946Z|00558|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:59:11.605822922Z 2023-01-09T10:59:11.605Z|00559|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:00:37.795329044Z 2023-01-09T11:00:37.795Z|00560|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:01:24.142058264Z 2023-01-09T11:01:24.142Z|00561|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:03:30.199794019Z 2023-01-09T11:03:30.199Z|00562|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:05:52.998208115Z 2023-01-09T11:05:52.998Z|00563|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:06:25.780768658Z 2023-01-09T11:06:25.780Z|00564|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:10:15.574844074Z 2023-01-09T11:10:15.574Z|00565|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:12:02.899808201Z 2023-01-09T11:12:02.899Z|00566|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:13:58.708641404Z 2023-01-09T11:13:58.708Z|00567|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:15:35.942176610Z 2023-01-09T11:15:35.942Z|00568|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:16:34.810852098Z 2023-01-09T11:16:34.810Z|00569|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:17:07.601041708Z 2023-01-09T11:17:07.600Z|00570|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:20:42.249797209Z 2023-01-09T11:20:42.249Z|00571|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:23:00.838812354Z 2023-01-09T11:23:00.838Z|00572|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:24:28.200023607Z 2023-01-09T11:24:28.199Z|00573|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:26:44.715874654Z 2023-01-09T11:26:44.715Z|00574|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:27:17.326783084Z 2023-01-09T11:27:17.326Z|00575|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:31:12.021896871Z 2023-01-09T11:31:12.021Z|00576|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:33:21.667350093Z 2023-01-09T11:33:21.667Z|00577|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:35:49.099796814Z 2023-01-09T11:35:49.099Z|00578|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:38:09.724964439Z 2023-01-09T11:38:09.724Z|00579|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T11:38:42.298427031Z 2023-01-09T11:38:42.298Z|00580|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:43:23.078146721Z 2023-01-09T11:43:23.078Z|00581|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:44:18.715983236Z 2023-01-09T11:44:18.715Z|00582|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:46:14.333813780Z 2023-01-09T11:46:14.333Z|00583|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:49:32.118837409Z 2023-01-09T11:49:32.118Z|00584|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:53:41.826311815Z 2023-01-09T11:53:41.826Z|00585|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:55:23.674812109Z 2023-01-09T11:55:23.674Z|00586|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:57:01.931821931Z 2023-01-09T11:57:01.931Z|00587|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:59:58.870774314Z 2023-01-09T11:59:58.870Z|00588|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:00:36.054232923Z 2023-01-09T12:00:36.054Z|00589|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:04:17.603783921Z 2023-01-09T12:04:17.603Z|00590|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:06:22.629531746Z 2023-01-09T12:06:22.629Z|00591|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:07:12.448963489Z 2023-01-09T12:07:12.448Z|00592|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:11:21.808717075Z 2023-01-09T12:11:21.808Z|00593|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:14:40.394817229Z 2023-01-09T12:14:40.394Z|00594|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:15:35.673217601Z 2023-01-09T12:15:35.673Z|00595|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:17:43.982311255Z 2023-01-09T12:17:43.982Z|00596|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:21:05.852778664Z 2023-01-09T12:21:05.852Z|00597|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:21:38.575841289Z 2023-01-09T12:21:38.575Z|00598|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:22:30.432853110Z 2023-01-09T12:22:30.432Z|00599|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:25:09.181567989Z 2023-01-09T12:25:09.181Z|00600|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:28:58.640780217Z 2023-01-09T12:28:58.640Z|00601|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:30:36.870776242Z 2023-01-09T12:30:36.870Z|00602|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:31:07.317575117Z 2023-01-09T12:31:07.317Z|00603|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:31:40.296017996Z 2023-01-09T12:31:40.295Z|00604|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:32:53.260329325Z 2023-01-09T12:32:53.260Z|00605|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:35:55.048740371Z 2023-01-09T12:35:55.048Z|00606|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:39:04.376751935Z 2023-01-09T12:39:04.376Z|00607|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:41:26.719773440Z 2023-01-09T12:41:26.719Z|00608|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:42:00.072814327Z 2023-01-09T12:42:00.072Z|00609|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:43:53.222500126Z 2023-01-09T12:43:53.222Z|00610|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:45:34.030386346Z 2023-01-09T12:45:34.030Z|00611|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:49:40.211794404Z 2023-01-09T12:49:40.211Z|00612|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:54:04.021274736Z 2023-01-09T12:54:04.021Z|00613|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:59:45.026200721Z 2023-01-09T12:59:45.026Z|00614|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:00:35.187766789Z 2023-01-09T13:00:35.187Z|00615|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:02:58.164037921Z 2023-01-09T13:02:58.163Z|00616|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:04:54.936807101Z 2023-01-09T13:04:54.936Z|00617|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:10:25.905805023Z 2023-01-09T13:10:25.905Z|00618|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:13:38.393757294Z 2023-01-09T13:13:38.393Z|00619|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:14:11.574765281Z 2023-01-09T13:14:11.574Z|00620|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:15:42.876731525Z 2023-01-09T13:15:42.876Z|00621|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:25:24.446566128Z 2023-01-09T13:25:24.446Z|00622|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:29:30.321805691Z 2023-01-09T13:29:30.321Z|00623|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:30:34.598822149Z 2023-01-09T13:30:34.598Z|00624|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:34:55.300767015Z 2023-01-09T13:34:55.300Z|00625|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:36:51.384474074Z 2023-01-09T13:36:51.384Z|00626|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:40:23.977224115Z 2023-01-09T13:40:23.977Z|00627|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:45:34.848783701Z 2023-01-09T13:45:34.848Z|00628|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:47:25.300753053Z 2023-01-09T13:47:25.300Z|00629|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:47:58.310750756Z 2023-01-09T13:47:58.310Z|00630|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:51:13.872757988Z 2023-01-09T13:51:13.872Z|00631|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:57:15.522875451Z 2023-01-09T13:57:15.522Z|00632|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:59:17.860480302Z 2023-01-09T13:59:17.860Z|00633|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:59:50.335884087Z 2023-01-09T13:59:50.335Z|00634|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:00:34.002697146Z 2023-01-09T14:00:34.002Z|00635|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:02:22.792399829Z 2023-01-09T14:02:22.792Z|00636|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:08:10.145476969Z 2023-01-09T14:08:10.145Z|00637|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:09:53.071146815Z 2023-01-09T14:09:53.071Z|00638|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:13:23.656546722Z 2023-01-09T14:13:23.656Z|00639|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:15:35.129399414Z 2023-01-09T14:15:35.129Z|00640|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:19:27.504022841Z 2023-01-09T14:19:27.503Z|00641|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:20:43.867446949Z 2023-01-09T14:20:43.867Z|00642|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:24:16.574976039Z 2023-01-09T14:24:16.574Z|00643|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:29:41.523766173Z 2023-01-09T14:29:41.523Z|00644|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:31:06.360694272Z 2023-01-09T14:31:06.360Z|00645|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:35:44.481738902Z 2023-01-09T14:35:44.481Z|00646|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:39:53.616702448Z 2023-01-09T14:39:53.616Z|00647|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:41:06.778609127Z 2023-01-09T14:41:06.778Z|00648|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:44:31.128816265Z 2023-01-09T14:44:31.128Z|00649|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:46:26.285784847Z 2023-01-09T14:46:26.285Z|00650|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:50:28.429821374Z 2023-01-09T14:50:28.429Z|00651|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:51:01.070806754Z 2023-01-09T14:51:01.070Z|00652|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:53:23.168897670Z 2023-01-09T14:53:23.168Z|00653|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:56:30.004942398Z 2023-01-09T14:56:30.004Z|00654|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:00:58.252486874Z 2023-01-09T15:00:58.252Z|00655|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:01:30.851247461Z 2023-01-09T15:01:30.851Z|00656|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:03:58.026983031Z 2023-01-09T15:03:58.026Z|00657|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:06:53.776939974Z 2023-01-09T15:06:53.776Z|00658|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:12:16.047749997Z 2023-01-09T15:12:16.047Z|00659|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:12:48.794765624Z 2023-01-09T15:12:48.794Z|00660|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:14:59.963487806Z 2023-01-09T15:14:59.963Z|00661|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:15:35.640456721Z 2023-01-09T15:15:35.640Z|00662|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:17:11.347793612Z 2023-01-09T15:17:11.347Z|00663|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:22:24.155014734Z 2023-01-09T15:22:24.154Z|00664|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:22:57.524849083Z 2023-01-09T15:22:57.524Z|00665|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:25:14.760156685Z 2023-01-09T15:25:14.760Z|00666|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:27:39.359786582Z 2023-01-09T15:27:39.359Z|00667|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:30:34.766739336Z 2023-01-09T15:30:34.766Z|00668|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:32:56.752770262Z 2023-01-09T15:32:56.752Z|00669|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:33:29.414758441Z 2023-01-09T15:33:29.414Z|00670|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:37:21.937832291Z 2023-01-09T15:37:21.937Z|00671|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:38:56.318751784Z 2023-01-09T15:38:56.318Z|00672|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:40:47.353919233Z 2023-01-09T15:40:47.353Z|00673|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache

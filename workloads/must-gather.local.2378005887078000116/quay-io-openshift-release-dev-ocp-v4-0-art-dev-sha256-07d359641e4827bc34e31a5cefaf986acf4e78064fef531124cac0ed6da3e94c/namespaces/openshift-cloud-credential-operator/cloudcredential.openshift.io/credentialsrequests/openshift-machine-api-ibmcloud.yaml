@@ -1,0 +1,89 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2023-01-09T04:37:19Z"
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:policies: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:37:19Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:38:06Z"
+  name: openshift-machine-api-ibmcloud
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "2251"
+  uid: d27bbf4e-b03d-4200-a5fb-d664335c284c
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: IBMCloudProviderSpec
+    policies:
+    - attributes:
+      - name: serviceName
+        value: is
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Operator
+      - crn:v1:bluemix:public:iam::::role:Editor
+      - crn:v1:bluemix:public:iam::::role:Viewer
+    - attributes:
+      - name: resourceType
+        value: resource-group
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Viewer
+  secretRef:
+    name: ibmcloud-credentials
+    namespace: openshift-machine-api
+status:
+  conditions:
+  - lastProbeTime: "2023-01-09T04:38:06Z"
+    lastTransitionTime: "2023-01-09T04:38:06Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

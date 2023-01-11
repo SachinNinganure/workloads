@@ -1,0 +1,119 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Jenkins Maven Agent
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:53Z"
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:47:51Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"v4.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:51Z"
+  name: jenkins-agent-maven
+  namespace: openshift
+  resourceVersion: "22030"
+  uid: da16b304-5f4f-4ba8-9094-ba6c8ba8b05b
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Provides a Jenkins Agent with Maven tooling
+      iconClass: icon-jenkins
+      openshift.io/display-name: Jenkins Maven Agent
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: jenkins
+    from:
+      kind: ImageStreamTag
+      name: v4.0
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a Jenkins Agent with Maven tooling
+      iconClass: icon-jenkins
+      openshift.io/display-name: Jenkins Maven Agent
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: jenkins
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/openshift4/ose-jenkins-agent-maven:v4.10
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: v4.0
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-maven
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:53Z"
+      dockerImageReference: registry.redhat.io/openshift4/ose-jenkins-agent-maven@sha256:6f5baf52a205e526d7ce0f00a1abdf3cb481b309b542714f594e2fa2ee8fb285
+      generation: 2
+      image: sha256:6f5baf52a205e526d7ce0f00a1abdf3cb481b309b542714f594e2fa2ee8fb285
+    tag: latest
+  - items:
+    - created: "2023-01-09T04:47:53Z"
+      dockerImageReference: registry.redhat.io/openshift4/ose-jenkins-agent-maven@sha256:6f5baf52a205e526d7ce0f00a1abdf3cb481b309b542714f594e2fa2ee8fb285
+      generation: 2
+      image: sha256:6f5baf52a205e526d7ce0f00a1abdf3cb481b309b542714f594e2fa2ee8fb285
+    tag: v4.0

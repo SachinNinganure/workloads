@@ -1,0 +1,10 @@
+2023-01-09T04:39:24.364458255Z 2023-01-09T04:39:24+00:00 INFO: ovn-node-metrics-cert not mounted. Waiting one hour.
+2023-01-09T04:42:04.497534786Z 2023-01-09T04:42:04+00:00 INFO: ovn-node-metrics-certs mounted, starting kube-rbac-proxy
+2023-01-09T04:42:04.522905233Z I0109 04:42:04.522844    2928 main.go:187] Valid token audiences: 
+2023-01-09T04:42:04.522938187Z I0109 04:42:04.522928    2928 main.go:337] Reading certificate files
+2023-01-09T04:42:04.523119047Z I0109 04:42:04.523104    2928 main.go:371] Starting TCP socket on :9103
+2023-01-09T04:42:04.523397624Z I0109 04:42:04.523378    2928 main.go:378] Listening securely on :9103
+2023-01-09T04:48:37.443874488Z E0109 04:48:37.443824    2928 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:48:37.443910067Z E0109 04:48:37.443879    2928 proxy.go:74] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:47.741582872Z E0109 04:52:47.741507    2928 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:47.741632654Z E0109 04:52:47.741595    2928 proxy.go:74] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused

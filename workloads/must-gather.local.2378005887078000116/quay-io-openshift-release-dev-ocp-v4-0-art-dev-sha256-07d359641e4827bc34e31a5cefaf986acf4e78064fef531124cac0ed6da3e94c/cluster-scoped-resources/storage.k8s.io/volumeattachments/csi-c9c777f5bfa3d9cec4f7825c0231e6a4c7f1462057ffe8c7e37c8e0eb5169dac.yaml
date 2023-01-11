@@ -1,0 +1,58 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: VolumeAttachment
+metadata:
+  annotations:
+    csi.alpha.kubernetes.io/node-id: i-04f1bfd1d011b07b2
+  creationTimestamp: "2023-01-09T06:12:45Z"
+  finalizers:
+  - external-attacher/ebs-csi-aws-com
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:csi.alpha.kubernetes.io/node-id: {}
+        f:finalizers:
+          .: {}
+          v:"external-attacher/ebs-csi-aws-com": {}
+    manager: csi-attacher
+    operation: Update
+    time: "2023-01-09T06:12:45Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:attacher: {}
+        f:nodeName: {}
+        f:source:
+          f:persistentVolumeName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T06:12:45Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:attached: {}
+        f:attachmentMetadata:
+          .: {}
+          f:devicePath: {}
+    manager: csi-attacher
+    operation: Update
+    subresource: status
+    time: "2023-01-09T06:12:49Z"
+  name: csi-c9c777f5bfa3d9cec4f7825c0231e6a4c7f1462057ffe8c7e37c8e0eb5169dac
+  resourceVersion: "60462"
+  uid: fb93cf55-6488-493d-9ae4-349ec562a340
+spec:
+  attacher: ebs.csi.aws.com
+  nodeName: ip-10-0-144-137.us-east-2.compute.internal
+  source:
+    persistentVolumeName: pvc-19506ef1-2fdd-4b53-a651-2f6c7bcebbd6
+status:
+  attached: true
+  attachmentMetadata:
+    devicePath: /dev/xvdbd

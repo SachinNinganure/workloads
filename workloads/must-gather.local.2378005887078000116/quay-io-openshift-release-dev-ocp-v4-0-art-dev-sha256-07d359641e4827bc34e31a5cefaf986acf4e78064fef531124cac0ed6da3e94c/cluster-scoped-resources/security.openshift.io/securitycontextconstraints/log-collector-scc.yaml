@@ -1,0 +1,84 @@
+---
+allowHostDirVolumePlugin: true
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegeEscalation: false
+allowPrivilegedContainer: false
+allowedCapabilities: null
+apiVersion: security.openshift.io/v1
+defaultAddCapabilities: null
+defaultAllowPrivilegeEscalation: false
+forbiddenSysctls:
+- '*'
+fsGroup:
+  type: RunAsAny
+groups: []
+kind: SecurityContextConstraints
+metadata:
+  creationTimestamp: "2023-01-09T06:11:57Z"
+  generation: 2
+  managedFields:
+  - apiVersion: security.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowHostDirVolumePlugin: {}
+      f:allowHostIPC: {}
+      f:allowHostNetwork: {}
+      f:allowHostPID: {}
+      f:allowHostPorts: {}
+      f:allowPrivilegeEscalation: {}
+      f:allowPrivilegedContainer: {}
+      f:allowedCapabilities: {}
+      f:defaultAddCapabilities: {}
+      f:defaultAllowPrivilegeEscalation: {}
+      f:forbiddenSysctls: {}
+      f:fsGroup: {}
+      f:groups: {}
+      f:priority: {}
+      f:readOnlyRootFilesystem: {}
+      f:requiredDropCapabilities: {}
+      f:runAsUser:
+        .: {}
+        f:type: {}
+      f:seLinuxContext:
+        .: {}
+        f:type: {}
+      f:seccompProfiles: {}
+      f:supplementalGroups: {}
+      f:users: {}
+      f:volumes: {}
+    manager: cluster-logging-operator
+    operation: Update
+    time: "2023-01-09T15:39:48Z"
+  name: log-collector-scc
+  resourceVersion: "267950"
+  uid: bbac5806-c846-4562-baee-b9434106f3eb
+priority: null
+readOnlyRootFilesystem: true
+requiredDropCapabilities:
+- CHOWN
+- DAC_OVERRIDE
+- FOWNER
+- FSETID
+- KILL
+- NET_BIND_SERVICE
+- SETGID
+- SETPCAP
+- SETUID
+runAsUser:
+  type: RunAsAny
+seLinuxContext:
+  type: RunAsAny
+seccompProfiles:
+- runtime/default
+supplementalGroups:
+  type: RunAsAny
+users: []
+volumes:
+- configMap
+- emptyDir
+- hostPath
+- projected
+- secret

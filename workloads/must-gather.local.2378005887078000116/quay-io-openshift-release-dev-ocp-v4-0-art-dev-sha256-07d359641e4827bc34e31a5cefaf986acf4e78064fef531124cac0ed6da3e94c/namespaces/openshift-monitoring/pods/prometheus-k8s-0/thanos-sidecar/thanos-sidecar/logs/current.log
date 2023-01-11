@@ -1,0 +1,12 @@
+2023-01-09T04:47:28.676097687Z level=info ts=2023-01-09T04:47:28.676025823Z caller=sidecar.go:123 msg="no supported bucket was configured, uploads will be disabled"
+2023-01-09T04:47:28.676178723Z level=info ts=2023-01-09T04:47:28.676138369Z caller=options.go:30 protocol=gRPC msg="enabling server side TLS"
+2023-01-09T04:47:28.676288303Z level=info ts=2023-01-09T04:47:28.676263882Z caller=options.go:60 protocol=gRPC msg="server TLS client verification enabled"
+2023-01-09T04:47:28.676866516Z level=info ts=2023-01-09T04:47:28.676837487Z caller=sidecar.go:361 msg="starting sidecar"
+2023-01-09T04:47:28.676995741Z level=info ts=2023-01-09T04:47:28.676938531Z caller=intrumentation.go:56 msg="changing probe status" status=ready
+2023-01-09T04:47:28.676995741Z level=info ts=2023-01-09T04:47:28.676957412Z caller=reloader.go:199 component=reloader msg="nothing to be watched"
+2023-01-09T04:47:28.677111098Z level=info ts=2023-01-09T04:47:28.677084099Z caller=intrumentation.go:75 msg="changing probe status" status=healthy
+2023-01-09T04:47:28.677125474Z level=info ts=2023-01-09T04:47:28.677108056Z caller=http.go:73 service=http/server component=sidecar msg="listening for requests and metrics" address=127.0.0.1:10902
+2023-01-09T04:47:28.677702416Z level=info ts=2023-01-09T04:47:28.677660678Z caller=grpc.go:131 service=gRPC/server component=sidecar msg="listening for serving gRPC" address=0.0.0.0:10901
+2023-01-09T04:47:28.677726334Z level=info ts=2023-01-09T04:47:28.677693035Z caller=tls_config.go:195 service=http/server component=sidecar msg="TLS is disabled." http2=false
+2023-01-09T04:47:28.678980349Z level=info ts=2023-01-09T04:47:28.678953416Z caller=sidecar.go:179 msg="successfully loaded prometheus version"
+2023-01-09T04:47:28.724912380Z level=info ts=2023-01-09T04:47:28.724861311Z caller=sidecar.go:201 msg="successfully loaded prometheus external labels" external_labels="{prometheus=\"openshift-monitoring/k8s\", prometheus_replica=\"prometheus-k8s-0\"}"

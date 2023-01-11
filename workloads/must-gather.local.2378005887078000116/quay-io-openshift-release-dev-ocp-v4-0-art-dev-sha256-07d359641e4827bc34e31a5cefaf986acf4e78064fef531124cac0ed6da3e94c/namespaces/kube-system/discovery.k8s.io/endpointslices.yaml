@@ -1,0 +1,109 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.190.242
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-190-242.us-east-2.compute.internal
+      uid: 3d8b8033-dde7-453b-8a42-c52fe66f1c86
+  - addresses:
+    - 10.0.130.201
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-130-201.us-east-2.compute.internal
+      uid: 63f93508-f9ec-4006-9e48-a3356f0aff02
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-199-219.us-east-2.compute.internal
+      uid: 0f86a2c1-ac70-41b4-962c-149ac68ce490
+  - addresses:
+    - 10.0.144.137
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-144-137.us-east-2.compute.internal
+      uid: 84e5248f-d764-4b00-bf42-1ebc30b9e2b8
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-145-4.us-east-2.compute.internal
+      uid: aaa507e9-f484-4779-8f5a-b17315ac8043
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: ip-10-0-160-211.us-east-2.compute.internal
+      uid: 3aa9328b-65bb-4d9a-b12a-7e5710de6e2c
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2023-01-09T04:47:06Z"
+    generation: 4
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+      k8s-app: kubelet
+      kubernetes.io/service-name: kubelet
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bf815f6d-99a4-4a3e-87a8-c69558b32edb"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:35:06Z"
+    name: kubelet-mk46f
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Endpoints
+      name: kubelet
+      uid: bf815f6d-99a4-4a3e-87a8-c69558b32edb
+    resourceVersion: "45951"
+    uid: efce1b54-16a8-428c-9877-5a81c2bdf94f
+  ports:
+  - name: http-metrics
+    port: 10255
+    protocol: TCP
+  - name: https-metrics
+    port: 10250
+    protocol: TCP
+  - name: cadvisor
+    port: 4194
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268622"

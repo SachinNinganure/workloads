@@ -1,0 +1,288 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: machine-api-termination-handler
+    operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: O1lK1A==
+  creationTimestamp: "2023-01-09T05:32:59Z"
+  generateName: machine-api-termination-handler-
+  labels:
+    api: clusterapi
+    controller-revision-hash: 5976496cfc
+    k8s-app: termination-handler
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:api: {}
+          f:controller-revision-hash: {}
+          f:k8s-app: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7517d15f-6157-48b3-909e-509cb293fbbc"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"termination-handler"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"KUBECONFIG"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/kubelet/kubeconfig"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/lib/kubelet/pki"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"kubeconfig"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"pki"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T05:32:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.190.242"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:33:23Z"
+  name: machine-api-termination-handler-nrzs5
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: machine-api-termination-handler
+    uid: 7517d15f-6157-48b3-909e-509cb293fbbc
+  resourceVersion: "44835"
+  uid: 5315c41e-865a-4bd6-a646-bb2ef1709a4b
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ip-10-0-190-242.us-east-2.compute.internal
+  automountServiceAccountToken: false
+  containers:
+  - args:
+    - --logtostderr=true
+    - --v=3
+    - --node-name=$(NODE_NAME)
+    - --namespace=openshift-machine-api
+    - --poll-interval-seconds=5
+    command:
+    - /termination-handler
+    env:
+    - name: KUBECONFIG
+      value: /var/lib/kubelet/kubeconfig
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ef9db227070ef68b463ed902ff609cb8ae2859aedf30d69367f0feae248832c9
+    imagePullPolicy: IfNotPresent
+    name: termination-handler
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/kubelet/kubeconfig
+      name: kubeconfig
+      readOnly: true
+    - mountPath: /var/lib/kubelet/pki
+      name: pki
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  imagePullSecrets:
+  - name: machine-api-termination-handler-dockercfg-648cs
+  nodeName: ip-10-0-190-242.us-east-2.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+    machine.openshift.io/interruptible-instance: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000470000
+    seLinuxOptions:
+      level: s0:c22,c4
+    supplementalGroups:
+    - 1000470000
+  serviceAccount: machine-api-termination-handler
+  serviceAccountName: machine-api-termination-handler
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /var/lib/kubelet/kubeconfig
+      type: ""
+    name: kubeconfig
+  - hostPath:
+      path: /var/lib/kubelet/pki
+      type: ""
+    name: pki
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:32:58Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:33:23Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:33:23Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:32:59Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://c1223e35ba49056b5d268b42fce64c6ad7b3a8139c14a11af53a27ea254fa158
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ef9db227070ef68b463ed902ff609cb8ae2859aedf30d69367f0feae248832c9
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ef9db227070ef68b463ed902ff609cb8ae2859aedf30d69367f0feae248832c9
+    lastState: {}
+    name: termination-handler
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T05:33:22Z"
+  hostIP: 10.0.190.242
+  phase: Running
+  podIP: 10.0.190.242
+  podIPs:
+  - ip: 10.0.190.242
+  qosClass: Burstable
+  startTime: "2023-01-09T05:32:58Z"

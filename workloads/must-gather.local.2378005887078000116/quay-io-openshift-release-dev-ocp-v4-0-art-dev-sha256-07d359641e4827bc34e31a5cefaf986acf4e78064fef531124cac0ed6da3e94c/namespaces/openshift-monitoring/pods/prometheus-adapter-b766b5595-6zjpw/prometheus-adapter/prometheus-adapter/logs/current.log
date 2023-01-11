@@ -1,0 +1,8 @@
+2023-01-09T04:49:22.550690584Z I0109 04:49:22.550572       1 adapter.go:114] successfully using in-cluster auth
+2023-01-09T04:49:23.000717133Z I0109 04:49:23.000673       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/etc/tls/private/client-ca-file"
+2023-01-09T04:49:23.000756784Z I0109 04:49:23.000724       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
+2023-01-09T04:49:23.000765127Z I0109 04:49:23.000679       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/etc/tls/private/requestheader-client-ca-file"
+2023-01-09T04:49:23.001166079Z I0109 04:49:23.001129       1 secure_serving.go:210] Serving securely on [::]:6443
+2023-01-09T04:49:23.001194767Z I0109 04:49:23.001180       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2023-01-09T04:52:51.537838546Z E0109 04:52:51.537789       1 webhook.go:223] Failed to make webhook authorizer request: Post "https://172.30.0.1:443/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:51.537883804Z E0109 04:52:51.537838       1 errors.go:77] Post "https://172.30.0.1:443/apis/authorization.k8s.io/v1/subjectaccessreviews?timeout=10s": dial tcp 172.30.0.1:443: connect: connection refused

@@ -1,0 +1,333 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.7/23"],"mac_address":"0a:58:0a:81:00:07","gateway_ips":["10.129.0.1"],"ip_address":"10.129.0.7/23","gateway_ip":"10.129.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.7"
+          ],
+          "mac": "0a:58:0a:81:00:07",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.7"
+          ],
+          "mac": "0a:58:0a:81:00:07",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-01-09T04:41:05Z"
+  generateName: aws-ebs-csi-driver-operator-78d478467d-
+  labels:
+    name: aws-ebs-csi-driver-operator
+    pod-template-hash: 78d478467d
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T04:41:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5e5d9c3f-e011-4a70-9ebc-b134a41a436a"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"aws-ebs-csi-driver-operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ATTACHER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LIVENESS_PROBE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_DRIVER_REGISTRAR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROVISIONER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RESIZER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SNAPSHOTTER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T04:41:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.0.7"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:09Z"
+  name: aws-ebs-csi-driver-operator-78d478467d-6p28g
+  namespace: openshift-cluster-csi-drivers
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: aws-ebs-csi-driver-operator-78d478467d
+    uid: 5e5d9c3f-e011-4a70-9ebc-b134a41a436a
+  resourceVersion: "5266"
+  uid: 7e566057-39ad-4688-94ef-e3f298b15892
+spec:
+  containers:
+  - args:
+    - start
+    - -v=2
+    env:
+    - name: DRIVER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6d6b0a4a7f205d5e52404797b190b7ef5063a999f3f91680e02229b22790b916
+    - name: PROVISIONER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:12be6984e3a56cbc5b2a5272a872a40b242cce8a0f167993107c6de6bf776c53
+    - name: ATTACHER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab4b9ad5114d8fc53ec73045e973a8be2faa0975195113e96e07fcf8ad86a7e2
+    - name: RESIZER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f18e0cf76a2ac840c9f66f89f1b47aced70650021e7931199659aef9cbca31e0
+    - name: SNAPSHOTTER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8262cb60ae8fbf0bf565a5f624693daa9e6f396970dcdbba5d1ca55eb525ec0
+    - name: NODE_DRIVER_REGISTRAR_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6bd9d4dc813a01257767fb3b16395e8aee044feec410ed8e93ee1e82daf5a744
+    - name: LIVENESS_PROBE_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:836d284f0c24a1d400cebc0f25e8172c28e7476879bfffe1071fb9ceb169c9ce
+    - name: KUBE_RBAC_PROXY_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4e596cc1ded888a6fb4e8cbb9135b18b016ab8edcca1c0818d0231f7ec9a8908
+    imagePullPolicy: IfNotPresent
+    name: aws-ebs-csi-driver-operator
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000290000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6555p
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-199-219.us-east-2.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000290000
+    seLinuxOptions:
+      level: s0:c17,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: aws-ebs-csi-driver-operator
+  serviceAccountName: aws-ebs-csi-driver-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-6555p
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:05Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:09Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:09Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:05Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://9c53af66e186d43ed53d739da071be82f79fb7810cb507ef45eacb323bc1868f
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4e596cc1ded888a6fb4e8cbb9135b18b016ab8edcca1c0818d0231f7ec9a8908
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4e596cc1ded888a6fb4e8cbb9135b18b016ab8edcca1c0818d0231f7ec9a8908
+    lastState: {}
+    name: aws-ebs-csi-driver-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:41:08Z"
+  hostIP: 10.0.199.219
+  phase: Running
+  podIP: 10.129.0.7
+  podIPs:
+  - ip: 10.129.0.7
+  qosClass: Burstable
+  startTime: "2023-01-09T04:41:05Z"

@@ -1,0 +1,141 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: JBoss EAP 7.4.0 Runtime Image with OpenJDK 8
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:51Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+    version: 7.4.0
+  creationTimestamp: "2023-01-09T04:47:51Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"7.4.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:51Z"
+  name: jboss-eap74-openjdk8-runtime-openshift
+  namespace: openshift
+  resourceVersion: "21895"
+  uid: b0237d11-0213-433b-81c5-d72b041c5e44
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: The latest available build of JBoss EAP 7.4.0 runtime image with
+        OpenJDK 8
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP 7.4.0 with OpenJDK 8 (Runtime Image)
+      sampleContextDir: kitchensink
+      sampleRef: 7.4.x
+      sampleRepo: https://github.com/jbossas/eap-quickstarts/
+      supports: eap:7.4.0,javaee:8,java:8
+      tags: builder,eap,javaee,java,jboss,hidden
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap74-openjdk8-runtime-openshift-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 7.4.0
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: The latest available build of JBoss EAP 7.4 runtime image with
+        OpenJDK 8
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP 7.4 with OpenJDK 8 (Runtime Image)
+      sampleContextDir: kitchensink
+      sampleRef: 7.4.x
+      sampleRepo: https://github.com/jbossas/eap-quickstarts/
+      supports: eap:7.4,javaee:8,java:8
+      tags: builder,eap,javaee,java,jboss,hidden
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap74-openjdk8-runtime-openshift-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/jboss-eap74-openjdk8-runtime-openshift
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap74-openjdk8-runtime-openshift-rhel7@sha256:61d3e2e88400b410d975a0bd1e36c9d43327e8726682ab9f8b8065a11876afca
+      generation: 2
+      image: sha256:61d3e2e88400b410d975a0bd1e36c9d43327e8726682ab9f8b8065a11876afca
+    tag: 7.4.0
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap74-openjdk8-runtime-openshift-rhel7@sha256:61d3e2e88400b410d975a0bd1e36c9d43327e8726682ab9f8b8065a11876afca
+      generation: 2
+      image: sha256:61d3e2e88400b410d975a0bd1e36c9d43327e8726682ab9f8b8065a11876afca
+    tag: latest

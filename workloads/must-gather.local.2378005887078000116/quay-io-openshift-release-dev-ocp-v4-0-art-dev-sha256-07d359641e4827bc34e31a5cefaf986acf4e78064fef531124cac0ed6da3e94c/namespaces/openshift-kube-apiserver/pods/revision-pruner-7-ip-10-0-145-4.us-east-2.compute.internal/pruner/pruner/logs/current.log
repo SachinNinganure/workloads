@@ -1,0 +1,16 @@
+2023-01-09T04:49:23.555012851Z I0109 04:49:23.464579       1 cmd.go:41] &{<nil> true {false} prune true map[cert-dir:0xc000b17a40 max-eligible-revision:0xc000b177c0 protected-revisions:0xc000b17860 resource-dir:0xc000b17900 static-pod-name:0xc000b179a0 v:0xc000b29220] [0xc000b29220 0xc000b177c0 0xc000b17860 0xc000b17900 0xc000b17a40 0xc000b179a0] [] map[add-dir-header:0xc000b28aa0 alsologtostderr:0xc000b28b40 cert-dir:0xc000b17a40 help:0xc000b295e0 log-backtrace-at:0xc000b28c80 log-dir:0xc000b28d20 log-file:0xc000b28dc0 log-file-max-size:0xc000b28e60 log-flush-frequency:0xc000b28be0 logtostderr:0xc000b28f00 max-eligible-revision:0xc000b177c0 one-output:0xc000b28fa0 protected-revisions:0xc000b17860 resource-dir:0xc000b17900 skip-headers:0xc000b29040 skip-log-headers:0xc000b290e0 static-pod-name:0xc000b179a0 stderrthreshold:0xc000b29180 v:0xc000b29220 vmodule:0xc000b292c0] [0xc000b177c0 0xc000b17860 0xc000b17900 0xc000b179a0 0xc000b17a40 0xc000b28aa0 0xc000b28b40 0xc000b28c80 0xc000b28d20 0xc000b28dc0 0xc000b28e60 0xc000b28be0 0xc000b28f00 0xc000b28fa0 0xc000b29040 0xc000b290e0 0xc000b29180 0xc000b29220 0xc000b292c0 0xc000b295e0] [0xc000b28aa0 0xc000b28b40 0xc000b17a40 0xc000b295e0 0xc000b28c80 0xc000b28d20 0xc000b28dc0 0xc000b28e60 0xc000b28be0 0xc000b28f00 0xc000b177c0 0xc000b28fa0 0xc000b17860 0xc000b17900 0xc000b29040 0xc000b290e0 0xc000b179a0 0xc000b29180 0xc000b29220 0xc000b292c0] map[104:0xc000b295e0 118:0xc000b29220] [] -1 0 0xc000939140 true 0xa43500 []}
+2023-01-09T04:49:23.555262086Z I0109 04:49:23.555232       1 cmd.go:42] (*prune.PruneOptions)(0xc000347e00)({
+2023-01-09T04:49:23.555262086Z  MaxEligibleRevision: (int) 7,
+2023-01-09T04:49:23.555262086Z  ProtectedRevisions: ([]int) (len=6 cap=6) {
+2023-01-09T04:49:23.555262086Z   (int) 2,
+2023-01-09T04:49:23.555262086Z   (int) 3,
+2023-01-09T04:49:23.555262086Z   (int) 4,
+2023-01-09T04:49:23.555262086Z   (int) 5,
+2023-01-09T04:49:23.555262086Z   (int) 6,
+2023-01-09T04:49:23.555262086Z   (int) 7
+2023-01-09T04:49:23.555262086Z  },
+2023-01-09T04:49:23.555262086Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2023-01-09T04:49:23.555262086Z  CertDir: (string) (len=20) "kube-apiserver-certs",
+2023-01-09T04:49:23.555262086Z  StaticPodName: (string) (len=18) "kube-apiserver-pod"
+2023-01-09T04:49:23.555262086Z })
+2023-01-09T04:49:23.555962198Z I0109 04:49:23.555938       1 cmd.go:134] Skipping /etc/kubernetes/static-pod-resources/kube-apiserver-certs as it does not exist

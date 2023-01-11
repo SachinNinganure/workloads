@@ -1,0 +1,46 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:42:13Z"
+    creationTimestamp: "2023-01-09T04:36:54Z"
+    labels:
+      app: etcd-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:42:13Z"
+    name: metrics
+    namespace: openshift-etcd-operator
+    resourceVersion: "9223"
+    uid: 773ec6d9-bbee-4730-a203-2ce9401e9275
+  subsets:
+  - addresses:
+    - ip: 10.130.0.26
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: etcd-operator-559f665f64-vms2h
+        namespace: openshift-etcd-operator
+        uid: c2d5a717-3140-4fff-90d7-7f699e0ea2c7
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268433"

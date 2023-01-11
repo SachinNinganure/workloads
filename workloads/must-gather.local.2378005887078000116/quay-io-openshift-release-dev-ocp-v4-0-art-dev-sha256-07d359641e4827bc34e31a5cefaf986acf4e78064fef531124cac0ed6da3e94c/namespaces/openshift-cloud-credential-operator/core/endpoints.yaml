@@ -1,0 +1,75 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:32Z"
+    creationTimestamp: "2023-01-09T04:37:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:32Z"
+    name: cco-metrics
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "7092"
+    uid: ecf09306-6ee1-4eb8-a780-b3439d248906
+  subsets:
+  - addresses:
+    - ip: 10.130.0.16
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: cloud-credential-operator-6fc48b9479-sh55k
+        namespace: openshift-cloud-credential-operator
+        uid: 8dbff7f2-8b94-47f9-ac89-5a85ca76124e
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:47:25Z"
+    creationTimestamp: "2023-01-09T04:47:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:47:25Z"
+    name: pod-identity-webhook
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20479"
+    uid: 7b27fced-d2c5-45b8-b58f-f38a4c43f6f4
+  subsets:
+  - addresses:
+    - ip: 10.128.0.35
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: pod-identity-webhook-777b54447c-bmvcc
+        namespace: openshift-cloud-credential-operator
+        uid: 84e38612-81e2-4e95-be73-e15926ebd159
+    ports:
+    - port: 6443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268363"

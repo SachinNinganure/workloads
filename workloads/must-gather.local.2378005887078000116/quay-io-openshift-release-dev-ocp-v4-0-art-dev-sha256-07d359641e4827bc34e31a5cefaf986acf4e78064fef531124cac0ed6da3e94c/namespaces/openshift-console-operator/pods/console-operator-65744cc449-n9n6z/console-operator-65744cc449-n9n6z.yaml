@@ -1,0 +1,551 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.31/23"],"mac_address":"0a:58:0a:80:00:1f","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.31/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.31"
+          ],
+          "mac": "0a:58:0a:80:00:1f",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.31"
+          ],
+          "mac": "0a:58:0a:80:00:1f",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-01-09T04:46:21Z"
+  generateName: console-operator-65744cc449-
+  labels:
+    name: console-operator
+    pod-template-hash: 65744cc449
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T04:46:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"fc4d2ea4-eeaa-4c3e-a7e7-1398004432b5"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"console-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"CONSOLE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DOWNLOADS_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":60000,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/run/configmaps/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"conversion-webhook-server"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/run/configmaps/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/webhook-serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"webhook-serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T04:46:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:46:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.31"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:46:26Z"
+  name: console-operator-65744cc449-n9n6z
+  namespace: openshift-console-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: console-operator-65744cc449
+    uid: fc4d2ea4-eeaa-4c3e-a7e7-1398004432b5
+  resourceVersion: "18578"
+  uid: 8ee170db-c7cb-458b-8ed8-d4df5064b307
+spec:
+  containers:
+  - args:
+    - -v=2
+    - --config=/var/run/configmaps/config/controller-config.yaml
+    command:
+    - console
+    - operator
+    env:
+    - name: CONSOLE_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:45ce25aa01ce77d2d7ad8cc2914686e07e71489c8ec625bc920f14ef83b94f33
+    - name: DOWNLOADS_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2823d5f6c6f9145b1c817f20ebfb1be4b72656086d58182356e911c324efebaf
+    - name: RELEASE_VERSION
+      value: 4.12.0-0.nightly-2023-01-08-142418
+    - name: OPERATOR_NAME
+      value: console-operator
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: console-operator
+    ports:
+    - containerPort: 60000
+      name: metrics
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000640000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/configmaps/config
+      name: config
+    - mountPath: /var/run/secrets/serving-cert
+      name: serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jtdjd
+      readOnly: true
+  - args:
+    - --port=9443
+    - --tls-cert-file=/var/run/secrets/webhook-serving-cert/tls.crt
+    - --tls-private-key-file=/var/run/secrets/webhook-serving-cert/tls.key
+    command:
+    - console
+    - crdconvert
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 9443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: conversion-webhook-server
+    ports:
+    - containerPort: 9443
+      name: webhook
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 9443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000640000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/configmaps/config
+      name: config
+    - mountPath: /var/run/secrets/webhook-serving-cert
+      name: webhook-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jtdjd
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: console-operator-dockercfg-gh8tn
+  nodeName: ip-10-0-145-4.us-east-2.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000640000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c25,c20
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: console-operator
+  serviceAccountName: console-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: console-operator-config
+    name: config
+  - name: serving-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: serving-cert
+  - name: webhook-serving-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: webhook-serving-cert
+  - name: kube-api-access-jtdjd
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:46:21Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:46:26Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:46:26Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:46:21Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://870d3fa9334f55c28aec7b0e0e830b4c6b4b1daa485fea71dc41554cc87aa6fd
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    lastState: {}
+    name: console-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:46:24Z"
+  - containerID: cri-o://ca65437fdfe3aaf865d3dc7b5acfed5e7c2858e2a14abea66cb8093bb54b0c02
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:98d4eee0edefa5f976980e36667e217efa0575e91252a99c98bb5a7e4f1bed1f
+    lastState: {}
+    name: conversion-webhook-server
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:46:25Z"
+  hostIP: 10.0.145.4
+  phase: Running
+  podIP: 10.128.0.31
+  podIPs:
+  - ip: 10.128.0.31
+  qosClass: Burstable
+  startTime: "2023-01-09T04:46:21Z"

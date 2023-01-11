@@ -1,0 +1,12 @@
+2023-01-09T04:45:25.298963837Z 2023/01/09 04:45:25 provider.go:129: Defaulting client-id to system:serviceaccount:openshift-machine-config-operator:machine-config-daemon
+2023-01-09T04:45:25.298963837Z 2023/01/09 04:45:25 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-01-09T04:45:25.299992587Z 2023/01/09 04:45:25 provider.go:358: Delegation of authentication and authorization to OpenShift is enabled for bearer tokens and client certificates.
+2023-01-09T04:45:40.795669766Z I0109 04:45:40.795629    2789 trace.go:205] Trace[1298498081]: "Reflector ListAndWatch" name:github.com/openshift/oauth-proxy/providers/openshift/provider.go:354 (09-Jan-2023 04:45:25.300) (total time: 15495ms):
+2023-01-09T04:45:40.795669766Z Trace[1298498081]: ---"Objects listed" 15495ms (04:45:00.795)
+2023-01-09T04:45:40.795669766Z Trace[1298498081]: [15.495366876s] [15.495366876s] END
+2023-01-09T04:45:40.798186014Z 2023/01/09 04:45:40 oauthproxy.go:203: mapping path "/" => upstream "http://127.0.0.1:8797/"
+2023-01-09T04:45:40.798202951Z 2023/01/09 04:45:40 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:openshift-machine-config-operator:machine-config-daemon
+2023-01-09T04:45:40.798202951Z 2023/01/09 04:45:40 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-01-09T04:45:40.798833660Z 2023/01/09 04:45:40 http.go:61: HTTP: listening on 127.0.0.1:4180
+2023-01-09T04:45:40.798913433Z I0109 04:45:40.798894    2789 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key
+2023-01-09T04:45:40.798985801Z 2023/01/09 04:45:40 http.go:107: HTTPS: listening on [::]:9001

@@ -1,0 +1,417 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 58687b44f7
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9db5b57c-4f8e-470b-a4fd-436b0f110e60"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":50051,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T04:41:46Z"
+    name: certified-operators
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: certified-operators
+      uid: 9db5b57c-4f8e-470b-a4fd-436b0f110e60
+    resourceVersion: "7989"
+    uid: 80e38c45-d994-48e6-b53d-ef2c69135ce7
+  spec:
+    clusterIP: 172.30.84.138
+    clusterIPs:
+    - 172.30.84.138
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+      targetPort: 50051
+    selector:
+      olm.catalogSource: certified-operators
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 59d9c65745
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f1cd1c2a-e4a6-4504-be08-41364750f8e3"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":50051,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T04:41:46Z"
+    name: community-operators
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: community-operators
+      uid: f1cd1c2a-e4a6-4504-be08-41364750f8e3
+    resourceVersion: "8020"
+    uid: f42634d1-9ef5-4e4b-8197-6a95ee829d85
+  spec:
+    clusterIP: 172.30.183.170
+    clusterIPs:
+    - 172.30.183.170
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+      targetPort: 50051
+    selector:
+      olm.catalogSource: community-operators
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      capability.openshift.io/name: marketplace
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.alpha.openshift.io/serving-cert-secret-name: marketplace-operator-metrics
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:37:07Z"
+    labels:
+      name: marketplace-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8081,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":8383,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:07Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:41:21Z"
+    name: marketplace-operator-metrics
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "6320"
+    uid: 391ea545-162e-4edb-bddf-c5006467aab8
+  spec:
+    clusterIP: 172.30.176.27
+    clusterIPs:
+    - 172.30.176.27
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 8383
+      protocol: TCP
+      targetPort: 8383
+    - name: https-metrics
+      port: 8081
+      protocol: TCP
+      targetPort: 8081
+    selector:
+      name: marketplace-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T05:30:33Z"
+    labels:
+      olm.service-spec-hash: 5c5d846dbd
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"03763f71-3ef3-461b-a2df-e0449d212989"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":50051,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T05:30:33Z"
+    name: qe-app-registry
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: qe-app-registry
+      uid: 03763f71-3ef3-461b-a2df-e0449d212989
+    resourceVersion: "42174"
+    uid: 26e95d07-0c10-494c-8ecd-44806f066561
+  spec:
+    clusterIP: 172.30.169.243
+    clusterIPs:
+    - 172.30.169.243
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+      targetPort: 50051
+    selector:
+      olm.catalogSource: qe-app-registry
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 7d86f55d66
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8a3ca23e-4c87-4f6b-af87-3d30ed508aed"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":50051,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T04:41:46Z"
+    name: redhat-marketplace
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-marketplace
+      uid: 8a3ca23e-4c87-4f6b-af87-3d30ed508aed
+    resourceVersion: "8028"
+    uid: 81bb50f6-1ab7-46a1-8196-6614caf949ad
+  spec:
+    clusterIP: 172.30.196.73
+    clusterIPs:
+    - 172.30.196.73
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+      targetPort: 50051
+    selector:
+      olm.catalogSource: redhat-marketplace
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 677fdb66d4
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"07b6a9a1-c0f0-4bfe-b7f1-d7cd8360f80d"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":50051,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T04:41:46Z"
+    name: redhat-operators
+    namespace: openshift-marketplace
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: CatalogSource
+      name: redhat-operators
+      uid: 07b6a9a1-c0f0-4bfe-b7f1-d7cd8360f80d
+    resourceVersion: "7983"
+    uid: 13f1ed3d-e57d-4f03-8ff7-2618c5ae764e
+  spec:
+    clusterIP: 172.30.249.60
+    clusterIPs:
+    - 172.30.249.60
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+      targetPort: 50051
+    selector:
+      olm.catalogSource: redhat-operators
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "268723"

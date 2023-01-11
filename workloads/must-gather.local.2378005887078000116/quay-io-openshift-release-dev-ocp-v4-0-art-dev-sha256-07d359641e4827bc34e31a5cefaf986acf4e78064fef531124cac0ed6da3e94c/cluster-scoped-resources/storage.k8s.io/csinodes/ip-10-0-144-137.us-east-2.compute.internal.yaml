@@ -1,0 +1,47 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/cinder,kubernetes.io/gce-pd
+  creationTimestamp: "2023-01-09T04:45:01Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storage.alpha.kubernetes.io/migrated-plugins: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"84e5248f-d764-4b00-bf42-1ebc30b9e2b8"}: {}
+      f:spec:
+        f:drivers:
+          k:{"name":"ebs.csi.aws.com"}:
+            .: {}
+            f:allocatable:
+              .: {}
+              f:count: {}
+            f:name: {}
+            f:nodeID: {}
+            f:topologyKeys: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-01-09T04:45:28Z"
+  name: ip-10-0-144-137.us-east-2.compute.internal
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: ip-10-0-144-137.us-east-2.compute.internal
+    uid: 84e5248f-d764-4b00-bf42-1ebc30b9e2b8
+  resourceVersion: "15602"
+  uid: 663fcfd3-4831-49e9-bf21-576377f57b68
+spec:
+  drivers:
+  - allocatable:
+      count: 25
+    name: ebs.csi.aws.com
+    nodeID: i-04f1bfd1d011b07b2
+    topologyKeys:
+    - topology.ebs.csi.aws.com/zone

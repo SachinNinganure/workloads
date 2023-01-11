@@ -1,0 +1,100 @@
+---
+# Assumptions:
+#  - KUBECONFIG env var is set on orchestration host (would have to be in bashrc) or kubeconfig is set in ~/.kube/config
+#  - cluster-logging operator deployed
+#  - podman installed
+#  - libselinux-python2 (or variation depending on OS) installed
+- name: Run logging test
+  hosts: orchestration
+  remote_user: "{{orchestration_user}}"
+  gather_facts: false
+  vars_files:
+    - vars/logging.yml
+  tasks:
+    - name: Verify oc command is available
+      command: oc version
+      changed_when: False
+    - name: Verify openshift-logging exists
+      shell: oc get projects | grep "openshift-logging"
+      changed_when: False
+    - name: Delete existing collector buffers
+      shell: |
+        for p in $(oc -n openshift-logging get pods -l component=fluentd -o jsonpath={.items[*].metadata.name}); do oc -n openshift-logging -c fluentd exec $p -- bash -c "rm -rvf /var/lib/fluentd/*/*" ;done;
+      tags:
+        - clear_buffers
+    - name: Get worker nodes
+      shell: oc get nodes | grep worker | awk '{print $1}'
+      register: worker_nodes
+      changed_when: False
+    - name: Label single worker node
+      block:
+        - name: Remove any existing "placement" labels from worker nodes
+          shell: "oc label node {{ item }} placement-"
+          loop: "{{ worker_nodes.stdout_lines }}"
+          register: result
+          changed_when: '"not labeled" not in result.stdout'
+        - name: Label one worker node with placement=logtest
+          shell: oc label node $(oc get nodes | grep worker | head -n 1 | awk '{print $1}') placement=logtest
+      when: not LABEL_ALL_NODES
+      tags: label_node
+    - name: Label all nodes
+      shell: "for i in $(oc get nodes | grep worker | awk '{print $1}'); do oc label node/$i placement=logtest --overwrite; done"
+      when: LABEL_ALL_NODES
+      tags: label_node
+    - name: Create workloads directory
+      file:
+        path: "{{WORKLOAD_DIR}}/workloads"
+        state: directory
+        mode: '0755'
+    - name: Git clone SVT repo
+      ansible.builtin.git:
+        repo: 'https://github.com/openshift/svt.git'
+        dest: "{{WORKLOAD_DIR}}/workloads/svt"
+    - name: Template cluster-loader logtest.yml
+      template:
+        src: templates/logtest.yml.j2
+        dest: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/config/logtest.yml"
+    - name: Template logtest-rc.json
+      template:
+        src: templates/logtest-rc.json.j2
+        dest: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/content/logtest/logtest-rc.json"
+    - name: Create venv in SVT
+      ansible.builtin.command: python3 -m venv venv
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
+    - name: Install requirements in venv
+      ansible.builtin.command: venv/bin/pip install -r requirements.txt
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
+    - name: Launch SVT cluster-loader
+      ansible.builtin.command: "venv/bin/python cluster-loader.py -f config/logtest.yml --kubeconfig {{KUBECONFIG}} -v"
+      args:
+        chdir: "{{WORKLOAD_DIR}}/workloads/svt/openshift_scalability/"
+    - set_fact:
+        test_start: "{{ lookup('pipe','date +%s') }}"
+    - name: Output node placement
+      shell: oc get pods -A -o wide | grep centos | awk '{print $8}' | sort | uniq -c | sort -n |& tee
+    - name: Pause for est. time of test "{{ (NUM_LINES|int / RATE|int) | round(0, 'floor') | int }}" min
+      pause:
+        minutes: "{{ (NUM_LINES|int / RATE|int) | round(0, 'floor') | int }}"
+    - name: Check for test completion for up to "{{ PAUSE_OFFSET }}" min -  "{{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}" logs
+      shell: |
+        oc exec -n openshift-logging -c elasticsearch {{ es_pod.stdout }} -- es_util --query=app*/_count \
+          -d '{"query":{"wildcard":{"{{QUERY_PATH}}":{"value":"{{PROJECT_BASENAME}}*","boost":1,"rewrite":"constant_score"}}}}' | jq '.count'
+      register: num_indexed
+      until: num_indexed.stdout|int  ==  (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int)
+      retries: "{{ (12 * PAUSE_OFFSET | int) }}"
+      ignore_errors: yes
+      delay: 5
+    - set_fact:
+        test_end: "{{ lookup('pipe','date +%s') }}"
+    - name: Assert number of messages is equal to NUM_LINES*NUM_PROJECTS
+      assert:
+        that:
+          - "{{ num_indexed.stdout }} == {{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}"
+    - name: Clean up logtest projects
+      shell: oc delete project $(oc get projects | grep '{{ PROJECT_BASENAME }}' | awk '{print $1}' | sed ':a;N;$!ba;s/\n/ /g')
+      tags:
+        - cleanup
+    - name: Test Runtime
+      debug: msg="{{ test_end | int - test_start | int }} sec"

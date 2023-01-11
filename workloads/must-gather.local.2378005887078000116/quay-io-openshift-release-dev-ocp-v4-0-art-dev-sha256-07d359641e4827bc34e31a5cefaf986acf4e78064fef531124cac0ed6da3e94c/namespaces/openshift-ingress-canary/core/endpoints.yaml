@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:33:43Z"
+    creationTimestamp: "2023-01-09T04:46:33Z"
+    labels:
+      ingress.openshift.io/canary: canary_controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:ingress.openshift.io/canary: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:43Z"
+    name: ingress-canary
+    namespace: openshift-ingress-canary
+    resourceVersion: "45159"
+    uid: 6f37990e-f3c8-4183-b8ae-8ba888acc75e
+  subsets:
+  - addresses:
+    - ip: 10.128.2.10
+      nodeName: ip-10-0-130-201.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ingress-canary-tpjlj
+        namespace: openshift-ingress-canary
+        uid: f3b16900-314e-445c-8929-3e3d131be139
+    - ip: 10.129.2.6
+      nodeName: ip-10-0-144-137.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ingress-canary-v4t55
+        namespace: openshift-ingress-canary
+        uid: 0a00be34-2cb6-4b96-9135-d0a8dd8bf6ed
+    - ip: 10.131.2.6
+      nodeName: ip-10-0-190-242.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ingress-canary-zk8s2
+        namespace: openshift-ingress-canary
+        uid: fa163603-93ee-455a-9e84-61cf192dba4d
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+    - name: 8888-tcp
+      port: 8888
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268497"

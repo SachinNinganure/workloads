@@ -1,0 +1,118 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      operator.openshift.io/spec-hash: e03373e23ea2a7835c60f32a86f5123b0281fc0911f7a9f4a6d19b5df4be894d
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-secret-name: aws-ebs-csi-driver-controller-metrics-serving-cert
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:41:12Z"
+    labels:
+      app: aws-ebs-csi-driver-controller-metrics
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/spec-hash: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":444,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":445,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":446,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":447,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: aws-ebs-csi-driver-operator
+      operation: Update
+      time: "2023-01-09T04:41:12Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:41:27Z"
+    name: aws-ebs-csi-driver-controller-metrics
+    namespace: openshift-cluster-csi-drivers
+    resourceVersion: "6907"
+    uid: 866d09e3-e614-474f-bfeb-f124ec58042c
+  spec:
+    clusterIP: 172.30.201.71
+    clusterIPs:
+    - 172.30.201.71
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: provisioner-m
+      port: 443
+      protocol: TCP
+      targetPort: provisioner-m
+    - name: attacher-m
+      port: 444
+      protocol: TCP
+      targetPort: attacher-m
+    - name: resizer-m
+      port: 445
+      protocol: TCP
+      targetPort: resizer-m
+    - name: snapshotter-m
+      port: 446
+      protocol: TCP
+      targetPort: snapshotter-m
+    - name: driver-m
+      port: 447
+      protocol: TCP
+      targetPort: driver-m
+    selector:
+      app: aws-ebs-csi-driver-controller
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "268793"

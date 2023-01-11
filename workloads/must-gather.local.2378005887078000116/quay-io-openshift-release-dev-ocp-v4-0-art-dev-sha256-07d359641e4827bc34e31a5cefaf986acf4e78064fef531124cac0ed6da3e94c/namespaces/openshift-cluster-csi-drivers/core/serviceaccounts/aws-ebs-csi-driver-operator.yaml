@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: aws-ebs-csi-driver-operator-dockercfg-5br6b
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-01-09T04:41:05Z"
+  name: aws-ebs-csi-driver-operator
+  namespace: openshift-cluster-csi-drivers
+  resourceVersion: "15560"
+  uid: ac8a9611-47a2-4b32-9162-e9aa80c515fb
+secrets:
+- name: aws-ebs-csi-driver-operator-dockercfg-5br6b

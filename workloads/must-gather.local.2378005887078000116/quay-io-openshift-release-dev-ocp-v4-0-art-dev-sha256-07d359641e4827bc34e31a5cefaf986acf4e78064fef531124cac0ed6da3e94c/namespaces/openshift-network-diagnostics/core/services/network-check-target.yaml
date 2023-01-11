@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-01-09T04:39:05Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"b8592153-d60b-43d6-8417-eb32b9b3af15"}: {}
+      f:spec:
+        f:ports:
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-01-09T04:39:05Z"
+  name: network-check-target
+  namespace: openshift-network-diagnostics
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+  resourceVersion: "3065"
+  uid: 7cbbacc0-afa3-47a4-a27e-3c10a0006aca
+spec:
+  clusterIP: 172.30.173.231
+  clusterIPs:
+  - 172.30.173.231
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: network-check-target
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

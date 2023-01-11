@@ -1,0 +1,40 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: CSIDriver
+metadata:
+  annotations:
+    csi.openshift.io/managed: "true"
+    operator.openshift.io/spec-hash: 73fa557d50bb4d5a7171eb150c182fd5bcf48096f22d60b8403b44b066f0f410
+  creationTimestamp: "2023-01-09T04:41:09Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:csi.openshift.io/managed: {}
+          f:operator.openshift.io/spec-hash: {}
+      f:spec:
+        f:attachRequired: {}
+        f:fsGroupPolicy: {}
+        f:podInfoOnMount: {}
+        f:requiresRepublish: {}
+        f:storageCapacity: {}
+        f:volumeLifecycleModes:
+          .: {}
+          v:"Persistent": {}
+    manager: aws-ebs-csi-driver-operator
+    operation: Update
+    time: "2023-01-09T04:41:09Z"
+  name: ebs.csi.aws.com
+  resourceVersion: "5293"
+  uid: f5165671-e851-476c-a5f2-007c5bba93ba
+spec:
+  attachRequired: true
+  fsGroupPolicy: File
+  podInfoOnMount: false
+  requiresRepublish: false
+  storageCapacity: false
+  volumeLifecycleModes:
+  - Persistent

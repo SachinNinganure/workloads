@@ -1,0 +1,100 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: etcd-ip-10-0-199-219.us-east-2.compute.internal
+      namespace: openshift-etcd
+      uid: 200d0bbe-6978-479d-81fb-c952e618f7db
+    zone: us-east-2c
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: etcd-ip-10-0-160-211.us-east-2.compute.internal
+      namespace: openshift-etcd
+      uid: aa8d1231-106d-43fb-8f1c-09fc53a21dba
+    zone: us-east-2b
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: etcd-ip-10-0-145-4.us-east-2.compute.internal
+      namespace: openshift-etcd
+      uid: a6587a3b-0720-46dc-8daf-b883d97408b9
+    zone: us-east-2a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:01:09Z"
+    creationTimestamp: "2023-01-09T04:36:45Z"
+    generateName: etcd-
+    generation: 37
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: etcd
+      kubernetes.io/service-name: etcd
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8aec9092-b534-49e1-9bce-158958a95944"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:01:09Z"
+    name: etcd-nmfmh
+    namespace: openshift-etcd
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: etcd
+      uid: 8aec9092-b534-49e1-9bce-158958a95944
+    resourceVersion: "31297"
+    uid: 487e5778-fbef-4f75-85d0-041883fe85e6
+  ports:
+  - name: etcd
+    port: 2379
+    protocol: TCP
+  - name: etcd-metrics
+    port: 9979
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268440"

@@ -1,0 +1,346 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.27/23"],"mac_address":"0a:58:0a:82:00:1b","gateway_ips":["10.130.0.1"],"ip_address":"10.130.0.27/23","gateway_ip":"10.130.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.27"
+          ],
+          "mac": "0a:58:0a:82:00:1b",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.27"
+          ],
+          "mac": "0a:58:0a:82:00:1b",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-01-09T04:38:21Z"
+  generateName: control-plane-machine-set-operator-5b9d6d746b-
+  labels:
+    k8s-app: control-plane-machine-set-operator
+    pod-template-hash: 5b9d6d746b
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6229d137-7930-46e0-a995-01697bbf6204"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"control-plane-machine-set-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"COMPONENT_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"control-plane-machine-set-operator-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T04:38:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:38:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T04:40:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.27"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:32Z"
+  name: control-plane-machine-set-operator-5b9d6d746b-4sgw9
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: control-plane-machine-set-operator-5b9d6d746b
+    uid: 6229d137-7930-46e0-a995-01697bbf6204
+  resourceVersion: "7112"
+  uid: 1efd90ca-f772-443e-9320-61d95f7f1368
+spec:
+  containers:
+  - args:
+    - -v=2
+    - --leader-elect=true
+    - --leader-elect-lease-duration=137s
+    - --leader-elect-renew-deadline=107s
+    - --leader-elect-retry-period=26s
+    - --leader-elect-resource-namespace=openshift-machine-api
+    command:
+    - /manager
+    env:
+    - name: RELEASE_VERSION
+      value: 4.12.0-0.nightly-2023-01-08-142418
+    - name: COMPONENT_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2f4bd57474ac21367df881cb966756e1bb6941588e43622bbd2755ed7d13a9c9
+    imagePullPolicy: IfNotPresent
+    name: control-plane-machine-set-operator
+    ports:
+    - containerPort: 9443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000470000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: control-plane-machine-set-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5b6zg
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-160-211.us-east-2.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000470000
+    seLinuxOptions:
+      level: s0:c22,c4
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: control-plane-machine-set-operator
+  serviceAccountName: control-plane-machine-set-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: control-plane-machine-set-operator-tls
+    secret:
+      defaultMode: 420
+      secretName: control-plane-machine-set-operator-tls
+  - name: kube-api-access-5b6zg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:40:48Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:32Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:41:32Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:40:48Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://35de91536872f0430dc50c2e9681b76466afe8e956bcab25aa437218ee6d7024
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2f4bd57474ac21367df881cb966756e1bb6941588e43622bbd2755ed7d13a9c9
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2f4bd57474ac21367df881cb966756e1bb6941588e43622bbd2755ed7d13a9c9
+    lastState: {}
+    name: control-plane-machine-set-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:41:31Z"
+  hostIP: 10.0.160.211
+  phase: Running
+  podIP: 10.130.0.27
+  podIPs:
+  - ip: 10.130.0.27
+  qosClass: Burstable
+  startTime: "2023-01-09T04:40:48Z"

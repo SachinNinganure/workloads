@@ -1,0 +1,9 @@
+2023-01-09T04:42:09.398492222Z I0109 04:42:09.398379       1 main.go:94] Version: v4.12.0-202301042354.p0.g6945eef.assembly.stream-0-g56d995c-dirty
+2023-01-09T04:42:09.401093578Z I0109 04:42:09.401067       1 common.go:111] Probing CSI driver for readiness
+2023-01-09T04:42:09.402137434Z I0109 04:42:09.402109       1 main.go:150] CSI driver name: "ebs.csi.aws.com"
+2023-01-09T04:42:09.402902541Z I0109 04:42:09.402883       1 common.go:111] Probing CSI driver for readiness
+2023-01-09T04:42:09.403256760Z I0109 04:42:09.403232       1 main.go:176] ServeMux listening at "localhost:8203"
+2023-01-09T04:42:09.404025199Z I0109 04:42:09.404004       1 main.go:226] CSI driver supports ControllerPublishUnpublish, using real CSI handler
+2023-01-09T04:42:09.404638706Z I0109 04:42:09.404611       1 leaderelection.go:248] attempting to acquire leader lease openshift-cluster-csi-drivers/external-attacher-leader-ebs-csi-aws-com...
+2023-01-09T04:48:51.116615690Z E0109 04:48:51.116563       1 leaderelection.go:330] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-ebs-csi-aws-com: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-attacher-leader-ebs-csi-aws-com": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:51.720818759Z E0109 04:52:51.720760       1 leaderelection.go:330] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-ebs-csi-aws-com: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-attacher-leader-ebs-csi-aws-com": dial tcp 172.30.0.1:443: connect: connection refused

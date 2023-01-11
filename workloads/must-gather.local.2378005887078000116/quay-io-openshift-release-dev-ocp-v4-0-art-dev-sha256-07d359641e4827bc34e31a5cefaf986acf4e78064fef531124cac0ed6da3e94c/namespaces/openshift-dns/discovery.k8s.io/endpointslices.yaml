@@ -1,0 +1,155 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2c
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-7qhkr
+      namespace: openshift-dns
+      uid: 7064dab0-b751-436c-9d13-68a5900b0a07
+    zone: us-east-2c
+  - addresses:
+    - 10.128.0.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2a
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-vp75m
+      namespace: openshift-dns
+      uid: ded57f7d-2e40-4fef-844a-ef0accd6fddd
+    zone: us-east-2a
+  - addresses:
+    - 10.130.0.39
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2a
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-pvwwn
+      namespace: openshift-dns
+      uid: 471624af-28d6-46c3-9f19-b065bc57a7ec
+    zone: us-east-2b
+  - addresses:
+    - 10.128.2.7
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2a
+    nodeName: ip-10-0-130-201.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-rhfqh
+      namespace: openshift-dns
+      uid: 5825d919-ae35-489b-b04c-26b7565ea9e7
+    zone: us-east-2a
+  - addresses:
+    - 10.129.2.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2a
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-6phhx
+      namespace: openshift-dns
+      uid: a71db24b-5408-4534-b598-64b972c1d7ab
+    zone: us-east-2a
+  - addresses:
+    - 10.131.2.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hints:
+      forZones:
+      - name: us-east-2b
+    nodeName: ip-10-0-190-242.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-default-482k5
+      namespace: openshift-dns
+      uid: 01e99138-58b5-4058-b4d0-9ab0b468b3a6
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:37Z"
+    generateName: dns-default-
+    generation: 24
+    labels:
+      dns.operator.openshift.io/owning-dns: default
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: dns-default
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:dns.operator.openshift.io/owning-dns: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"26355728-3d92-4b28-95c3-657ca8a3d39f"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:54Z"
+    name: dns-default-2vvpt
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: dns-default
+      uid: 26355728-3d92-4b28-95c3-657ca8a3d39f
+    resourceVersion: "45278"
+    uid: 6d3cc61f-b3ee-4cf6-a351-77d9827e7a0b
+  ports:
+  - name: dns-tcp
+    port: 5353
+    protocol: TCP
+  - name: metrics
+    port: 9154
+    protocol: TCP
+  - name: dns
+    port: 5353
+    protocol: UDP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268422"

@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:44:15Z"
+    creationTimestamp: "2023-01-09T04:44:11Z"
+    labels:
+      name: cluster-samples-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:44:15Z"
+    name: metrics
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "12192"
+    uid: e3a08730-3c9a-402d-9b1e-5bb9304496b4
+  subsets:
+  - addresses:
+    - ip: 10.128.0.21
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: cluster-samples-operator-d456b8f8b-lcdmj
+        namespace: openshift-cluster-samples-operator
+        uid: 61aa0d92-4071-4454-8d1e-53fc354a74ca
+    ports:
+    - port: 60000
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268776"

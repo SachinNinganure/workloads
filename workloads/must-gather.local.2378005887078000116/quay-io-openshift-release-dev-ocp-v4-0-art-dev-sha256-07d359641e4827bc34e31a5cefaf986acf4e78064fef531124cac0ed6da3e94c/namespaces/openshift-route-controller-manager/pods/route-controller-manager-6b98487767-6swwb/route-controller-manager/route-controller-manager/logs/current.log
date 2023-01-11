@@ -1,0 +1,12 @@
+2023-01-09T04:49:26.197846274Z I0109 04:49:26.197751       1 controller_manager.go:26] Starting controllers on 0.0.0.0:8443 (4.12.0-202301042354.p0.g9e74d17.assembly.stream-9e74d17)
+2023-01-09T04:49:26.199361472Z I0109 04:49:26.199326       1 standalone_apiserver.go:104] Started health checks at 0.0.0.0:8443
+2023-01-09T04:49:26.199390766Z I0109 04:49:26.199379       1 leaderelection.go:248] attempting to acquire leader lease openshift-route-controller-manager/openshift-route-controllers...
+2023-01-09T04:49:26.212305894Z I0109 04:49:26.212277       1 leaderelection.go:258] successfully acquired lease openshift-route-controller-manager/openshift-route-controllers
+2023-01-09T04:49:26.212459191Z I0109 04:49:26.212415       1 event.go:285] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-route-controller-manager", Name:"openshift-route-controllers", UID:"5e2a75f6-5bb9-442b-b0f1-b20bae5cd277", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"24601", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' route-controller-manager-6b98487767-6swwb became leader
+2023-01-09T04:49:26.212737494Z I0109 04:49:26.212696       1 route.go:81] Starting "openshift.io/ingress-to-route"
+2023-01-09T04:49:26.215380160Z I0109 04:49:26.215352       1 ingress.go:262] ingress-to-route metrics registered with prometheus
+2023-01-09T04:49:26.215400817Z I0109 04:49:26.215379       1 route.go:91] Started "openshift.io/ingress-to-route"
+2023-01-09T04:49:26.215400817Z I0109 04:49:26.215387       1 route.go:81] Starting "openshift.io/ingress-ip"
+2023-01-09T04:49:26.215400817Z I0109 04:49:26.215393       1 route.go:91] Started "openshift.io/ingress-ip"
+2023-01-09T04:49:26.215410355Z I0109 04:49:26.215401       1 route.go:93] Started Route Controllers
+2023-01-09T04:49:26.215780637Z I0109 04:49:26.215758       1 ingress.go:313] Starting controller

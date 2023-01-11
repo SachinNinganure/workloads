@@ -1,0 +1,548 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T05:00:19Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T05:00:19Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:40:28Z"
+  name: volumesnapshotclasses.v1.snapshot.storage.k8s.io
+  resourceVersion: "268285"
+  uid: b4f9fdff-4f88-4f64-b38f-c77e9fc573b3
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 38
+          verb: get
+        requestCount: 38
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 12
+          verb: watch
+        requestCount: 12
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 66
+    requestCount: 66
+  last24h:
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: get
+        requestCount: 8
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      nodeName: 10.0.199.219
+      requestCount: 30
+    requestCount: 30
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        requestCount: 64
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 18
+          verb: watch
+        requestCount: 18
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      nodeName: 10.0.199.219
+      requestCount: 107
+    requestCount: 107
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 18
+          verb: watch
+        requestCount: 18
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      nodeName: 10.0.199.219
+      requestCount: 102
+    requestCount: 102
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 16
+          verb: watch
+        requestCount: 16
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      nodeName: 10.0.199.219
+      requestCount: 100
+    requestCount: 100
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 14
+          verb: watch
+        requestCount: 14
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      nodeName: 10.0.199.219
+      requestCount: 98
+    requestCount: 98
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 16
+          verb: watch
+        requestCount: 16
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      nodeName: 10.0.199.219
+      requestCount: 100
+    requestCount: 100
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 14
+          verb: watch
+        requestCount: 14
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 97
+    requestCount: 97
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 14
+          verb: watch
+        requestCount: 14
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 100
+    requestCount: 100
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 16
+          verb: watch
+        requestCount: 16
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 101
+    requestCount: 101
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 18
+          verb: watch
+        requestCount: 18
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      nodeName: 10.0.199.219
+      requestCount: 102
+    requestCount: 102
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        requestCount: 60
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 16
+          verb: watch
+        requestCount: 16
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      nodeName: 10.0.199.219
+      requestCount: 97
+    requestCount: 97
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 38
+          verb: get
+        requestCount: 38
+        userAgent: aws-ebs-csi-driver-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-operator
+      - byVerb:
+        - requestCount: 12
+          verb: watch
+        requestCount: 12
+        userAgent: snapshot-validation-webhook/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:default
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: snapshot-controller/v0.0.0
+        username: system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: csi-snapshotter/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:aws-ebs-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 66
+    requestCount: 66
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 1100

@@ -1,0 +1,87 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:33:54Z"
+    creationTimestamp: "2023-01-09T04:41:37Z"
+    labels:
+      dns.operator.openshift.io/owning-dns: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:dns.operator.openshift.io/owning-dns: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:54Z"
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "45272"
+    uid: 26bf9414-57c5-4479-b834-b9db38c894ed
+  subsets:
+  - addresses:
+    - ip: 10.128.0.13
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-vp75m
+        namespace: openshift-dns
+        uid: ded57f7d-2e40-4fef-844a-ef0accd6fddd
+    - ip: 10.128.2.7
+      nodeName: ip-10-0-130-201.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-rhfqh
+        namespace: openshift-dns
+        uid: 5825d919-ae35-489b-b04c-26b7565ea9e7
+    - ip: 10.129.0.14
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-7qhkr
+        namespace: openshift-dns
+        uid: 7064dab0-b751-436c-9d13-68a5900b0a07
+    - ip: 10.129.2.5
+      nodeName: ip-10-0-144-137.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-6phhx
+        namespace: openshift-dns
+        uid: a71db24b-5408-4534-b598-64b972c1d7ab
+    - ip: 10.130.0.39
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-pvwwn
+        namespace: openshift-dns
+        uid: 471624af-28d6-46c3-9f19-b065bc57a7ec
+    - ip: 10.131.2.5
+      nodeName: ip-10-0-190-242.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: dns-default-482k5
+        namespace: openshift-dns
+        uid: 01e99138-58b5-4058-b4d0-9ab0b468b3a6
+    ports:
+    - name: dns
+      port: 5353
+      protocol: UDP
+    - name: metrics
+      port: 9154
+      protocol: TCP
+    - name: dns-tcp
+      port: 5353
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268417"

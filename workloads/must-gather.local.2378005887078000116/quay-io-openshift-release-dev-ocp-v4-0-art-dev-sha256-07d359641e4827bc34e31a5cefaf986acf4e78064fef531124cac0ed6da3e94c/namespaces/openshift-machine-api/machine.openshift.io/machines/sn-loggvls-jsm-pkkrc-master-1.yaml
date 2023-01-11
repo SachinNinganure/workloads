@@ -1,0 +1,246 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: running
+  creationTimestamp: "2023-01-09T04:37:32Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generation: 3
+  labels:
+    machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+    machine.openshift.io/cluster-api-machine-role: master
+    machine.openshift.io/cluster-api-machine-type: master
+    machine.openshift.io/instance-type: m5.2xlarge
+    machine.openshift.io/region: us-east-2
+    machine.openshift.io/zone: us-east-2b
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:ami:
+              .: {}
+              f:id: {}
+            f:apiVersion: {}
+            f:blockDevices: {}
+            f:credentialsSecret:
+              .: {}
+              f:name: {}
+            f:deviceIndex: {}
+            f:iamInstanceProfile:
+              .: {}
+              f:id: {}
+            f:instanceType: {}
+            f:kind: {}
+            f:loadBalancers: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:metadataServiceOptions: {}
+            f:placement:
+              .: {}
+              f:availabilityZone: {}
+              f:region: {}
+            f:securityGroups: {}
+            f:subnet:
+              .: {}
+              f:filters: {}
+            f:tags: {}
+            f:userDataSecret:
+              .: {}
+              f:name: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-01-09T04:37:32Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:37:32Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+        f:labels:
+          f:machine.openshift.io/instance-type: {}
+          f:machine.openshift.io/region: {}
+          f:machine.openshift.io/zone: {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2023-01-09T04:41:53Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:nodeRef: {}
+    manager: nodelink-controller
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:42:03Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b299c398-b405-4c24-b4d0-8354cfcaf06e"}: {}
+    manager: manager
+    operation: Update
+    time: "2023-01-09T04:42:26Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:lifecycleHooks:
+          f:preDrain:
+            .: {}
+            k:{"name":"EtcdQuorumOperator"}:
+              .: {}
+              f:name: {}
+              f:owner: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-01-09T04:43:06Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:addresses: {}
+        f:conditions: {}
+        f:lastUpdated: {}
+        f:phase: {}
+        f:providerStatus:
+          .: {}
+          f:conditions: {}
+          f:instanceId: {}
+          f:instanceState: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:43:19Z"
+  name: sn-loggvls-jsm-pkkrc-master-1
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ControlPlaneMachineSet
+    name: cluster
+    uid: b299c398-b405-4c24-b4d0-8354cfcaf06e
+  resourceVersion: "10842"
+  uid: 82d834d1-adb4-4ddc-a5b2-c21648dad26e
+spec:
+  lifecycleHooks:
+    preDrain:
+    - name: EtcdQuorumOperator
+      owner: clusteroperator/etcd
+  metadata: {}
+  providerID: aws:///us-east-2b/i-0350913b07fd2e83c
+  providerSpec:
+    value:
+      ami:
+        id: ami-0ff64f495c7e977cf
+      apiVersion: machine.openshift.io/v1beta1
+      blockDevices:
+      - ebs:
+          encrypted: true
+          iops: 0
+          kmsKey:
+            arn: ""
+          volumeSize: 120
+          volumeType: gp3
+      credentialsSecret:
+        name: aws-cloud-credentials
+      deviceIndex: 0
+      iamInstanceProfile:
+        id: sn-loggvls-jsm-pkkrc-master-profile
+      instanceType: m5.2xlarge
+      kind: AWSMachineProviderConfig
+      loadBalancers:
+      - name: sn-loggvls-jsm-pkkrc-int
+        type: network
+      - name: sn-loggvls-jsm-pkkrc-ext
+        type: network
+      metadata:
+        creationTimestamp: null
+      metadataServiceOptions: {}
+      placement:
+        availabilityZone: us-east-2b
+        region: us-east-2
+      securityGroups:
+      - filters:
+        - name: tag:Name
+          values:
+          - sn-loggvls-jsm-pkkrc-master-sg
+      subnet:
+        filters:
+        - name: tag:Name
+          values:
+          - sn-loggvls-jsm-pkkrc-private-us-east-2b
+      tags:
+      - name: kubernetes.io/cluster/sn-loggvls-jsm-pkkrc
+        value: owned
+      userDataSecret:
+        name: master-user-data
+status:
+  addresses:
+  - address: 10.0.160.211
+    type: InternalIP
+  - address: ip-10-0-160-211.us-east-2.compute.internal
+    type: InternalDNS
+  - address: ip-10-0-160-211.us-east-2.compute.internal
+    type: Hostname
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:43:19Z"
+    message: 'Drain operation currently blocked by: [{Name:EtcdQuorumOperator Owner:clusteroperator/etcd}]'
+    reason: HookPresent
+    severity: Warning
+    status: "False"
+    type: Drainable
+  - lastTransitionTime: "2023-01-09T04:42:26Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2023-01-09T04:42:03Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2023-01-09T04:43:19Z"
+  nodeRef:
+    kind: Node
+    name: ip-10-0-160-211.us-east-2.compute.internal
+    uid: 3aa9328b-65bb-4d9a-b12a-7e5710de6e2c
+  phase: Running
+  providerStatus:
+    conditions:
+    - lastTransitionTime: "2023-01-09T04:42:26Z"
+      message: Machine successfully created
+      reason: MachineCreationSucceeded
+      status: "True"
+      type: MachineCreation
+    instanceId: i-0350913b07fd2e83c
+    instanceState: running

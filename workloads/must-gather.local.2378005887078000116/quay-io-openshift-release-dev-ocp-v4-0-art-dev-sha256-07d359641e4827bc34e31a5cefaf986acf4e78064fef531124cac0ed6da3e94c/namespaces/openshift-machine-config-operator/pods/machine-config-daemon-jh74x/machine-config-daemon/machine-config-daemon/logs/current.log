@@ -1,0 +1,142 @@
+2023-01-09T04:41:31.836084068Z I0109 04:41:31.836017    9310 start.go:112] Version: v4.12.0-202301070015.p0.g2b3eba7.assembly.stream-dirty (2b3eba74dd9e4371f35ab41dbda02642f60707ec)
+2023-01-09T04:41:31.857186785Z I0109 04:41:31.854918    9310 start.go:125] Calling chroot("/rootfs")
+2023-01-09T04:41:31.857186785Z I0109 04:41:31.856480    9310 update.go:2089] Running: systemctl daemon-reload
+2023-01-09T04:41:32.358766484Z I0109 04:41:32.358722    9310 rpm-ostree.go:86] Enabled workaround for bug 2111817
+2023-01-09T04:41:32.876559761Z I0109 04:41:32.876015    9310 daemon.go:246] Booted osImageURL: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365 () 61575280d615bb7fa29cd0263893472819133440b14c69eb161107866e678b2b
+2023-01-09T04:41:32.999735854Z I0109 04:41:32.999696    9310 start.go:101] Copied self to /run/bin/machine-config-daemon on host
+2023-01-09T04:41:33.000628662Z I0109 04:41:33.000608    9310 start.go:188] overriding kubernetes api to https://api-int.sn-loggvls-jsm.qe.devcluster.openshift.com:6443
+2023-01-09T04:41:33.001358913Z I0109 04:41:33.001338    9310 metrics.go:106] Registering Prometheus metrics
+2023-01-09T04:41:33.001418158Z I0109 04:41:33.001402    9310 metrics.go:111] Starting metrics listener on 127.0.0.1:8797
+2023-01-09T04:41:33.002645038Z I0109 04:41:33.002600    9310 writer.go:93] NodeWriter initialized with credentials from /var/lib/kubelet/kubeconfig
+2023-01-09T04:41:33.002773347Z I0109 04:41:33.002747    9310 update.go:2104] Starting to manage node: ip-10-0-160-211.us-east-2.compute.internal
+2023-01-09T04:41:33.012690688Z I0109 04:41:33.012660    9310 rpm-ostree.go:412] Running captured: rpm-ostree status
+2023-01-09T04:41:33.058870453Z I0109 04:41:33.058829    9310 daemon.go:1303] State: idle
+2023-01-09T04:41:33.058870453Z Deployments:
+2023-01-09T04:41:33.058870453Z * ostree-unverified-registry:quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+2023-01-09T04:41:33.058870453Z                    Digest: sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+2023-01-09T04:41:33.058870453Z                 Timestamp: 2023-01-09T04:37:52Z
+2023-01-09T04:41:33.058870453Z 
+2023-01-09T04:41:33.058870453Z   a80d851eac7716e90ea927f5b67f0d7972630c67f0ec4eed275f61a2536aabd0
+2023-01-09T04:41:33.058870453Z                   Version: 412.86.202212081411-0 (2022-12-08T14:14:37Z)
+2023-01-09T04:41:33.059308969Z I0109 04:41:33.059276    9310 coreos.go:54] CoreOS aleph version: mtime=2022-12-08 14:19:28.504 +0000 UTC build=412.86.202212081411-0 imgid=rhcos-412.86.202212081411-0-qemu.x86_64.qcow2
+2023-01-09T04:41:33.059335780Z I0109 04:41:33.059329    9310 coreos.go:71] Ignition provisioning: time=2023-01-09T04:36:56Z
+2023-01-09T04:41:33.059347036Z I0109 04:41:33.059335    9310 rpm-ostree.go:412] Running captured: journalctl --list-boots
+2023-01-09T04:41:33.067097378Z I0109 04:41:33.067054    9310 daemon.go:1312] journalctl --list-boots:
+2023-01-09T04:41:33.067097378Z -1 d5a62d7640e24ba3afe7a80cd4caccf8 Mon 2023-01-09 04:29:45 UTC—Mon 2023-01-09 04:38:02 UTC
+2023-01-09T04:41:33.067097378Z  0 4216b285932e4f15bea42b678abddb88 Mon 2023-01-09 04:38:14 UTC—Mon 2023-01-09 04:41:33 UTC
+2023-01-09T04:41:33.067097378Z I0109 04:41:33.067075    9310 rpm-ostree.go:412] Running captured: systemctl list-units --state=failed --no-legend
+2023-01-09T04:41:33.073174473Z I0109 04:41:33.073148    9310 daemon.go:1327] systemd service state: OK
+2023-01-09T04:41:33.073174473Z I0109 04:41:33.073164    9310 daemon.go:992] Starting MachineConfigDaemon
+2023-01-09T04:41:33.073319091Z I0109 04:41:33.073289    9310 daemon.go:999] Enabling Kubelet Healthz Monitor
+2023-01-09T04:41:34.016151741Z I0109 04:41:34.016111    9310 daemon.go:456] Node ip-10-0-160-211.us-east-2.compute.internal is part of the control plane
+2023-01-09T04:41:54.009956802Z I0109 04:41:54.009608    9310 node.go:24] No machineconfiguration.openshift.io/currentConfig annotation on node ip-10-0-160-211.us-east-2.compute.internal: map[csi.volume.kubernetes.io/nodeid:{"ebs.csi.aws.com":"i-0350913b07fd2e83c"} k8s.ovn.org/host-addresses:["10.0.160.211"] k8s.ovn.org/l3-gateway-config:{"default":{"mode":"shared","interface-id":"br-ex_ip-10-0-160-211.us-east-2.compute.internal","mac-address":"06:8f:85:f2:f0:6c","ip-addresses":["10.0.160.211/19"],"ip-address":"10.0.160.211/19","next-hops":["10.0.160.1"],"next-hop":"10.0.160.1","node-port-enable":"true","vlan-id":"0"}} k8s.ovn.org/node-chassis-id:72635b3d-9675-4c2e-9b40-93d6d47f2500 k8s.ovn.org/node-gateway-router-lrp-ifaddr:{"ipv4":"100.64.0.3/16"} k8s.ovn.org/node-mgmt-port-mac-address:1a:02:47:20:76:0b k8s.ovn.org/node-primary-ifaddr:{"ipv4":"10.0.160.211/19"} k8s.ovn.org/node-subnets:{"default":"10.130.0.0/23"} volumes.kubernetes.io/controller-managed-attach-detach:true], in cluster bootstrap, loading initial node annotation from /etc/machine-config-daemon/node-annotations.json
+2023-01-09T04:41:54.011381908Z I0109 04:41:54.011342    9310 node.go:45] Setting initial node config: rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T04:41:54.032462326Z I0109 04:41:54.032424    9310 daemon.go:1220] In bootstrap mode
+2023-01-09T04:41:54.032462326Z I0109 04:41:54.032450    9310 daemon.go:1248] Current+desired config: rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T04:41:54.032501876Z I0109 04:41:54.032458    9310 daemon.go:1258] state: Done
+2023-01-09T04:41:54.041162950Z I0109 04:41:54.041110    9310 update.go:2089] Running: rpm-ostree cleanup -r
+2023-01-09T04:41:55.231586357Z Bootloader updated; bootconfig swap: yes; bootversion: boot.1.1, deployment count change: -1
+2023-01-09T04:42:04.726846781Z Freed: 846.3 MB (pkgcache branches: 0)
+2023-01-09T04:42:05.484107630Z I0109 04:42:05.484056    9310 update.go:2104] No bootstrap pivot required; unlinking bootstrap node annotations
+2023-01-09T04:42:05.487965970Z I0109 04:42:05.487933    9310 daemon.go:1564] Validating against pending config rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T04:42:06.125793866Z I0109 04:42:06.125753    9310 rpm-ostree.go:412] Running captured: rpm-ostree kargs
+2023-01-09T04:42:06.185373216Z I0109 04:42:06.185331    9310 update.go:2104] Validated on-disk state
+2023-01-09T04:42:06.191878947Z I0109 04:42:06.191827    9310 daemon.go:1622] Completing pending config rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T04:42:16.204169456Z I0109 04:42:16.204124    9310 update.go:2104] Update completed for config rendered-master-f509746cb678ff4a775c368176e3991b and node has been successfully uncordoned
+2023-01-09T04:42:16.219967339Z I0109 04:42:16.219864    9310 daemon.go:1650] In desired config rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T04:42:16.232404403Z I0109 04:42:16.232355    9310 config_drift_monitor.go:246] Config Drift Monitor started
+2023-01-09T05:31:06.434829782Z I0109 05:31:06.434788    9310 rpm-ostree.go:412] Running captured: rpm-ostree kargs
+2023-01-09T05:31:06.710769746Z I0109 05:31:06.710733    9310 daemon.go:594] Preflight config drift check successful (took 881.103639ms)
+2023-01-09T05:31:06.716079687Z I0109 05:31:06.716056    9310 config_drift_monitor.go:255] Config Drift Monitor has shut down
+2023-01-09T05:31:06.728506784Z I0109 05:31:06.728464    9310 update.go:2126] Adding SIGTERM protection
+2023-01-09T05:31:06.747177676Z I0109 05:31:06.747115    9310 update.go:529] Checking Reconcilable for config rendered-master-f509746cb678ff4a775c368176e3991b to rendered-master-9a5b5926acef90c95fac0086c87d868a
+2023-01-09T05:31:06.788053042Z I0109 05:31:06.788013    9310 update.go:2104] Starting update from rendered-master-f509746cb678ff4a775c368176e3991b to rendered-master-9a5b5926acef90c95fac0086c87d868a: &{osUpdate:false kargs:false fips:false passwd:false files:true units:false kernelType:false extensions:false}
+2023-01-09T05:31:06.791042808Z I0109 05:31:06.791004    9310 helpers.go:879] File diff: detected change to /etc/containers/registries.conf
+2023-01-09T05:31:06.791240659Z I0109 05:31:06.791223    9310 drain.go:251] /etc/containers/registries.conf: changes made are safe to skip drain
+2023-01-09T05:31:06.791240659Z I0109 05:31:06.791236    9310 update.go:560] Changes do not require drain, skipping.
+2023-01-09T05:31:06.791255372Z I0109 05:31:06.791240    9310 update.go:1231] Updating files
+2023-01-09T05:31:06.791255372Z I0109 05:31:06.791244    9310 update.go:1636] Writing file "/etc/NetworkManager/conf.d/20-keyfiles.conf"
+2023-01-09T05:31:06.795927746Z I0109 05:31:06.795894    9310 update.go:1636] Writing file "/etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt"
+2023-01-09T05:31:06.798084262Z I0109 05:31:06.798056    9310 update.go:1636] Writing file "/etc/kubernetes/apiserver-url.env"
+2023-01-09T05:31:06.801186249Z I0109 05:31:06.801163    9310 update.go:1636] Writing file "/etc/audit/rules.d/mco-audit-quiet-containers.rules"
+2023-01-09T05:31:06.803676600Z I0109 05:31:06.803654    9310 update.go:1636] Writing file "/etc/tmpfiles.d/cleanup-cni.conf"
+2023-01-09T05:31:06.806231335Z I0109 05:31:06.806208    9310 update.go:1636] Writing file "/etc/kubernetes/static-pod-resources/configmaps/cloud-config/ca-bundle.pem"
+2023-01-09T05:31:06.808426997Z I0109 05:31:06.808406    9310 update.go:1636] Writing file "/usr/local/bin/configure-ovs.sh"
+2023-01-09T05:31:06.812059118Z I0109 05:31:06.812037    9310 update.go:1636] Writing file "/etc/containers/storage.conf"
+2023-01-09T05:31:06.815181504Z I0109 05:31:06.815161    9310 update.go:1636] Writing file "/etc/mco/proxy.env"
+2023-01-09T05:31:06.817936263Z I0109 05:31:06.817909    9310 update.go:1636] Writing file "/etc/systemd/system.conf.d/10-default-env-godebug.conf"
+2023-01-09T05:31:06.820514419Z I0109 05:31:06.820490    9310 update.go:1636] Writing file "/etc/modules-load.d/iptables.conf"
+2023-01-09T05:31:06.822897826Z I0109 05:31:06.822880    9310 update.go:1636] Writing file "/etc/node-sizing-enabled.env"
+2023-01-09T05:31:06.825677504Z I0109 05:31:06.825658    9310 update.go:1636] Writing file "/usr/local/sbin/dynamic-system-reserved-calc.sh"
+2023-01-09T05:31:06.828690301Z I0109 05:31:06.828666    9310 update.go:1636] Writing file "/etc/kubernetes/kubelet-ca.crt"
+2023-01-09T05:31:06.831134858Z I0109 05:31:06.831109    9310 update.go:1636] Writing file "/etc/systemd/system.conf.d/kubelet-cgroups.conf"
+2023-01-09T05:31:06.833979138Z I0109 05:31:06.833954    9310 update.go:1636] Writing file "/etc/systemd/system/kubelet.service.d/20-logging.conf"
+2023-01-09T05:31:06.837265303Z I0109 05:31:06.837240    9310 update.go:1636] Writing file "/etc/NetworkManager/conf.d/sdn.conf"
+2023-01-09T05:31:06.839526911Z I0109 05:31:06.839499    9310 update.go:1636] Writing file "/etc/NetworkManager/dispatcher.d/pre-up.d/10-ofport-request.sh"
+2023-01-09T05:31:06.842968474Z I0109 05:31:06.842946    9310 update.go:1636] Writing file "/var/lib/kubelet/config.json"
+2023-01-09T05:31:06.846210296Z I0109 05:31:06.846186    9310 update.go:1636] Writing file "/etc/kubernetes/ca.crt"
+2023-01-09T05:31:06.848788295Z I0109 05:31:06.848765    9310 update.go:1636] Writing file "/etc/sysctl.d/forward.conf"
+2023-01-09T05:31:06.851281338Z I0109 05:31:06.851255    9310 update.go:1636] Writing file "/etc/sysctl.d/inotify.conf"
+2023-01-09T05:31:06.853892729Z I0109 05:31:06.853868    9310 update.go:1636] Writing file "/usr/local/bin/aws-kubelet-nodename"
+2023-01-09T05:31:06.856322394Z I0109 05:31:06.856292    9310 update.go:1636] Writing file "/usr/local/bin/aws-kubelet-providerid"
+2023-01-09T05:31:06.859034754Z I0109 05:31:06.859011    9310 update.go:1636] Writing file "/usr/local/bin/mco-hostname"
+2023-01-09T05:31:06.861517763Z I0109 05:31:06.861491    9310 update.go:1636] Writing file "/usr/local/bin/recover-kubeconfig.sh"
+2023-01-09T05:31:06.864517256Z I0109 05:31:06.864490    9310 update.go:1636] Writing file "/etc/kubernetes/kubelet-plugins/volume/exec/.dummy"
+2023-01-09T05:31:06.866576450Z I0109 05:31:06.866552    9310 update.go:1636] Writing file "/etc/NetworkManager/dispatcher.d/99-vsphere-disable-tx-udp-tnl"
+2023-01-09T05:31:06.869327048Z I0109 05:31:06.869303    9310 update.go:1636] Writing file "/etc/containers/registries.conf"
+2023-01-09T05:31:06.872124033Z I0109 05:31:06.872099    9310 update.go:1636] Writing file "/etc/crio/crio.conf.d/00-default"
+2023-01-09T05:31:06.874980871Z I0109 05:31:06.874950    9310 update.go:1636] Writing file "/etc/containers/policy.json"
+2023-01-09T05:31:06.877555853Z I0109 05:31:06.877533    9310 update.go:1636] Writing file "/etc/kubernetes/cloud.conf"
+2023-01-09T05:31:06.879637157Z I0109 05:31:06.879613    9310 update.go:1636] Writing file "/etc/kubernetes/kubelet.conf"
+2023-01-09T05:31:06.882112576Z I0109 05:31:06.882085    9310 update.go:1636] Writing file "/usr/local/bin/kubenswrapper"
+2023-01-09T05:31:06.885418072Z I0109 05:31:06.885394    9310 update.go:1568] Writing systemd unit "aws-kubelet-nodename.service"
+2023-01-09T05:31:06.887058892Z I0109 05:31:06.887042    9310 update.go:1568] Writing systemd unit "aws-kubelet-providerid.service"
+2023-01-09T05:31:06.888794012Z I0109 05:31:06.888778    9310 update.go:1523] Writing systemd unit dropin "01-kubens.conf"
+2023-01-09T05:31:06.890512781Z I0109 05:31:06.890495    9310 update.go:1509] Dropin for 10-mco-default-env.conf has no content, skipping write
+2023-01-09T05:31:06.890525894Z I0109 05:31:06.890511    9310 update.go:1516] Removing "/etc/systemd/system/crio.service.d/10-mco-default-env.conf", updated file has zero length
+2023-01-09T05:31:06.890544366Z I0109 05:31:06.890533    9310 update.go:1523] Writing systemd unit dropin "10-mco-profile-unix-socket.conf"
+2023-01-09T05:31:06.891792969Z I0109 05:31:06.891779    9310 update.go:1523] Writing systemd unit dropin "10-mco-default-madv.conf"
+2023-01-09T05:31:07.818109222Z I0109 05:31:07.818061    9310 update.go:1500] Preset systemd unit crio.service
+2023-01-09T05:31:07.818109222Z I0109 05:31:07.818087    9310 update.go:1523] Writing systemd unit dropin "mco-disabled.conf"
+2023-01-09T05:31:07.827214775Z I0109 05:31:07.827174    9310 update.go:1614] Could not reset unit preset for docker.socket, skipping. (Error msg: error running preset on unit: Failed to preset unit: Unit file docker.socket does not exist.
+2023-01-09T05:31:07.827214775Z )
+2023-01-09T05:31:07.827214775Z I0109 05:31:07.827197    9310 update.go:1568] Writing systemd unit "kubelet-auto-node-size.service"
+2023-01-09T05:31:07.828856930Z I0109 05:31:07.828837    9310 update.go:1523] Writing systemd unit dropin "01-kubens.conf"
+2023-01-09T05:31:07.830708692Z I0109 05:31:07.830683    9310 update.go:1509] Dropin for 10-mco-default-env.conf has no content, skipping write
+2023-01-09T05:31:07.830729205Z I0109 05:31:07.830705    9310 update.go:1516] Removing "/etc/systemd/system/kubelet.service.d/10-mco-default-env.conf", updated file has zero length
+2023-01-09T05:31:07.830745102Z I0109 05:31:07.830729    9310 update.go:1523] Writing systemd unit dropin "10-mco-default-madv.conf"
+2023-01-09T05:31:07.831871597Z I0109 05:31:07.831846    9310 update.go:1568] Writing systemd unit "kubelet.service"
+2023-01-09T05:31:07.833292375Z I0109 05:31:07.833269    9310 update.go:1568] Writing systemd unit "kubens.service"
+2023-01-09T05:31:07.834729315Z I0109 05:31:07.834707    9310 update.go:1568] Writing systemd unit "machine-config-daemon-firstboot.service"
+2023-01-09T05:31:07.836526700Z I0109 05:31:07.836508    9310 update.go:1568] Writing systemd unit "machine-config-daemon-pull.service"
+2023-01-09T05:31:07.837657150Z I0109 05:31:07.837639    9310 update.go:1568] Writing systemd unit "node-valid-hostname.service"
+2023-01-09T05:31:07.839042430Z I0109 05:31:07.839024    9310 update.go:1568] Writing systemd unit "nodeip-configuration.service"
+2023-01-09T05:31:07.840359864Z I0109 05:31:07.840343    9310 update.go:1568] Writing systemd unit "ovs-configuration.service"
+2023-01-09T05:31:07.841703377Z I0109 05:31:07.841686    9310 update.go:1523] Writing systemd unit dropin "10-ovs-vswitchd-restart.conf"
+2023-01-09T05:31:08.713429281Z I0109 05:31:08.713375    9310 update.go:1500] Preset systemd unit ovs-vswitchd.service
+2023-01-09T05:31:08.713429281Z I0109 05:31:08.713399    9310 update.go:1523] Writing systemd unit dropin "10-ovsdb-restart.conf"
+2023-01-09T05:31:08.717651170Z I0109 05:31:08.717607    9310 update.go:1509] Dropin for 10-mco-default-env.conf has no content, skipping write
+2023-01-09T05:31:08.717651170Z I0109 05:31:08.717634    9310 update.go:1516] Removing "/etc/systemd/system/pivot.service.d/10-mco-default-env.conf", updated file has zero length
+2023-01-09T05:31:08.724648824Z I0109 05:31:08.724607    9310 update.go:1614] Could not reset unit preset for pivot.service, skipping. (Error msg: error running preset on unit: Failed to preset unit: Unit file pivot.service does not exist.
+2023-01-09T05:31:08.724648824Z )
+2023-01-09T05:31:08.724648824Z I0109 05:31:08.724631    9310 update.go:1509] Dropin for 10-mco-default-env.conf has no content, skipping write
+2023-01-09T05:31:08.724679613Z I0109 05:31:08.724644    9310 update.go:1516] Removing "/etc/systemd/system/rpm-ostreed.service.d/10-mco-default-env.conf", updated file has zero length
+2023-01-09T05:31:08.724702184Z I0109 05:31:08.724690    9310 update.go:1523] Writing systemd unit dropin "mco-controlplane-nice.conf"
+2023-01-09T05:31:09.552807337Z I0109 05:31:09.552763    9310 update.go:1500] Preset systemd unit rpm-ostreed.service
+2023-01-09T05:31:09.552807337Z I0109 05:31:09.552795    9310 update.go:1523] Writing systemd unit dropin "mco-disabled.conf"
+2023-01-09T05:31:09.560939016Z I0109 05:31:09.560895    9310 update.go:1614] Could not reset unit preset for zincati.service, skipping. (Error msg: error running preset on unit: Failed to preset unit: Unit file zincati.service does not exist.
+2023-01-09T05:31:09.560939016Z )
+2023-01-09T05:31:10.416829639Z I0109 05:31:10.416767    9310 update.go:1478] Enabled systemd units: [aws-kubelet-nodename.service aws-kubelet-providerid.service kubelet-auto-node-size.service kubelet.service machine-config-daemon-firstboot.service machine-config-daemon-pull.service node-valid-hostname.service openvswitch.service ovs-configuration.service ovsdb-server.service]
+2023-01-09T05:31:11.238214016Z I0109 05:31:11.238161    9310 update.go:1489] Disabled systemd units [kubens.service nodeip-configuration.service]
+2023-01-09T05:31:11.238214016Z I0109 05:31:11.238196    9310 update.go:1296] Deleting stale data
+2023-01-09T05:31:11.238316870Z I0109 05:31:11.238303    9310 update.go:1792] Writing SSHKeys at "/home/core/.ssh/authorized_keys"
+2023-01-09T05:31:11.960429158Z I0109 05:31:11.960388    9310 update.go:2089] Running: systemctl reload crio
+2023-01-09T05:31:11.972322490Z I0109 05:31:11.972268    9310 update.go:2104] crio config reloaded successfully! Desired config rendered-master-9a5b5926acef90c95fac0086c87d868a has been applied, skipping reboot
+2023-01-09T05:31:11.975150625Z I0109 05:31:11.975092    9310 daemon.go:1255] Current config: rendered-master-f509746cb678ff4a775c368176e3991b
+2023-01-09T05:31:11.975150625Z I0109 05:31:11.975110    9310 daemon.go:1256] Desired config: rendered-master-9a5b5926acef90c95fac0086c87d868a
+2023-01-09T05:31:11.975150625Z I0109 05:31:11.975117    9310 daemon.go:1258] state: Done
+2023-01-09T05:31:11.975150625Z I0109 05:31:11.975126    9310 daemon.go:1622] Completing pending config rendered-master-9a5b5926acef90c95fac0086c87d868a
+2023-01-09T05:31:21.994915515Z I0109 05:31:21.994875    9310 update.go:2104] Update completed for config rendered-master-9a5b5926acef90c95fac0086c87d868a and node has been successfully uncordoned
+2023-01-09T05:31:22.014378602Z I0109 05:31:22.014330    9310 daemon.go:1650] In desired config rendered-master-9a5b5926acef90c95fac0086c87d868a
+2023-01-09T05:31:22.034633762Z I0109 05:31:22.034586    9310 config_drift_monitor.go:246] Config Drift Monitor started
+2023-01-09T05:31:22.034728996Z I0109 05:31:22.034712    9310 update.go:2134] Removing SIGTERM protection

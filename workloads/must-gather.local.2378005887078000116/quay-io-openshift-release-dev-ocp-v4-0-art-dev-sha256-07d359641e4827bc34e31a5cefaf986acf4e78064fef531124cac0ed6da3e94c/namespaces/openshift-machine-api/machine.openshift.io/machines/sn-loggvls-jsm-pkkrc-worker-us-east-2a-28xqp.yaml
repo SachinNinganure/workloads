@@ -1,0 +1,220 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: running
+  creationTimestamp: "2023-01-09T04:41:47Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generateName: sn-loggvls-jsm-pkkrc-worker-us-east-2a-
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+    machine.openshift.io/cluster-api-machineset: sn-loggvls-jsm-pkkrc-worker-us-east-2a
+    machine.openshift.io/instance-type: m5.4xlarge
+    machine.openshift.io/interruptible-instance: ""
+    machine.openshift.io/region: us-east-2
+    machine.openshift.io/zone: us-east-2a
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+          f:machine.openshift.io/cluster-api-machineset: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"44495224-32ce-4d01-8c02-3eea8199627a"}: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:ami:
+              .: {}
+              f:id: {}
+            f:apiVersion: {}
+            f:blockDevices: {}
+            f:credentialsSecret:
+              .: {}
+              f:name: {}
+            f:deviceIndex: {}
+            f:iamInstanceProfile:
+              .: {}
+              f:id: {}
+            f:instanceType: {}
+            f:kind: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:metadataServiceOptions: {}
+            f:placement:
+              .: {}
+              f:availabilityZone: {}
+              f:region: {}
+            f:securityGroups: {}
+            f:spotMarketOptions: {}
+            f:subnet:
+              .: {}
+              f:filters: {}
+            f:tags: {}
+            f:userDataSecret:
+              .: {}
+              f:name: {}
+    manager: machineset-controller
+    operation: Update
+    time: "2023-01-09T04:41:47Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+        f:labels:
+          f:machine.openshift.io/instance-type: {}
+          f:machine.openshift.io/interruptible-instance: {}
+          f:machine.openshift.io/region: {}
+          f:machine.openshift.io/zone: {}
+      f:spec:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:machine.openshift.io/interruptible-instance: {}
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2023-01-09T04:42:56Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:addresses: {}
+        f:conditions: {}
+        f:phase: {}
+        f:providerStatus:
+          .: {}
+          f:conditions: {}
+          f:instanceId: {}
+          f:instanceState: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:44:58Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:lastUpdated: {}
+        f:nodeRef: {}
+    manager: nodelink-controller
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:45:28Z"
+  name: sn-loggvls-jsm-pkkrc-worker-us-east-2a-28xqp
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: MachineSet
+    name: sn-loggvls-jsm-pkkrc-worker-us-east-2a
+    uid: 44495224-32ce-4d01-8c02-3eea8199627a
+  resourceVersion: "15577"
+  uid: 5bf88534-0404-446d-8873-d1993cdb0d63
+spec:
+  lifecycleHooks: {}
+  metadata:
+    labels:
+      machine.openshift.io/interruptible-instance: ""
+  providerID: aws:///us-east-2a/i-03e0387b8b536aaf1
+  providerSpec:
+    value:
+      ami:
+        id: ami-0ff64f495c7e977cf
+      apiVersion: machine.openshift.io/v1beta1
+      blockDevices:
+      - ebs:
+          encrypted: true
+          iops: 0
+          kmsKey:
+            arn: ""
+          volumeSize: 120
+          volumeType: gp3
+      credentialsSecret:
+        name: aws-cloud-credentials
+      deviceIndex: 0
+      iamInstanceProfile:
+        id: sn-loggvls-jsm-pkkrc-worker-profile
+      instanceType: m5.4xlarge
+      kind: AWSMachineProviderConfig
+      metadata:
+        creationTimestamp: null
+      metadataServiceOptions: {}
+      placement:
+        availabilityZone: us-east-2a
+        region: us-east-2
+      securityGroups:
+      - filters:
+        - name: tag:Name
+          values:
+          - sn-loggvls-jsm-pkkrc-worker-sg
+      spotMarketOptions: {}
+      subnet:
+        filters:
+        - name: tag:Name
+          values:
+          - sn-loggvls-jsm-pkkrc-private-us-east-2a
+      tags:
+      - name: kubernetes.io/cluster/sn-loggvls-jsm-pkkrc
+        value: owned
+      userDataSecret:
+        name: worker-user-data
+status:
+  addresses:
+  - address: 10.0.130.201
+    type: InternalIP
+  - address: ip-10-0-130-201.us-east-2.compute.internal
+    type: InternalDNS
+  - address: ip-10-0-130-201.us-east-2.compute.internal
+    type: Hostname
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:41:51Z"
+    status: "True"
+    type: Drainable
+  - lastTransitionTime: "2023-01-09T04:43:06Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2023-01-09T04:41:51Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2023-01-09T04:45:28Z"
+  nodeRef:
+    kind: Node
+    name: ip-10-0-130-201.us-east-2.compute.internal
+    uid: 63f93508-f9ec-4006-9e48-a3356f0aff02
+  phase: Running
+  providerStatus:
+    conditions:
+    - lastTransitionTime: "2023-01-09T04:42:31Z"
+      message: Machine successfully created
+      reason: MachineCreationSucceeded
+      status: "True"
+      type: MachineCreation
+    instanceId: i-03e0387b8b536aaf1
+    instanceState: running

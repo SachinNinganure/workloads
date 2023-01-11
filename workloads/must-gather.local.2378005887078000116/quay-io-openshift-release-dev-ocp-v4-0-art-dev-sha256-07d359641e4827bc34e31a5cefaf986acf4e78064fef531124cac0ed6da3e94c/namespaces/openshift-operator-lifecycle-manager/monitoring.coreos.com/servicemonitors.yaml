@@ -1,0 +1,139 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2023-01-09T04:37:14Z"
+    generation: 1
+    labels:
+      app: catalog-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:14Z"
+    name: catalog-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "1506"
+    uid: bd9bec89-dfe5-4982-9ae0-56b4847b53c4
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: etcd_(debugging|disk|request|server).*
+        sourceLabels:
+        - __name__
+      port: https-metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: catalog-operator-metrics.openshift-operator-lifecycle-manager.svc
+    jobLabel: component
+    namespaceSelector:
+      matchNames:
+      - openshift-operator-lifecycle-manager
+    selector:
+      matchLabels:
+        app: catalog-operator
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2023-01-09T04:37:10Z"
+    generation: 1
+    labels:
+      app: olm-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:10Z"
+    name: olm-operator
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "1458"
+    uid: cbcd4490-6fae-4be4-9043-7ec16bc12976
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: etcd_(debugging|disk|request|server).*
+        sourceLabels:
+        - __name__
+      port: https-metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: olm-operator-metrics.openshift-operator-lifecycle-manager.svc
+    jobLabel: component
+    namespaceSelector:
+      matchNames:
+      - openshift-operator-lifecycle-manager
+    selector:
+      matchLabels:
+        app: olm-operator
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "268779"

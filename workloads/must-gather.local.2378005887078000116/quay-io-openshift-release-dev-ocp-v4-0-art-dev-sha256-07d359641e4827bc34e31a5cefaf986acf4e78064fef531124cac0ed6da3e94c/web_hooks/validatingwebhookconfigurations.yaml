@@ -1,0 +1,573 @@
+apiVersion: v1
+items:
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:46:15Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: prometheus-operator
+    name: alertmanagerconfigs.openshift.io
+    resourceVersion: "18193"
+    uid: a39f040d-bd2f-4d95-8fa2-1a86cd3695b6
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: prometheus-operator-admission-webhook
+        namespace: openshift-monitoring
+        path: /admission-alertmanagerconfigs/validate
+        port: 8443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: alertmanagerconfigs.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - monitoring.coreos.com
+      apiVersions:
+      - v1alpha1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - alertmanagerconfigs
+      scope: Namespaced
+    sideEffects: None
+    timeoutSeconds: 5
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:42:25Z"
+    generation: 2
+    labels:
+      k8s-app: cluster-autoscaler-operator
+    name: autoscaling.openshift.io
+    resourceVersion: "9772"
+    uid: 0c83062e-c580-4dea-8aa1-e2606575a035
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: cluster-autoscaler-operator
+        namespace: openshift-machine-api
+        path: /validate-clusterautoscalers
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: clusterautoscalers.autoscaling.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - autoscaling.openshift.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - clusterautoscalers
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: cluster-autoscaler-operator
+        namespace: openshift-machine-api
+        path: /validate-machineautoscalers
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: machineautoscalers.autoscaling.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - autoscaling.openshift.io
+      apiVersions:
+      - v1beta1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - machineautoscalers
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:42:06Z"
+    generation: 2
+    name: cluster-baremetal-validating-webhook-configuration
+    resourceVersion: "8878"
+    uid: 78bb0aab-cec2-4a63-b93c-5bf253cb6d4a
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    - v1beta1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: cluster-baremetal-webhook-service
+        namespace: openshift-machine-api
+        path: /validate-metal3-io-v1alpha1-provisioning
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: vprovisioning.kb.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - metal3.io
+      apiVersions:
+      - v1alpha1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - provisionings
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:43:18Z"
+    generation: 472
+    name: controlplanemachineset.machine.openshift.io
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "267764"
+    uid: b7619715-9b23-4d8b-8a59-6e94a4368acf
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: control-plane-machine-set-operator
+        namespace: openshift-machine-api
+        path: /validate-machine-openshift-io-v1-controlplanemachineset
+        port: 9443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: controlplanemachineset.machine.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - machine.openshift.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - controlplanemachinesets
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:41:32Z"
+    generation: 2
+    name: machine-api
+    resourceVersion: "7077"
+    uid: a952d922-fbe5-4a44-bcd0-c6684fca8dae
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: machine-api-operator-webhook
+        namespace: openshift-machine-api
+        path: /validate-machine-openshift-io-v1beta1-machine
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: validation.machine.machine.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - machine.openshift.io
+      apiVersions:
+      - v1beta1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - machines
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: machine-api-operator-webhook
+        namespace: openshift-machine-api
+        path: /validate-machine-openshift-io-v1beta1-machineset
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: validation.machineset.machine.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - machine.openshift.io
+      apiVersions:
+      - v1beta1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - machinesets
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:38:55Z"
+    generation: 2
+    labels:
+      app: multus-admission-controller
+    name: multus.openshift.io
+    ownerReferences:
+    - apiVersion: operator.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Network
+      name: cluster
+      uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+    resourceVersion: "5378"
+    uid: 99853938-f7dc-4512-9bd4-5090be2558c5
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: multus-admission-controller
+        namespace: openshift-multus
+        path: /validate
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: multus-validating-config.k8s.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - k8s.cni.cncf.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - network-attachment-definitions
+      scope: '*'
+    sideEffects: NoneOnDryRun
+    timeoutSeconds: 30
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:37:28Z"
+    generation: 482
+    name: performance-addon-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "267673"
+    uid: e573aeae-c738-4af4-8916-c47b479bcecb
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: performance-addon-operator-service
+        namespace: openshift-cluster-node-tuning-operator
+        path: /validate-performance-openshift-io-v2-performanceprofile
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: vwb.performance.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - performance.openshift.io
+      apiVersions:
+      - v2
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - performanceprofiles
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:46:15Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: prometheus-operator
+    name: prometheusrules.openshift.io
+    resourceVersion: "18191"
+    uid: 796ca7dc-7f4e-435a-aff5-6428a0ef495a
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: prometheus-operator-admission-webhook
+        namespace: openshift-monitoring
+        path: /admission-prometheusrules/validate
+        port: 8443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: prometheusrules.openshift.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - monitoring.coreos.com
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - prometheusrules
+      scope: Namespaced
+    sideEffects: None
+    timeoutSeconds: 5
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:41:04Z"
+    generation: 2
+    labels:
+      app: csi-snapshot-webhook
+    name: snapshot.storage.k8s.io
+    resourceVersion: "5372"
+    uid: 9e931043-db39-4a13-be25-038d7de386ea
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    - v1beta1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJTVlxYkJBd2MyTDB3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZM016SXpPVEkyTkRBZQpGdzB5TXpBeE1Ea3dORFF4TUROYUZ3MHlOVEF6TURrd05EUXhNRFJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJOek15TXpreU5qUXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFRjYzViVmh0L1FYbzkrUVNURGZoK3U5Ynpwc1BVOXcxYgpXL25ub05scDZVaU95SmxCcHN6TGo2V2ozOE9kS29LTE9jbGg2c2dYSXJ2QXI2eVorTHYvTlpFY1VJQi9VZG1VClhkT0M4Z0RCTG5hQWZJY2RKcDJXUTlBeC94V05ZN01CMmpoTkNNa2dJSXN1U043QnlSSXlDcmJXYUJzWUZPQmsKQmNkbzBjbXpmbGlMcnlOMG1ienRXMm1ndWM3SHRvOWlyWEsvRFo5ekJmbldwdkxUOUZtbGdRZi9ReVRrVDZKNQpmeThpYmJjTjVSbStWeTd4dm9XK2hvSXd0M2JISEdSNUJwcGZjSE93dzVzZ1htUUIrNTdSNisydDB3c3BwcXp5CnZSVlo1eGVQSTBsc2paS2Q4a1hmdWc3bnVmQ0lBdk1YclczWVlMMFN3NnVNbEx5SVlEWkpBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFKYzNvYgpIam41N1Y2T1dZT0VxUXN0YXJqK0J6QWZCZ05WSFNNRUdEQVdnQlFKYzNvYkhqbjU3VjZPV1lPRXFRc3RhcmorCkJ6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFtbkJiTml6VjRjTWNTd3JtUzkyRmp6QW9NdUJxSFpsbGF3QWQKMzdHODhZSTVLUzFTWVVmUWQxa0RIVmZxYTczbmZOendXSEswSGRmbkpzQldJeWpGY3luQ2pxbnhoeklzTUlIdwo0NUhQVXQyc2ZZTTdlNDBMazkrS09YeFlFTTNQS2R5TFdONDRRbUk3aVU5WVVsSjFON0RrbEswd1BVYTJoVCs5CnBMUmQzM09KWWlsUDhrdUQ1ek51eWlJUHRPZVBXNkxkd1c1dFUwdmlReStpbHE5eVc5NTZXTitOb0FZRVdZcCsKTGlPR0hOaXlxY3FGV3dUbWlYSWFFOUlHZFBGbFR2cVNtckZoZk5BRjJkT2NKMHk5S245Y2tKb3kraVRpZ0d6RQpTNGFaWTZlaVl4Q21NZkFTM3pEcXVYbmZPTGhoTERRYWpPVUprWXlJbDA4akwyWndEQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+      service:
+        name: csi-snapshot-webhook
+        namespace: openshift-cluster-storage-operator
+        path: /volumesnapshot
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: volumesnapshotclasses.snapshot.storage.k8s.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - snapshot.storage.k8s.io
+      apiVersions:
+      - v1beta1
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - volumesnapshots
+      - volumesnapshotcontents
+      - volumesnapshotclasses
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    creationTimestamp: "2023-01-09T05:32:20Z"
+    generateName: valertingrule.loki.grafana.com-
+    generation: 1
+    labels:
+      olm.owner: loki-operator.v5.6.0
+      olm.owner.kind: ClusterServiceVersion
+      olm.owner.namespace: openshift-operators-redhat
+      olm.webhook-description-generate-name: valertingrule.loki.grafana.com
+      olm.webhook-description-hash: 6565786f78
+    name: valertingrule.loki.grafana.com-dpmzt
+    resourceVersion: "43985"
+    uid: 2fab4fdb-630b-40c0-85f8-6d6fc331512d
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQVdLZ0F3SUJBZ0lJRS9scDZkZGFqNXd3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE1UTm1PVFk1WlRsawpOelZoT0dZNVl6QWVGdzB5TXpBeE1Ea3dOVE15TWpCYUZ3MHlOVEF4TURnd05UTXlNakJhTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRFelpqazIKT1dVNVpEYzFZVGhtT1dNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFSeHYrT2lJT0tnZW52VQoxQjJhVFFGaTgrOTdQdThHeGphZldWTEE5NjFZcnFvZ3dOckxXOXZqVGQ5cjREd1BjYzZyR1V1NzN0WFFkdmFTCjJ5QkZ3WUVHbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVVrK1B5Ym1haXFid2pPVnFXYkdJMDJUOGZHdmN3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQVBHcQpsM2pXem1OemxtNUdjbUp0U2FQaCtiUkdjTDdDOGZ6NmI4Y1hOVjJIQWlFQTlvVFZqNmRQM3N3Q2NhLzVlc3BCClVNN2dYMnRlV0ZtOCtpTXlBeVBvYjlvPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: loki-operator-controller-manager-service
+        namespace: openshift-operators-redhat
+        path: /validate-loki-grafana-com-v1beta1-alertingrule
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: valertingrule.loki.grafana.com
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - loki.grafana.com
+      apiVersions:
+      - v1beta1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - alertingrules
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    creationTimestamp: "2023-01-09T05:32:20Z"
+    generateName: vlokistack.loki.grafana.com-
+    generation: 1
+    labels:
+      olm.owner: loki-operator.v5.6.0
+      olm.owner.kind: ClusterServiceVersion
+      olm.owner.namespace: openshift-operators-redhat
+      olm.webhook-description-generate-name: vlokistack.loki.grafana.com
+      olm.webhook-description-hash: 7994bbd89f
+    name: vlokistack.loki.grafana.com-tphpd
+    resourceVersion: "43987"
+    uid: fbb8970d-fc30-422b-b755-21686e59b49d
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQVdLZ0F3SUJBZ0lJRS9scDZkZGFqNXd3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE1UTm1PVFk1WlRsawpOelZoT0dZNVl6QWVGdzB5TXpBeE1Ea3dOVE15TWpCYUZ3MHlOVEF4TURnd05UTXlNakJhTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRFelpqazIKT1dVNVpEYzFZVGhtT1dNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFSeHYrT2lJT0tnZW52VQoxQjJhVFFGaTgrOTdQdThHeGphZldWTEE5NjFZcnFvZ3dOckxXOXZqVGQ5cjREd1BjYzZyR1V1NzN0WFFkdmFTCjJ5QkZ3WUVHbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVVrK1B5Ym1haXFid2pPVnFXYkdJMDJUOGZHdmN3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQVBHcQpsM2pXem1OemxtNUdjbUp0U2FQaCtiUkdjTDdDOGZ6NmI4Y1hOVjJIQWlFQTlvVFZqNmRQM3N3Q2NhLzVlc3BCClVNN2dYMnRlV0ZtOCtpTXlBeVBvYjlvPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: loki-operator-controller-manager-service
+        namespace: openshift-operators-redhat
+        path: /validate-loki-grafana-com-v1-lokistack
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: vlokistack.loki.grafana.com
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - loki.grafana.com
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - lokistacks
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    creationTimestamp: "2023-01-09T05:32:20Z"
+    generateName: vrecordingrule.loki.grafana.com-
+    generation: 1
+    labels:
+      olm.owner: loki-operator.v5.6.0
+      olm.owner.kind: ClusterServiceVersion
+      olm.owner.namespace: openshift-operators-redhat
+      olm.webhook-description-generate-name: vrecordingrule.loki.grafana.com
+      olm.webhook-description-hash: 5dbb9cb469
+    name: vrecordingrule.loki.grafana.com-9ccj6
+    resourceVersion: "43988"
+    uid: 016ca417-7e99-4d08-81aa-39f705cee745
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQVdLZ0F3SUJBZ0lJRS9scDZkZGFqNXd3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE1UTm1PVFk1WlRsawpOelZoT0dZNVl6QWVGdzB5TXpBeE1Ea3dOVE15TWpCYUZ3MHlOVEF4TURnd05UTXlNakJhTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRFelpqazIKT1dVNVpEYzFZVGhtT1dNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFSeHYrT2lJT0tnZW52VQoxQjJhVFFGaTgrOTdQdThHeGphZldWTEE5NjFZcnFvZ3dOckxXOXZqVGQ5cjREd1BjYzZyR1V1NzN0WFFkdmFTCjJ5QkZ3WUVHbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVVrK1B5Ym1haXFid2pPVnFXYkdJMDJUOGZHdmN3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQVBHcQpsM2pXem1OemxtNUdjbUp0U2FQaCtiUkdjTDdDOGZ6NmI4Y1hOVjJIQWlFQTlvVFZqNmRQM3N3Q2NhLzVlc3BCClVNN2dYMnRlV0ZtOCtpTXlBeVBvYjlvPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: loki-operator-controller-manager-service
+        namespace: openshift-operators-redhat
+        path: /validate-loki-grafana-com-v1beta1-recordingrule
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: vrecordingrule.loki.grafana.com
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - loki.grafana.com
+      apiVersions:
+      - v1beta1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - recordingrules
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,82 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: "2023-01-09T05:32:20Z"
+  generateName: valertingrule.loki.grafana.com-
+  generation: 1
+  labels:
+    olm.owner: loki-operator.v5.6.0
+    olm.owner.kind: ClusterServiceVersion
+    olm.owner.namespace: openshift-operators-redhat
+    olm.webhook-description-generate-name: valertingrule.loki.grafana.com
+    olm.webhook-description-hash: 6565786f78
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.owner: {}
+          f:olm.owner.kind: {}
+          f:olm.owner.namespace: {}
+          f:olm.webhook-description-generate-name: {}
+          f:olm.webhook-description-hash: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"valertingrule.loki.grafana.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:caBundle: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:20Z"
+  name: valertingrule.loki.grafana.com-dpmzt
+  resourceVersion: "43985"
+  uid: 2fab4fdb-630b-40c0-85f8-6d6fc331512d
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQVdLZ0F3SUJBZ0lJRS9scDZkZGFqNXd3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE1UTm1PVFk1WlRsawpOelZoT0dZNVl6QWVGdzB5TXpBeE1Ea3dOVE15TWpCYUZ3MHlOVEF4TURnd05UTXlNakJhTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRFelpqazIKT1dVNVpEYzFZVGhtT1dNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFSeHYrT2lJT0tnZW52VQoxQjJhVFFGaTgrOTdQdThHeGphZldWTEE5NjFZcnFvZ3dOckxXOXZqVGQ5cjREd1BjYzZyR1V1NzN0WFFkdmFTCjJ5QkZ3WUVHbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVVrK1B5Ym1haXFid2pPVnFXYkdJMDJUOGZHdmN3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQVBHcQpsM2pXem1OemxtNUdjbUp0U2FQaCtiUkdjTDdDOGZ6NmI4Y1hOVjJIQWlFQTlvVFZqNmRQM3N3Q2NhLzVlc3BCClVNN2dYMnRlV0ZtOCtpTXlBeVBvYjlvPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: loki-operator-controller-manager-service
+      namespace: openshift-operators-redhat
+      path: /validate-loki-grafana-com-v1beta1-alertingrule
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: valertingrule.loki.grafana.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - loki.grafana.com
+    apiVersions:
+    - v1beta1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - alertingrules
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

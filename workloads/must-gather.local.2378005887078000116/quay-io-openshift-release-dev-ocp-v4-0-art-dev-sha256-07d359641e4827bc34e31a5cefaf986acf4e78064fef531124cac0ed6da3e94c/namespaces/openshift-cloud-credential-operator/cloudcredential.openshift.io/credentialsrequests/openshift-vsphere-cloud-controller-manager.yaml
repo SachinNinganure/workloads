@@ -1,0 +1,72 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:38:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:38:58Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:38:58Z"
+  name: openshift-vsphere-cloud-controller-manager
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "2851"
+  uid: 14c53742-740c-4cac-980a-a263fd133534
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: VSphereProviderSpec
+  secretRef:
+    name: vsphere-cloud-credentials
+    namespace: openshift-cloud-controller-manager
+status:
+  conditions:
+  - lastProbeTime: "2023-01-09T04:38:58Z"
+    lastTransitionTime: "2023-01-09T04:38:58Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

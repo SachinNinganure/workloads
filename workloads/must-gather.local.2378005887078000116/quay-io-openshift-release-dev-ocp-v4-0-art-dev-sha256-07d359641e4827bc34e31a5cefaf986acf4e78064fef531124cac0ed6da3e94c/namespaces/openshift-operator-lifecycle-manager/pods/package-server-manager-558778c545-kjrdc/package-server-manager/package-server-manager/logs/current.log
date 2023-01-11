@@ -1,0 +1,79 @@
+2023-01-09T04:41:03.071317309Z I0109 04:41:03.069089       1 request.go:682] Waited for 1.028119754s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/operators.coreos.com/v1alpha2?timeout=32s
+2023-01-09T04:41:05.148876911Z 1.6732392651488326e+09	INFO	setup	starting manager
+2023-01-09T04:41:05.149056712Z I0109 04:41:05.149038       1 leaderelection.go:248] attempting to acquire leader lease openshift-operator-lifecycle-manager/packageserver-controller-lock...
+2023-01-09T04:41:05.149087788Z 1.6732392651490622e+09	INFO	Starting server	{"kind": "health probe", "addr": "[::]:8080"}
+2023-01-09T04:41:05.159038831Z I0109 04:41:05.159008       1 leaderelection.go:258] successfully acquired lease openshift-operator-lifecycle-manager/packageserver-controller-lock
+2023-01-09T04:41:05.159358500Z 1.6732392651592984e+09	INFO	Starting EventSource	{"controller": "clusterserviceversion", "controllerGroup": "operators.coreos.com", "controllerKind": "ClusterServiceVersion", "source": "kind source: *v1alpha1.ClusterServiceVersion"}
+2023-01-09T04:41:05.159405778Z 1.6732392651593902e+09	INFO	Starting EventSource	{"controller": "clusterserviceversion", "controllerGroup": "operators.coreos.com", "controllerKind": "ClusterServiceVersion", "source": "kind source: *v1.Infrastructure"}
+2023-01-09T04:41:05.159434730Z 1.6732392651594238e+09	INFO	Starting Controller	{"controller": "clusterserviceversion", "controllerGroup": "operators.coreos.com", "controllerKind": "ClusterServiceVersion"}
+2023-01-09T04:41:05.159582321Z 1.6732392651595047e+09	DEBUG	events	package-server-manager-558778c545-kjrdc_af38b223-2f88-44f2-a079-bca48cd7f86e became leader	{"type": "Normal", "object": {"kind":"Lease","namespace":"openshift-operator-lifecycle-manager","name":"packageserver-controller-lock","uid":"e0ea055c-81ab-4dac-b104-cf87dbc7c266","apiVersion":"coordination.k8s.io/v1","resourceVersion":"4700"}, "reason": "LeaderElection"}
+2023-01-09T04:41:05.260357390Z 1.673239265260312e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T04:41:05.260357390Z 1.6732392652603061e+09	INFO	Starting workers	{"controller": "clusterserviceversion", "controllerGroup": "operators.coreos.com", "controllerKind": "ClusterServiceVersion", "worker count": 1}
+2023-01-09T04:41:05.260497861Z 1.6732392652604787e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:05.260525397Z 1.6732392652605097e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:05.264677911Z 1.6732392652646375e+09	INFO	controllers.packageserver	attempting to create the packageserver csv
+2023-01-09T04:41:05.265917945Z 1.6732392652658916e+09	INFO	controllers.packageserver	updating csv spec
+2023-01-09T04:41:05.276389101Z 1.673239265276329e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "created"}
+2023-01-09T04:41:05.276389101Z 1.6732392652763686e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:05.276456204Z 1.6732392652764375e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:05.276482450Z 1.6732392652764668e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:05.279938822Z 1.6732392652798953e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:05.279938822Z 1.6732392652799282e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.860441126Z 1.673239283860394e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.860487559Z 1.6732392838604372e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:23.867315397Z 1.6732392838672402e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:23.867315397Z 1.6732392838672936e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.890014489Z 1.6732392838899527e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.890042379Z 1.6732392838900201e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:23.895301282Z 1.673239283895207e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:23.895301282Z 1.6732392838952944e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.941029662Z 1.6732392839388313e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:23.941029662Z 1.673239283938878e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:23.943028660Z 1.673239283942949e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:23.943028660Z 1.6732392839429767e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:24.270776346Z 1.6732392842707212e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:24.270819485Z 1.673239284270771e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:24.275360748Z 1.6732392842753103e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:24.275389707Z 1.673239284275377e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:24.701759517Z 1.6732392847017045e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:24.701789913Z 1.6732392847017546e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:24.704973596Z 1.673239284704918e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:24.704973596Z 1.6732392847049441e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:25.221975545Z 1.673239285221924e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:41:25.221975545Z 1.6732392852219658e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:41:25.226577518Z 1.6732392852265306e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:41:25.226624256Z 1.6732392852266111e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:46:55.709214349Z 1.673239615709134e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:46:55.709214349Z 1.673239615709186e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:46:55.712503079Z 1.673239615712412e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:46:55.712503079Z 1.67323961571244e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:48:59.026053797Z 1.6732397390259802e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:48:59.026106821Z 1.6732397390260468e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:48:59.029881438Z 1.6732397390298316e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:48:59.029881438Z 1.6732397390298638e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:48:59.920290713Z 1.6732397399202402e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T04:48:59.920290713Z 1.6732397399202797e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T04:48:59.920342936Z 1.6732397399203274e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:48:59.920390611Z 1.6732397399203517e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:48:59.923347358Z 1.6732397399233074e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:48:59.923347358Z 1.673239739923336e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:52:59.300669437Z 1.6732399793006136e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:52:59.300669437Z 1.6732399793006604e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:52:59.303182217Z 1.6732399793031392e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:52:59.303182217Z 1.6732399793031638e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:53:02.480533106Z 1.6732399824804792e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T04:53:02.480612479Z 1.6732399824805982e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T04:53:02.480685518Z 1.6732399824806714e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T04:53:02.480725090Z 1.6732399824807131e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T04:53:02.483251003Z 1.6732399824831991e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T04:53:02.483251003Z 1.67323998248323e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T14:05:17.053261136Z 1.6732731170532002e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T14:05:17.053261136Z 1.6732731170532424e+09	INFO	controllers.packageserver	requeueing the packageserver deployment after encountering infrastructure event	{"infrastructure": "cluster"}
+2023-01-09T14:05:17.053329842Z 1.6732731170533092e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T14:05:17.053341159Z 1.6732731170533333e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T14:05:17.055451857Z 1.673273117055413e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T14:05:17.055451857Z 1.673273117055437e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T14:51:01.779124923Z 1.673275861779076e+09	INFO	controllers.packageserver	handling current request	{"csv": "openshift-operator-lifecycle-manager/packageserver", "request": "openshift-operator-lifecycle-manager/packageserver"}
+2023-01-09T14:51:01.779197217Z 1.6732758617791185e+09	INFO	controllers.packageserver	currently topology mode	{"csv": "openshift-operator-lifecycle-manager/packageserver", "highly available": true}
+2023-01-09T14:51:01.781275275Z 1.6732758617812443e+09	INFO	controllers.packageserver	reconciliation result	{"csv": "openshift-operator-lifecycle-manager/packageserver", "res": "unchanged"}
+2023-01-09T14:51:01.781275275Z 1.6732758617812667e+09	INFO	controllers.packageserver	finished request reconciliation	{"csv": "openshift-operator-lifecycle-manager/packageserver"}

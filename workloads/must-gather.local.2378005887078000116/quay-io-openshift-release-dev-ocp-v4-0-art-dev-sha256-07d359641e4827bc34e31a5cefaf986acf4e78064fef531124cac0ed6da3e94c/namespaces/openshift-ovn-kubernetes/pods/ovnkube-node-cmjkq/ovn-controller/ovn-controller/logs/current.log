@@ -1,0 +1,347 @@
+2023-01-09T05:33:22.533217750Z 2023-01-09T05:33:22+00:00 - starting ovn-controller
+2023-01-09T05:33:22.559614809Z 2023-01-09T05:33:22Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2023-01-09T05:33:22.560268975Z 2023-01-09T05:33:22.560Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2023-01-09T05:33:22.560293501Z 2023-01-09T05:33:22.560Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2023-01-09T05:33:22.563260391Z 2023-01-09T05:33:22.563Z|00004|main|INFO|OVN internal version is : [22.09.1-20.25.0-68.4]
+2023-01-09T05:33:22.563260391Z 2023-01-09T05:33:22.563Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2023-01-09T05:33:22.581007829Z 2023-01-09T05:33:22.580Z|00006|main|INFO|OVNSB IDL reconnected, force recompute.
+2023-01-09T05:33:25.875272364Z 2023-01-09T05:33:25.875Z|00007|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T05:33:25.878969453Z 2023-01-09T05:33:25.878Z|00008|reconnect|INFO|ssl:10.0.160.211:9642: connected
+2023-01-09T05:33:25.893410255Z 2023-01-09T05:33:25.893Z|00009|features|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T05:33:25.893410255Z 2023-01-09T05:33:25.893Z|00010|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T05:33:25.894221356Z 2023-01-09T05:33:25.894Z|00011|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T05:33:25.894221356Z 2023-01-09T05:33:25.894Z|00012|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2023-01-09T05:33:25.894246614Z 2023-01-09T05:33:25.894Z|00013|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T05:33:25.894246614Z 2023-01-09T05:33:25.894Z|00014|ofctrl|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T05:33:25.894246614Z 2023-01-09T05:33:25.894Z|00015|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T05:33:25.894804789Z 2023-01-09T05:33:25.894Z|00016|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T05:33:25.895437043Z 2023-01-09T05:33:25.895Z|00017|main|INFO|OVS feature set changed, force recompute.
+2023-01-09T05:33:25.946618464Z 2023-01-09T05:33:25.946Z|00001|pinctrl(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2023-01-09T05:33:25.946669286Z 2023-01-09T05:33:25.946Z|00002|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2023-01-09T05:33:25.948418805Z 2023-01-09T05:33:25.948Z|00003|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2023-01-09T05:33:26.251213876Z 2023-01-09T05:33:26.251Z|00018|binding|INFO|Claiming lport cr-rtos-ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.251213876Z 2023-01-09T05:33:26.251Z|00019|binding|INFO|cr-rtos-ip-10-0-190-242.us-east-2.compute.internal: Claiming 0a:58:0a:83:02:01 10.131.2.1/23
+2023-01-09T05:33:26.292295092Z 2023-01-09T05:33:26.292Z|00020|if_status|INFO|Not updating pb chassis for k8s-ip-10-0-190-242.us-east-2.compute.internal now as sb is readonly
+2023-01-09T05:33:26.292594247Z 2023-01-09T05:33:26.292Z|00021|if_status|INFO|if_status_handle_claims for k8s-ip-10-0-190-242.us-east-2.compute.internal
+2023-01-09T05:33:26.292594247Z 2023-01-09T05:33:26.292Z|00022|binding|INFO|Claiming lport k8s-ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.292594247Z 2023-01-09T05:33:26.292Z|00023|binding|INFO|k8s-ip-10-0-190-242.us-east-2.compute.internal: Claiming be:b1:1b:54:e5:00 10.131.2.2
+2023-01-09T05:33:26.306633715Z 2023-01-09T05:33:26.306Z|00024|binding|INFO|Setting lport k8s-ip-10-0-190-242.us-east-2.compute.internal ovn-installed in OVS
+2023-01-09T05:33:26.306633715Z 2023-01-09T05:33:26.306Z|00025|binding|INFO|Setting lport k8s-ip-10-0-190-242.us-east-2.compute.internal up in Southbound
+2023-01-09T05:33:26.320459250Z 2023-01-09T05:33:26.320Z|00026|binding|INFO|Claiming lport rtoe-GR_ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.320459250Z 2023-01-09T05:33:26.320Z|00027|binding|INFO|rtoe-GR_ip-10-0-190-242.us-east-2.compute.internal: Claiming 06:e7:b8:5f:96:c8 10.0.190.242/19
+2023-01-09T05:33:26.320520947Z 2023-01-09T05:33:26.320Z|00028|binding|INFO|Claiming lport jtor-GR_ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.320520947Z 2023-01-09T05:33:26.320Z|00029|binding|INFO|jtor-GR_ip-10-0-190-242.us-east-2.compute.internal: Claiming router
+2023-01-09T05:33:26.320652340Z 2023-01-09T05:33:26.320Z|00030|binding|INFO|Claiming lport rtoj-GR_ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.320652340Z 2023-01-09T05:33:26.320Z|00031|binding|INFO|rtoj-GR_ip-10-0-190-242.us-east-2.compute.internal: Claiming 0a:58:64:40:00:05 100.64.0.5/16
+2023-01-09T05:33:26.320691549Z 2023-01-09T05:33:26.320Z|00032|binding|INFO|Claiming lport etor-GR_ip-10-0-190-242.us-east-2.compute.internal for this chassis.
+2023-01-09T05:33:26.320691549Z 2023-01-09T05:33:26.320Z|00033|binding|INFO|etor-GR_ip-10-0-190-242.us-east-2.compute.internal: Claiming 06:e7:b8:5f:96:c8
+2023-01-09T05:33:35.903799642Z 2023-01-09T05:33:35.903Z|00034|memory|INFO|22468 kB peak resident set size after 13.3 seconds
+2023-01-09T05:33:35.903831982Z 2023-01-09T05:33:35.903Z|00035|memory|INFO|idl-cells-OVN_Southbound:28098 idl-cells-Open_vSwitch:701 if_status_mgr_ifaces_state_usage-KB:1 if_status_mgr_ifaces_usage-KB:1 lflow-cache-entries-cache-expr:309 lflow-cache-entries-cache-matches:752 lflow-cache-size-KB:787 local_datapath_usage-KB:1 ofctrl_desired_flow_usage-KB:518 ofctrl_installed_flow_usage-KB:402 ofctrl_sb_flow_ref_usage-KB:205
+2023-01-09T05:33:39.939225338Z 2023-01-09T05:33:39.939Z|00036|binding|INFO|Claiming lport openshift-dns_dns-default-482k5 for this chassis.
+2023-01-09T05:33:39.939225338Z 2023-01-09T05:33:39.939Z|00037|binding|INFO|openshift-dns_dns-default-482k5: Claiming 0a:58:0a:83:02:05 10.131.2.5
+2023-01-09T05:33:39.953138291Z 2023-01-09T05:33:39.953Z|00038|binding|INFO|Setting lport openshift-dns_dns-default-482k5 ovn-installed in OVS
+2023-01-09T05:33:39.953138291Z 2023-01-09T05:33:39.953Z|00039|binding|INFO|Setting lport openshift-dns_dns-default-482k5 up in Southbound
+2023-01-09T05:33:39.955869356Z 2023-01-09T05:33:39.955Z|00040|if_status|INFO|Not updating pb chassis for openshift-ingress-canary_ingress-canary-zk8s2 now as sb is readonly
+2023-01-09T05:33:39.957525506Z 2023-01-09T05:33:39.957Z|00041|if_status|INFO|if_status_handle_claims for openshift-ingress-canary_ingress-canary-zk8s2
+2023-01-09T05:33:39.957525506Z 2023-01-09T05:33:39.957Z|00042|binding|INFO|Claiming lport openshift-ingress-canary_ingress-canary-zk8s2 for this chassis.
+2023-01-09T05:33:39.957556347Z 2023-01-09T05:33:39.957Z|00043|binding|INFO|openshift-ingress-canary_ingress-canary-zk8s2: Claiming 0a:58:0a:83:02:06 10.131.2.6
+2023-01-09T05:33:39.968833409Z 2023-01-09T05:33:39.968Z|00044|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-zk8s2 ovn-installed in OVS
+2023-01-09T05:33:39.968833409Z 2023-01-09T05:33:39.968Z|00045|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-zk8s2 up in Southbound
+2023-01-09T05:34:03.237933941Z 2023-01-09T05:34:03.237Z|00046|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-7zd9g for this chassis.
+2023-01-09T05:34:03.237933941Z 2023-01-09T05:34:03.237Z|00047|binding|INFO|openshift-network-diagnostics_network-check-target-7zd9g: Claiming 0a:58:0a:83:02:03 10.131.2.3
+2023-01-09T05:34:03.254047190Z 2023-01-09T05:34:03.254Z|00048|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-7zd9g ovn-installed in OVS
+2023-01-09T05:34:03.254047190Z 2023-01-09T05:34:03.254Z|00049|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-7zd9g up in Southbound
+2023-01-09T05:34:03.330548375Z 2023-01-09T05:34:03.330Z|00050|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-w2s9h for this chassis.
+2023-01-09T05:34:03.330548375Z 2023-01-09T05:34:03.330Z|00051|binding|INFO|openshift-multus_network-metrics-daemon-w2s9h: Claiming 0a:58:0a:83:02:04 10.131.2.4
+2023-01-09T05:34:03.343939656Z 2023-01-09T05:34:03.343Z|00052|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-w2s9h ovn-installed in OVS
+2023-01-09T05:34:03.343939656Z 2023-01-09T05:34:03.343Z|00053|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-w2s9h up in Southbound
+2023-01-09T05:35:13.091647583Z 2023-01-09T05:35:13.091Z|00054|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:37:17.839597876Z 2023-01-09T05:37:17.839Z|00055|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:41:38.740879113Z 2023-01-09T05:41:38.740Z|00056|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T05:43:50.017418256Z 2023-01-09T05:43:50.017Z|00057|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:45:36.057985800Z 2023-01-09T05:45:36.057Z|00058|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:47:32.567720434Z 2023-01-09T05:47:32.567Z|00059|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:51:07.153842300Z 2023-01-09T05:51:07.153Z|00060|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T05:52:01.125495914Z 2023-01-09T05:52:01.125Z|00061|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T05:54:08.845219594Z 2023-01-09T05:54:08.845Z|00062|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T05:57:47.274860118Z 2023-01-09T05:57:47.274Z|00063|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:01:27.609135235Z 2023-01-09T06:01:27.609Z|00064|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:02:00.997993033Z 2023-01-09T06:02:00.997Z|00065|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:02:47.592868054Z 2023-01-09T06:02:47.592Z|00066|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:06:50.056383789Z 2023-01-09T06:06:50.056Z|00067|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:08:34.130651203Z 2023-01-09T06:08:34.130Z|00068|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:11:42.903504365Z 2023-01-09T06:11:42.903Z|00069|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:11:58.315876025Z 2023-01-09T06:11:58.315Z|00070|binding|INFO|Claiming lport openshift-logging_collector-cwngs for this chassis.
+2023-01-09T06:11:58.315876025Z 2023-01-09T06:11:58.315Z|00071|binding|INFO|openshift-logging_collector-cwngs: Claiming 0a:58:0a:83:02:08 10.131.2.8
+2023-01-09T06:11:58.329690840Z 2023-01-09T06:11:58.329Z|00072|binding|INFO|Setting lport openshift-logging_collector-cwngs ovn-installed in OVS
+2023-01-09T06:11:58.329690840Z 2023-01-09T06:11:58.329Z|00073|binding|INFO|Setting lport openshift-logging_collector-cwngs up in Southbound
+2023-01-09T06:11:58.563821105Z 2023-01-09T06:11:58.563Z|00074|binding|INFO|Claiming lport openshift-logging_logging-view-plugin-56cbd77f8b-f4hzq for this chassis.
+2023-01-09T06:11:58.563821105Z 2023-01-09T06:11:58.563Z|00075|binding|INFO|openshift-logging_logging-view-plugin-56cbd77f8b-f4hzq: Claiming 0a:58:0a:83:02:07 10.131.2.7
+2023-01-09T06:11:58.578525140Z 2023-01-09T06:11:58.578Z|00076|binding|INFO|Setting lport openshift-logging_logging-view-plugin-56cbd77f8b-f4hzq ovn-installed in OVS
+2023-01-09T06:11:58.578525140Z 2023-01-09T06:11:58.578Z|00077|binding|INFO|Setting lport openshift-logging_logging-view-plugin-56cbd77f8b-f4hzq up in Southbound
+2023-01-09T06:12:13.226644718Z 2023-01-09T06:12:13.226Z|00078|binding|INFO|Releasing lport openshift-logging_collector-cwngs from this chassis (sb_readonly=0)
+2023-01-09T06:12:14.664854534Z 2023-01-09T06:12:14.664Z|00079|binding|INFO|Claiming lport openshift-logging_collector-bhqdl for this chassis.
+2023-01-09T06:12:14.664854534Z 2023-01-09T06:12:14.664Z|00080|binding|INFO|openshift-logging_collector-bhqdl: Claiming 0a:58:0a:83:02:09 10.131.2.9
+2023-01-09T06:12:14.680438378Z 2023-01-09T06:12:14.680Z|00081|binding|INFO|Setting lport openshift-logging_collector-bhqdl ovn-installed in OVS
+2023-01-09T06:12:14.680438378Z 2023-01-09T06:12:14.680Z|00082|binding|INFO|Setting lport openshift-logging_collector-bhqdl up in Southbound
+2023-01-09T06:12:41.509113635Z 2023-01-09T06:12:41.509Z|00083|binding|INFO|Claiming lport openshift-logging_lokistack-sample-distributor-74bfbf6c7c-qh8t5 for this chassis.
+2023-01-09T06:12:41.509113635Z 2023-01-09T06:12:41.509Z|00084|binding|INFO|openshift-logging_lokistack-sample-distributor-74bfbf6c7c-qh8t5: Claiming 0a:58:0a:83:02:0a 10.131.2.10
+2023-01-09T06:12:41.524609807Z 2023-01-09T06:12:41.524Z|00085|binding|INFO|Setting lport openshift-logging_lokistack-sample-distributor-74bfbf6c7c-qh8t5 ovn-installed in OVS
+2023-01-09T06:12:41.524609807Z 2023-01-09T06:12:41.524Z|00086|binding|INFO|Setting lport openshift-logging_lokistack-sample-distributor-74bfbf6c7c-qh8t5 up in Southbound
+2023-01-09T06:12:41.710545977Z 2023-01-09T06:12:41.710Z|00087|binding|INFO|Claiming lport openshift-logging_lokistack-sample-query-frontend-7c78f4b446-4fnpf for this chassis.
+2023-01-09T06:12:41.710545977Z 2023-01-09T06:12:41.710Z|00088|binding|INFO|openshift-logging_lokistack-sample-query-frontend-7c78f4b446-4fnpf: Claiming 0a:58:0a:83:02:0b 10.131.2.11
+2023-01-09T06:12:41.724929370Z 2023-01-09T06:12:41.724Z|00089|binding|INFO|Setting lport openshift-logging_lokistack-sample-query-frontend-7c78f4b446-4fnpf ovn-installed in OVS
+2023-01-09T06:12:41.724929370Z 2023-01-09T06:12:41.724Z|00090|binding|INFO|Setting lport openshift-logging_lokistack-sample-query-frontend-7c78f4b446-4fnpf up in Southbound
+2023-01-09T06:13:19.140517902Z 2023-01-09T06:13:19.140Z|00091|binding|INFO|Claiming lport openshift-logging_lokistack-sample-index-gateway-1 for this chassis.
+2023-01-09T06:13:19.140517902Z 2023-01-09T06:13:19.140Z|00092|binding|INFO|openshift-logging_lokistack-sample-index-gateway-1: Claiming 0a:58:0a:83:02:0c 10.131.2.12
+2023-01-09T06:13:19.156998211Z 2023-01-09T06:13:19.156Z|00093|binding|INFO|Setting lport openshift-logging_lokistack-sample-index-gateway-1 ovn-installed in OVS
+2023-01-09T06:13:19.156998211Z 2023-01-09T06:13:19.156Z|00094|binding|INFO|Setting lport openshift-logging_lokistack-sample-index-gateway-1 up in Southbound
+2023-01-09T06:14:26.830694464Z 2023-01-09T06:14:26.830Z|00095|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:15:35.388292526Z 2023-01-09T06:15:35.388Z|00096|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:18:57.843563398Z 2023-01-09T06:18:57.843Z|00097|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:21:48.608861042Z 2023-01-09T06:21:48.608Z|00098|binding|INFO|Claiming lport logtesta0_centos-logtest-lpj2q for this chassis.
+2023-01-09T06:21:48.608861042Z 2023-01-09T06:21:48.608Z|00099|binding|INFO|logtesta0_centos-logtest-lpj2q: Claiming 0a:58:0a:83:02:0d 10.131.2.13
+2023-01-09T06:21:48.625740196Z 2023-01-09T06:21:48.625Z|00100|binding|INFO|Setting lport logtesta0_centos-logtest-lpj2q ovn-installed in OVS
+2023-01-09T06:21:48.625740196Z 2023-01-09T06:21:48.625Z|00101|binding|INFO|Setting lport logtesta0_centos-logtest-lpj2q up in Southbound
+2023-01-09T06:22:20.834505852Z 2023-01-09T06:22:20.834Z|00102|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:22:53.499506366Z 2023-01-09T06:22:53.499Z|00103|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T06:23:39.610444780Z 2023-01-09T06:23:39.610Z|00104|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:29:44.660694084Z 2023-01-09T06:29:44.660Z|00105|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:30:35.632612778Z 2023-01-09T06:30:35.632Z|00106|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:32:37.624161670Z 2023-01-09T06:32:37.624Z|00107|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:34:32.470543174Z 2023-01-09T06:34:32.470Z|00108|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T06:40:09.453972714Z 2023-01-09T06:40:09.453Z|00109|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:43:10.484765756Z 2023-01-09T06:43:10.484Z|00110|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:45:43.396767607Z 2023-01-09T06:45:43.396Z|00111|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:50:43.232273451Z 2023-01-09T06:50:43.232Z|00112|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T06:53:27.237116403Z 2023-01-09T06:53:27.237Z|00113|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:54:29.432197885Z 2023-01-09T06:54:29.432Z|00114|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T06:56:23.440282987Z 2023-01-09T06:56:23.440Z|00115|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T06:57:01.197777920Z 2023-01-09T06:57:01.197Z|00116|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T06:57:34.361207034Z 2023-01-09T06:57:34.361Z|00117|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:00:34.052906446Z 2023-01-09T07:00:34.052Z|00118|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:01:44.070465455Z 2023-01-09T07:01:44.070Z|00119|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:05:20.351004224Z 2023-01-09T07:05:20.350Z|00120|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:06:40.949171656Z 2023-01-09T07:06:40.949Z|00121|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:07:47.471913128Z 2023-01-09T07:07:47.471Z|00122|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:08:20.165048468Z 2023-01-09T07:08:20.165Z|00123|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:14:34.226405988Z 2023-01-09T07:14:34.226Z|00124|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:15:36.055041110Z 2023-01-09T07:15:36.055Z|00125|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:16:56.512938313Z 2023-01-09T07:16:56.512Z|00126|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:01.278327292Z 2023-01-09T07:19:01.278Z|00127|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:19:34.085165312Z 2023-01-09T07:19:34.085Z|00128|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:26:05.946172585Z 2023-01-09T07:26:05.946Z|00129|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:26:50.078192417Z 2023-01-09T07:26:50.078Z|00130|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:27:40.074289082Z 2023-01-09T07:27:40.074Z|00131|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:29:14.577639753Z 2023-01-09T07:29:14.577Z|00132|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:29:47.824857704Z 2023-01-09T07:29:47.824Z|00133|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:30:35.494411279Z 2023-01-09T07:30:35.494Z|00134|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:37:55.572162664Z 2023-01-09T07:37:55.572Z|00135|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:41:08.732401689Z 2023-01-09T07:41:08.732Z|00136|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:41:41.867298299Z 2023-01-09T07:41:41.867Z|00137|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T07:45:36.712372635Z 2023-01-09T07:45:36.712Z|00138|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T07:47:37.733685543Z 2023-01-09T07:47:37.733Z|00139|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T07:49:13.239250344Z 2023-01-09T07:49:13.239Z|00140|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:51:34.493182692Z 2023-01-09T07:51:34.493Z|00141|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T07:52:07.656189460Z 2023-01-09T07:52:07.656Z|00142|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T07:58:13.712067414Z 2023-01-09T07:58:13.712Z|00143|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T07:59:37.715439529Z 2023-01-09T07:59:37.715Z|00144|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:00:35.852164103Z 2023-01-09T08:00:35.852Z|00145|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:02:18.949540928Z 2023-01-09T08:02:18.949Z|00146|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:02:51.461043029Z 2023-01-09T08:02:51.461Z|00147|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:08:45.473182681Z 2023-01-09T08:08:45.473Z|00148|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:09:49.167256563Z 2023-01-09T08:09:49.167Z|00149|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:12:21.686969324Z 2023-01-09T08:12:21.686Z|00150|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:12:54.156966359Z 2023-01-09T08:12:54.156Z|00151|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:15:35.006465593Z 2023-01-09T08:15:35.006Z|00152|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T08:18:28.262483780Z 2023-01-09T08:18:28.262Z|00153|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T08:19:33.275019196Z 2023-01-09T08:19:33.274Z|00154|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:20:37.854568027Z 2023-01-09T08:20:37.854Z|00155|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:23:21.894165040Z 2023-01-09T08:23:21.894Z|00156|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:23:55.031325162Z 2023-01-09T08:23:55.031Z|00157|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:29:34.005175129Z 2023-01-09T08:29:34.005Z|00158|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:30:36.057309213Z 2023-01-09T08:30:36.057Z|00159|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:32:34.454034036Z 2023-01-09T08:32:34.453Z|00160|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T08:35:08.339336480Z 2023-01-09T08:35:08.339Z|00161|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T08:35:41.043492177Z 2023-01-09T08:35:41.043Z|00162|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T08:42:41.954329855Z 2023-01-09T08:42:41.954Z|00163|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:46:06.821885907Z 2023-01-09T08:46:06.821Z|00164|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:47:51.453067785Z 2023-01-09T08:47:51.453Z|00165|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:53:29.481418261Z 2023-01-09T08:53:29.481Z|00166|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T08:56:39.150170716Z 2023-01-09T08:56:39.150Z|00167|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T08:57:59.806789699Z 2023-01-09T08:57:59.806Z|00168|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:00:36.059529377Z 2023-01-09T09:00:36.059Z|00169|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T09:02:21.007785966Z 2023-01-09T09:02:21.007Z|00170|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T09:03:49.240246195Z 2023-01-09T09:03:49.240Z|00171|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:07:33.805049229Z 2023-01-09T09:07:33.805Z|00172|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:08:06.491518496Z 2023-01-09T09:08:06.491Z|00173|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T09:09:07.674179819Z 2023-01-09T09:09:07.674Z|00174|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:12:36.760989450Z 2023-01-09T09:12:36.760Z|00175|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:14:06.012328129Z 2023-01-09T09:14:06.012Z|00176|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:15:34.679177629Z 2023-01-09T09:15:34.679Z|00177|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:18:05.637259107Z 2023-01-09T09:18:05.637Z|00178|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:18:38.278862859Z 2023-01-09T09:18:38.278Z|00179|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:19:36.473696944Z 2023-01-09T09:19:36.473Z|00180|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T09:24:19.803132631Z 2023-01-09T09:24:19.803Z|00181|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:25:28.135326576Z 2023-01-09T09:25:28.135Z|00182|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:29:05.125205620Z 2023-01-09T09:29:05.125Z|00183|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:29:38.200515053Z 2023-01-09T09:29:38.200Z|00184|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:30:34.860188533Z 2023-01-09T09:30:34.860Z|00185|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:31:45.556736124Z 2023-01-09T09:31:45.556Z|00186|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:35:33.783775821Z 2023-01-09T09:35:33.783Z|00187|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T09:36:30.706991820Z 2023-01-09T09:36:30.706Z|00188|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:39:35.850383652Z 2023-01-09T09:39:35.850Z|00189|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T09:40:08.992473760Z 2023-01-09T09:40:08.992Z|00190|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:42:59.466686029Z 2023-01-09T09:42:59.466Z|00191|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:46:13.691666459Z 2023-01-09T09:46:13.691Z|00192|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T09:50:43.803083197Z 2023-01-09T09:50:43.803Z|00193|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:54:25.451154858Z 2023-01-09T09:54:25.451Z|00194|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T09:56:42.501822383Z 2023-01-09T09:56:42.501Z|00195|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:01:10.577055542Z 2023-01-09T10:01:10.577Z|00196|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:05:01.231866757Z 2023-01-09T10:05:01.231Z|00197|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:07:28.386958730Z 2023-01-09T10:07:28.386Z|00198|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:11:04.583590915Z 2023-01-09T10:11:04.583Z|00199|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T10:12:09.532308648Z 2023-01-09T10:12:09.532Z|00200|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:13:25.460784588Z 2023-01-09T10:13:25.460Z|00201|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:15:38.015924415Z 2023-01-09T10:15:38.015Z|00202|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:18:06.312057458Z 2023-01-09T10:18:06.312Z|00203|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:21:58.129195820Z 2023-01-09T10:21:58.129Z|00204|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:22:39.846195362Z 2023-01-09T10:22:39.846Z|00205|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:23:44.327328094Z 2023-01-09T10:23:44.327Z|00206|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:26:28.920726548Z 2023-01-09T10:26:28.920Z|00207|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T10:29:25.309092437Z 2023-01-09T10:29:25.309Z|00208|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:30:35.401769135Z 2023-01-09T10:30:35.401Z|00209|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T10:32:13.630174423Z 2023-01-09T10:32:13.630Z|00210|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:33:32.006879576Z 2023-01-09T10:33:32.006Z|00211|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:34:05.211898615Z 2023-01-09T10:34:05.211Z|00212|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T10:37:35.801240923Z 2023-01-09T10:37:35.801Z|00213|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:39:59.224371994Z 2023-01-09T10:39:59.224Z|00214|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:43:13.256158945Z 2023-01-09T10:43:13.256Z|00215|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:44:18.883248615Z 2023-01-09T10:44:18.883Z|00216|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:44:52.046186884Z 2023-01-09T10:44:52.046Z|00217|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:45:34.585295770Z 2023-01-09T10:45:34.585Z|00218|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:48:25.701719734Z 2023-01-09T10:48:25.701Z|00219|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T10:50:27.053125336Z 2023-01-09T10:50:27.053Z|00220|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:53:12.720822652Z 2023-01-09T10:53:12.720Z|00221|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:55:24.538806183Z 2023-01-09T10:55:24.538Z|00222|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T10:55:57.946943443Z 2023-01-09T10:55:57.946Z|00223|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T10:59:11.605243478Z 2023-01-09T10:59:11.605Z|00224|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:00:37.795160375Z 2023-01-09T11:00:37.795Z|00225|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:01:24.141177289Z 2023-01-09T11:01:24.141Z|00226|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:03:30.200546579Z 2023-01-09T11:03:30.200Z|00227|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:05:52.996367946Z 2023-01-09T11:05:52.996Z|00228|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T11:06:25.780265190Z 2023-01-09T11:06:25.780Z|00229|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:10:15.575977514Z 2023-01-09T11:10:15.575Z|00230|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:12:02.896184387Z 2023-01-09T11:12:02.896Z|00231|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:13:58.708737944Z 2023-01-09T11:13:58.708Z|00232|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:15:35.942189321Z 2023-01-09T11:15:35.942Z|00233|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:16:34.811918011Z 2023-01-09T11:16:34.811Z|00234|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:17:07.600628006Z 2023-01-09T11:17:07.600Z|00235|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:20:42.255004847Z 2023-01-09T11:20:42.254Z|00236|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:23:00.839104505Z 2023-01-09T11:23:00.839Z|00237|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:24:28.200163931Z 2023-01-09T11:24:28.200Z|00238|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:26:44.716419247Z 2023-01-09T11:26:44.716Z|00239|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T11:27:17.327375872Z 2023-01-09T11:27:17.327Z|00240|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:31:12.023152568Z 2023-01-09T11:31:12.023Z|00241|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:33:21.667803270Z 2023-01-09T11:33:21.667Z|00242|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:35:49.094994858Z 2023-01-09T11:35:49.094Z|00243|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:38:09.725424526Z 2023-01-09T11:38:09.725Z|00244|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:38:42.300615962Z 2023-01-09T11:38:42.300Z|00245|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T11:43:23.078229015Z 2023-01-09T11:43:23.078Z|00246|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:44:18.716474862Z 2023-01-09T11:44:18.716Z|00247|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T11:46:14.328374569Z 2023-01-09T11:46:14.328Z|00248|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T11:49:32.118163470Z 2023-01-09T11:49:32.118Z|00249|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:53:41.827204141Z 2023-01-09T11:53:41.827Z|00250|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:55:23.674120770Z 2023-01-09T11:55:23.674Z|00251|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T11:57:01.933163997Z 2023-01-09T11:57:01.933Z|00252|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T11:59:58.871726968Z 2023-01-09T11:59:58.871Z|00253|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:00:36.055245146Z 2023-01-09T12:00:36.055Z|00254|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:04:17.605253693Z 2023-01-09T12:04:17.605Z|00255|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:06:22.629480532Z 2023-01-09T12:06:22.629Z|00256|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:07:12.449738650Z 2023-01-09T12:07:12.449Z|00257|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:11:21.809219873Z 2023-01-09T12:11:21.809Z|00258|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:14:40.394933344Z 2023-01-09T12:14:40.394Z|00259|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:15:35.674026144Z 2023-01-09T12:15:35.673Z|00260|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T12:17:43.984124578Z 2023-01-09T12:17:43.984Z|00261|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:21:05.853820631Z 2023-01-09T12:21:05.853Z|00262|lflow_cache|INFO|Detected cache inactivity (last active 30006 ms ago): trimming cache
+2023-01-09T12:21:38.576818346Z 2023-01-09T12:21:38.576Z|00263|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:22:30.433151940Z 2023-01-09T12:22:30.433Z|00264|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T12:25:09.181697096Z 2023-01-09T12:25:09.181Z|00265|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:28:58.641190921Z 2023-01-09T12:28:58.641Z|00266|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:30:36.867270220Z 2023-01-09T12:30:36.867Z|00267|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:31:07.314672725Z 2023-01-09T12:31:07.314Z|00268|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:31:40.296388632Z 2023-01-09T12:31:40.296Z|00269|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:32:53.259524581Z 2023-01-09T12:32:53.259Z|00270|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T12:35:55.048028465Z 2023-01-09T12:35:55.047Z|00271|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:39:04.376183091Z 2023-01-09T12:39:04.376Z|00272|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:41:26.719502191Z 2023-01-09T12:41:26.719Z|00273|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T12:42:00.073354629Z 2023-01-09T12:42:00.073Z|00274|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T12:43:53.221665290Z 2023-01-09T12:43:53.221Z|00275|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T12:45:34.030151518Z 2023-01-09T12:45:34.030Z|00276|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T12:49:40.211588011Z 2023-01-09T12:49:40.211Z|00277|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:54:04.021508836Z 2023-01-09T12:54:04.021Z|00278|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T12:59:45.026689520Z 2023-01-09T12:59:45.026Z|00279|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:00:35.189002810Z 2023-01-09T13:00:35.188Z|00280|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:02:58.159357704Z 2023-01-09T13:02:58.159Z|00281|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T13:04:54.937220090Z 2023-01-09T13:04:54.937Z|00282|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:10:25.907071065Z 2023-01-09T13:10:25.907Z|00283|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:13:38.395531563Z 2023-01-09T13:13:38.395Z|00284|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:14:11.576180321Z 2023-01-09T13:14:11.576Z|00285|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:15:42.879925051Z 2023-01-09T13:15:42.879Z|00286|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:25:24.445539645Z 2023-01-09T13:25:24.445Z|00287|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T13:29:30.318058458Z 2023-01-09T13:29:30.318Z|00288|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:30:34.594454236Z 2023-01-09T13:30:34.594Z|00289|lflow_cache|INFO|Detected cache inactivity (last active 30000 ms ago): trimming cache
+2023-01-09T13:34:55.298158888Z 2023-01-09T13:34:55.298Z|00290|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:36:51.384921138Z 2023-01-09T13:36:51.384Z|00291|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T13:40:23.976443416Z 2023-01-09T13:40:23.976Z|00292|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:45:34.852676747Z 2023-01-09T13:45:34.852Z|00293|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:47:25.298970343Z 2023-01-09T13:47:25.298Z|00294|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T13:47:58.312320640Z 2023-01-09T13:47:58.312Z|00295|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:51:13.874290506Z 2023-01-09T13:51:13.874Z|00296|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T13:57:15.524720691Z 2023-01-09T13:57:15.524Z|00297|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T13:59:17.861899709Z 2023-01-09T13:59:17.861Z|00298|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T13:59:50.337089677Z 2023-01-09T13:59:50.337Z|00299|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T14:00:34.003996776Z 2023-01-09T14:00:34.003Z|00300|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:02:22.793276723Z 2023-01-09T14:02:22.793Z|00301|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:08:10.145815564Z 2023-01-09T14:08:10.145Z|00302|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T14:09:53.070080924Z 2023-01-09T14:09:53.070Z|00303|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:13:23.656282866Z 2023-01-09T14:13:23.656Z|00304|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:15:35.129794782Z 2023-01-09T14:15:35.129Z|00305|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:19:27.500183480Z 2023-01-09T14:19:27.500Z|00306|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:20:43.867351504Z 2023-01-09T14:20:43.867Z|00307|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:24:16.576298158Z 2023-01-09T14:24:16.576Z|00308|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T14:29:41.524535664Z 2023-01-09T14:29:41.524Z|00309|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:31:06.361731430Z 2023-01-09T14:31:06.361Z|00310|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:35:44.482840893Z 2023-01-09T14:35:44.482Z|00311|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:39:53.616804442Z 2023-01-09T14:39:53.616Z|00312|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:41:06.778304096Z 2023-01-09T14:41:06.778Z|00313|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T14:44:01.580845147Z 2023-01-09T14:44:01.580Z|00314|binding|INFO|Claiming lport openshift-multus_cni-sysctl-allowlist-ds-mxq6b for this chassis.
+2023-01-09T14:44:01.580845147Z 2023-01-09T14:44:01.580Z|00315|binding|INFO|openshift-multus_cni-sysctl-allowlist-ds-mxq6b: Claiming 0a:58:0a:83:02:0e 10.131.2.14
+2023-01-09T14:44:01.597730140Z 2023-01-09T14:44:01.597Z|00316|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-mxq6b up in Southbound
+2023-01-09T14:44:01.598110707Z 2023-01-09T14:44:01.598Z|00317|binding|INFO|Setting lport openshift-multus_cni-sysctl-allowlist-ds-mxq6b ovn-installed in OVS
+2023-01-09T14:44:31.583197561Z 2023-01-09T14:44:31.583Z|00318|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T14:44:35.606403788Z 2023-01-09T14:44:35.606Z|00319|binding|INFO|Releasing lport openshift-multus_cni-sysctl-allowlist-ds-mxq6b from this chassis (sb_readonly=0)
+2023-01-09T14:46:26.285700730Z 2023-01-09T14:46:26.285Z|00320|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:50:28.424958086Z 2023-01-09T14:50:28.424Z|00321|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:51:01.071955973Z 2023-01-09T14:51:01.071Z|00322|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T14:53:23.168030489Z 2023-01-09T14:53:23.167Z|00323|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T14:56:30.001432308Z 2023-01-09T14:56:30.001Z|00324|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:00:58.250191418Z 2023-01-09T15:00:58.250Z|00325|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:01:30.852201549Z 2023-01-09T15:01:30.852Z|00326|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:03:58.028845412Z 2023-01-09T15:03:58.028Z|00327|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:06:53.776365665Z 2023-01-09T15:06:53.776Z|00328|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:12:16.044169652Z 2023-01-09T15:12:16.044Z|00329|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:12:48.796342804Z 2023-01-09T15:12:48.796Z|00330|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:14:59.958904620Z 2023-01-09T15:14:59.958Z|00331|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:15:35.636936409Z 2023-01-09T15:15:35.636Z|00332|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:17:11.347222367Z 2023-01-09T15:17:11.347Z|00333|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:22:24.155255091Z 2023-01-09T15:22:24.155Z|00334|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:22:57.525810742Z 2023-01-09T15:22:57.525Z|00335|lflow_cache|INFO|Detected cache inactivity (last active 30003 ms ago): trimming cache
+2023-01-09T15:25:14.761276791Z 2023-01-09T15:25:14.761Z|00336|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:27:39.361167066Z 2023-01-09T15:27:39.361Z|00337|lflow_cache|INFO|Detected cache inactivity (last active 30004 ms ago): trimming cache
+2023-01-09T15:30:34.769427564Z 2023-01-09T15:30:34.769Z|00338|lflow_cache|INFO|Detected cache inactivity (last active 30005 ms ago): trimming cache
+2023-01-09T15:32:56.748182919Z 2023-01-09T15:32:56.748Z|00339|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:33:29.414199973Z 2023-01-09T15:33:29.414Z|00340|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:37:21.933468705Z 2023-01-09T15:37:21.933Z|00341|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache
+2023-01-09T15:38:56.316473166Z 2023-01-09T15:38:56.316Z|00342|lflow_cache|INFO|Detected cache inactivity (last active 30001 ms ago): trimming cache
+2023-01-09T15:40:47.350108412Z 2023-01-09T15:40:47.350Z|00343|lflow_cache|INFO|Detected cache inactivity (last active 30002 ms ago): trimming cache

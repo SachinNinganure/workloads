@@ -1,0 +1,528 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    console.openshift.io/console-config-version: "25109"
+    console.openshift.io/image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:45ce25aa01ce77d2d7ad8cc2914686e07e71489c8ec625bc920f14ef83b94f33
+    console.openshift.io/infrastructure-config-version: "516"
+    console.openshift.io/oauth-secret-version: "18735"
+    console.openshift.io/oauth-serving-cert-config-version: "18525"
+    console.openshift.io/proxy-config-version: "534"
+    console.openshift.io/service-ca-config-version: "18674"
+    console.openshift.io/trusted-ca-config-version: "18676"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.51/23"],"mac_address":"0a:58:0a:81:00:33","gateway_ips":["10.129.0.1"],"ip_address":"10.129.0.51/23","gateway_ip":"10.129.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.51"
+          ],
+          "mac": "0a:58:0a:81:00:33",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.51"
+          ],
+          "mac": "0a:58:0a:81:00:33",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-01-09T04:50:00Z"
+  generateName: console-6cbb95b566-
+  labels:
+    app: console
+    component: ui
+    pod-template-hash: 6cbb95b566
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:console.openshift.io/console-config-version: {}
+          f:console.openshift.io/image: {}
+          f:console.openshift.io/infrastructure-config-version: {}
+          f:console.openshift.io/oauth-secret-version: {}
+          f:console.openshift.io/oauth-serving-cert-config-version: {}
+          f:console.openshift.io/proxy-config-version: {}
+          f:console.openshift.io/service-ca-config-version: {}
+          f:console.openshift.io/trusted-ca-config-version: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4d9b40fe-338e-4d3f-a90a-1f3c96232591"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"console"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/console-config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/oauth-config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/oauth-serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/service-ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"console-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"console-oauth-config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"console-serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"oauth-serving-cert"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"service-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"trusted-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T04:50:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:50:04Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T04:50:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:50:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.0.51"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:53:13Z"
+  name: console-6cbb95b566-zblmm
+  namespace: openshift-console
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: console-6cbb95b566
+    uid: 4d9b40fe-338e-4d3f-a90a-1f3c96232591
+  resourceVersion: "27305"
+  uid: 47bf5dbf-20c2-4d90-a121-22d0dc55d1f6
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: component
+            operator: In
+            values:
+            - ui
+        topologyKey: kubernetes.io/hostname
+  containers:
+  - command:
+    - /opt/bridge/bin/bridge
+    - --public-dir=/opt/bridge/static
+    - --config=/var/console-config/console-config.yaml
+    - --service-ca-file=/var/service-ca/service-ca.crt
+    - --v=2
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:45ce25aa01ce77d2d7ad8cc2914686e07e71489c8ec625bc920f14ef83b94f33
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - sleep
+          - "25"
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /health
+        port: 8443
+        scheme: HTTPS
+      initialDelaySeconds: 150
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: console
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /health
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000630000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/serving-cert
+      name: console-serving-cert
+      readOnly: true
+    - mountPath: /var/oauth-config
+      name: console-oauth-config
+      readOnly: true
+    - mountPath: /var/console-config
+      name: console-config
+      readOnly: true
+    - mountPath: /var/service-ca
+      name: service-ca
+      readOnly: true
+    - mountPath: /var/oauth-serving-cert
+      name: oauth-serving-cert
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9ph9z
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: console-dockercfg-rnvj4
+  nodeName: ip-10-0-199-219.us-east-2.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000630000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c25,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: console
+  serviceAccountName: console
+  terminationGracePeriodSeconds: 40
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-reachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: console-serving-cert
+    secret:
+      defaultMode: 420
+      secretName: console-serving-cert
+  - name: console-oauth-config
+    secret:
+      defaultMode: 420
+      secretName: console-oauth-config
+  - configMap:
+      defaultMode: 420
+      name: console-config
+    name: console-config
+  - configMap:
+      defaultMode: 420
+      name: service-ca
+    name: service-ca
+  - configMap:
+      defaultMode: 420
+      name: oauth-serving-cert
+    name: oauth-serving-cert
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: trusted-ca-bundle
+    name: trusted-ca-bundle
+  - name: kube-api-access-9ph9z
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:50:33Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:53:13Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:53:13Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:50:33Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://c111c6912e2a5d92e123062c15794547f1df2337c49f49e363c36f96cc628f53
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:45ce25aa01ce77d2d7ad8cc2914686e07e71489c8ec625bc920f14ef83b94f33
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:45ce25aa01ce77d2d7ad8cc2914686e07e71489c8ec625bc920f14ef83b94f33
+    lastState: {}
+    name: console
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:50:33Z"
+  hostIP: 10.0.199.219
+  phase: Running
+  podIP: 10.129.0.51
+  podIPs:
+  - ip: 10.129.0.51
+  qosClass: Burstable
+  startTime: "2023-01-09T04:50:33Z"

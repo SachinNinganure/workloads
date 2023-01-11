@@ -1,0 +1,161 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      imageregistry.operator.openshift.io/checksum: sha256:1c19715a76014ae1d56140d6390a08f14f453c1a59dc36c15718f40c638ef63d
+      service.alpha.openshift.io/serving-cert-secret-name: image-registry-tls
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:47:33Z"
+    labels:
+      docker-registry: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:imageregistry.operator.openshift.io/checksum: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:docker-registry: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":5000,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-image-registry-operator
+      operation: Update
+      time: "2023-01-09T04:47:33Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:47:33Z"
+    name: image-registry
+    namespace: openshift-image-registry
+    resourceVersion: "20789"
+    uid: ce25a267-8992-4f61-9147-19bff0f8da94
+  spec:
+    clusterIP: 172.30.96.54
+    clusterIPs:
+    - 172.30.96.54
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: 5000-tcp
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      docker-registry: default
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.alpha.openshift.io/serving-cert-secret-name: image-registry-operator-tls
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:37:30Z"
+    labels:
+      name: image-registry-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":60000,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:30Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:41:10Z"
+    name: image-registry-operator
+    namespace: openshift-image-registry
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "5408"
+    uid: 67a79dee-866f-49dd-8b3d-21cd4807cf6f
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 60000
+      protocol: TCP
+      targetPort: 60000
+    selector:
+      name: cluster-image-registry-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "268443"

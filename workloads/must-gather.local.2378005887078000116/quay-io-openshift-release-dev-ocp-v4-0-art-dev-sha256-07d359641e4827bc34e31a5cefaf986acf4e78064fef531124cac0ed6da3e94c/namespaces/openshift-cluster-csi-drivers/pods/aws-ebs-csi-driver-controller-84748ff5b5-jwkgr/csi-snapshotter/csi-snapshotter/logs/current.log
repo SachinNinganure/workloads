@@ -1,0 +1,10 @@
+2023-01-09T04:42:06.624262289Z I0109 04:42:06.624135       1 main.go:104] Version: v4.12.0-202301042354.p0.g7e23256.assembly.stream-0-g85d20f9-dirty
+2023-01-09T04:42:06.626975065Z I0109 04:42:06.626944       1 main.go:184] CSI driver name: "ebs.csi.aws.com"
+2023-01-09T04:42:06.627028982Z I0109 04:42:06.626984       1 common.go:111] Probing CSI driver for readiness
+2023-01-09T04:42:06.627045148Z I0109 04:42:06.627033       1 main.go:192] ServeMux listening at "localhost:8205"
+2023-01-09T04:42:06.627796591Z I0109 04:42:06.627763       1 main.go:222] Start NewCSISnapshotSideCarController with snapshotter [ebs.csi.aws.com] kubeconfig [] csiTimeout [1m0s] csiAddress [/var/lib/csi/sockets/pluginproxy/csi.sock] resyncPeriod [15m0s] snapshotNamePrefix [snapshot] snapshotNameUUIDLength [824637359064]
+2023-01-09T04:42:06.628378071Z I0109 04:42:06.628338       1 leaderelection.go:248] attempting to acquire leader lease openshift-cluster-csi-drivers/external-snapshotter-leader-ebs-csi-aws-com...
+2023-01-09T04:42:06.639048901Z I0109 04:42:06.639019       1 leaderelection.go:258] successfully acquired lease openshift-cluster-csi-drivers/external-snapshotter-leader-ebs-csi-aws-com
+2023-01-09T04:42:06.639142089Z I0109 04:42:06.639127       1 leader_election.go:178] became leader, starting
+2023-01-09T04:42:06.639221776Z I0109 04:42:06.639193       1 snapshot_controller_base.go:133] Starting CSI snapshotter
+2023-01-09T04:48:41.820782119Z E0109 04:48:41.820727       1 leaderelection.go:330] error retrieving resource lock openshift-cluster-csi-drivers/external-snapshotter-leader-ebs-csi-aws-com: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-snapshotter-leader-ebs-csi-aws-com": dial tcp 172.30.0.1:443: connect: connection refused

@@ -1,0 +1,247 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: InstallPlan
+metadata:
+  creationTimestamp: "2023-01-09T05:32:05Z"
+  generateName: install-
+  generation: 1
+  labels:
+    operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1ded697f-2fa3-4f9f-b3f3-2c59a4bbcd98"}: {}
+      f:spec:
+        .: {}
+        f:approval: {}
+        f:approved: {}
+        f:clusterServiceVersionNames: {}
+        f:generation: {}
+    manager: catalog
+    operation: Update
+    time: "2023-01-09T05:32:05Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:05Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:bundleLookups: {}
+        f:catalogSources: {}
+        f:conditions: {}
+        f:phase: {}
+        f:plan: {}
+        f:startTime: {}
+    manager: catalog
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:32:20Z"
+  name: install-k755v
+  namespace: openshift-operators-redhat
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: Subscription
+    name: loki-operator
+    uid: 1ded697f-2fa3-4f9f-b3f3-2c59a4bbcd98
+  resourceVersion: "43994"
+  uid: d32aa153-0289-4986-b9c0-858319964158
+spec:
+  approval: Automatic
+  approved: true
+  clusterServiceVersionNames:
+  - loki-operator.v5.6.0
+  generation: 1
+status:
+  bundleLookups:
+  - catalogSourceRef:
+      name: qe-app-registry
+      namespace: openshift-marketplace
+    identifier: loki-operator.v5.6.0
+    path: brew.registry.redhat.io/rh-osbs/openshift-logging-loki-operator-bundle@sha256:bdfbd1dce83b05f3e859f977780323af55750cb2fe2c9fe7dc64d5bab7d6c78c
+    properties: '{"properties":[{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"AlertingRule","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"LokiStack","version":"v1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"LokiStack","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"RecordingRule","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"RulerConfig","version":"v1beta1"}},{"type":"olm.maxOpenShiftVersion","value":4.12},{"type":"olm.package","value":{"packageName":"loki-operator","version":"5.6.0"}}]}'
+    replaces: ""
+  catalogSources: []
+  conditions:
+  - lastTransitionTime: "2023-01-09T05:32:20Z"
+    lastUpdateTime: "2023-01-09T05:32:20Z"
+    status: "True"
+    type: Installed
+  phase: Complete
+  plan:
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: operators.coreos.com
+      kind: ClusterServiceVersion
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator.v5.6.0
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1alpha1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: alertingrules.loki.grafana.com
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: ""
+      kind: ConfigMap
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-manager-config
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-metrics-reader
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-controller-manager-metrics-service
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: monitoring.coreos.com
+      kind: ServiceMonitor
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-metrics-monitor
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-webhook-service
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-prometheus
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: lokistacks.loki.grafana.com
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: recordingrules.loki.grafana.com
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: rulerconfigs.loki.grafana.com
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator-prometheus
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator.v5.6.0-default-b5f784f5c
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator.v5.6.0-default-b5f784f5c
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator.v5.6.0-6dd75c5f8f
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: loki-operator.v5.6.0
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"524f407c363b467719a8a8960c0382b05288b3719be61d4258a21915e2d88b1","namespace":"openshift-marketplace","catalogSourceName":"qe-app-registry","catalogSourceNamespace":"openshift-marketplace","replaces":"","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"AlertingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"LokiStack\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RecordingRule\",\"version\":\"v1beta1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"loki.grafana.com\",\"kind\":\"RulerConfig\",\"version\":\"v1beta1\"}},{\"type\":\"olm.maxOpenShiftVersion\",\"value\":4.12},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"loki-operator\",\"version\":\"5.6.0\"}}]}"}'
+      name: loki-operator.v5.6.0-6dd75c5f8f
+      sourceName: qe-app-registry
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  startTime: "2023-01-09T05:32:17Z"

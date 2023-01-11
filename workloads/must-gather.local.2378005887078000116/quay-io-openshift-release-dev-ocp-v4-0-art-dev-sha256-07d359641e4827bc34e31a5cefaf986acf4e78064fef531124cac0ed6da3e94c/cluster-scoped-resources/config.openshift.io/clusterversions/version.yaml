@@ -1,0 +1,104 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  creationTimestamp: "2023-01-09T04:36:40Z"
+  generation: 2
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:channel: {}
+        f:clusterID: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-01-09T04:36:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableUpdates: {}
+        f:capabilities:
+          .: {}
+          f:enabledCapabilities: {}
+          f:knownCapabilities: {}
+        f:conditions: {}
+        f:desired:
+          .: {}
+          f:image: {}
+          f:version: {}
+        f:history: {}
+        f:observedGeneration: {}
+        f:versionHash: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:37:18Z"
+  name: version
+  resourceVersion: "46725"
+  uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+spec:
+  channel: stable-4.12
+  clusterID: 3c7653f6-78ff-477b-b860-2cce76acf539
+status:
+  availableUpdates: null
+  capabilities:
+    enabledCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+    knownCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:36:44Z"
+    message: 'Unable to retrieve available updates: currently reconciling cluster
+      version 4.12.0-0.nightly-2023-01-08-142418 not found in the "stable-4.12" channel'
+    reason: VersionNotFound
+    status: "False"
+    type: RetrievedUpdates
+  - lastTransitionTime: "2023-01-09T04:36:44Z"
+    message: Capabilities match configured spec
+    reason: AsExpected
+    status: "False"
+    type: ImplicitlyEnabledCapabilities
+  - lastTransitionTime: "2023-01-09T04:36:44Z"
+    message: Payload loaded version="4.12.0-0.nightly-2023-01-08-142418" image="registry.ci.openshift.org/ocp/release@sha256:0b0a195b0360934e726b42f302a9023593234f2545ef0cc1e03b294627e42fbc"
+      architecture="amd64"
+    reason: PayloadLoaded
+    status: "True"
+    type: ReleaseAccepted
+  - lastTransitionTime: "2023-01-09T04:59:24Z"
+    message: Done applying 4.12.0-0.nightly-2023-01-08-142418
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-09T04:59:24Z"
+    status: "False"
+    type: Failing
+  - lastTransitionTime: "2023-01-09T04:59:24Z"
+    message: Cluster version is 4.12.0-0.nightly-2023-01-08-142418
+    status: "False"
+    type: Progressing
+  desired:
+    image: registry.ci.openshift.org/ocp/release@sha256:0b0a195b0360934e726b42f302a9023593234f2545ef0cc1e03b294627e42fbc
+    version: 4.12.0-0.nightly-2023-01-08-142418
+  history:
+  - completionTime: "2023-01-09T04:59:24Z"
+    image: registry.ci.openshift.org/ocp/release@sha256:0b0a195b0360934e726b42f302a9023593234f2545ef0cc1e03b294627e42fbc
+    startedTime: "2023-01-09T04:36:44Z"
+    state: Completed
+    verified: false
+    version: 4.12.0-0.nightly-2023-01-08-142418
+  observedGeneration: 2
+  versionHash: -qOhkF8IZOo=

@@ -1,0 +1,70 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:48:12Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:groups: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:48:12Z"
+  name: image-registry-rules
+  namespace: openshift-image-registry
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "22869"
+  uid: 66faea63-9ccc-4abd-a5cf-81bdc1fd5f5f
+spec:
+  groups:
+  - name: imageregistry.operations.rules
+    rules:
+    - expr: |
+        label_replace(
+          label_replace(
+            sum by (operation) (imageregistry_request_duration_seconds_count{operation="BlobStore.ServeBlob"}), "operation", "get", "operation", "(.+)"
+          ), "resource_type", "blob", "resource_type", ""
+        )
+      record: imageregistry:operations_count:sum
+    - expr: |
+        label_replace(
+          label_replace(
+            sum by (operation) (imageregistry_request_duration_seconds_count{operation="BlobStore.Create"}), "operation", "create", "operation", "(.+)"
+          ), "resource_type", "blob", "resource_type", ""
+        )
+      record: imageregistry:operations_count:sum
+    - expr: |
+        label_replace(
+          label_replace(
+            sum by (operation) (imageregistry_request_duration_seconds_count{operation="ManifestService.Get"}), "operation", "get", "operation", "(.+)"
+          ), "resource_type", "manifest", "resource_type", ""
+        )
+      record: imageregistry:operations_count:sum
+    - expr: |
+        label_replace(
+          label_replace(
+            sum by (operation) (imageregistry_request_duration_seconds_count{operation="ManifestService.Put"}), "operation", "create", "operation", "(.+)"
+          ), "resource_type", "manifest", "resource_type", ""
+        )
+      record: imageregistry:operations_count:sum

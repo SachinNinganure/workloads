@@ -1,0 +1,323 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-j6dlf
+      namespace: openshift-ovn-kubernetes
+      uid: 406aafb5-e303-4413-a14d-d792bd5c8aef
+    zone: us-east-2c
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-rldgf
+      namespace: openshift-ovn-kubernetes
+      uid: 64495fb3-f5b7-44db-8853-0d412104e65d
+    zone: us-east-2a
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-jrqkm
+      namespace: openshift-ovn-kubernetes
+      uid: 1eb3dff1-36fd-4f12-97b4-fe24e15e79c1
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:26Z"
+    creationTimestamp: "2023-01-09T04:39:01Z"
+    generateName: ovn-kubernetes-master-
+    generation: 7
+    labels:
+      app: ovnkube-master
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovn-kubernetes-master
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"373859c5-c9ca-4706-a4ca-2a2e0a95fd0e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:26Z"
+    name: ovn-kubernetes-master-ng47v
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovn-kubernetes-master
+      uid: 373859c5-c9ca-4706-a4ca-2a2e0a95fd0e
+    resourceVersion: "6860"
+    uid: 96ab9f21-7e19-452a-95d7-c8628b84f0b8
+  ports:
+  - name: metrics
+    port: 9102
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-vnjnv
+      namespace: openshift-ovn-kubernetes
+      uid: fb7e55ac-b5bc-43ca-b7eb-728ed0e581bf
+    zone: us-east-2a
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-4b9fr
+      namespace: openshift-ovn-kubernetes
+      uid: 044e2c3e-8fc5-430e-a4d4-b857992ef386
+    zone: us-east-2c
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-q28vb
+      namespace: openshift-ovn-kubernetes
+      uid: 36285c85-33ae-41da-bf57-66ae4981a950
+    zone: us-east-2b
+  - addresses:
+    - 10.0.130.201
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-130-201.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-m56wh
+      namespace: openshift-ovn-kubernetes
+      uid: cf72e8cd-da33-420b-952b-5b2ac5773189
+    zone: us-east-2a
+  - addresses:
+    - 10.0.144.137
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-2ltbk
+      namespace: openshift-ovn-kubernetes
+      uid: 80079de7-5a69-49ef-9805-acf8142395aa
+    zone: us-east-2a
+  - addresses:
+    - 10.0.190.242
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-190-242.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-cmjkq
+      namespace: openshift-ovn-kubernetes
+      uid: 27687212-cb1e-4e22-8014-8b7299037d41
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2023-01-09T04:39:01Z"
+    generateName: ovn-kubernetes-node-
+    generation: 24
+    labels:
+      app: ovnkube-node
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovn-kubernetes-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7d4b719e-1b72-4210-a0ba-3f26587c1802"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:41Z"
+    name: ovn-kubernetes-node-wv4v6
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovn-kubernetes-node
+      uid: 7d4b719e-1b72-4210-a0ba-3f26587c1802
+    resourceVersion: "45116"
+    uid: 2399021c-4b4c-4922-95e9-646e854e6f12
+  ports:
+  - name: ovn-metrics
+    port: 9105
+    protocol: TCP
+  - name: metrics
+    port: 9103
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-j6dlf
+      namespace: openshift-ovn-kubernetes
+      uid: 406aafb5-e303-4413-a14d-d792bd5c8aef
+    zone: us-east-2c
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-rldgf
+      namespace: openshift-ovn-kubernetes
+      uid: 64495fb3-f5b7-44db-8853-0d412104e65d
+    zone: us-east-2a
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-jrqkm
+      namespace: openshift-ovn-kubernetes
+      uid: 1eb3dff1-36fd-4f12-97b4-fe24e15e79c1
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:26Z"
+    creationTimestamp: "2023-01-09T04:38:59Z"
+    generateName: ovnkube-db-
+    generation: 7
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovnkube-db
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c1e32b85-b336-4707-bb77-47400a3c6e79"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:26Z"
+    name: ovnkube-db-8cfd4
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovnkube-db
+      uid: c1e32b85-b336-4707-bb77-47400a3c6e79
+    resourceVersion: "6862"
+    uid: 0e944612-bd54-481a-a4d0-5baec6d8d22e
+  ports:
+  - name: south
+    port: 9642
+    protocol: TCP
+  - name: north
+    port: 9641
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268747"

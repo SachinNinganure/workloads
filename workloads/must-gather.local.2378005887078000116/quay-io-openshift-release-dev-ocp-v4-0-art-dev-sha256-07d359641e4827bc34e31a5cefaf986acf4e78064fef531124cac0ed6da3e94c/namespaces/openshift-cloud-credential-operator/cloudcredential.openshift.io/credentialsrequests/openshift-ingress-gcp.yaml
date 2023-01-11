@@ -1,0 +1,85 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:37:10Z"
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:predefinedRoles: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:37:10Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:38:06Z"
+  name: openshift-ingress-gcp
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "2263"
+  uid: 8b05b24e-3bad-4476-b571-6e6ca1504cee
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    predefinedRoles:
+    - roles/dns.admin
+  secretRef:
+    name: cloud-credentials
+    namespace: openshift-ingress-operator
+  serviceAccountNames:
+  - ingress-operator
+status:
+  conditions:
+  - lastProbeTime: "2023-01-09T04:38:06Z"
+    lastTransitionTime: "2023-01-09T04:38:06Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

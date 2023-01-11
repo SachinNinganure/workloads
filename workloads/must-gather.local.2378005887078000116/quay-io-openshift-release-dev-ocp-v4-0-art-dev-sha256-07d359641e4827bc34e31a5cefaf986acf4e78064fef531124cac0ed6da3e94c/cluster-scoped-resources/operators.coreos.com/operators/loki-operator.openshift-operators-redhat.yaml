@@ -1,0 +1,203 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: Operator
+metadata:
+  creationTimestamp: "2023-01-09T05:32:05Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:05Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:components:
+          .: {}
+          f:labelSelector:
+            .: {}
+            f:matchExpressions: {}
+          f:refs: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:34:21Z"
+  name: loki-operator.openshift-operators-redhat
+  resourceVersion: "45522"
+  uid: 3c4c82a9-4198-4e7a-9c0a-d9879ba83f4a
+spec: {}
+status:
+  components:
+    labelSelector:
+      matchExpressions:
+      - key: operators.coreos.com/loki-operator.openshift-operators-redhat
+        operator: Exists
+    refs:
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      name: loki-operator.v5.6.0-6dd75c5f8f
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      name: loki-operator.v5.6.0-default-b5f784f5c
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      name: loki-operator-controller-manager-service-system:auth-delegator
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      name: loki-operator.v5.6.0-6dd75c5f8f
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      name: loki-operator.v5.6.0-default-b5f784f5c
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:34:20Z"
+        lastUpdateTime: "2023-01-09T05:34:20Z"
+        message: install strategy completed with no errors
+        reason: InstallSucceeded
+        status: "True"
+        type: Succeeded
+      kind: ClusterServiceVersion
+      name: loki-operator.v5.6.0
+      namespace: openshift-operators-redhat
+    - apiVersion: v1
+      kind: ConfigMap
+      name: loki-operator-manager-config
+      namespace: openshift-operators-redhat
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:17Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:32:17Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: alertingrules.loki.grafana.com
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: lokistacks.loki.grafana.com
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: recordingrules.loki.grafana.com
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:32:18Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: rulerconfigs.loki.grafana.com
+    - apiVersion: apps/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:34:20Z"
+        lastUpdateTime: "2023-01-09T05:34:20Z"
+        message: Deployment has minimum availability.
+        reason: MinimumReplicasAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-01-09T05:32:20Z"
+        lastUpdateTime: "2023-01-09T05:34:20Z"
+        message: ReplicaSet "loki-operator-controller-manager-565db69ff8" has successfully
+          progressed.
+        reason: NewReplicaSetAvailable
+        status: "True"
+        type: Progressing
+      kind: Deployment
+      name: loki-operator-controller-manager
+      namespace: openshift-operators-redhat
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:20Z"
+        lastUpdateTime: "2023-01-09T05:32:20Z"
+        status: "True"
+        type: Installed
+      kind: InstallPlan
+      name: install-k755v
+      namespace: openshift-operators-redhat
+    - apiVersion: operators.coreos.com/v2
+      kind: OperatorCondition
+      name: loki-operator.v5.6.0
+      namespace: openshift-operators-redhat
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: Role
+      name: loki-operator-controller-manager-service-cert
+      namespace: openshift-operators-redhat
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: Role
+      name: loki-operator.v5.6.0-default-b5f784f5c
+      namespace: openshift-operators-redhat
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      name: loki-operator-controller-manager-service-auth-reader
+      namespace: kube-system
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      name: loki-operator-controller-manager-service-cert
+      namespace: openshift-operators-redhat
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      name: loki-operator.v5.6.0-default-b5f784f5c
+      namespace: openshift-operators-redhat
+    - apiVersion: v1
+      kind: Secret
+      name: loki-operator-controller-manager-service-cert
+      namespace: openshift-operators-redhat
+    - apiVersion: v1
+      kind: Service
+      name: loki-operator-controller-manager-metrics-service
+      namespace: openshift-operators-redhat
+    - apiVersion: v1
+      kind: Service
+      name: loki-operator-controller-manager-service
+      namespace: openshift-operators-redhat
+    - apiVersion: v1
+      kind: Service
+      name: loki-operator-webhook-service
+      namespace: openshift-operators-redhat
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:32:05Z"
+        message: all available catalogsources are healthy
+        reason: AllCatalogSourcesHealthy
+        status: "False"
+        type: CatalogSourcesUnhealthy
+      kind: Subscription
+      name: loki-operator
+      namespace: openshift-operators-redhat

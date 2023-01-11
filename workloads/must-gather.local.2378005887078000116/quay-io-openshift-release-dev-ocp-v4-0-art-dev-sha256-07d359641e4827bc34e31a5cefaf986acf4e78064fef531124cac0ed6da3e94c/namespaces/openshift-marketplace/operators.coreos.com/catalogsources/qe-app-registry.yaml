@@ -1,0 +1,68 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  creationTimestamp: "2023-01-09T05:30:33Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:image: {}
+        f:publisher: {}
+        f:sourceType: {}
+        f:updateStrategy:
+          .: {}
+          f:registryPoll:
+            .: {}
+            f:interval: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:30:33Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:connectionState:
+          .: {}
+          f:address: {}
+          f:lastConnect: {}
+          f:lastObservedState: {}
+        f:latestImageRegistryPoll: {}
+        f:registryService:
+          .: {}
+          f:createdAt: {}
+          f:port: {}
+          f:protocol: {}
+          f:serviceName: {}
+          f:serviceNamespace: {}
+    manager: catalog
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:36:31Z"
+  name: qe-app-registry
+  namespace: openshift-marketplace
+  resourceVersion: "266723"
+  uid: 03763f71-3ef3-461b-a2df-e0449d212989
+spec:
+  image: quay.io/openshift-qe-optional-operators/aosqe-index:v4.12
+  publisher: Openshift QE
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 10m0s
+status:
+  connectionState:
+    address: qe-app-registry.openshift-marketplace.svc:50051
+    lastConnect: "2023-01-09T12:55:38Z"
+    lastObservedState: READY
+  latestImageRegistryPoll: "2023-01-09T15:36:31Z"
+  registryService:
+    createdAt: "2023-01-09T05:30:33Z"
+    port: "50051"
+    protocol: grpc
+    serviceName: qe-app-registry
+    serviceNamespace: openshift-marketplace

@@ -1,0 +1,9 @@
+2023-01-09T05:30:33.664473529Z 2023/01/09 05:30:33 provider.go:129: Defaulting client-id to system:serviceaccount:openshift-monitoring:thanos-querier
+2023-01-09T05:30:33.664542149Z 2023/01/09 05:30:33 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-01-09T05:30:33.665667963Z 2023/01/09 05:30:33 provider.go:358: Delegation of authentication and authorization to OpenShift is enabled for bearer tokens and client certificates.
+2023-01-09T05:30:33.694047920Z 2023/01/09 05:30:33 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:9090/"
+2023-01-09T05:30:33.694047920Z 2023/01/09 05:30:33 oauthproxy.go:224: compiled skip-auth-regex => "^/-/(healthy|ready)$"
+2023-01-09T05:30:33.694074341Z 2023/01/09 05:30:33 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:openshift-monitoring:thanos-querier
+2023-01-09T05:30:33.694074341Z 2023/01/09 05:30:33 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-01-09T05:30:33.694666440Z I0109 05:30:33.694637       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key
+2023-01-09T05:30:33.694724247Z 2023/01/09 05:30:33 http.go:107: HTTPS: listening on [::]:9091

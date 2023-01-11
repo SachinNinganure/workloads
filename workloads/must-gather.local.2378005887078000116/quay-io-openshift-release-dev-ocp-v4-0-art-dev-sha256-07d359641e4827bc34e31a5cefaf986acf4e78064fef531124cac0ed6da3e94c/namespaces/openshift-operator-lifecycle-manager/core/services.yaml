@@ -1,0 +1,228 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      service.alpha.openshift.io/serving-cert-secret-name: catalog-operator-serving-cert
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:37:28Z"
+    labels:
+      app: catalog-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:28Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:41:20Z"
+    name: catalog-operator-metrics
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "6220"
+    uid: 20f55e28-573c-471e-9a53-d73c52810b37
+  spec:
+    clusterIP: 172.30.121.222
+    clusterIPs:
+    - 172.30.121.222
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https-metrics
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      app: catalog-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      service.alpha.openshift.io/serving-cert-secret-name: olm-operator-serving-cert
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T04:37:28Z"
+    labels:
+      app: olm-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:37:28Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:41:19Z"
+    name: olm-operator-metrics
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "6200"
+    uid: f1fccf53-0641-4107-8605-1e8363f0db71
+  spec:
+    clusterIP: 172.30.141.110
+    clusterIPs:
+    - 172.30.141.110
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https-metrics
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      app: olm-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4e61d051-fcb5-4761-872d-48a6b972291b"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":5443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-01-09T04:41:24Z"
+    name: packageserver-service
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: packageserver
+      uid: 4e61d051-fcb5-4761-872d-48a6b972291b
+    resourceVersion: "6759"
+    uid: c44324c2-a047-4913-af52-f98fa8d4121e
+  spec:
+    clusterIP: 172.30.61.164
+    clusterIPs:
+    - 172.30.61.164
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "5443"
+      port: 5443
+      protocol: TCP
+      targetPort: 5443
+    selector:
+      app: packageserver
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "268779"

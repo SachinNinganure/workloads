@@ -1,0 +1,97 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-controller-manager-ip-10-0-160-211.us-east-2.compute.internal
+      namespace: openshift-kube-controller-manager
+      uid: 217af5e8-300d-475f-af85-e892956b9386
+    zone: us-east-2b
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-controller-manager-ip-10-0-145-4.us-east-2.compute.internal
+      namespace: openshift-kube-controller-manager
+      uid: e26bd812-99ac-439c-b865-c2dfc35e5fb9
+    zone: us-east-2a
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: kube-controller-manager-ip-10-0-199-219.us-east-2.compute.internal
+      namespace: openshift-kube-controller-manager
+      uid: 5207fe47-8a98-4862-91ee-24993dc5109f
+    zone: us-east-2c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:55:47Z"
+    creationTimestamp: "2023-01-09T04:41:11Z"
+    generateName: kube-controller-manager-
+    generation: 27
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: kube-controller-manager
+      prometheus: kube-controller-manager
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4ad17cb4-b38b-418a-b8f6-509f7fd47a7e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:55:47Z"
+    name: kube-controller-manager-xtt4b
+    namespace: openshift-kube-controller-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: kube-controller-manager
+      uid: 4ad17cb4-b38b-418a-b8f6-509f7fd47a7e
+    resourceVersion: "28670"
+    uid: 0d1b0416-d79b-4d00-88ac-4756d96a2810
+  ports:
+  - name: https
+    port: 10257
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268618"

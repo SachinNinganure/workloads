@@ -1,0 +1,70 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:37:17Z"
+  generation: 1
+  labels:
+    k8s-app: machine-config-daemon
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:selector: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:37:17Z"
+  name: machine-config-daemon
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "1600"
+  uid: 3d296b2c-5080-4165-8d7e-5c6c24b2c7a0
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    interval: 30s
+    path: /metrics
+    port: metrics
+    relabelings:
+    - action: replace
+      regex: ;(.*)
+      replacement: $1
+      separator: ;
+      sourceLabels:
+      - node
+      - __meta_kubernetes_pod_node_name
+      targetLabel: node
+    scheme: https
+    tlsConfig:
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      serverName: machine-config-daemon.openshift-machine-config-operator.svc
+  namespaceSelector:
+    matchNames:
+    - openshift-machine-config-operator
+  selector:
+    matchLabels:
+      k8s-app: machine-config-daemon

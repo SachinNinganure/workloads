@@ -1,0 +1,12 @@
+2023-01-09T05:30:40.186374680Z ts=2023-01-09T05:30:40.186Z caller=main.go:231 level=info msg="Starting Alertmanager" version="(version=0.24.0, branch=rhaos-4.12-rhel-8, revision=519cbb87494d2830821a0da0a657af69d852c93b)"
+2023-01-09T05:30:40.186449260Z ts=2023-01-09T05:30:40.186Z caller=main.go:232 level=info build_context="(go=go1.19.4, user=root@232132c11c68, date=20230105-00:26:49)"
+2023-01-09T05:30:40.193415450Z ts=2023-01-09T05:30:40.193Z caller=cluster.go:680 level=info component=cluster msg="Waiting for gossip to settle..." interval=2s
+2023-01-09T05:30:40.217828114Z ts=2023-01-09T05:30:40.217Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-01-09T05:30:40.218101984Z ts=2023-01-09T05:30:40.218Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-01-09T05:30:40.221587920Z ts=2023-01-09T05:30:40.221Z caller=main.go:535 level=info msg=Listening address=127.0.0.1:9093
+2023-01-09T05:30:40.221671287Z ts=2023-01-09T05:30:40.221Z caller=tls_config.go:231 level=info msg="TLS is disabled." http2=false
+2023-01-09T05:30:42.193894227Z ts=2023-01-09T05:30:42.193Z caller=cluster.go:705 level=info component=cluster msg="gossip not settled" polls=0 before=0 now=2 elapsed=2.000405047s
+2023-01-09T05:30:44.225135698Z ts=2023-01-09T05:30:44.225Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-01-09T05:30:44.225557471Z ts=2023-01-09T05:30:44.225Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-01-09T05:30:50.195851988Z ts=2023-01-09T05:30:50.195Z caller=cluster.go:697 level=info component=cluster msg="gossip settled; proceeding" elapsed=10.002392628s
+2023-01-09T05:30:55.201772988Z ts=2023-01-09T05:30:55.201Z caller=cluster.go:470 level=warn component=cluster msg=refresh result=failure addr=alertmanager-main-1.alertmanager-operated:9094 err="1 error occurred:\n\t* Failed to resolve alertmanager-main-1.alertmanager-operated:9094: lookup alertmanager-main-1.alertmanager-operated on 172.30.0.10:53: no such host\n\n"

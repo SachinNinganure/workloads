@@ -1,0 +1,51 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: AlertingRule.v1beta1.loki.grafana.com,LokiStack.v1.loki.grafana.com,RecordingRule.v1beta1.loki.grafana.com,RulerConfig.v1beta1.loki.grafana.com
+  creationTimestamp: "2023-01-09T05:30:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:upgradeStrategy: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:30:44Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastUpdated: {}
+        f:namespaces:
+          .: {}
+          v:"": {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:30:44Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:olm.providedAPIs: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:17Z"
+  name: openshift-operators-redhat
+  namespace: openshift-operators-redhat
+  resourceVersion: "43751"
+  uid: a26fc157-2f9d-46e6-8b85-cc69e50f4348
+spec:
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-01-09T05:30:44Z"
+  namespaces:
+  - ""

@@ -1,0 +1,90 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-01-09T04:46:26Z"
+    labels:
+      app: console
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:53:32Z"
+    name: console
+    namespace: openshift-console
+    resourceVersion: "27503"
+    uid: 3abc356f-d7bf-48c0-9403-5034baf4d332
+  subsets:
+  - addresses:
+    - ip: 10.129.0.51
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: console-6cbb95b566-zblmm
+        namespace: openshift-console
+        uid: 47bf5dbf-20c2-4d90-a121-22d0dc55d1f6
+    - ip: 10.130.0.69
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: console-6cbb95b566-blr5w
+        namespace: openshift-console
+        uid: 2ecab2fa-f13b-4619-97f3-b7cccb9762eb
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:30:52Z"
+    creationTimestamp: "2023-01-09T04:46:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:30:52Z"
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "42765"
+    uid: 91b37dc0-82b2-48b0-9367-75bd69e90584
+  subsets:
+  - addresses:
+    - ip: 10.128.2.9
+      nodeName: ip-10-0-130-201.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: downloads-8d695cd69-4427w
+        namespace: openshift-console
+        uid: 89a678d4-fe1e-4088-b5ea-abca269c6aff
+    - ip: 10.129.0.68
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: downloads-8d695cd69-l7j6r
+        namespace: openshift-console
+        uid: 0763898d-8bd1-4887-ad5a-0101b34e980b
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268372"

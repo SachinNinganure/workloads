@@ -1,0 +1,66 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:42:47Z"
+    generation: 1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: cluster-etcd-operator
+      operation: Update
+      time: "2023-01-09T04:42:47Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:01:04Z"
+    name: etcd-guard-pdb
+    namespace: openshift-etcd
+    resourceVersion: "31272"
+    uid: bfef398c-3598-4749-9790-98fc0854d457
+  spec:
+    minAvailable: 2
+    selector:
+      matchLabels:
+        app: guard
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:01:04Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 3
+    desiredHealthy: 2
+    disruptionsAllowed: 1
+    expectedPods: 3
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "268441"

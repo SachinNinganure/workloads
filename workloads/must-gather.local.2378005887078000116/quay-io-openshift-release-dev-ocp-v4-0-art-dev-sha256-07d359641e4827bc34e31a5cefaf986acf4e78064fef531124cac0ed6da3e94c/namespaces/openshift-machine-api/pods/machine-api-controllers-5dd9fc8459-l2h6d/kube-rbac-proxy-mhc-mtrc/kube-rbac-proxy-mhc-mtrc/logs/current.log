@@ -1,0 +1,7 @@
+2023-01-09T04:41:47.900857363Z I0109 04:41:47.900751       1 main.go:151] Reading config file: /etc/kube-rbac-proxy/config-file.yaml
+2023-01-09T04:41:47.901254943Z I0109 04:41:47.901238       1 main.go:187] Valid token audiences: 
+2023-01-09T04:41:47.901313552Z I0109 04:41:47.901301       1 main.go:337] Reading certificate files
+2023-01-09T04:41:47.901460119Z I0109 04:41:47.901447       1 main.go:371] Starting TCP socket on 0.0.0.0:8444
+2023-01-09T04:41:47.901719154Z I0109 04:41:47.901699       1 main.go:378] Listening securely on 0.0.0.0:8444
+2023-01-09T04:52:46.410552620Z E0109 04:52:46.410499       1 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:52:46.410592769Z E0109 04:52:46.410552       1 proxy.go:74] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused

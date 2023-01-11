@@ -1,0 +1,61 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-01-09T05:32:17Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: loki-operator-v5.6.0
+    app.kubernetes.io/managed-by: operator-lifecycle-manager
+    app.kubernetes.io/name: loki-operator
+    app.kubernetes.io/part-of: cluster-logging
+    app.kubernetes.io/version: 5.6.0
+    name: loki-operator
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"ab6c364d-ccd8-475a-ab69-00b55d883bdf"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:selector: {}
+    manager: catalog
+    operation: Update
+    time: "2023-01-09T05:32:17Z"
+  name: loki-operator-metrics-monitor
+  namespace: openshift-operators-redhat
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: ClusterServiceVersion
+    name: loki-operator.v5.6.0
+    uid: ab6c364d-ccd8-475a-ab69-00b55d883bdf
+  resourceVersion: "43820"
+  uid: 441c757f-faa4-49fa-8df2-415dacd29655
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    interval: 30s
+    path: /metrics
+    scheme: https
+    scrapeTimeout: 10s
+    targetPort: 8443
+    tlsConfig:
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      serverName: loki-operator-controller-manager-metrics-service.openshift-operators-redhat.svc
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: loki-operator

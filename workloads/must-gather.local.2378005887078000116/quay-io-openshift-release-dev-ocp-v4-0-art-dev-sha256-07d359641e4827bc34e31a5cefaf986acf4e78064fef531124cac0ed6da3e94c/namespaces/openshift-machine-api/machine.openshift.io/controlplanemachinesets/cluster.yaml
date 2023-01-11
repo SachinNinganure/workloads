@@ -1,0 +1,268 @@
+---
+apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  creationTimestamp: "2023-01-09T04:37:31Z"
+  finalizers:
+  - controlplanemachineset.machine.openshift.io
+  generation: 1
+  labels:
+    machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+  managedFields:
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+      f:spec:
+        .: {}
+        f:replicas: {}
+        f:selector: {}
+        f:state: {}
+        f:strategy:
+          .: {}
+          f:type: {}
+        f:template:
+          .: {}
+          f:machineType: {}
+          f:machines_v1beta1_machine_openshift_io:
+            .: {}
+            f:failureDomains:
+              .: {}
+              f:aws: {}
+              f:platform: {}
+            f:metadata:
+              .: {}
+              f:labels:
+                .: {}
+                f:machine.openshift.io/cluster-api-cluster: {}
+                f:machine.openshift.io/cluster-api-machine-role: {}
+                f:machine.openshift.io/cluster-api-machine-type: {}
+            f:spec:
+              .: {}
+              f:lifecycleHooks: {}
+              f:metadata: {}
+              f:providerSpec:
+                .: {}
+                f:value:
+                  .: {}
+                  f:ami:
+                    .: {}
+                    f:id: {}
+                  f:apiVersion: {}
+                  f:blockDevices: {}
+                  f:credentialsSecret:
+                    .: {}
+                    f:name: {}
+                  f:deviceIndex: {}
+                  f:iamInstanceProfile:
+                    .: {}
+                    f:id: {}
+                  f:instanceType: {}
+                  f:kind: {}
+                  f:loadBalancers: {}
+                  f:metadata:
+                    .: {}
+                    f:creationTimestamp: {}
+                  f:metadataServiceOptions: {}
+                  f:placement:
+                    .: {}
+                    f:region: {}
+                  f:securityGroups: {}
+                  f:subnet: {}
+                  f:tags: {}
+                  f:userDataSecret:
+                    .: {}
+                    f:name: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-01-09T04:37:31Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:37:31Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"controlplanemachineset.machine.openshift.io": {}
+    manager: manager
+    operation: Update
+    time: "2023-01-09T04:41:36Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Error"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:42:56Z"
+  name: cluster
+  namespace: openshift-machine-api
+  resourceVersion: "10337"
+  uid: b299c398-b405-4c24-b4d0-8354cfcaf06e
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+      machine.openshift.io/cluster-api-machine-role: master
+      machine.openshift.io/cluster-api-machine-type: master
+  state: Active
+  strategy:
+    type: RollingUpdate
+  template:
+    machineType: machines_v1beta1_machine_openshift_io
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        aws:
+        - placement:
+            availabilityZone: us-east-2a
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - sn-loggvls-jsm-pkkrc-private-us-east-2a
+            type: Filters
+        - placement:
+            availabilityZone: us-east-2b
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - sn-loggvls-jsm-pkkrc-private-us-east-2b
+            type: Filters
+        - placement:
+            availabilityZone: us-east-2c
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - sn-loggvls-jsm-pkkrc-private-us-east-2c
+            type: Filters
+        platform: AWS
+      metadata:
+        labels:
+          machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+          machine.openshift.io/cluster-api-machine-role: master
+          machine.openshift.io/cluster-api-machine-type: master
+      spec:
+        lifecycleHooks: {}
+        metadata: {}
+        providerSpec:
+          value:
+            ami:
+              id: ami-0ff64f495c7e977cf
+            apiVersion: machine.openshift.io/v1beta1
+            blockDevices:
+            - ebs:
+                encrypted: true
+                iops: 0
+                kmsKey:
+                  arn: ""
+                volumeSize: 120
+                volumeType: gp3
+            credentialsSecret:
+              name: aws-cloud-credentials
+            deviceIndex: 0
+            iamInstanceProfile:
+              id: sn-loggvls-jsm-pkkrc-master-profile
+            instanceType: m5.2xlarge
+            kind: AWSMachineProviderConfig
+            loadBalancers:
+            - name: sn-loggvls-jsm-pkkrc-int
+              type: network
+            - name: sn-loggvls-jsm-pkkrc-ext
+              type: network
+            metadata:
+              creationTimestamp: null
+            metadataServiceOptions: {}
+            placement:
+              region: us-east-2
+            securityGroups:
+            - filters:
+              - name: tag:Name
+                values:
+                - sn-loggvls-jsm-pkkrc-master-sg
+            subnet: {}
+            tags:
+            - name: kubernetes.io/cluster/sn-loggvls-jsm-pkkrc
+              value: owned
+            userDataSecret:
+              name: master-user-data
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:41:36Z"
+    message: ""
+    observedGeneration: 1
+    reason: AsExpected
+    status: "False"
+    type: Error
+  - lastTransitionTime: "2023-01-09T04:42:56Z"
+    message: ""
+    observedGeneration: 1
+    reason: AllReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-09T04:42:56Z"
+    message: ""
+    observedGeneration: 1
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-01-09T04:42:26Z"
+    message: ""
+    observedGeneration: 1
+    reason: AllReplicasUpdated
+    status: "False"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3

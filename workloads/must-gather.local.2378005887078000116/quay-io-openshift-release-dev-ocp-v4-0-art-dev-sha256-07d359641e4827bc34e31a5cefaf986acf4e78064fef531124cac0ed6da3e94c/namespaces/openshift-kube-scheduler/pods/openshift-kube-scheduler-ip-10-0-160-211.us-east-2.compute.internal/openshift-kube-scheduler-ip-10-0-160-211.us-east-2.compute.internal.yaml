@@ -1,0 +1,502 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/default-container: kube-scheduler
+    kubernetes.io/config.hash: ac1e0e8bd7e0d25aeb92963ff9ea1b5d
+    kubernetes.io/config.mirror: ac1e0e8bd7e0d25aeb92963ff9ea1b5d
+    kubernetes.io/config.seen: "2023-01-09T04:49:55.990747704Z"
+    kubernetes.io/config.source: file
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2023-01-09T04:50:09Z"
+  labels:
+    app: openshift-kube-scheduler
+    revision: "6"
+    scheduler: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:revision: {}
+          f:scheduler: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"3aa9328b-65bb-4d9a-b12a-7e5710de6e2c"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-scheduler"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10259,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-scheduler-cert-syncer"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-scheduler-recovery-controller"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"wait-for-host-port"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cert-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-01-09T04:50:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.160.211"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:50:59Z"
+  name: openshift-kube-scheduler-ip-10-0-160-211.us-east-2.compute.internal
+  namespace: openshift-kube-scheduler
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: ip-10-0-160-211.us-east-2.compute.internal
+    uid: 3aa9328b-65bb-4d9a-b12a-7e5710de6e2c
+  resourceVersion: "25869"
+  uid: bbd014a6-a07c-422d-bf40-aa5bcd8aa31f
+spec:
+  containers:
+  - args:
+    - --config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml
+    - --cert-dir=/var/run/kubernetes
+    - --authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig
+    - --authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig
+    - --feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true
+    - -v=2
+    - --tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt
+    - --tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    command:
+    - hyperkube
+    - kube-scheduler
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: healthz
+        port: 10259
+        scheme: HTTPS
+      initialDelaySeconds: 45
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: kube-scheduler
+    ports:
+    - containerPort: 10259
+      hostPort: 10259
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: healthz
+        port: 10259
+        scheme: HTTPS
+      initialDelaySeconds: 45
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 15m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+  - args:
+    - --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig
+    - --namespace=$(POD_NAMESPACE)
+    - --destination-dir=/etc/kubernetes/static-pod-certs
+    command:
+    - cluster-kube-scheduler-operator
+    - cert-syncer
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    imagePullPolicy: IfNotPresent
+    name: kube-scheduler-cert-syncer
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+  - args:
+    - |
+      timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 11443 \))" ]; do sleep 1; done'
+
+      exec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2
+    command:
+    - /bin/bash
+    - -euxo
+    - pipefail
+    - -c
+    env:
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    imagePullPolicy: IfNotPresent
+    name: kube-scheduler-recovery-controller
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - args:
+    - |
+      echo -n "Waiting for port :10259 to be released."
+      while [ -n "$(ss -Htan '( sport = 10259 )')" ]; do
+        echo -n "."
+        sleep 1
+      done
+    command:
+    - /usr/bin/timeout
+    - "30"
+    - /bin/bash
+    - -c
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    imagePullPolicy: IfNotPresent
+    name: wait-for-host-port
+    resources:
+      requests:
+        cpu: 15m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+  nodeName: ip-10-0-160-211.us-east-2.compute.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/kube-scheduler-pod-6
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/kube-scheduler-certs
+      type: ""
+    name: cert-dir
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:50:09Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:50:59Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:50:59Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:42:58Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://2b0c84c016ff43d6ae0b17c2dab59ea7038a89689febd977fa686bcc46f7e744
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    lastState: {}
+    name: kube-scheduler
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:50:10Z"
+  - containerID: cri-o://36d8c9689151b762579634b6694cb30f38a14dcb79dcc3dafff2afc44a5d85a8
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    lastState: {}
+    name: kube-scheduler-cert-syncer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:50:10Z"
+  - containerID: cri-o://aea0df3904d97b1d712a22af53917fda37f0a41fe9ba771f7a3235566469bdc4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651
+    lastState: {}
+    name: kube-scheduler-recovery-controller
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:50:10Z"
+  hostIP: 10.0.160.211
+  initContainerStatuses:
+  - containerID: cri-o://e8c2f2f468c098f35cdcc1c93c89ffcb84b7426de0fa5af1325783109d659db9
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:662c00a50b8327cc39963577d3e11aa71458b3888ce06223a4501679a28fecd1
+    lastState: {}
+    name: wait-for-host-port
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://e8c2f2f468c098f35cdcc1c93c89ffcb84b7426de0fa5af1325783109d659db9
+        exitCode: 0
+        finishedAt: "2023-01-09T04:50:09Z"
+        reason: Completed
+        startedAt: "2023-01-09T04:50:09Z"
+  phase: Running
+  podIP: 10.0.160.211
+  podIPs:
+  - ip: 10.0.160.211
+  qosClass: Burstable
+  startTime: "2023-01-09T04:42:58Z"

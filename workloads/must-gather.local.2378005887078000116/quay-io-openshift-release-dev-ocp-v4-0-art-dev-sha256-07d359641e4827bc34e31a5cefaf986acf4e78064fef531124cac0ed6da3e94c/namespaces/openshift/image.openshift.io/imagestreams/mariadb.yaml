@@ -1,0 +1,335 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: MariaDB
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:51Z"
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:47:49Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"10.3"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"10.3-el7"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"10.3-el8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"10.5-el7"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"10.5-el8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"10.5-el9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:49Z"
+  name: mariadb
+  namespace: openshift
+  resourceVersion: "21889"
+  uid: c802297e-2b31-480a-9e1e-e8be9521af34
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Provides a MariaDB 10.3 database on RHEL 7. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.3/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.3
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb,hidden
+      version: "10.3"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/mariadb-103-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "10.3"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MariaDB 10.3 database on RHEL 7. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.3/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.3 (RHEL 7)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+      version: "10.3"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/mariadb-103-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 10.3-el7
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MariaDB 10.3 database on RHEL 8. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.3/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.3 (RHEL 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+      version: "10.3"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel8/mariadb-103:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 10.3-el8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MariaDB 10.5 database on RHEL 7. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.5/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.5 (RHEL 7)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+      version: "10.5"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/mariadb-105-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 10.5-el7
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MariaDB 10.5 database on RHEL 8. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.5/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.5 (RHEL 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+      version: "10.5"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel8/mariadb-105:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 10.5-el8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MariaDB 10.5 database on RHEL 9. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.5/README.md.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB 10.5 (RHEL 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+      version: "10.5"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel9/mariadb-105:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 10.5-el9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |-
+        Provides a MariaDB database on RHEL. For more information about using this database image, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/tree/master/10.5/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version of MariaDB available on OpenShift, including major version updates.
+      iconClass: icon-mariadb
+      openshift.io/display-name: MariaDB (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,mariadb
+    from:
+      kind: ImageStreamTag
+      name: 10.5-el8
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/mariadb
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhscl/mariadb-103-rhel7@sha256:232df52c03419ede36cd86dd4dbbf793125b7944e764f83cfa5f9211526cee01
+      generation: 2
+      image: sha256:232df52c03419ede36cd86dd4dbbf793125b7944e764f83cfa5f9211526cee01
+    tag: "10.3"
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhscl/mariadb-103-rhel7@sha256:232df52c03419ede36cd86dd4dbbf793125b7944e764f83cfa5f9211526cee01
+      generation: 2
+      image: sha256:232df52c03419ede36cd86dd4dbbf793125b7944e764f83cfa5f9211526cee01
+    tag: 10.3-el7
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhel8/mariadb-103@sha256:624edbdebbb3a0994732fd7af73aa01cbb5f5b5434a16d60b5c1084f9ce0a679
+      generation: 2
+      image: sha256:624edbdebbb3a0994732fd7af73aa01cbb5f5b5434a16d60b5c1084f9ce0a679
+    tag: 10.3-el8
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhscl/mariadb-105-rhel7@sha256:3e7a815a57e49e7a2bf5799267ba79b72449a4433bbda097cf0899ae8b2916ef
+      generation: 2
+      image: sha256:3e7a815a57e49e7a2bf5799267ba79b72449a4433bbda097cf0899ae8b2916ef
+    tag: 10.5-el7
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhel8/mariadb-105@sha256:b7862d7164d21ac7977a2f58ec5e2a5cac44d4d5f57e9bee9bd702fd81e38725
+      generation: 2
+      image: sha256:b7862d7164d21ac7977a2f58ec5e2a5cac44d4d5f57e9bee9bd702fd81e38725
+    tag: 10.5-el8
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhel9/mariadb-105@sha256:444e96b39df7acc981b1e52fabc6874eef5ec0632d4d8ebba28a47dc267e3d28
+      generation: 2
+      image: sha256:444e96b39df7acc981b1e52fabc6874eef5ec0632d4d8ebba28a47dc267e3d28
+    tag: 10.5-el9
+  - items:
+    - created: "2023-01-09T04:47:51Z"
+      dockerImageReference: registry.redhat.io/rhel8/mariadb-105@sha256:b7862d7164d21ac7977a2f58ec5e2a5cac44d4d5f57e9bee9bd702fd81e38725
+      generation: 2
+      image: sha256:b7862d7164d21ac7977a2f58ec5e2a5cac44d4d5f57e9bee9bd702fd81e38725
+    tag: latest

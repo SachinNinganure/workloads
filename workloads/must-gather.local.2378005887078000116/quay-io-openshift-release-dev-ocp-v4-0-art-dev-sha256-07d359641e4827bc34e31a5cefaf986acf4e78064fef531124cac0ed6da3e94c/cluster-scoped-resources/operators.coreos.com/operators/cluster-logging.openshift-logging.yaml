@@ -1,0 +1,142 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: Operator
+metadata:
+  creationTimestamp: "2023-01-09T05:30:53Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:30:53Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:components:
+          .: {}
+          f:labelSelector:
+            .: {}
+            f:matchExpressions: {}
+          f:refs: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:34:18Z"
+  name: cluster-logging.openshift-logging
+  resourceVersion: "45444"
+  uid: d9adf145-9393-4ea6-9ef4-cf6f562c8921
+spec: {}
+status:
+  components:
+    labelSelector:
+      matchExpressions:
+      - key: operators.coreos.com/cluster-logging.openshift-logging
+        operator: Exists
+    refs:
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      name: cluster-logging.v5.6.0-5dc9df7dfc
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      name: cluster-logging.v5.6.0-5dc9df7dfc
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:34:17Z"
+        lastUpdateTime: "2023-01-09T05:34:17Z"
+        message: install strategy completed with no errors
+        reason: InstallSucceeded
+        status: "True"
+        type: Succeeded
+      kind: ClusterServiceVersion
+      name: cluster-logging.v5.6.0
+      namespace: openshift-logging
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:31:17Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:31:17Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: clusterlogforwarders.logging.openshift.io
+    - apiVersion: apiextensions.k8s.io/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:31:17Z"
+        message: no conflicts found
+        reason: NoConflicts
+        status: "True"
+        type: NamesAccepted
+      - lastTransitionTime: "2023-01-09T05:31:17Z"
+        message: the initial names have been accepted
+        reason: InitialNamesAccepted
+        status: "True"
+        type: Established
+      kind: CustomResourceDefinition
+      name: clusterloggings.logging.openshift.io
+    - apiVersion: apps/v1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:34:17Z"
+        lastUpdateTime: "2023-01-09T05:34:17Z"
+        message: Deployment has minimum availability.
+        reason: MinimumReplicasAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-01-09T05:31:20Z"
+        lastUpdateTime: "2023-01-09T05:34:17Z"
+        message: ReplicaSet "cluster-logging-operator-8656d566b7" has successfully
+          progressed.
+        reason: NewReplicaSetAvailable
+        status: "True"
+        type: Progressing
+      kind: Deployment
+      name: cluster-logging-operator
+      namespace: openshift-logging
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:31:20Z"
+        lastUpdateTime: "2023-01-09T05:31:20Z"
+        status: "True"
+        type: Installed
+      kind: InstallPlan
+      name: install-tjpgh
+      namespace: openshift-logging
+    - apiVersion: operators.coreos.com/v2
+      kind: OperatorCondition
+      name: cluster-logging.v5.6.0
+      namespace: openshift-logging
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: Role
+      name: cluster-logging.v5.6.0-cluster-logging-operator-7dc79bf9b7
+      namespace: openshift-logging
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      name: cluster-logging.v5.6.0-cluster-logging-operator-7dc79bf9b7
+      namespace: openshift-logging
+    - apiVersion: v1
+      kind: Service
+      name: cluster-logging-operator-metrics
+      namespace: openshift-logging
+    - apiVersion: v1
+      kind: ServiceAccount
+      name: cluster-logging-operator
+      namespace: openshift-logging
+    - apiVersion: operators.coreos.com/v1alpha1
+      conditions:
+      - lastTransitionTime: "2023-01-09T05:30:55Z"
+        message: all available catalogsources are healthy
+        reason: AllCatalogSourcesHealthy
+        status: "False"
+        type: CatalogSourcesUnhealthy
+      kind: Subscription
+      name: cluster-logging
+      namespace: openshift-logging

@@ -1,0 +1,62 @@
+2023-01-09T04:41:31.751052353Z W0109 04:41:31.750387       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-01-09T04:41:31.751052353Z W0109 04:41:31.750638       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-01-09T04:41:31.831885105Z I0109 04:41:31.831848       1 main.go:148] setting up manager
+2023-01-09T04:41:31.871141854Z I0109 04:41:31.871099       1 main.go:164] registering components
+2023-01-09T04:41:31.871141854Z I0109 04:41:31.871125       1 main.go:166] setting up scheme
+2023-01-09T04:41:31.871432297Z I0109 04:41:31.871410       1 main.go:201] setting up controllers
+2023-01-09T04:41:31.871471190Z I0109 04:41:31.871448       1 config.go:33] using default as failed to load config /var/run/configmaps/config/config.yaml: open /var/run/configmaps/config/config.yaml: no such file or directory
+2023-01-09T04:41:31.871484153Z I0109 04:41:31.871464       1 config.go:23] machine approver config: {NodeClientCert:{Disabled:false}}
+2023-01-09T04:41:31.871656008Z I0109 04:41:31.871637       1 main.go:224] starting the cmd
+2023-01-09T04:41:31.872081841Z I0109 04:41:31.872050       1 leaderelection.go:248] attempting to acquire leader lease openshift-cluster-machine-approver/cluster-machine-approver-leader...
+2023-01-09T04:41:31.878254728Z I0109 04:41:31.878210       1 leaderelection.go:258] successfully acquired lease openshift-cluster-machine-approver/cluster-machine-approver-leader
+2023-01-09T04:41:31.879186440Z I0109 04:41:31.879160       1 status.go:97] Starting cluster operator status controller
+2023-01-09T04:41:32.080620052Z I0109 04:41:32.079856       1 controller.go:121] Reconciling CSR: system:openshift:openshift-authenticator-9gk9j
+2023-01-09T04:41:32.094568999Z I0109 04:41:32.094515       1 controller.go:214] system:openshift:openshift-authenticator-9gk9j: CSR is already approved
+2023-01-09T04:42:01.501504758Z I0109 04:42:01.501450       1 controller.go:121] Reconciling CSR: system:openshift:openshift-monitoring-w4bzv
+2023-01-09T04:42:01.517144631Z I0109 04:42:01.517103       1 csr_check.go:157] system:openshift:openshift-monitoring-w4bzv: CSR does not appear to be client csr
+2023-01-09T04:42:01.517144631Z I0109 04:42:01.517127       1 csr_check.go:59] system:openshift:openshift-monitoring-w4bzv: CSR does not appear to be a node serving cert
+2023-01-09T04:42:01.517174583Z I0109 04:42:01.517143       1 controller.go:233] system:openshift:openshift-monitoring-w4bzv: CSR not authorized
+2023-01-09T04:42:01.522721156Z I0109 04:42:01.522685       1 controller.go:121] Reconciling CSR: system:openshift:openshift-monitoring-w4bzv
+2023-01-09T04:42:01.540022412Z I0109 04:42:01.539957       1 controller.go:214] system:openshift:openshift-monitoring-w4bzv: CSR is already approved
+2023-01-09T04:42:01.543573546Z I0109 04:42:01.543535       1 controller.go:121] Reconciling CSR: system:openshift:openshift-monitoring-w4bzv
+2023-01-09T04:42:01.556722583Z I0109 04:42:01.556665       1 controller.go:214] system:openshift:openshift-monitoring-w4bzv: CSR is already approved
+2023-01-09T04:44:38.242501231Z I0109 04:44:38.242446       1 controller.go:121] Reconciling CSR: csr-8tsxm
+2023-01-09T04:44:38.269813808Z I0109 04:44:38.269776       1 controller.go:240] CSR csr-8tsxm approved
+2023-01-09T04:44:39.304458599Z I0109 04:44:39.304408       1 controller.go:121] Reconciling CSR: csr-zzbv7
+2023-01-09T04:44:39.323744570Z I0109 04:44:39.323697       1 csr_check.go:157] csr-zzbv7: CSR does not appear to be client csr
+2023-01-09T04:44:39.329205941Z I0109 04:44:39.329178       1 csr_check.go:545] retrieving serving cert from ip-10-0-200-52.us-east-2.compute.internal (10.0.200.52:10250)
+2023-01-09T04:44:39.330653190Z I0109 04:44:39.330618       1 csr_check.go:182] Failed to retrieve current serving cert: remote error: tls: internal error
+2023-01-09T04:44:39.330653190Z I0109 04:44:39.330638       1 csr_check.go:202] Falling back to machine-api authorization for ip-10-0-200-52.us-east-2.compute.internal
+2023-01-09T04:44:39.335661210Z I0109 04:44:39.335633       1 controller.go:240] CSR csr-zzbv7 approved
+2023-01-09T04:44:46.386181916Z I0109 04:44:46.386136       1 controller.go:121] Reconciling CSR: csr-kggk5
+2023-01-09T04:44:46.418373887Z I0109 04:44:46.418324       1 controller.go:240] CSR csr-kggk5 approved
+2023-01-09T04:44:57.578035203Z I0109 04:44:57.577973       1 controller.go:121] Reconciling CSR: csr-w9jj6
+2023-01-09T04:44:57.609732645Z I0109 04:44:57.609694       1 controller.go:240] CSR csr-w9jj6 approved
+2023-01-09T04:44:58.639826483Z I0109 04:44:58.639782       1 controller.go:121] Reconciling CSR: csr-jr4pf
+2023-01-09T04:44:58.659192271Z I0109 04:44:58.659153       1 csr_check.go:157] csr-jr4pf: CSR does not appear to be client csr
+2023-01-09T04:44:58.662530656Z I0109 04:44:58.662508       1 csr_check.go:545] retrieving serving cert from ip-10-0-130-201.us-east-2.compute.internal (10.0.130.201:10250)
+2023-01-09T04:44:58.664601994Z I0109 04:44:58.664577       1 csr_check.go:182] Failed to retrieve current serving cert: remote error: tls: internal error
+2023-01-09T04:44:58.664601994Z I0109 04:44:58.664594       1 csr_check.go:202] Falling back to machine-api authorization for ip-10-0-130-201.us-east-2.compute.internal
+2023-01-09T04:44:58.670882740Z I0109 04:44:58.670850       1 controller.go:240] CSR csr-jr4pf approved
+2023-01-09T04:44:58.794012527Z I0109 04:44:58.793960       1 controller.go:121] Reconciling CSR: csr-cmfqd
+2023-01-09T04:44:58.829411104Z I0109 04:44:58.829373       1 csr_check.go:157] csr-cmfqd: CSR does not appear to be client csr
+2023-01-09T04:44:58.839704518Z I0109 04:44:58.839660       1 csr_check.go:545] retrieving serving cert from ip-10-0-144-137.us-east-2.compute.internal (10.0.144.137:10250)
+2023-01-09T04:44:58.842105688Z I0109 04:44:58.842081       1 csr_check.go:182] Failed to retrieve current serving cert: remote error: tls: internal error
+2023-01-09T04:44:58.842105688Z I0109 04:44:58.842099       1 csr_check.go:202] Falling back to machine-api authorization for ip-10-0-144-137.us-east-2.compute.internal
+2023-01-09T04:44:58.850268814Z I0109 04:44:58.850230       1 controller.go:240] CSR csr-cmfqd approved
+2023-01-09T04:47:21.179079061Z I0109 04:47:21.178981       1 controller.go:121] Reconciling CSR: csr-4k59k
+2023-01-09T04:47:21.227578669Z I0109 04:47:21.227540       1 controller.go:240] CSR csr-4k59k approved
+2023-01-09T04:47:35.861830827Z I0109 04:47:35.861786       1 controller.go:121] Reconciling CSR: csr-h69p6
+2023-01-09T04:47:35.906056049Z I0109 04:47:35.904418       1 csr_check.go:157] csr-h69p6: CSR does not appear to be client csr
+2023-01-09T04:47:35.922817019Z I0109 04:47:35.922759       1 csr_check.go:545] retrieving serving cert from ip-10-0-162-201.us-east-2.compute.internal (10.0.162.201:10250)
+2023-01-09T04:47:35.924956371Z I0109 04:47:35.924917       1 csr_check.go:182] Failed to retrieve current serving cert: remote error: tls: internal error
+2023-01-09T04:47:35.925026080Z I0109 04:47:35.925009       1 csr_check.go:202] Falling back to machine-api authorization for ip-10-0-162-201.us-east-2.compute.internal
+2023-01-09T04:47:35.942757278Z I0109 04:47:35.942712       1 controller.go:240] CSR csr-h69p6 approved
+2023-01-09T05:32:58.816737838Z I0109 05:32:58.816680       1 controller.go:121] Reconciling CSR: csr-l8fkx
+2023-01-09T05:32:58.845874675Z I0109 05:32:58.845841       1 controller.go:240] CSR csr-l8fkx approved
+2023-01-09T05:32:59.897062563Z I0109 05:32:59.897028       1 controller.go:121] Reconciling CSR: csr-77f9x
+2023-01-09T05:32:59.939056755Z I0109 05:32:59.939017       1 csr_check.go:157] csr-77f9x: CSR does not appear to be client csr
+2023-01-09T05:32:59.941134347Z I0109 05:32:59.941105       1 csr_check.go:545] retrieving serving cert from ip-10-0-190-242.us-east-2.compute.internal (10.0.190.242:10250)
+2023-01-09T05:32:59.943044421Z I0109 05:32:59.943013       1 csr_check.go:182] Failed to retrieve current serving cert: remote error: tls: internal error
+2023-01-09T05:32:59.943044421Z I0109 05:32:59.943032       1 csr_check.go:202] Falling back to machine-api authorization for ip-10-0-190-242.us-east-2.compute.internal
+2023-01-09T05:32:59.948039759Z I0109 05:32:59.947969       1 controller.go:240] CSR csr-77f9x approved

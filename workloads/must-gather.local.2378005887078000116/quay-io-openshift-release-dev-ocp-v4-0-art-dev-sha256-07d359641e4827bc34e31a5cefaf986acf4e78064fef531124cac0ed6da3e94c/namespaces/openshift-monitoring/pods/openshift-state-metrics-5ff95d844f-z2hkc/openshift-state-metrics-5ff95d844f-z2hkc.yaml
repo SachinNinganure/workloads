@@ -1,0 +1,461 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.8/23"],"mac_address":"0a:58:0a:81:02:08","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.8/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.8"
+          ],
+          "mac": "0a:58:0a:81:02:08",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.8"
+          ],
+          "mac": "0a:58:0a:81:02:08",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-01-09T04:47:09Z"
+  generateName: openshift-state-metrics-5ff95d844f-
+  labels:
+    app.kubernetes.io/component: exporter
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: openshift-state-metrics
+    app.kubernetes.io/part-of: openshift-monitoring
+    pod-template-hash: 5ff95d844f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T04:47:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1a90eb86-168b-40cf-9680-4a1926d69485"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy-main"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-policy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy-self"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-policy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"openshift-state-metrics"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"openshift-state-metrics-kube-rbac-proxy-config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"openshift-state-metrics-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T04:47:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:47:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.8"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:47:13Z"
+  name: openshift-state-metrics-5ff95d844f-z2hkc
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: openshift-state-metrics-5ff95d844f
+    uid: 1a90eb86-168b-40cf-9680-4a1926d69485
+  resourceVersion: "19963"
+  uid: 71bf47ef-8cc8-449a-b145-434dce2fe71f
+spec:
+  containers:
+  - args:
+    - --logtostderr
+    - --secure-listen-address=:8443
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --upstream=http://127.0.0.1:8081/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --config-file=/etc/kube-rbac-policy/config.yaml
+    - --tls-min-version=VersionTLS12
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-main
+    ports:
+    - containerPort: 8443
+      name: https-main
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000430000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: openshift-state-metrics-tls
+    - mountPath: /etc/kube-rbac-policy
+      name: openshift-state-metrics-kube-rbac-proxy-config
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-876b2
+      readOnly: true
+  - args:
+    - --logtostderr
+    - --secure-listen-address=:9443
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --upstream=http://127.0.0.1:8082/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --config-file=/etc/kube-rbac-policy/config.yaml
+    - --tls-min-version=VersionTLS12
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-self
+    ports:
+    - containerPort: 9443
+      name: https-self
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000430000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: openshift-state-metrics-tls
+    - mountPath: /etc/kube-rbac-policy
+      name: openshift-state-metrics-kube-rbac-proxy-config
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-876b2
+      readOnly: true
+  - args:
+    - --host=127.0.0.1
+    - --port=8081
+    - --telemetry-host=127.0.0.1
+    - --telemetry-port=8082
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:06285dddb5ba9bce5a5ddd07f685f1bc766abed1e0c3890621df281ddc19ab1c
+    imagePullPolicy: IfNotPresent
+    name: openshift-state-metrics
+    resources:
+      requests:
+        cpu: 1m
+        memory: 32Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000430000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-876b2
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: openshift-state-metrics-dockercfg-99xlk
+  nodeName: ip-10-0-144-137.us-east-2.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000430000
+    seLinuxOptions:
+      level: s0:c21,c5
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: openshift-state-metrics
+  serviceAccountName: openshift-state-metrics
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: openshift-state-metrics-tls
+    secret:
+      defaultMode: 420
+      secretName: openshift-state-metrics-tls
+  - name: openshift-state-metrics-kube-rbac-proxy-config
+    secret:
+      defaultMode: 420
+      secretName: openshift-state-metrics-kube-rbac-proxy-config
+  - name: kube-api-access-876b2
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:47:09Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:47:13Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:47:13Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T04:47:09Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://b7492997bafa9fcd9e429bd667916568e84501efcd70cdd97eb6091e619fd3a5
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    lastState: {}
+    name: kube-rbac-proxy-main
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:47:10Z"
+  - containerID: cri-o://a904ea7bf2eaf47335c72e2c47dc2dea379c3d7453f94c22f670f7ab58cd3999
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    lastState: {}
+    name: kube-rbac-proxy-self
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:47:11Z"
+  - containerID: cri-o://24933975a083bf5bb7a06938fed114f06da5610c67caf1c735266b0e60d5ef3e
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:06285dddb5ba9bce5a5ddd07f685f1bc766abed1e0c3890621df281ddc19ab1c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:06285dddb5ba9bce5a5ddd07f685f1bc766abed1e0c3890621df281ddc19ab1c
+    lastState: {}
+    name: openshift-state-metrics
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T04:47:13Z"
+  hostIP: 10.0.144.137
+  phase: Running
+  podIP: 10.129.2.8
+  podIPs:
+  - ip: 10.129.2.8
+  qosClass: Burstable
+  startTime: "2023-01-09T04:47:09Z"

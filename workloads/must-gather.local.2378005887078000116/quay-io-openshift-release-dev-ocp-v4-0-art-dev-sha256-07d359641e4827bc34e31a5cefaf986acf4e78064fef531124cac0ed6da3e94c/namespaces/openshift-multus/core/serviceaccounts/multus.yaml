@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: multus-dockercfg-qjc72
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-01-09T04:38:50Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"b8592153-d60b-43d6-8417-eb32b9b3af15"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-01-09T04:38:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"multus-dockercfg-qjc72"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2023-01-09T04:45:29Z"
+  name: multus
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+  resourceVersion: "15919"
+  uid: 29ae283e-7542-4a9c-bec3-bb27f36b4872
+secrets:
+- name: multus-dockercfg-qjc72

@@ -1,0 +1,52 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  creationTimestamp: "2023-01-09T04:37:19Z"
+  generation: 1
+  labels:
+    machineconfiguration.openshift.io/role: master
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/role: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:ignition:
+            .: {}
+            f:version: {}
+          f:passwd:
+            .: {}
+            f:users: {}
+        f:extensions: {}
+        f:fips: {}
+        f:kernelArguments: {}
+        f:kernelType: {}
+        f:osImageURL: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-01-09T04:37:19Z"
+  name: 99-master-ssh
+  resourceVersion: "1655"
+  uid: cca44c49-ad60-4832-826f-34032b07ddb4
+spec:
+  config:
+    ignition:
+      version: 3.2.0
+    passwd:
+      users:
+      - name: core
+        sshAuthorizedKeys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWkwurd8TNAi+D7ffvyDdhGBSQtJx3/Yedlwvvha0q772vLlOAGlKCw4dajKy6qty1/GGQDgTJ17h3C9TEArI8ZqILnyydeY56DL+ELN3dtGBVof/N2qtW0+SmEnd1Mi7Qy5Tx4e/GVmB3NgX9szwNOVXhebzgBsXc9x+RtCVLPLC8J+qqSdTUZ0UfJsh2ptlQLGHmmTpF//QlJ1tngvAFeCOxJUhrLAa37P9MtFsiNk31EfKyBk3eIdZljTERmqFaoJCohsFFEdO7tVgU6p5NwniAyBGZVjZBzjELoI1aZ+/g9yReIScxl1R6PWqEzcU6lGo2hInnb6nuZFGb+90D
+          openshift-qe@redhat.com
+  extensions: null
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""

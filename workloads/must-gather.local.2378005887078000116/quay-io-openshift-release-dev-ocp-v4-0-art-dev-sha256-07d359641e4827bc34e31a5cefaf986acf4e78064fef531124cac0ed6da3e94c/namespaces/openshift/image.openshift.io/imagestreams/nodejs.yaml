@@ -1,0 +1,398 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Node.js
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:57Z"
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:47:52Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"14-ubi7"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"14-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"14-ubi8-minimal"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"16-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"16-ubi8-minimal"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"16-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"16-ubi9-minimal"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:52Z"
+  name: nodejs
+  namespace: openshift
+  resourceVersion: "22349"
+  uid: 5aff310b-8cfc-4a0d-8198-ed2bb1c56a4d
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Node.js 14 applications on UBI 7. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container/blob/master/14/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 14 (UBI 7)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs,hidden
+      version: "14"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi7/nodejs-14:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 14-ubi7
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 14 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container/blob/master/14/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 14 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "14"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/nodejs-14:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 14-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 14 applications on UBI 8 Minimal. For more
+        information about using this builder image, including OpenShift considerations,
+        see https://github.com/sclorg/s2i-nodejs-container/blob/master/14-minimal/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 14 (UBI 8 Minimal)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "14"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/nodejs-14-minimal:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 14-ubi8-minimal
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 16 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container/blob/master/16/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 16 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "16"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/nodejs-16:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 16-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 16 applications on UBI 8 Minimal. For more
+        information about using this builder image, including OpenShift considerations,
+        see https://github.com/sclorg/s2i-nodejs-container/blob/master/16-minimal/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 16 (UBI 8 Minimal)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "16"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/nodejs-16-minimal:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 16-ubi8-minimal
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 16 applications on UBI 9. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container/blob/master/16/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 16 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "16"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/nodejs-16:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 16-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Node.js 16 applications on UBI 9 Minimal. For more
+        information about using this builder image, including OpenShift considerations,
+        see https://github.com/sclorg/s2i-nodejs-container/blob/master/16-minimal/README.md.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js 16 (UBI 9 Minimal)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      tags: builder,nodejs
+      version: "16"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/nodejs-16-minimal:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 16-ubi9-minimal
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |-
+        Build and run Node.js applications on UBI. For more information about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container/blob/master/16/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version of Node.js available on OpenShift, including major version updates.
+      iconClass: icon-nodejs
+      openshift.io/display-name: Node.js (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/nodejs-ex.git
+      supports: nodejs
+      tags: builder,nodejs
+    from:
+      kind: ImageStreamTag
+      name: 16-ubi8
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/nodejs
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi7/nodejs-14@sha256:a0a785bcb5c63368dd30c90bdf6ab0375fdc58f82e8ce01f764e1b147057c6dd
+      generation: 2
+      image: sha256:a0a785bcb5c63368dd30c90bdf6ab0375fdc58f82e8ce01f764e1b147057c6dd
+    tag: 14-ubi7
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/nodejs-14@sha256:3014dc1c45b34d2daae226cb66477ea347bd2c8dfb503c04cd5a571b78104d31
+      generation: 2
+      image: sha256:3014dc1c45b34d2daae226cb66477ea347bd2c8dfb503c04cd5a571b78104d31
+    tag: 14-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/nodejs-14-minimal@sha256:ae0a36ae4de1d242d25959be3e1d5e667b7d063cf60acd2784670ce1783cea24
+      generation: 2
+      image: sha256:ae0a36ae4de1d242d25959be3e1d5e667b7d063cf60acd2784670ce1783cea24
+    tag: 14-ubi8-minimal
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/nodejs-16@sha256:ec4bda6a4daaea3a28591ea97afc0ea52d06d881a5d966e18269f9c0d0c87892
+      generation: 2
+      image: sha256:ec4bda6a4daaea3a28591ea97afc0ea52d06d881a5d966e18269f9c0d0c87892
+    tag: 16-ubi8
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/nodejs-16-minimal@sha256:5e3d0166269c525454b66b2976cd06095a2b3279cfa1f93a21b79aaf5a669fa9
+      generation: 2
+      image: sha256:5e3d0166269c525454b66b2976cd06095a2b3279cfa1f93a21b79aaf5a669fa9
+    tag: 16-ubi8-minimal
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi9/nodejs-16@sha256:940bd375c8e27b1bc3947c94261cacc68c1fc9324551bd10b468fe163533b509
+      generation: 2
+      image: sha256:940bd375c8e27b1bc3947c94261cacc68c1fc9324551bd10b468fe163533b509
+    tag: 16-ubi9
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi9/nodejs-16-minimal@sha256:8118041e4b4fbcae364736344f6bb6e7f8a4bb69a7d333e192f52fe05c090acd
+      generation: 2
+      image: sha256:8118041e4b4fbcae364736344f6bb6e7f8a4bb69a7d333e192f52fe05c090acd
+    tag: 16-ubi9-minimal
+  - items:
+    - created: "2023-01-09T04:47:57Z"
+      dockerImageReference: registry.redhat.io/ubi8/nodejs-16@sha256:ec4bda6a4daaea3a28591ea97afc0ea52d06d881a5d966e18269f9c0d0c87892
+      generation: 2
+      image: sha256:ec4bda6a4daaea3a28591ea97afc0ea52d06d881a5d966e18269f9c0d0c87892
+    tag: latest

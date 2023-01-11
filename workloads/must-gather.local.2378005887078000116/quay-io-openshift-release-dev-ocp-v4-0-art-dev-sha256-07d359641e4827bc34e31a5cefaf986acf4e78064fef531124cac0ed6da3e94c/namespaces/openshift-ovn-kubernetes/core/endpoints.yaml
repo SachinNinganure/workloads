@@ -1,0 +1,194 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:39:06Z"
+    creationTimestamp: "2023-01-09T04:39:01Z"
+    labels:
+      app: ovnkube-master
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:39:06Z"
+    name: ovn-kubernetes-master
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "3077"
+    uid: 953f6ec9-8028-457e-9c22-a029237d2178
+  subsets:
+  - addresses:
+    - ip: 10.0.145.4
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-rldgf
+        namespace: openshift-ovn-kubernetes
+        uid: 64495fb3-f5b7-44db-8853-0d412104e65d
+    - ip: 10.0.160.211
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-jrqkm
+        namespace: openshift-ovn-kubernetes
+        uid: 1eb3dff1-36fd-4f12-97b4-fe24e15e79c1
+    - ip: 10.0.199.219
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-j6dlf
+        namespace: openshift-ovn-kubernetes
+        uid: 406aafb5-e303-4413-a14d-d792bd5c8aef
+    ports:
+    - name: metrics
+      port: 9102
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-01-09T04:39:01Z"
+    labels:
+      app: ovnkube-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:41Z"
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "45114"
+    uid: bb85eb51-a82e-4ffb-acca-07999c989385
+  subsets:
+  - addresses:
+    - ip: 10.0.130.201
+      nodeName: ip-10-0-130-201.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-m56wh
+        namespace: openshift-ovn-kubernetes
+        uid: cf72e8cd-da33-420b-952b-5b2ac5773189
+    - ip: 10.0.144.137
+      nodeName: ip-10-0-144-137.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-2ltbk
+        namespace: openshift-ovn-kubernetes
+        uid: 80079de7-5a69-49ef-9805-acf8142395aa
+    - ip: 10.0.145.4
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-vnjnv
+        namespace: openshift-ovn-kubernetes
+        uid: fb7e55ac-b5bc-43ca-b7eb-728ed0e581bf
+    - ip: 10.0.160.211
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-q28vb
+        namespace: openshift-ovn-kubernetes
+        uid: 36285c85-33ae-41da-bf57-66ae4981a950
+    - ip: 10.0.190.242
+      nodeName: ip-10-0-190-242.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-cmjkq
+        namespace: openshift-ovn-kubernetes
+        uid: 27687212-cb1e-4e22-8014-8b7299037d41
+    - ip: 10.0.199.219
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-4b9fr
+        namespace: openshift-ovn-kubernetes
+        uid: 044e2c3e-8fc5-430e-a4d4-b857992ef386
+    ports:
+    - name: ovn-metrics
+      port: 9105
+      protocol: TCP
+    - name: metrics
+      port: 9103
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:26Z"
+    creationTimestamp: "2023-01-09T04:38:59Z"
+    labels:
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:26Z"
+    name: ovnkube-db
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "6861"
+    uid: 19f5895c-90e7-4739-bc6c-e60eba24ebb6
+  subsets:
+  - addresses:
+    - ip: 10.0.145.4
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-rldgf
+        namespace: openshift-ovn-kubernetes
+        uid: 64495fb3-f5b7-44db-8853-0d412104e65d
+    - ip: 10.0.160.211
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-jrqkm
+        namespace: openshift-ovn-kubernetes
+        uid: 1eb3dff1-36fd-4f12-97b4-fe24e15e79c1
+    - ip: 10.0.199.219
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-j6dlf
+        namespace: openshift-ovn-kubernetes
+        uid: 406aafb5-e303-4413-a14d-d792bd5c8aef
+    ports:
+    - name: south
+      port: 9642
+      protocol: TCP
+    - name: north
+      port: 9641
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268747"

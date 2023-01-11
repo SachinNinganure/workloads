@@ -1,0 +1,721 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-01-09T04:42:42Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-01-09T04:42:42Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:39:10Z"
+  name: apirequestcounts.v1.apiserver.openshift.io
+  resourceVersion: "267698"
+  uid: 26f64e3b-7bdd-460d-b659-d36719022d49
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1568
+          verb: get
+        - requestCount: 376
+          verb: update
+        requestCount: 1944
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 1944
+    - byUser:
+      - byVerb:
+        - requestCount: 1643
+          verb: get
+        - requestCount: 462
+          verb: update
+        requestCount: 2105
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 2105
+    - byUser:
+      - byVerb:
+        - requestCount: 2769
+          verb: get
+        - requestCount: 1328
+          verb: update
+        requestCount: 4097
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 4102
+    requestCount: 8151
+  last24h:
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 306
+          verb: get
+        - requestCount: 2
+          verb: list
+        - requestCount: 153
+          verb: update
+        requestCount: 461
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 461
+    - byUser:
+      - byVerb:
+        - requestCount: 358
+          verb: get
+        - requestCount: 2
+          verb: list
+        - requestCount: 169
+          verb: update
+        requestCount: 529
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 529
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:admin
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        requestCount: 2
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.18.164
+      requestCount: 4
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        - requestCount: 348
+          verb: get
+        - requestCount: 2
+          verb: list
+        - requestCount: 94
+          verb: update
+        requestCount: 452
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 459
+    requestCount: 1453
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2528
+          verb: get
+        - requestCount: 569
+          verb: update
+        requestCount: 3097
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3097
+    - byUser:
+      - byVerb:
+        - requestCount: 4
+          verb: create
+        - requestCount: 2586
+          verb: get
+        - requestCount: 602
+          verb: update
+        requestCount: 3192
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3192
+    - byUser:
+      - byVerb:
+        - requestCount: 17
+          verb: create
+        - requestCount: 4316
+          verb: get
+        - requestCount: 2061
+          verb: update
+        requestCount: 6394
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6402
+    requestCount: 12691
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 3
+          verb: create
+        - requestCount: 2587
+          verb: get
+        - requestCount: 577
+          verb: update
+        requestCount: 3167
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3167
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 2725
+          verb: get
+        - requestCount: 676
+          verb: update
+        requestCount: 3402
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3402
+    - byUser:
+      - byVerb:
+        - requestCount: 2
+          verb: create
+        - requestCount: 4396
+          verb: get
+        - requestCount: 2100
+          verb: update
+        requestCount: 6498
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6505
+    requestCount: 13074
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2589
+          verb: get
+        - requestCount: 550
+          verb: update
+        requestCount: 3139
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3139
+    - byUser:
+      - byVerb:
+        - requestCount: 2754
+          verb: get
+        - requestCount: 689
+          verb: update
+        requestCount: 3443
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3443
+    - byUser:
+      - byVerb:
+        - requestCount: 4444
+          verb: get
+        - requestCount: 2112
+          verb: update
+        requestCount: 6556
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6564
+    requestCount: 13146
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2594
+          verb: get
+        - requestCount: 553
+          verb: update
+        requestCount: 3147
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3147
+    - byUser:
+      - byVerb:
+        - requestCount: 2754
+          verb: get
+        - requestCount: 691
+          verb: update
+        requestCount: 3445
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3445
+    - byUser:
+      - byVerb:
+        - requestCount: 4401
+          verb: get
+        - requestCount: 2092
+          verb: update
+        requestCount: 6493
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6501
+    requestCount: 13093
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2592
+          verb: get
+        - requestCount: 552
+          verb: update
+        requestCount: 3144
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3144
+    - byUser:
+      - byVerb:
+        - requestCount: 2755
+          verb: get
+        - requestCount: 695
+          verb: update
+        requestCount: 3450
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3450
+    - byUser:
+      - byVerb:
+        - requestCount: 4404
+          verb: get
+        - requestCount: 2101
+          verb: update
+        requestCount: 6505
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6514
+    requestCount: 13108
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2627
+          verb: get
+        - requestCount: 591
+          verb: update
+        requestCount: 3218
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3218
+    - byUser:
+      - byVerb:
+        - requestCount: 2768
+          verb: get
+        - requestCount: 700
+          verb: update
+        requestCount: 3468
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3468
+    - byUser:
+      - byVerb:
+        - requestCount: 4448
+          verb: get
+        - requestCount: 2114
+          verb: update
+        requestCount: 6562
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6570
+    requestCount: 13256
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2585
+          verb: get
+        - requestCount: 552
+          verb: update
+        requestCount: 3137
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3137
+    - byUser:
+      - byVerb:
+        - requestCount: 2756
+          verb: get
+        - requestCount: 694
+          verb: update
+        requestCount: 3450
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3450
+    - byUser:
+      - byVerb:
+        - requestCount: 4404
+          verb: get
+        - requestCount: 2097
+          verb: update
+        requestCount: 6501
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6510
+    requestCount: 13097
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2599
+          verb: get
+        - requestCount: 563
+          verb: update
+        requestCount: 3162
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3162
+    - byUser:
+      - byVerb:
+        - requestCount: 2766
+          verb: get
+        - requestCount: 704
+          verb: update
+        requestCount: 3470
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3470
+    - byUser:
+      - byVerb:
+        - requestCount: 4426
+          verb: get
+        - requestCount: 2109
+          verb: update
+        requestCount: 6535
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 9
+          verb: watch
+        requestCount: 9
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6544
+    requestCount: 13176
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2609
+          verb: get
+        - requestCount: 562
+          verb: update
+        requestCount: 3171
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3171
+    - byUser:
+      - byVerb:
+        - requestCount: 2748
+          verb: get
+        - requestCount: 688
+          verb: update
+        requestCount: 3436
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3436
+    - byUser:
+      - byVerb:
+        - requestCount: 4436
+          verb: get
+        - requestCount: 2114
+          verb: update
+        requestCount: 6550
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6558
+    requestCount: 13165
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2619
+          verb: get
+        - requestCount: 577
+          verb: update
+        requestCount: 3196
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 3196
+    - byUser:
+      - byVerb:
+        - requestCount: 2775
+          verb: get
+        - requestCount: 701
+          verb: update
+        requestCount: 3476
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 3476
+    - byUser:
+      - byVerb:
+        - requestCount: 4431
+          verb: get
+        - requestCount: 2117
+          verb: update
+        requestCount: 6548
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 6556
+    requestCount: 13228
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1568
+          verb: get
+        - requestCount: 376
+          verb: update
+        requestCount: 1944
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.145.4
+      requestCount: 1944
+    - byUser:
+      - byVerb:
+        - requestCount: 1643
+          verb: get
+        - requestCount: 462
+          verb: update
+        requestCount: 2105
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      nodeName: 10.0.160.211
+      requestCount: 2105
+    - byUser:
+      - byVerb:
+        - requestCount: 2769
+          verb: get
+        - requestCount: 1328
+          verb: update
+        requestCount: 4097
+        userAgent: kube-apiserver/v1.25.4+77bec7a
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+77bec7a
+        username: system:kube-controller-manager
+      nodeName: 10.0.199.219
+      requestCount: 4102
+    requestCount: 8151
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.145.4
+      requestCount: 0
+    - nodeName: 10.0.160.211
+      requestCount: 0
+    - nodeName: 10.0.18.164
+      requestCount: 0
+    - nodeName: 10.0.199.219
+      requestCount: 0
+    requestCount: 0
+  requestCount: 140638

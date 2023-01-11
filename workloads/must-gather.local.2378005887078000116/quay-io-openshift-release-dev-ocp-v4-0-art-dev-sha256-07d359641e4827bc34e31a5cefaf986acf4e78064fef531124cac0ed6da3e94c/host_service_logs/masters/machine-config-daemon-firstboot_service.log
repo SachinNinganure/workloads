@@ -1,0 +1,429 @@
+-- Logs begin at Mon 2023-01-09 04:29:45 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+-- Logs begin at Mon 2023-01-09 04:29:50 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+-- Logs begin at Mon 2023-01-09 04:29:55 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+Jan 09 04:36:21.012807 ip-10-0-199-219 systemd[1]: Starting Machine Config Daemon Firstboot...
+Jan 09 04:36:21.017503 ip-10-0-199-219 sh[2253]: sed: can't read /etc/yum.repos.d/*.repo: No such file or directory
+Jan 09 04:36:21.042223 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.042205    2255 update.go:2089] Running: systemctl daemon-reload
+Jan 09 04:36:21.176859 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.176831    2255 rpm-ostree.go:86] Enabled workaround for bug 2111817
+Jan 09 04:36:21.498630 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.498455    2255 daemon.go:246] Booted osImageURL:  (412.86.202212081411-0) a80d851eac7716e90ea927f5b67f0d7972630c67f0ec4eed275f61a2536aabd0
+Jan 09 04:36:21.498901 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.498888    2255 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:36:21.521469 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.521452    2255 daemon.go:922] rpm-ostree has container feature
+Jan 09 04:36:21.522491 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.522476    2255 update.go:2126] Adding SIGTERM protection
+Jan 09 04:36:21.522759 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.522746    2255 update.go:529] Checking Reconcilable for config mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:36:21.523329 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.523317    2255 update.go:2104] Starting update from mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b: &{osUpdate:true kargs:false fips:false passwd:false files:false units:false kernelType:false extensions:false}
+Jan 09 04:36:21.528940 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.528926    2255 update.go:1231] Updating files
+Jan 09 04:36:21.528982 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:21.528945    2255 update.go:1296] Deleting stale data
+Jan 09 04:36:22.356438 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:22.356207    2255 run.go:19] Running: nice -- ionice -c 3 oc image extract --path /:/run/mco-extensions/os-extensions-content-1351053697 --registry-config /var/lib/kubelet/config.json quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1b967b048fac8006b51e715dfc1720ee3f3dd6dadff6baab4fd07c3ec378a6f0
+Jan 09 04:36:27.936766 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:27.936737    2255 update.go:1953] Updating OS to layered image quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:36:27.936766 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:27.936764    2255 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:36:27.957822 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:27.957803    2255 rpm-ostree.go:355] Executing rebase to quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:36:27.957822 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:36:27.957824    2255 update.go:2089] Running: rpm-ostree rebase --experimental ostree-unverified-registry:quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:36:31.291322 ip-10-0-199-219 machine-config-daemon[2365]: Pulling manifest: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:36:32.363157 ip-10-0-199-219 machine-config-daemon[2365]: Importing: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365 (digest: sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365)
+Jan 09 04:36:32.363523 ip-10-0-199-219 machine-config-daemon[2365]: ostree chunk layers stored: 0 needed: 51 (1.1 GB)
+Jan 09 04:36:32.363523 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:e89a8408ae78 (276.9 MB)
+Jan 09 04:36:36.011910 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:e89a8408ae78
+Jan 09 04:36:36.011910 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:2d414f17228e (110.4 MB)
+Jan 09 04:36:41.202916 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:2d414f17228e
+Jan 09 04:36:41.202916 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:27f262e70d98 (50.4 MB)
+Jan 09 04:36:41.981875 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:27f262e70d98
+Jan 09 04:36:41.981875 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:142f00fea5e2 (45.5 MB)
+Jan 09 04:36:42.782350 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:142f00fea5e2
+Jan 09 04:36:42.782350 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:9a201d92de7b (52.5 MB)
+Jan 09 04:36:44.026393 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:9a201d92de7b
+Jan 09 04:36:44.026393 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:bfd67025862f (38.9 MB)
+Jan 09 04:36:45.129279 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:bfd67025862f
+Jan 09 04:36:45.129702 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:149c01a2f35a (91.3 MB)
+Jan 09 04:36:45.948411 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:149c01a2f35a
+Jan 09 04:36:45.948597 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:7f88b3a5c259 (20.5 MB)
+Jan 09 04:36:46.651518 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:7f88b3a5c259
+Jan 09 04:36:46.651886 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:d4a1e0efe17f (22.5 MB)
+Jan 09 04:36:47.124970 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:d4a1e0efe17f
+Jan 09 04:36:47.125139 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:e7f53f6db74f (26.4 MB)
+Jan 09 04:36:47.602802 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:e7f53f6db74f
+Jan 09 04:36:47.602802 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:574ab7bf378e (15.1 MB)
+Jan 09 04:36:47.953957 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:574ab7bf378e
+Jan 09 04:36:47.953957 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:7962ef5c32d4 (12.0 MB)
+Jan 09 04:36:48.244682 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:7962ef5c32d4
+Jan 09 04:36:48.244682 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:4e157d31f393 (32.1 MB)
+Jan 09 04:36:49.107816 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:4e157d31f393
+Jan 09 04:36:49.107816 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:c199a413579a (12.8 MB)
+Jan 09 04:36:49.394355 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:c199a413579a
+Jan 09 04:36:49.394355 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:193864d6800c (12.8 MB)
+Jan 09 04:36:49.806730 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:193864d6800c
+Jan 09 04:36:49.806730 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:d67fc011cb07 (11.3 MB)
+Jan 09 04:36:50.076218 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:d67fc011cb07
+Jan 09 04:36:50.076218 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:0e7f0266dbd5 (25.0 MB)
+Jan 09 04:36:50.681799 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:0e7f0266dbd5
+Jan 09 04:36:50.681799 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:d10797306f79 (8.3 MB)
+Jan 09 04:36:50.923975 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:d10797306f79
+Jan 09 04:36:50.923975 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:038ad3f88c95 (8.8 MB)
+Jan 09 04:36:51.141204 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:038ad3f88c95
+Jan 09 04:36:51.141204 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:0ece45f20033 (7.3 MB)
+Jan 09 04:36:51.369334 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:0ece45f20033
+Jan 09 04:36:51.369334 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:cbf52dc4dae4 (6.7 MB)
+Jan 09 04:36:51.603869 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:cbf52dc4dae4
+Jan 09 04:36:51.604032 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:78eaa076429a (4.5 MB)
+Jan 09 04:36:51.791161 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:78eaa076429a
+Jan 09 04:36:51.791537 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:8f755a030059 (4.0 MB)
+Jan 09 04:36:51.969480 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:8f755a030059
+Jan 09 04:36:51.969480 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:061f1b16200e (4.3 MB)
+Jan 09 04:36:52.161373 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:061f1b16200e
+Jan 09 04:36:52.161373 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:43d4ce81ad93 (3.6 MB)
+Jan 09 04:36:52.342021 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:43d4ce81ad93
+Jan 09 04:36:52.342193 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:7141c7d4c184 (4.4 MB)
+Jan 09 04:36:52.530204 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:7141c7d4c184
+Jan 09 04:36:52.530366 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:eca37fd95074 (4.1 MB)
+Jan 09 04:36:52.697502 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:eca37fd95074
+Jan 09 04:36:52.697502 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:daad371a0d8f (3.8 MB)
+Jan 09 04:36:52.908829 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:daad371a0d8f
+Jan 09 04:36:52.908829 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:f05e72de3bce (3.8 MB)
+Jan 09 04:36:53.105890 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:f05e72de3bce
+Jan 09 04:36:53.106059 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:acbb33ff64fe (2.6 MB)
+Jan 09 04:36:53.242320 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:acbb33ff64fe
+Jan 09 04:36:53.242320 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:782905a10a37 (4.5 MB)
+Jan 09 04:36:53.410666 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:782905a10a37
+Jan 09 04:36:53.410666 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:3a10002ba2c7 (3.1 MB)
+Jan 09 04:36:53.572997 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:3a10002ba2c7
+Jan 09 04:36:53.572997 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:9ee45587cb8e (2.9 MB)
+Jan 09 04:36:53.722305 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:9ee45587cb8e
+Jan 09 04:36:53.722305 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:41ff5c8c9fe8 (3.9 MB)
+Jan 09 04:36:53.897160 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:41ff5c8c9fe8
+Jan 09 04:36:53.897160 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:1ace1d0ed067 (1.9 MB)
+Jan 09 04:36:54.051085 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:1ace1d0ed067
+Jan 09 04:36:54.051556 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:f27d666bc37b (3.0 MB)
+Jan 09 04:36:54.204727 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:f27d666bc37b
+Jan 09 04:36:54.204727 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:79f87e8650ef (3.4 MB)
+Jan 09 04:36:54.367991 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:79f87e8650ef
+Jan 09 04:36:54.367991 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:22f0bd0de2ec (2.9 MB)
+Jan 09 04:36:54.500614 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:22f0bd0de2ec
+Jan 09 04:36:54.500614 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:5792f41dd4f2 (2.2 MB)
+Jan 09 04:36:54.646203 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:5792f41dd4f2
+Jan 09 04:36:54.646203 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:73e3f54fa358 (4.4 MB)
+Jan 09 04:36:54.840036 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:73e3f54fa358
+Jan 09 04:36:54.840036 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:38683f5a70b3 (3.0 MB)
+Jan 09 04:36:55.015547 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:38683f5a70b3
+Jan 09 04:36:55.015547 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:4ecaebaec5ea (2.9 MB)
+Jan 09 04:36:55.168047 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:4ecaebaec5ea
+Jan 09 04:36:55.168047 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:b8419056b7d1 (7.4 MB)
+Jan 09 04:36:55.299257 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:b8419056b7d1
+Jan 09 04:36:55.299257 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:cc992b824d43 (2.5 MB)
+Jan 09 04:36:55.432985 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:cc992b824d43
+Jan 09 04:36:55.433140 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:e50f69cf65fe (2.4 MB)
+Jan 09 04:36:55.588265 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:e50f69cf65fe
+Jan 09 04:36:55.588265 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:4acf65a2bb44 (3.2 MB)
+Jan 09 04:36:55.731890 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:4acf65a2bb44
+Jan 09 04:36:55.731890 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:26bb672dd58c (2.3 MB)
+Jan 09 04:36:55.861417 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:26bb672dd58c
+Jan 09 04:36:55.861417 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:9f27e6c8f531 (2.0 MB)
+Jan 09 04:36:56.002716 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:9f27e6c8f531
+Jan 09 04:36:56.002716 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:40460eb66ef3 (2.7 MB)
+Jan 09 04:36:56.144261 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:40460eb66ef3
+Jan 09 04:36:56.144261 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:36ee47931145 (112.8 MB)
+Jan 09 04:36:58.424846 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:36ee47931145
+Jan 09 04:36:58.424846 ip-10-0-199-219 machine-config-daemon[2365]: Fetching ostree chunk sha256:9876a3c8b03f (1.7 MB)
+Jan 09 04:36:58.737664 ip-10-0-199-219 machine-config-daemon[2365]: Fetched ostree chunk sha256:9876a3c8b03f
+Jan 09 04:37:03.725135 ip-10-0-199-219 machine-config-daemon[2365]: Staging deployment...done
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]: Upgraded:
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   kernel 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   kernel-core 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   kernel-modules 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   kernel-modules-extra 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   openshift-clients 4.12.0-202211081039.p0.g854f807.assembly.stream.el8 -> 4.12.0-202301042257.p0.g854f807.assembly.stream.el8
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   openshift-hyperkube 4.12.0-202212081125.p0.g86bd4ff.assembly.stream.el8 -> 4.12.0-202301042257.p0.g77bec7a.assembly.stream.el8
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   openvswitch2.17 2.17.0-62.el8fdp -> 2.17.0-67.el8fdp
+Jan 09 04:37:05.111684 ip-10-0-199-219 machine-config-daemon[2365]:   runc 3:1.1.2-1.rhaos4.11.el8 -> 3:1.1.2-2.rhaos4.12.el8
+Jan 09 04:37:05.112294 ip-10-0-199-219 machine-config-daemon[2365]: Changes queued for next boot. Run "systemctl reboot" to start a reboot
+Jan 09 04:37:05.218451 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:37:05.218303    2255 update.go:2104] Rebooting node
+Jan 09 04:37:05.220653 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:37:05.220640    2255 update.go:2134] Removing SIGTERM protection
+Jan 09 04:37:05.220716 ip-10-0-199-219 machine-config-daemon[2255]: I0109 04:37:05.220705    2255 update.go:2104] initiating reboot: Completing firstboot provisioning to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:37:05.409708 ip-10-0-199-219 systemd[1]: machine-config-daemon-firstboot.service: Main process exited, code=killed, status=15/TERM
+Jan 09 04:37:05.409793 ip-10-0-199-219 systemd[1]: machine-config-daemon-firstboot.service: Failed with result 'signal'.
+Jan 09 04:37:05.410315 ip-10-0-199-219 systemd[1]: Stopped Machine Config Daemon Firstboot.
+Jan 09 04:37:05.411256 ip-10-0-199-219 systemd[1]: machine-config-daemon-firstboot.service: Consumed 5.543s CPU time
+-- Logs begin at Mon 2023-01-09 04:29:50 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+-- No entries --
+Jan 09 04:37:11.556266 ip-10-0-160-211 systemd[1]: Starting Machine Config Daemon Firstboot...
+Jan 09 04:37:11.560307 ip-10-0-160-211 sh[2251]: sed: can't read /etc/yum.repos.d/*.repo: No such file or directory
+Jan 09 04:37:11.584035 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:11.584013    2253 update.go:2089] Running: systemctl daemon-reload
+Jan 09 04:37:11.711651 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:11.711622    2253 rpm-ostree.go:86] Enabled workaround for bug 2111817
+Jan 09 04:37:12.006691 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.006664    2253 daemon.go:246] Booted osImageURL:  (412.86.202212081411-0) a80d851eac7716e90ea927f5b67f0d7972630c67f0ec4eed275f61a2536aabd0
+Jan 09 04:37:12.006977 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.006965    2253 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:37:12.028434 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.028412    2253 daemon.go:922] rpm-ostree has container feature
+Jan 09 04:37:12.029348 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.029333    2253 update.go:2126] Adding SIGTERM protection
+Jan 09 04:37:12.029532 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.029522    2253 update.go:529] Checking Reconcilable for config mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:37:12.029982 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.029971    2253 update.go:2104] Starting update from mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b: &{osUpdate:true kargs:false fips:false passwd:false files:false units:false kernelType:false extensions:false}
+Jan 09 04:37:12.035314 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.035301    2253 update.go:1231] Updating files
+Jan 09 04:37:12.035348 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.035321    2253 update.go:1296] Deleting stale data
+Jan 09 04:37:12.772144 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:12.771990    2253 run.go:19] Running: nice -- ionice -c 3 oc image extract --path /:/run/mco-extensions/os-extensions-content-1319092393 --registry-config /var/lib/kubelet/config.json quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1b967b048fac8006b51e715dfc1720ee3f3dd6dadff6baab4fd07c3ec378a6f0
+Jan 09 04:37:18.112904 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:18.112874    2253 update.go:1953] Updating OS to layered image quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:18.112904 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:18.112899    2253 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:37:18.134387 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:18.134368    2253 rpm-ostree.go:355] Executing rebase to quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:18.134387 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:18.134387    2253 update.go:2089] Running: rpm-ostree rebase --experimental ostree-unverified-registry:quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:21.325881 ip-10-0-145-4 systemd[1]: Starting Machine Config Daemon Firstboot...
+Jan 09 04:37:21.330527 ip-10-0-145-4 sh[2257]: sed: can't read /etc/yum.repos.d/*.repo: No such file or directory
+Jan 09 04:37:21.355207 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.355183    2259 update.go:2089] Running: systemctl daemon-reload
+Jan 09 04:37:21.485251 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.485226    2259 rpm-ostree.go:86] Enabled workaround for bug 2111817
+Jan 09 04:37:21.511518 ip-10-0-160-211 machine-config-daemon[2362]: Pulling manifest: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:21.787413 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.787259    2259 daemon.go:246] Booted osImageURL:  (412.86.202212081411-0) a80d851eac7716e90ea927f5b67f0d7972630c67f0ec4eed275f61a2536aabd0
+Jan 09 04:37:21.787688 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.787676    2259 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:37:21.808795 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.808771    2259 daemon.go:922] rpm-ostree has container feature
+Jan 09 04:37:21.809765 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.809751    2259 update.go:2126] Adding SIGTERM protection
+Jan 09 04:37:21.809967 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.809956    2259 update.go:529] Checking Reconcilable for config mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:37:21.810437 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.810426    2259 update.go:2104] Starting update from mco-empty-mc to rendered-master-f509746cb678ff4a775c368176e3991b: &{osUpdate:true kargs:false fips:false passwd:false files:false units:false kernelType:false extensions:false}
+Jan 09 04:37:21.815309 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.815295    2259 update.go:1231] Updating files
+Jan 09 04:37:21.815339 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:21.815316    2259 update.go:1296] Deleting stale data
+Jan 09 04:37:22.531465 ip-10-0-160-211 machine-config-daemon[2362]: Importing: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365 (digest: sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365)
+Jan 09 04:37:22.531834 ip-10-0-160-211 machine-config-daemon[2362]: ostree chunk layers stored: 0 needed: 51 (1.1 GB)
+Jan 09 04:37:22.531834 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:e89a8408ae78 (276.9 MB)
+Jan 09 04:37:22.609712 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:22.609684    2259 run.go:19] Running: nice -- ionice -c 3 oc image extract --path /:/run/mco-extensions/os-extensions-content-2255021710 --registry-config /var/lib/kubelet/config.json quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1b967b048fac8006b51e715dfc1720ee3f3dd6dadff6baab4fd07c3ec378a6f0
+Jan 09 04:37:26.515169 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:e89a8408ae78
+Jan 09 04:37:26.515547 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:2d414f17228e (110.4 MB)
+Jan 09 04:37:28.350585 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:28.350394    2259 update.go:1953] Updating OS to layered image quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:28.350585 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:28.350581    2259 rpm-ostree.go:412] Running captured: rpm-ostree --version
+Jan 09 04:37:28.371685 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:28.371666    2259 rpm-ostree.go:355] Executing rebase to quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:28.371685 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:37:28.371683    2259 update.go:2089] Running: rpm-ostree rebase --experimental ostree-unverified-registry:quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:31.656251 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:2d414f17228e
+Jan 09 04:37:31.656742 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:27f262e70d98 (50.4 MB)
+Jan 09 04:37:31.695769 ip-10-0-145-4 machine-config-daemon[2371]: Pulling manifest: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365
+Jan 09 04:37:32.552164 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:27f262e70d98
+Jan 09 04:37:32.552360 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:142f00fea5e2 (45.5 MB)
+Jan 09 04:37:32.728011 ip-10-0-145-4 machine-config-daemon[2371]: Importing: ostree-unverified-image:docker://quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365 (digest: sha256:6db665511f305ef230a2c752d836fe073e80550dc21cede3c55cf44db01db365)
+Jan 09 04:37:32.728375 ip-10-0-145-4 machine-config-daemon[2371]: ostree chunk layers stored: 0 needed: 51 (1.1 GB)
+Jan 09 04:37:32.728375 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:e89a8408ae78 (276.9 MB)
+Jan 09 04:37:33.363021 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:142f00fea5e2
+Jan 09 04:37:33.363021 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:9a201d92de7b (52.5 MB)
+Jan 09 04:37:34.620198 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:9a201d92de7b
+Jan 09 04:37:34.620609 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:bfd67025862f (38.9 MB)
+Jan 09 04:37:35.710790 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:bfd67025862f
+Jan 09 04:37:35.711180 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:149c01a2f35a (91.3 MB)
+Jan 09 04:37:36.307008 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:e89a8408ae78
+Jan 09 04:37:36.307375 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:2d414f17228e (110.4 MB)
+Jan 09 04:37:36.566042 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:149c01a2f35a
+Jan 09 04:37:36.566243 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:7f88b3a5c259 (20.5 MB)
+Jan 09 04:37:37.236508 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:7f88b3a5c259
+Jan 09 04:37:37.236508 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:d4a1e0efe17f (22.5 MB)
+Jan 09 04:37:37.720940 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:d4a1e0efe17f
+Jan 09 04:37:37.721105 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:e7f53f6db74f (26.4 MB)
+Jan 09 04:37:38.218849 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:e7f53f6db74f
+Jan 09 04:37:38.218849 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:574ab7bf378e (15.1 MB)
+Jan 09 04:37:38.543918 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:574ab7bf378e
+Jan 09 04:37:38.543918 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:7962ef5c32d4 (12.0 MB)
+Jan 09 04:37:38.844440 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:7962ef5c32d4
+Jan 09 04:37:38.844606 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:4e157d31f393 (32.1 MB)
+Jan 09 04:37:39.626280 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:4e157d31f393
+Jan 09 04:37:39.626280 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:c199a413579a (12.8 MB)
+Jan 09 04:37:39.896148 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:c199a413579a
+Jan 09 04:37:39.896148 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:193864d6800c (12.8 MB)
+Jan 09 04:37:40.267623 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:193864d6800c
+Jan 09 04:37:40.267623 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:d67fc011cb07 (11.3 MB)
+Jan 09 04:37:40.547894 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:d67fc011cb07
+Jan 09 04:37:40.547894 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:0e7f0266dbd5 (25.0 MB)
+Jan 09 04:37:41.122777 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:0e7f0266dbd5
+Jan 09 04:37:41.123171 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:d10797306f79 (8.3 MB)
+Jan 09 04:37:41.356473 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:d10797306f79
+Jan 09 04:37:41.356473 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:038ad3f88c95 (8.8 MB)
+Jan 09 04:37:41.462765 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:2d414f17228e
+Jan 09 04:37:41.462765 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:27f262e70d98 (50.4 MB)
+Jan 09 04:37:41.575400 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:038ad3f88c95
+Jan 09 04:37:41.575400 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:0ece45f20033 (7.3 MB)
+Jan 09 04:37:41.784332 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:0ece45f20033
+Jan 09 04:37:41.784332 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:cbf52dc4dae4 (6.7 MB)
+Jan 09 04:37:41.978123 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:cbf52dc4dae4
+Jan 09 04:37:41.978123 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:78eaa076429a (4.5 MB)
+Jan 09 04:37:42.136279 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:78eaa076429a
+Jan 09 04:37:42.136279 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:8f755a030059 (4.0 MB)
+Jan 09 04:37:42.236974 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:27f262e70d98
+Jan 09 04:37:42.236974 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:142f00fea5e2 (45.5 MB)
+Jan 09 04:37:42.303968 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:8f755a030059
+Jan 09 04:37:42.303968 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:061f1b16200e (4.3 MB)
+Jan 09 04:37:42.473776 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:061f1b16200e
+Jan 09 04:37:42.473776 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:43d4ce81ad93 (3.6 MB)
+Jan 09 04:37:42.641406 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:43d4ce81ad93
+Jan 09 04:37:42.641622 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:7141c7d4c184 (4.4 MB)
+Jan 09 04:37:42.799787 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:7141c7d4c184
+Jan 09 04:37:42.799787 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:eca37fd95074 (4.1 MB)
+Jan 09 04:37:42.958978 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:eca37fd95074
+Jan 09 04:37:42.958978 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:daad371a0d8f (3.8 MB)
+Jan 09 04:37:43.048061 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:142f00fea5e2
+Jan 09 04:37:43.048061 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:9a201d92de7b (52.5 MB)
+Jan 09 04:37:43.146526 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:daad371a0d8f
+Jan 09 04:37:43.146933 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:f05e72de3bce (3.8 MB)
+Jan 09 04:37:43.329392 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:f05e72de3bce
+Jan 09 04:37:43.329559 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:acbb33ff64fe (2.6 MB)
+Jan 09 04:37:43.455318 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:acbb33ff64fe
+Jan 09 04:37:43.455318 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:782905a10a37 (4.5 MB)
+Jan 09 04:37:43.625786 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:782905a10a37
+Jan 09 04:37:43.625786 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:3a10002ba2c7 (3.1 MB)
+Jan 09 04:37:43.772992 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:3a10002ba2c7
+Jan 09 04:37:43.773158 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:9ee45587cb8e (2.9 MB)
+Jan 09 04:37:43.906840 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:9ee45587cb8e
+Jan 09 04:37:43.906840 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:41ff5c8c9fe8 (3.9 MB)
+Jan 09 04:37:44.063093 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:41ff5c8c9fe8
+Jan 09 04:37:44.063093 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:1ace1d0ed067 (1.9 MB)
+Jan 09 04:37:44.191394 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:1ace1d0ed067
+Jan 09 04:37:44.191394 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:f27d666bc37b (3.0 MB)
+Jan 09 04:37:44.328251 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:9a201d92de7b
+Jan 09 04:37:44.328251 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:bfd67025862f (38.9 MB)
+Jan 09 04:37:44.341963 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:f27d666bc37b
+Jan 09 04:37:44.341963 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:79f87e8650ef (3.4 MB)
+Jan 09 04:37:44.492945 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:79f87e8650ef
+Jan 09 04:37:44.492945 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:22f0bd0de2ec (2.9 MB)
+Jan 09 04:37:44.622167 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:22f0bd0de2ec
+Jan 09 04:37:44.622338 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:5792f41dd4f2 (2.2 MB)
+Jan 09 04:37:44.748293 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:5792f41dd4f2
+Jan 09 04:37:44.748293 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:73e3f54fa358 (4.4 MB)
+Jan 09 04:37:45.000606 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:73e3f54fa358
+Jan 09 04:37:45.000606 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:38683f5a70b3 (3.0 MB)
+Jan 09 04:37:45.161871 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:38683f5a70b3
+Jan 09 04:37:45.161871 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:4ecaebaec5ea (2.9 MB)
+Jan 09 04:37:45.329839 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:4ecaebaec5ea
+Jan 09 04:37:45.330203 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:b8419056b7d1 (7.4 MB)
+Jan 09 04:37:45.462705 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:bfd67025862f
+Jan 09 04:37:45.463085 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:149c01a2f35a (91.3 MB)
+Jan 09 04:37:45.476425 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:b8419056b7d1
+Jan 09 04:37:45.476425 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:cc992b824d43 (2.5 MB)
+Jan 09 04:37:45.617568 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:cc992b824d43
+Jan 09 04:37:45.617568 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:e50f69cf65fe (2.4 MB)
+Jan 09 04:37:45.797527 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:e50f69cf65fe
+Jan 09 04:37:45.797527 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:4acf65a2bb44 (3.2 MB)
+Jan 09 04:37:45.959283 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:4acf65a2bb44
+Jan 09 04:37:45.959283 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:26bb672dd58c (2.3 MB)
+Jan 09 04:37:46.104011 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:26bb672dd58c
+Jan 09 04:37:46.104011 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:9f27e6c8f531 (2.0 MB)
+Jan 09 04:37:46.198148 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:149c01a2f35a
+Jan 09 04:37:46.198148 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:7f88b3a5c259 (20.5 MB)
+Jan 09 04:37:46.250061 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:9f27e6c8f531
+Jan 09 04:37:46.250061 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:40460eb66ef3 (2.7 MB)
+Jan 09 04:37:46.394759 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:40460eb66ef3
+Jan 09 04:37:46.394759 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:36ee47931145 (112.8 MB)
+Jan 09 04:37:46.909031 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:7f88b3a5c259
+Jan 09 04:37:46.909410 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:d4a1e0efe17f (22.5 MB)
+Jan 09 04:37:47.360581 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:d4a1e0efe17f
+Jan 09 04:37:47.360757 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:e7f53f6db74f (26.4 MB)
+Jan 09 04:37:47.835935 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:e7f53f6db74f
+Jan 09 04:37:47.835935 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:574ab7bf378e (15.1 MB)
+Jan 09 04:37:48.184111 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:574ab7bf378e
+Jan 09 04:37:48.184111 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:7962ef5c32d4 (12.0 MB)
+Jan 09 04:37:48.472499 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:7962ef5c32d4
+Jan 09 04:37:48.472499 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:4e157d31f393 (32.1 MB)
+Jan 09 04:37:48.543841 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:36ee47931145
+Jan 09 04:37:48.543841 ip-10-0-160-211 machine-config-daemon[2362]: Fetching ostree chunk sha256:9876a3c8b03f (1.7 MB)
+Jan 09 04:37:48.850385 ip-10-0-160-211 machine-config-daemon[2362]: Fetched ostree chunk sha256:9876a3c8b03f
+Jan 09 04:37:49.266184 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:4e157d31f393
+Jan 09 04:37:49.266184 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:c199a413579a (12.8 MB)
+Jan 09 04:37:49.576913 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:c199a413579a
+Jan 09 04:37:49.576913 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:193864d6800c (12.8 MB)
+Jan 09 04:37:49.950449 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:193864d6800c
+Jan 09 04:37:49.950449 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:d67fc011cb07 (11.3 MB)
+Jan 09 04:37:50.252046 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:d67fc011cb07
+Jan 09 04:37:50.252201 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:0e7f0266dbd5 (25.0 MB)
+Jan 09 04:37:50.860173 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:0e7f0266dbd5
+Jan 09 04:37:50.860556 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:d10797306f79 (8.3 MB)
+Jan 09 04:37:51.103413 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:d10797306f79
+Jan 09 04:37:51.103590 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:038ad3f88c95 (8.8 MB)
+Jan 09 04:37:51.356690 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:038ad3f88c95
+Jan 09 04:37:51.356858 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:0ece45f20033 (7.3 MB)
+Jan 09 04:37:51.595911 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:0ece45f20033
+Jan 09 04:37:51.596078 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:cbf52dc4dae4 (6.7 MB)
+Jan 09 04:37:51.810609 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:cbf52dc4dae4
+Jan 09 04:37:51.810609 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:78eaa076429a (4.5 MB)
+Jan 09 04:37:51.994756 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:78eaa076429a
+Jan 09 04:37:51.994756 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:8f755a030059 (4.0 MB)
+Jan 09 04:37:52.170933 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:8f755a030059
+Jan 09 04:37:52.170933 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:061f1b16200e (4.3 MB)
+Jan 09 04:37:52.360816 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:061f1b16200e
+Jan 09 04:37:52.360816 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:43d4ce81ad93 (3.6 MB)
+Jan 09 04:37:52.548872 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:43d4ce81ad93
+Jan 09 04:37:52.548872 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:7141c7d4c184 (4.4 MB)
+Jan 09 04:37:52.721912 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:7141c7d4c184
+Jan 09 04:37:52.722110 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:eca37fd95074 (4.1 MB)
+Jan 09 04:37:52.923782 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:eca37fd95074
+Jan 09 04:37:52.923782 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:daad371a0d8f (3.8 MB)
+Jan 09 04:37:53.139150 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:daad371a0d8f
+Jan 09 04:37:53.139150 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:f05e72de3bce (3.8 MB)
+Jan 09 04:37:53.333292 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:f05e72de3bce
+Jan 09 04:37:53.333292 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:acbb33ff64fe (2.6 MB)
+Jan 09 04:37:53.500709 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:acbb33ff64fe
+Jan 09 04:37:53.500905 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:782905a10a37 (4.5 MB)
+Jan 09 04:37:53.699610 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:782905a10a37
+Jan 09 04:37:53.699610 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:3a10002ba2c7 (3.1 MB)
+Jan 09 04:37:53.871001 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:3a10002ba2c7
+Jan 09 04:37:53.871001 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:9ee45587cb8e (2.9 MB)
+Jan 09 04:37:54.037134 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:9ee45587cb8e
+Jan 09 04:37:54.037134 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:41ff5c8c9fe8 (3.9 MB)
+Jan 09 04:37:54.042176 ip-10-0-160-211 machine-config-daemon[2362]: Staging deployment...done
+Jan 09 04:37:54.214544 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:41ff5c8c9fe8
+Jan 09 04:37:54.214938 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:1ace1d0ed067 (1.9 MB)
+Jan 09 04:37:54.408172 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:1ace1d0ed067
+Jan 09 04:37:54.408172 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:f27d666bc37b (3.0 MB)
+Jan 09 04:37:54.562699 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:f27d666bc37b
+Jan 09 04:37:54.562699 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:79f87e8650ef (3.4 MB)
+Jan 09 04:37:54.732491 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:79f87e8650ef
+Jan 09 04:37:54.732491 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:22f0bd0de2ec (2.9 MB)
+Jan 09 04:37:54.888921 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:22f0bd0de2ec
+Jan 09 04:37:54.888921 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:5792f41dd4f2 (2.2 MB)
+Jan 09 04:37:55.043721 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:5792f41dd4f2
+Jan 09 04:37:55.043914 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:73e3f54fa358 (4.4 MB)
+Jan 09 04:37:55.238423 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:73e3f54fa358
+Jan 09 04:37:55.238940 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:38683f5a70b3 (3.0 MB)
+Jan 09 04:37:55.429582 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:38683f5a70b3
+Jan 09 04:37:55.429582 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:4ecaebaec5ea (2.9 MB)
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]: Upgraded:
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   kernel 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   kernel-core 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   kernel-modules 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   kernel-modules-extra 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   openshift-clients 4.12.0-202211081039.p0.g854f807.assembly.stream.el8 -> 4.12.0-202301042257.p0.g854f807.assembly.stream.el8
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   openshift-hyperkube 4.12.0-202212081125.p0.g86bd4ff.assembly.stream.el8 -> 4.12.0-202301042257.p0.g77bec7a.assembly.stream.el8
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   openvswitch2.17 2.17.0-62.el8fdp -> 2.17.0-67.el8fdp
+Jan 09 04:37:55.455486 ip-10-0-160-211 machine-config-daemon[2362]:   runc 3:1.1.2-1.rhaos4.11.el8 -> 3:1.1.2-2.rhaos4.12.el8
+Jan 09 04:37:55.455973 ip-10-0-160-211 machine-config-daemon[2362]: Changes queued for next boot. Run "systemctl reboot" to start a reboot
+Jan 09 04:37:55.564128 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:55.563982    2253 update.go:2104] Rebooting node
+Jan 09 04:37:55.566680 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:55.566667    2253 update.go:2134] Removing SIGTERM protection
+Jan 09 04:37:55.566753 ip-10-0-160-211 machine-config-daemon[2253]: I0109 04:37:55.566743    2253 update.go:2104] initiating reboot: Completing firstboot provisioning to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:37:55.584441 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:4ecaebaec5ea
+Jan 09 04:37:55.584441 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:b8419056b7d1 (7.4 MB)
+Jan 09 04:37:55.719936 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:b8419056b7d1
+Jan 09 04:37:55.719936 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:cc992b824d43 (2.5 MB)
+Jan 09 04:37:55.735510 ip-10-0-160-211 systemd[1]: machine-config-daemon-firstboot.service: Main process exited, code=killed, status=15/TERM
+Jan 09 04:37:55.735595 ip-10-0-160-211 systemd[1]: machine-config-daemon-firstboot.service: Failed with result 'signal'.
+Jan 09 04:37:55.736143 ip-10-0-160-211 systemd[1]: Stopped Machine Config Daemon Firstboot.
+Jan 09 04:37:55.738737 ip-10-0-160-211 systemd[1]: machine-config-daemon-firstboot.service: Consumed 5.625s CPU time
+-- Logs begin at Mon 2023-01-09 04:29:45 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+-- No entries --
+Jan 09 04:37:55.854691 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:cc992b824d43
+Jan 09 04:37:55.854691 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:e50f69cf65fe (2.4 MB)
+Jan 09 04:37:56.022524 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:e50f69cf65fe
+Jan 09 04:37:56.022733 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:4acf65a2bb44 (3.2 MB)
+Jan 09 04:37:56.170809 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:4acf65a2bb44
+Jan 09 04:37:56.170809 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:26bb672dd58c (2.3 MB)
+Jan 09 04:37:56.318789 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:26bb672dd58c
+Jan 09 04:37:56.318789 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:9f27e6c8f531 (2.0 MB)
+Jan 09 04:37:56.453056 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:9f27e6c8f531
+Jan 09 04:37:56.453244 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:40460eb66ef3 (2.7 MB)
+Jan 09 04:37:56.599331 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:40460eb66ef3
+Jan 09 04:37:56.599331 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:36ee47931145 (112.8 MB)
+Jan 09 04:37:58.794777 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:36ee47931145
+Jan 09 04:37:58.795250 ip-10-0-145-4 machine-config-daemon[2371]: Fetching ostree chunk sha256:9876a3c8b03f (1.7 MB)
+Jan 09 04:37:59.133147 ip-10-0-145-4 machine-config-daemon[2371]: Fetched ostree chunk sha256:9876a3c8b03f
+Jan 09 04:38:04.022576 ip-10-0-145-4 machine-config-daemon[2371]: Staging deployment...done
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]: Upgraded:
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   kernel 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   kernel-core 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   kernel-modules 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   kernel-modules-extra 4.18.0-372.36.1.el8_6 -> 4.18.0-372.40.1.el8_6
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   openshift-clients 4.12.0-202211081039.p0.g854f807.assembly.stream.el8 -> 4.12.0-202301042257.p0.g854f807.assembly.stream.el8
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   openshift-hyperkube 4.12.0-202212081125.p0.g86bd4ff.assembly.stream.el8 -> 4.12.0-202301042257.p0.g77bec7a.assembly.stream.el8
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   openvswitch2.17 2.17.0-62.el8fdp -> 2.17.0-67.el8fdp
+Jan 09 04:38:05.379599 ip-10-0-145-4 machine-config-daemon[2371]:   runc 3:1.1.2-1.rhaos4.11.el8 -> 3:1.1.2-2.rhaos4.12.el8
+Jan 09 04:38:05.380269 ip-10-0-145-4 machine-config-daemon[2371]: Changes queued for next boot. Run "systemctl reboot" to start a reboot
+Jan 09 04:38:05.486471 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:38:05.486383    2259 update.go:2104] Rebooting node
+Jan 09 04:38:05.488885 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:38:05.488873    2259 update.go:2134] Removing SIGTERM protection
+Jan 09 04:38:05.488950 ip-10-0-145-4 machine-config-daemon[2259]: I0109 04:38:05.488934    2259 update.go:2104] initiating reboot: Completing firstboot provisioning to rendered-master-f509746cb678ff4a775c368176e3991b
+Jan 09 04:38:05.649289 ip-10-0-145-4 systemd[1]: machine-config-daemon-firstboot.service: Main process exited, code=killed, status=15/TERM
+Jan 09 04:38:05.649374 ip-10-0-145-4 systemd[1]: machine-config-daemon-firstboot.service: Failed with result 'signal'.
+Jan 09 04:38:05.649936 ip-10-0-145-4 systemd[1]: Stopped Machine Config Daemon Firstboot.
+Jan 09 04:38:05.650845 ip-10-0-145-4 systemd[1]: machine-config-daemon-firstboot.service: Consumed 5.623s CPU time
+-- Logs begin at Mon 2023-01-09 04:29:55 UTC, end at Mon 2023-01-09 15:41:11 UTC. --
+-- No entries --

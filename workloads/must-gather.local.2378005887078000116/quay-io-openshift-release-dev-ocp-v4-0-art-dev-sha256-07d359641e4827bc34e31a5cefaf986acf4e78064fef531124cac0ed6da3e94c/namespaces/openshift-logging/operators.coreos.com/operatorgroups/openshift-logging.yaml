@@ -1,0 +1,62 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: ClusterLogForwarder.v1.logging.openshift.io,ClusterLogging.v1.logging.openshift.io
+  creationTimestamp: "2023-01-09T05:30:44Z"
+  generation: 1
+  labels:
+    og_label: openshift-logging
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:og_label: {}
+      f:spec:
+        .: {}
+        f:targetNamespaces:
+          .: {}
+          v:"openshift-logging": {}
+        f:upgradeStrategy: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:30:44Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastUpdated: {}
+        f:namespaces:
+          .: {}
+          v:"openshift-logging": {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:30:44Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:olm.providedAPIs: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:31:17Z"
+  name: openshift-logging
+  namespace: openshift-logging
+  resourceVersion: "43078"
+  uid: 0f8ec218-f9eb-4963-9d69-eba0a21bc4e5
+spec:
+  targetNamespaces:
+  - openshift-logging
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-01-09T05:30:44Z"
+  namespaces:
+  - openshift-logging

@@ -1,0 +1,101 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:36:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:36:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:36:45Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:33:23Z"
+  name: image-registry
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "44851"
+  uid: 3b6f7116-77c8-488c-afa1-1430e4678dba
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:47:54Z"
+    message: |-
+      Available: The registry is ready
+      NodeCADaemonAvailable: The daemon set node-ca has available replicas
+      ImagePrunerAvailable: Pruner CronJob has been created
+    reason: Ready
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-09T05:33:23Z"
+    message: |-
+      Progressing: The registry is ready
+      NodeCADaemonProgressing: The daemon set node-ca is deployed
+    reason: Ready
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-01-09T04:47:31Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: imagepruners
+  - group: rbac.authorization.k8s.io
+    name: system:registry
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: registry-registry-role
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: openshift-image-registry-pruner
+    resource: clusterrolebindings
+  - group: ""
+    name: openshift-image-registry
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.0-0.nightly-2023-01-08-142418

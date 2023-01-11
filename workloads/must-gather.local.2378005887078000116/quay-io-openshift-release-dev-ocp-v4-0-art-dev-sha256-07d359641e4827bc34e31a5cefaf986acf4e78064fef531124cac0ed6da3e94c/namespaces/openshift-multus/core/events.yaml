@@ -1,0 +1,924 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:44:01.089414Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247390"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-multus/cni-sysctl-allowlist-ds-bh4dj to
+    ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab25f5851637
+    namespace: openshift-multus
+    resourceVersion: "247403"
+    uid: 5f79a83d-cbcb-436f-ba85-01cc1712d0b1
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247405"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Add eth0 [10.129.2.120/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab261626ff5c
+    namespace: openshift-multus
+    resourceVersion: "247414"
+    uid: f86400d2-e407-42fc-8d24-70fb76458fcf
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247397"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ae783ee6a05beafca04f0766933ee1573b70231a6cd8c449a2177afdaf4802a0"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab2617b68611
+    namespace: openshift-multus
+    resourceVersion: "247418"
+    uid: a829f709-a1b5-4a47-a2ef-961a1b530c6b
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247397"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Created container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab2622be3a75
+    namespace: openshift-multus
+    resourceVersion: "247421"
+    uid: 82daea80-c6c1-44c6-872c-45f6db858367
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247397"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Started container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab26249a2abb
+    namespace: openshift-multus
+    resourceVersion: "247424"
+    uid: 1db370ec-aeb2-4a8f-ba9b-c8c5bb97f2f4
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-bh4dj
+    namespace: openshift-multus
+    resourceVersion: "247397"
+    uid: a4086f21-7a3f-44e9-a6dc-17c9671cfe1b
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:05Z"
+  message: Stopping container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:05Z"
+    name: cni-sysctl-allowlist-ds-bh4dj.1738ab26eb091ede
+    namespace: openshift-multus
+    resourceVersion: "247460"
+    uid: f2e21a76-270e-405c-94cc-03fd7609ceb9
+  reason: Killing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:44:01.078720Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247388"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-multus/cni-sysctl-allowlist-ds-mxq6b to
+    ip-10-0-190-242.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab25f4e1f3ae
+    namespace: openshift-multus
+    resourceVersion: "247396"
+    uid: 84d7efdd-960c-4177-a4a6-e02fa72347ce
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247404"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Add eth0 [10.131.2.14/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab2615816ce6
+    namespace: openshift-multus
+    resourceVersion: "247410"
+    uid: aa02058d-5c94-4833-ad42-42d3c9e09612
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247389"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ae783ee6a05beafca04f0766933ee1573b70231a6cd8c449a2177afdaf4802a0"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab26170ee74c
+    namespace: openshift-multus
+    resourceVersion: "247417"
+    uid: 1f9d5e5a-7074-4f0c-a17f-1e7b210c2db2
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-190-242.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247389"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Created container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab2621a4bb62
+    namespace: openshift-multus
+    resourceVersion: "247420"
+    uid: 4f50d96a-a05b-4489-a230-966748cd5215
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-190-242.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247389"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Started container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab262432cf03
+    namespace: openshift-multus
+    resourceVersion: "247423"
+    uid: 0333d55d-fb3c-48b5-a05f-c2cebdeb7024
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-190-242.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-mxq6b
+    namespace: openshift-multus
+    resourceVersion: "247389"
+    uid: 9cd2c021-1302-418a-9bf8-3520eb76f5d1
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:05Z"
+  message: Stopping container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:05Z"
+    name: cni-sysctl-allowlist-ds-mxq6b.1738ab26ece227c3
+    namespace: openshift-multus
+    resourceVersion: "247461"
+    uid: 67a7973d-0b72-4eb5-aab5-29cfd607facb
+  reason: Killing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-190-242.us-east-2.compute.internal
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:44:01.087852Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247391"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-multus/cni-sysctl-allowlist-ds-nfv2z to
+    ip-10-0-130-201.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab25f56d4153
+    namespace: openshift-multus
+    resourceVersion: "247402"
+    uid: ba227584-89e5-49ad-8c41-98c10158a803
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247406"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Add eth0 [10.128.2.28/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab2615a4ae79
+    namespace: openshift-multus
+    resourceVersion: "247411"
+    uid: de8287ed-7519-4bc1-bea9-0b590fea5e7b
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247394"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ae783ee6a05beafca04f0766933ee1573b70231a6cd8c449a2177afdaf4802a0"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab2617058f5b
+    namespace: openshift-multus
+    resourceVersion: "247416"
+    uid: 10d1f5f6-e11b-4c01-a43e-da8f4d5cb0f6
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-130-201.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247394"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Created container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab2620741b10
+    namespace: openshift-multus
+    resourceVersion: "247419"
+    uid: 36539318-1354-41d3-a22b-6659db56a7b1
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-130-201.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247394"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: Started container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab2622f746bd
+    namespace: openshift-multus
+    resourceVersion: "247422"
+    uid: 80edbb33-1b89-44e8-9ec7-ee73e4cc359b
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-130-201.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-multus-additional-cni-plugins}
+    kind: Pod
+    name: cni-sysctl-allowlist-ds-nfv2z
+    namespace: openshift-multus
+    resourceVersion: "247394"
+    uid: 7c4acc92-07cc-4fac-8c76-ae0aaed96e57
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:04Z"
+  message: Stopping container kube-multus-additional-cni-plugins
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:44:04Z"
+    name: cni-sysctl-allowlist-ds-nfv2z.1738ab26db24ab54
+    namespace: openshift-multus
+    resourceVersion: "247455"
+    uid: a5ae96d2-7fcc-4143-9d79-dbdf134ab648
+  reason: Killing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-130-201.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: cni-sysctl-allowlist-ds
+    namespace: openshift-multus
+    resourceVersion: "247385"
+    uid: eaed68a6-1667-4d7d-b52d-ffa6756eddcf
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: 'Created pod: cni-sysctl-allowlist-ds-mxq6b'
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds.1738ab25f469cc0a
+    namespace: openshift-multus
+    resourceVersion: "247392"
+    uid: d08c1276-30b9-41bb-bc59-888d145d9cb2
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: cni-sysctl-allowlist-ds
+    namespace: openshift-multus
+    resourceVersion: "247385"
+    uid: eaed68a6-1667-4d7d-b52d-ffa6756eddcf
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: 'Created pod: cni-sysctl-allowlist-ds-nfv2z'
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds.1738ab25f4e290d2
+    namespace: openshift-multus
+    resourceVersion: "247393"
+    uid: 9f771be6-d3e6-452a-beb5-9a4efaa93d82
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:44:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: cni-sysctl-allowlist-ds
+    namespace: openshift-multus
+    resourceVersion: "247385"
+    uid: eaed68a6-1667-4d7d-b52d-ffa6756eddcf
+  kind: Event
+  lastTimestamp: "2023-01-09T14:44:01Z"
+  message: 'Created pod: cni-sysctl-allowlist-ds-bh4dj'
+  metadata:
+    creationTimestamp: "2023-01-09T14:44:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:44:01Z"
+    name: cni-sysctl-allowlist-ds.1738ab25f4e29a20
+    namespace: openshift-multus
+    resourceVersion: "247399"
+    uid: 4845aae5-74ba-4bb3-b4f8-e627cc8dec63
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "268583"

@@ -1,0 +1,81 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2023-01-09T04:36:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:36:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:36:45Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:24Z"
+  name: operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "6681"
+  uid: 24393b9f-f742-47ea-90cf-39a916ea455f
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:41:24Z"
+    message: Deployed 0.19.0
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-01-09T04:41:24Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-09T04:41:24Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-01-09T04:41:24Z"
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.12.0-0.nightly-2023-01-08-142418
+  - name: operator-lifecycle-manager
+    version: 0.19.0

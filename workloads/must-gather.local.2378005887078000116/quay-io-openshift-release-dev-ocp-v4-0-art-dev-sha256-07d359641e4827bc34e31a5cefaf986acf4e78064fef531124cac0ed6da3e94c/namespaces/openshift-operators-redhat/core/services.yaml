@@ -1,0 +1,259 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+      service.beta.openshift.io/serving-cert-secret-name: loki-operator-metrics
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1673239264
+    creationTimestamp: "2023-01-09T05:32:17Z"
+    labels:
+      app.kubernetes.io/instance: loki-operator-v5.6.0
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      app.kubernetes.io/version: 5.6.0
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ab6c364d-ccd8-475a-ab69-00b55d883bdf"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T05:32:17Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+      manager: olm
+      operation: Update
+      time: "2023-01-09T05:32:17Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T05:32:17Z"
+    name: loki-operator-controller-manager-metrics-service
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: loki-operator.v5.6.0
+      uid: ab6c364d-ccd8-475a-ab69-00b55d883bdf
+    resourceVersion: "43809"
+    uid: ee77cfe7-b204-450d-a3aa-407e72e22cfd
+  spec:
+    clusterIP: 172.30.33.224
+    clusterIPs:
+    - 172.30.33.224
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      name: loki-operator-controller-manager
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-01-09T05:32:20Z"
+    labels:
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ab6c364d-ccd8-475a-ab69-00b55d883bdf"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-01-09T05:32:20Z"
+    name: loki-operator-controller-manager-service
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: loki-operator.v5.6.0
+      uid: ab6c364d-ccd8-475a-ab69-00b55d883bdf
+    resourceVersion: "43958"
+    uid: 83478455-a72c-4d88-b352-45a8b098e3bf
+  spec:
+    clusterIP: 172.30.51.101
+    clusterIPs:
+    - 172.30.51.101
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "443"
+      port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      name: loki-operator-controller-manager
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.beta.openshift.io/serving-cert-secret-name: loki-operator-webhook-service
+    creationTimestamp: "2023-01-09T05:32:18Z"
+    labels:
+      app.kubernetes.io/instance: loki-operator-v5.6.0
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      app.kubernetes.io/version: 5.6.0
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ab6c364d-ccd8-475a-ab69-00b55d883bdf"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-01-09T05:32:18Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+      manager: olm
+      operation: Update
+      time: "2023-01-09T05:32:18Z"
+    name: loki-operator-webhook-service
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: loki-operator.v5.6.0
+      uid: ab6c364d-ccd8-475a-ab69-00b55d883bdf
+    resourceVersion: "43859"
+    uid: 8fc6e2fe-cba7-4821-bc2b-db71b6bd9d69
+  spec:
+    clusterIP: 172.30.221.94
+    clusterIPs:
+    - 172.30.221.94
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "268591"

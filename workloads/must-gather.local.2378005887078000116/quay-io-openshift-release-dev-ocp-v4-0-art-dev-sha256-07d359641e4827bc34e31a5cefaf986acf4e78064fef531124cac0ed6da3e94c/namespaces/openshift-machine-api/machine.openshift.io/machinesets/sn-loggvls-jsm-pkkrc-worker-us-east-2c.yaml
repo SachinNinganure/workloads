@@ -1,0 +1,170 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/GPU: "0"
+    machine.openshift.io/memoryMb: "65536"
+    machine.openshift.io/vCPU: "16"
+  creationTimestamp: "2023-01-09T04:37:30Z"
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+      f:spec:
+        .: {}
+        f:selector: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:machine.openshift.io/cluster-api-cluster: {}
+              f:machine.openshift.io/cluster-api-machine-role: {}
+              f:machine.openshift.io/cluster-api-machine-type: {}
+              f:machine.openshift.io/cluster-api-machineset: {}
+          f:spec:
+            .: {}
+            f:lifecycleHooks: {}
+            f:metadata: {}
+            f:providerSpec:
+              .: {}
+              f:value:
+                .: {}
+                f:ami:
+                  .: {}
+                  f:id: {}
+                f:apiVersion: {}
+                f:blockDevices: {}
+                f:credentialsSecret:
+                  .: {}
+                  f:name: {}
+                f:deviceIndex: {}
+                f:iamInstanceProfile:
+                  .: {}
+                  f:id: {}
+                f:instanceType: {}
+                f:kind: {}
+                f:metadata:
+                  .: {}
+                  f:creationTimestamp: {}
+                f:metadataServiceOptions: {}
+                f:placement:
+                  .: {}
+                  f:availabilityZone: {}
+                  f:region: {}
+                f:securityGroups: {}
+                f:spotMarketOptions: {}
+                f:subnet:
+                  .: {}
+                  f:filters: {}
+                f:tags: {}
+                f:userDataSecret:
+                  .: {}
+                  f:name: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-01-09T04:37:30Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:37:30Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/GPU: {}
+          f:machine.openshift.io/memoryMb: {}
+          f:machine.openshift.io/vCPU: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2023-01-09T04:45:09Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+        f:replicas: {}
+    manager: machineset-controller
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:30:31Z"
+  name: sn-loggvls-jsm-pkkrc-worker-us-east-2c
+  namespace: openshift-machine-api
+  resourceVersion: "41968"
+  uid: 25a32a46-004d-48ee-bf8a-5acac2e5be53
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+      machine.openshift.io/cluster-api-machineset: sn-loggvls-jsm-pkkrc-worker-us-east-2c
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: sn-loggvls-jsm-pkkrc
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: sn-loggvls-jsm-pkkrc-worker-us-east-2c
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          ami:
+            id: ami-0ff64f495c7e977cf
+          apiVersion: machine.openshift.io/v1beta1
+          blockDevices:
+          - ebs:
+              encrypted: true
+              iops: 0
+              kmsKey:
+                arn: ""
+              volumeSize: 120
+              volumeType: gp3
+          credentialsSecret:
+            name: aws-cloud-credentials
+          deviceIndex: 0
+          iamInstanceProfile:
+            id: sn-loggvls-jsm-pkkrc-worker-profile
+          instanceType: m5.4xlarge
+          kind: AWSMachineProviderConfig
+          metadata:
+            creationTimestamp: null
+          metadataServiceOptions: {}
+          placement:
+            availabilityZone: us-east-2c
+            region: us-east-2
+          securityGroups:
+          - filters:
+            - name: tag:Name
+              values:
+              - sn-loggvls-jsm-pkkrc-worker-sg
+          spotMarketOptions: {}
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - sn-loggvls-jsm-pkkrc-private-us-east-2c
+          tags:
+          - name: kubernetes.io/cluster/sn-loggvls-jsm-pkkrc
+            value: owned
+          userDataSecret:
+            name: worker-user-data
+status:
+  observedGeneration: 2
+  replicas: 0

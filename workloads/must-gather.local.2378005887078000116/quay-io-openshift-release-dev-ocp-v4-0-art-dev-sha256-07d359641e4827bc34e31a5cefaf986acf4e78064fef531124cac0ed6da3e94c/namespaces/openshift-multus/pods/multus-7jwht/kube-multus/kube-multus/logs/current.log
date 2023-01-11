@@ -1,0 +1,29 @@
+2023-01-09T04:39:12.086697800Z 2023-01-09T04:39:12+00:00 [cnibincopy] Successfully copied files in /usr/src/multus-cni/rhel8/bin/ to /host/opt/cni/bin/upgrade_1f8536e8-acdb-46ac-a8a9-c0d2fa12c7ef
+2023-01-09T04:39:12.090227278Z 2023-01-09T04:39:12+00:00 [cnibincopy] Successfully moved files in /host/opt/cni/bin/upgrade_1f8536e8-acdb-46ac-a8a9-c0d2fa12c7ef to /host/opt/cni/bin/
+2023-01-09T04:39:12.174158679Z 2023-01-09T04:39:12+00:00 WARN: {unknown parameter "-"}
+2023-01-09T04:39:12.181807353Z 2023-01-09T04:39:12+00:00 Entrypoint skipped copying Multus binary.
+2023-01-09T04:39:12.208776369Z 2023-01-09T04:39:12+00:00 Generating Multus configuration file using files in /host/var/run/multus/cni/net.d...
+2023-01-09T04:39:12.218575504Z 2023-01-09T04:39:12+00:00 Attempting to find master plugin configuration, attempt 0
+2023-01-09T04:39:17.245742592Z 2023-01-09T04:39:17+00:00 Attempting to find master plugin configuration, attempt 5
+2023-01-09T04:39:22.269791397Z 2023-01-09T04:39:22+00:00 Attempting to find master plugin configuration, attempt 10
+2023-01-09T04:39:27.293961057Z 2023-01-09T04:39:27+00:00 Attempting to find master plugin configuration, attempt 15
+2023-01-09T04:39:32.317293199Z 2023-01-09T04:39:32+00:00 Attempting to find master plugin configuration, attempt 20
+2023-01-09T04:39:37.339338806Z 2023-01-09T04:39:37+00:00 Attempting to find master plugin configuration, attempt 25
+2023-01-09T04:39:42.361120459Z 2023-01-09T04:39:42+00:00 Attempting to find master plugin configuration, attempt 30
+2023-01-09T04:39:47.383091051Z 2023-01-09T04:39:47+00:00 Attempting to find master plugin configuration, attempt 35
+2023-01-09T04:39:52.405603686Z 2023-01-09T04:39:52+00:00 Attempting to find master plugin configuration, attempt 40
+2023-01-09T04:39:57.427667190Z 2023-01-09T04:39:57+00:00 Attempting to find master plugin configuration, attempt 45
+2023-01-09T04:40:02.449802412Z 2023-01-09T04:40:02+00:00 Attempting to find master plugin configuration, attempt 50
+2023-01-09T04:40:07.472759402Z 2023-01-09T04:40:07+00:00 Attempting to find master plugin configuration, attempt 55
+2023-01-09T04:40:12.494899113Z 2023-01-09T04:40:12+00:00 Attempting to find master plugin configuration, attempt 60
+2023-01-09T04:40:17.516906425Z 2023-01-09T04:40:17+00:00 Attempting to find master plugin configuration, attempt 65
+2023-01-09T04:40:22.538609887Z 2023-01-09T04:40:22+00:00 Attempting to find master plugin configuration, attempt 70
+2023-01-09T04:40:27.561036042Z 2023-01-09T04:40:27+00:00 Attempting to find master plugin configuration, attempt 75
+2023-01-09T04:40:32.583155601Z 2023-01-09T04:40:32+00:00 Attempting to find master plugin configuration, attempt 80
+2023-01-09T04:40:37.605597778Z 2023-01-09T04:40:37+00:00 Attempting to find master plugin configuration, attempt 85
+2023-01-09T04:40:42.627489104Z 2023-01-09T04:40:42+00:00 Using MASTER_PLUGIN: 10-ovn-kubernetes.conf
+2023-01-09T04:40:42.745371719Z 2023-01-09T04:40:42+00:00 Nested capabilities string: 
+2023-01-09T04:40:42.748461322Z 2023-01-09T04:40:42+00:00 Using /host/var/run/multus/cni/net.d/10-ovn-kubernetes.conf as a source to generate the Multus configuration
+2023-01-09T04:40:42.784180290Z 2023-01-09T04:40:42+00:00 Config file created @ /host/etc/cni/net.d/00-multus.conf
+2023-01-09T04:40:42.784238793Z { "cniVersion": "0.3.1", "name": "multus-cni-network", "type": "multus", "namespaceIsolation": true, "globalNamespaces": "default,openshift-multus,openshift-sriov-network-operator", "logLevel": "verbose", "binDir": "/opt/multus/bin", "readinessindicatorfile": "/var/run/multus/cni/net.d/10-ovn-kubernetes.conf", "kubeconfig": "/etc/kubernetes/cni/net.d/multus.d/multus.kubeconfig", "delegates": [ {"cniVersion":"0.4.0","name":"ovn-kubernetes","type":"ovn-k8s-cni-overlay","ipam":{},"dns":{},"logFile":"/var/log/ovn-kubernetes/ovn-k8s-cni-overlay.log","logLevel":"4","logfile-maxsize":100,"logfile-maxbackups":5,"logfile-maxage":5} ] }
+2023-01-09T04:40:42.786030523Z 2023-01-09T04:40:42+00:00 Entering watch loop...

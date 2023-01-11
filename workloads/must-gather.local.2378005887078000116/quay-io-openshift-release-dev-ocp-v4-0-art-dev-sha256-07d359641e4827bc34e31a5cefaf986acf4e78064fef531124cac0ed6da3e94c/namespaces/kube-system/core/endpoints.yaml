@@ -1,0 +1,74 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-01-09T04:47:06Z"
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      k8s-app: kubelet
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2023-01-09T05:35:06Z"
+    name: kubelet
+    namespace: kube-system
+    resourceVersion: "45950"
+    uid: bf815f6d-99a4-4a3e-87a8-c69558b32edb
+  subsets:
+  - addresses:
+    - ip: 10.0.130.201
+      targetRef:
+        kind: Node
+        name: ip-10-0-130-201.us-east-2.compute.internal
+        uid: 63f93508-f9ec-4006-9e48-a3356f0aff02
+    - ip: 10.0.144.137
+      targetRef:
+        kind: Node
+        name: ip-10-0-144-137.us-east-2.compute.internal
+        uid: 84e5248f-d764-4b00-bf42-1ebc30b9e2b8
+    - ip: 10.0.145.4
+      targetRef:
+        kind: Node
+        name: ip-10-0-145-4.us-east-2.compute.internal
+        uid: aaa507e9-f484-4779-8f5a-b17315ac8043
+    - ip: 10.0.160.211
+      targetRef:
+        kind: Node
+        name: ip-10-0-160-211.us-east-2.compute.internal
+        uid: 3aa9328b-65bb-4d9a-b12a-7e5710de6e2c
+    - ip: 10.0.190.242
+      targetRef:
+        kind: Node
+        name: ip-10-0-190-242.us-east-2.compute.internal
+        uid: 3d8b8033-dde7-453b-8a42-c52fe66f1c86
+    - ip: 10.0.199.219
+      targetRef:
+        kind: Node
+        name: ip-10-0-199-219.us-east-2.compute.internal
+        uid: 0f86a2c1-ac70-41b4-962c-149ac68ce490
+    ports:
+    - name: https-metrics
+      port: 10250
+      protocol: TCP
+    - name: http-metrics
+      port: 10255
+      protocol: TCP
+    - name: cadvisor
+      port: 4194
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268622"

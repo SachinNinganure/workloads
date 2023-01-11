@@ -1,0 +1,45 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-01-09T05:31:17Z"
+  generation: 1
+  labels:
+    control-plane: cluster-logging-operator
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:control-plane: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1a3cc03c-803b-4d72-8795-af0ba3315f20"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector: {}
+        f:selector: {}
+    manager: catalog
+    operation: Update
+    time: "2023-01-09T05:31:17Z"
+  name: cluster-logging-operator-metrics-monitor
+  namespace: openshift-logging
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: ClusterServiceVersion
+    name: cluster-logging.v5.6.0
+    uid: 1a3cc03c-803b-4d72-8795-af0ba3315f20
+  resourceVersion: "43112"
+  uid: bf37eb98-16ea-4031-a63d-70c4b58f1b82
+spec:
+  endpoints:
+  - port: http-metrics
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+      name: cluster-logging-operator

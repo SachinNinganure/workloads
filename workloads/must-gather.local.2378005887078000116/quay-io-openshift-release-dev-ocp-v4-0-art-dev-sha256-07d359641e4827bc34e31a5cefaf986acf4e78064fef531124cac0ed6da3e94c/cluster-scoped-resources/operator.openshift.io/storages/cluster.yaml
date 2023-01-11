@@ -1,0 +1,140 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Storage
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-01-09T04:37:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:37:31Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:readyReplicas: {}
+    manager: cluster-storage-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:33:27Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "44919"
+  uid: 556bc262-237b-4c1e-be39-6ac9ce8dd02c
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    reason: AsExpected
+    status: "False"
+    type: VSphereProblemDetectorStarterDegraded
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    reason: AsExpected
+    status: "False"
+    type: CSIDriverStarterDegraded
+  - lastTransitionTime: "2023-01-09T04:41:09Z"
+    status: "False"
+    type: AWSEBSProgressing
+  - lastTransitionTime: "2023-01-09T04:41:05Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorDeploymentDegraded
+  - lastTransitionTime: "2023-01-09T04:41:08Z"
+    status: "True"
+    type: SnapshotCRDControllerUpgradeable
+  - lastTransitionTime: "2023-01-09T04:41:10Z"
+    message: StorageClass provided by supplied CSI Driver instead of the cluster-storage-operator
+    status: "True"
+    type: DefaultStorageClassControllerAvailable
+  - lastTransitionTime: "2023-01-09T04:41:10Z"
+    status: "False"
+    type: DefaultStorageClassControllerProgressing
+  - lastTransitionTime: "2023-01-09T04:41:11Z"
+    reason: AsExpected
+    status: "False"
+    type: DefaultStorageClassControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:12Z"
+    reason: AsExpected
+    status: "False"
+    type: SnapshotCRDControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:14Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorStaticControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:42:07Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: AWSEBSCSIDriverOperatorCRAvailable
+  - lastTransitionTime: "2023-01-09T05:33:27Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorCRProgressing
+  - lastTransitionTime: "2023-01-09T04:41:16Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorCRDegraded
+  - lastTransitionTime: "2023-01-09T04:41:14Z"
+    status: "True"
+    type: AWSEBSCSIDriverOperatorCRUpgradeable
+  - lastTransitionTime: "2023-01-09T04:41:15Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2023-01-09T04:41:16Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSEBSCSIDriverOperatorDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: aws-ebs-csi-driver-operator
+    namespace: openshift-cluster-csi-drivers
+    resource: deployments
+  - group: operator.openshift.io
+    hash: ""
+    lastGeneration: 1
+    name: ebs.csi.aws.com
+    namespace: ""
+    resource: clustercsidrivers
+  readyReplicas: 0

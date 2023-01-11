@@ -1,0 +1,100 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.10
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-130-201.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ingress-canary-tpjlj
+      namespace: openshift-ingress-canary
+      uid: f3b16900-314e-445c-8929-3e3d131be139
+    zone: us-east-2a
+  - addresses:
+    - 10.129.2.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ingress-canary-v4t55
+      namespace: openshift-ingress-canary
+      uid: 0a00be34-2cb6-4b96-9135-d0a8dd8bf6ed
+    zone: us-east-2a
+  - addresses:
+    - 10.131.2.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-190-242.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: ingress-canary-zk8s2
+      namespace: openshift-ingress-canary
+      uid: fa163603-93ee-455a-9e84-61cf192dba4d
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:33:43Z"
+    creationTimestamp: "2023-01-09T04:46:51Z"
+    generateName: ingress-canary-
+    generation: 7
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      ingress.openshift.io/canary: canary_controller
+      kubernetes.io/service-name: ingress-canary
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:ingress.openshift.io/canary: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b5d57dd4-20c0-4196-ae8b-ca316e666d73"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:33:43Z"
+    name: ingress-canary-s6wsn
+    namespace: openshift-ingress-canary
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ingress-canary
+      uid: b5d57dd4-20c0-4196-ae8b-ca316e666d73
+    resourceVersion: "45158"
+    uid: 9ce9f7c1-ecdb-46f0-bd6a-0ae8da955084
+  ports:
+  - name: 8888-tcp
+    port: 8888
+    protocol: TCP
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268497"

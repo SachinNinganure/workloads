@@ -1,0 +1,70 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    imageregistry.operator.openshift.io/checksum: sha256:693052fe8cd7138d0dbe6186d2d1dc6e308cb8a3063856ddf6fde9c61b28b8bb
+  creationTimestamp: "2023-01-09T04:47:33Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:imageregistry.operator.openshift.io/checksum: {}
+      f:rules: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2023-01-09T04:47:33Z"
+  name: system:registry
+  resourceVersion: "20660"
+  uid: 9dba3b7f-26e6-421a-85a6-d31b5a3d172c
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - limitranges
+  - resourcequotas
+  verbs:
+  - list
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - imagestreamimages
+  - imagestreams/layers
+  - imagestreams/secrets
+  verbs:
+  - get
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - imagestreams
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - imagestreamtags
+  verbs:
+  - delete
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - images
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - imagestreammappings
+  verbs:
+  - create
+- apiGroups:
+  - operator.openshift.io
+  resources:
+  - imagecontentsourcepolicies
+  verbs:
+  - list

@@ -1,0 +1,27 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: "2023-01-09T04:41:20Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:groups: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-01-09T04:41:20Z"
+  name: kube-apiserver-requests
+  namespace: openshift-kube-apiserver
+  resourceVersion: "6272"
+  uid: 8a8dfdc8-8c13-4058-b48b-ca92857b7c04
+spec:
+  groups:
+  - name: apiserver-requests-in-flight
+    rules:
+    - expr: |
+        max_over_time(sum(apiserver_current_inflight_requests{apiserver=~"openshift-apiserver|kube-apiserver"}) by (apiserver,requestKind)[2m:])
+      record: cluster:apiserver_current_inflight_requests:sum:max_over_time:2m

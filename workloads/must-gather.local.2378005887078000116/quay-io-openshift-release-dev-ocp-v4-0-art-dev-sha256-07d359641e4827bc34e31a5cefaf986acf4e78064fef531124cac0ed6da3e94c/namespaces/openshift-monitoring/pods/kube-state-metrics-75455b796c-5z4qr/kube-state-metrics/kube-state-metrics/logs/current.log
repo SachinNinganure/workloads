@@ -1,0 +1,20 @@
+2023-01-09T04:47:14.170228092Z I0109 04:47:14.170076       1 server.go:92] "Used default resources"
+2023-01-09T04:47:14.170296638Z I0109 04:47:14.170221       1 types.go:136] "Using all namespaces"
+2023-01-09T04:47:14.170407015Z I0109 04:47:14.170391       1 server.go:121] "Metric allow-denylisting" allowDenyStatus="Excluding the following lists that were on denylist: ^kube_secret_labels$, ^kube_.+_created$, ^kube_.+_metadata_resource_version$, ^kube_replicaset_status_observed_generation$, ^kube_pod_restart_policy$, ^kube_pod_init_container_status_running$, ^kube_pod_container_status_running$, ^kube_pod_status_scheduled$, ^kube_pod_init_container_status_terminated$, ^kube_pod_container_status_terminated$, ^kube_pod_completion_time$, ^kube_.+_annotations$, ^kube_replicaset_metadata_generation$"
+2023-01-09T04:47:14.170415536Z W0109 04:47:14.170409       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-01-09T04:47:14.170961973Z I0109 04:47:14.170945       1 server.go:249] "Tested communication with server"
+2023-01-09T04:47:14.179614151Z I0109 04:47:14.179582       1 server.go:254] "Run with Kubernetes cluster version" major="1" minor="25" gitVersion="v1.25.4+77bec7a" gitTreeState="clean" gitCommit="b6d1f054747e9886f61dd85316deac3415e2726f" platform="linux/amd64"
+2023-01-09T04:47:14.179614151Z I0109 04:47:14.179604       1 server.go:255] "Communication with server successful"
+2023-01-09T04:47:14.179796945Z I0109 04:47:14.179782       1 server.go:201] "Started metrics server" metricsServerAddress="127.0.0.1:8081"
+2023-01-09T04:47:14.179796945Z I0109 04:47:14.179789       1 metrics_handler.go:97] "Autosharding disabled"
+2023-01-09T04:47:14.179819763Z I0109 04:47:14.179803       1 server.go:190] "Started kube-state-metrics self metrics server" telemetryAddress="127.0.0.1:8082"
+2023-01-09T04:47:14.181137079Z I0109 04:47:14.181108       1 server.go:65] levelinfomsgTLS is disabled.http2false
+2023-01-09T04:47:14.181161282Z I0109 04:47:14.181140       1 server.go:65] levelinfomsgTLS is disabled.http2false
+2023-01-09T04:47:14.182284337Z I0109 04:47:14.182255       1 builder.go:233] "Active resources" activeStoreNames="certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments"
+2023-01-09T04:48:53.842919602Z E0109 04:48:53.842882       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.PodDisruptionBudget: unknown (get poddisruptionbudgets.policy)
+2023-01-09T04:48:53.843414415Z E0109 04:48:53.843397       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.ReplicaSet: unknown (get replicasets.apps)
+2023-01-09T04:48:53.843442756Z E0109 04:48:53.843428       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.ResourceQuota: unknown (get resourcequotas)
+2023-01-09T04:48:53.843460665Z E0109 04:48:53.843448       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.Service: unknown (get services)
+2023-01-09T04:48:53.843460665Z E0109 04:48:53.843455       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.NetworkPolicy: unknown (get networkpolicies.networking.k8s.io)
+2023-01-09T04:48:53.843515065Z E0109 04:48:53.843502       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.DaemonSet: unknown (get daemonsets.apps)
+2023-01-09T04:48:53.847038595Z E0109 04:48:53.847022       1 reflector.go:138] k8s.io/kube-state-metrics/internal/store/builder.go:533: Failed to watch *v1.PersistentVolume: unknown (get persistentvolumes)

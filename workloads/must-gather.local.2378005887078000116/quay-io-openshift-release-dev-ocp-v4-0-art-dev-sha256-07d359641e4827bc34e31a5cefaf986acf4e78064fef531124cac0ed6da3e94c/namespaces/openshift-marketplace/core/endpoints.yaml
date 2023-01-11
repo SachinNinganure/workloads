@@ -1,0 +1,244 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:42:17Z"
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 58687b44f7
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:42:17Z"
+    name: certified-operators
+    namespace: openshift-marketplace
+    resourceVersion: "9506"
+    uid: 169ee98f-eb4f-463c-9f16-f2150ae14a13
+  subsets:
+  - addresses:
+    - ip: 10.129.0.15
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: certified-operators-hcwlm
+        namespace: openshift-marketplace
+        uid: b9922976-34ed-4f4b-b24f-aad316c39f7c
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 59d9c65745
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:53:04Z"
+    name: community-operators
+    namespace: openshift-marketplace
+    resourceVersion: "206892"
+    uid: f1e7421b-56da-43e6-9a1d-d5d04ebc9fac
+  subsets:
+  - addresses:
+    - ip: 10.128.0.149
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: community-operators-gvczh
+        namespace: openshift-marketplace
+        uid: 7efb3cac-b41c-49bf-98a2-2af95978ad98
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:40Z"
+    creationTimestamp: "2023-01-09T04:37:07Z"
+    labels:
+      name: marketplace-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:40Z"
+    name: marketplace-operator-metrics
+    namespace: openshift-marketplace
+    resourceVersion: "7653"
+    uid: 0afe3536-3a59-470c-afe7-dc65388c133e
+  subsets:
+  - addresses:
+    - ip: 10.130.0.15
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: marketplace-operator-f9895fd48-fc9hm
+        namespace: openshift-marketplace
+        uid: 89606b3e-be05-4504-819c-7be910ac042c
+    ports:
+    - name: https-metrics
+      port: 8081
+      protocol: TCP
+    - name: metrics
+      port: 8383
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:30:54Z"
+    creationTimestamp: "2023-01-09T05:30:33Z"
+    labels:
+      olm.service-spec-hash: 5c5d846dbd
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:30:54Z"
+    name: qe-app-registry
+    namespace: openshift-marketplace
+    resourceVersion: "42785"
+    uid: 074af33d-9e83-48e2-aa13-6277ce854cdb
+  subsets:
+  - addresses:
+    - ip: 10.129.2.21
+      nodeName: ip-10-0-144-137.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: qe-app-registry-qzbbk
+        namespace: openshift-marketplace
+        uid: c5cbfeb9-6439-40ad-bf69-779e23810a50
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:42:17Z"
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 7d86f55d66
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:42:17Z"
+    name: redhat-marketplace
+    namespace: openshift-marketplace
+    resourceVersion: "9503"
+    uid: 10cfb228-8664-4aed-a47a-32bf2ed7753c
+  subsets:
+  - addresses:
+    - ip: 10.129.0.16
+      nodeName: ip-10-0-199-219.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: redhat-marketplace-rw4rv
+        namespace: openshift-marketplace
+        uid: 4a4a413f-0826-406e-a56d-aa94d197b84a
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:42:36Z"
+    creationTimestamp: "2023-01-09T04:41:46Z"
+    labels:
+      olm.service-spec-hash: 677fdb66d4
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.service-spec-hash: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:42:36Z"
+    name: redhat-operators
+    namespace: openshift-marketplace
+    resourceVersion: "10024"
+    uid: 790a9db4-9810-4a76-8144-1cad093df0a1
+  subsets:
+  - addresses:
+    - ip: 10.128.0.14
+      nodeName: ip-10-0-145-4.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: redhat-operators-9kwbk
+        namespace: openshift-marketplace
+        uid: 0b4bf4dd-410e-4a89-a274-c78a67950877
+    ports:
+    - name: grpc
+      port: 50051
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268723"

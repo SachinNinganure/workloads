@@ -1,0 +1,46 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:42:15Z"
+    creationTimestamp: "2023-01-09T04:37:27Z"
+    labels:
+      app: kube-apiserver-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:42:15Z"
+    name: metrics
+    namespace: openshift-kube-apiserver-operator
+    resourceVersion: "9397"
+    uid: 201eeb39-fc30-4b15-99d6-aa1ee265a161
+  subsets:
+  - addresses:
+    - ip: 10.130.0.30
+      nodeName: ip-10-0-160-211.us-east-2.compute.internal
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-operator-57d845b467-d22t9
+        namespace: openshift-kube-apiserver-operator
+        uid: 208df116-c21e-4154-9d13-55839ee51db3
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "268510"

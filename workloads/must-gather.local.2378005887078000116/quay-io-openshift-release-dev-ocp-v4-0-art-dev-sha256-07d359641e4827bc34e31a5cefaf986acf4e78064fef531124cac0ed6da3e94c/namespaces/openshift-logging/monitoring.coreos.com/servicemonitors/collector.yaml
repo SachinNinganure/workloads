@@ -1,0 +1,64 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-01-09T06:11:57Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1f3ead98-4a43-43f1-b818-d4bdd09bcf3a"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:selector: {}
+    manager: cluster-logging-operator
+    operation: Update
+    time: "2023-01-09T06:11:57Z"
+  name: collector
+  namespace: openshift-logging
+  ownerReferences:
+  - apiVersion: logging.openshift.io/v1
+    controller: true
+    kind: ClusterLogging
+    name: instance
+    uid: 1f3ead98-4a43-43f1-b818-d4bdd09bcf3a
+  resourceVersion: "59312"
+  uid: c7819421-14d6-47a8-9440-02ff2a05f643
+spec:
+  endpoints:
+  - bearerTokenSecret:
+      key: ""
+    path: /metrics
+    port: metrics
+    scheme: https
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      serverName: collector.openshift-logging.svc
+  - bearerTokenSecret:
+      key: ""
+    path: /metrics
+    port: logfile-metrics
+    scheme: https
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      serverName: collector.openshift-logging.svc
+  jobLabel: monitor-collector
+  namespaceSelector:
+    matchNames:
+    - openshift-logging
+  selector:
+    matchLabels:
+      logging-infra: support

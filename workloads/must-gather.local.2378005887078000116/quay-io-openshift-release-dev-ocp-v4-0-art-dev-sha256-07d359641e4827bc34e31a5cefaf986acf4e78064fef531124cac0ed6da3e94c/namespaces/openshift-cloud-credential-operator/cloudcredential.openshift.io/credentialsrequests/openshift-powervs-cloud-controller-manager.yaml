@@ -1,0 +1,98 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-01-09T04:38:58Z"
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:38:58Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:policies: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:38:58Z"
+  name: openshift-powervs-cloud-controller-manager
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "2844"
+  uid: 88efceba-e341-4bba-a07c-4ad7d5ebaa1c
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: IBMCloudPowerVSProviderSpec
+    policies:
+    - attributes:
+      - name: resourceType
+        value: resource-group
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Viewer
+    - attributes:
+      - name: serviceName
+        value: is
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Editor
+      - crn:v1:bluemix:public:iam::::role:Operator
+      - crn:v1:bluemix:public:iam::::role:Viewer
+    - attributes:
+      - name: serviceName
+        value: power-iaas
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Viewer
+      - crn:v1:bluemix:public:iam::::serviceRole:Reader
+      - crn:v1:bluemix:public:iam::::serviceRole:Manager
+  secretRef:
+    name: ibm-cloud-credentials
+    namespace: openshift-cloud-controller-manager
+status:
+  conditions:
+  - lastProbeTime: "2023-01-09T04:38:58Z"
+    lastTransitionTime: "2023-01-09T04:38:58Z"
+    message: CredentialsRequest is not for platform AWS
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

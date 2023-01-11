@@ -1,0 +1,326 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.21/23"],"mac_address":"0a:58:0a:81:02:15","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.21/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.21"
+          ],
+          "mac": "0a:58:0a:81:02:15",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.21"
+          ],
+          "mac": "0a:58:0a:81:02:15",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: privileged
+  creationTimestamp: "2023-01-09T05:30:33Z"
+  generateName: qe-app-registry-
+  labels:
+    olm.catalogSource: qe-app-registry
+    olm.pod-spec-hash: 86d49b467d
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/safe-to-evict: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.catalogSource: {}
+          f:olm.pod-spec-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"03763f71-3ef3-461b-a2df-e0449d212989"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"registry-server"}:
+            .: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":50051,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:readOnlyRootFilesystem: {}
+            f:startupProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+    manager: catalog
+    operation: Update
+    time: "2023-01-09T05:30:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T05:30:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:30:34Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.21"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:30:54Z"
+  name: qe-app-registry-qzbbk
+  namespace: openshift-marketplace
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: CatalogSource
+    name: qe-app-registry
+    uid: 03763f71-3ef3-461b-a2df-e0449d212989
+  resourceVersion: "42784"
+  uid: c5cbfeb9-6439-40ad-bf69-779e23810a50
+spec:
+  containers:
+  - image: quay.io/openshift-qe-optional-operators/aosqe-index:v4.12
+    imagePullPolicy: Always
+    livenessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: registry-server
+    ports:
+    - containerPort: 50051
+      name: grpc
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      capabilities:
+        drop:
+        - MKNOD
+      readOnlyRootFilesystem: false
+    startupProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 15
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kgvnk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ip-10-0-144-137.us-east-2.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    seLinuxOptions:
+      level: s0:c17,c4
+  serviceAccount: qe-app-registry
+  serviceAccountName: qe-app-registry
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-kgvnk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:30:33Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:30:54Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:30:54Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:30:33Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://81eb2663114a87d7f5e86bb3410c7e6091c8827528ae83aa70272141c198fb1c
+    image: quay.io/openshift-qe-optional-operators/aosqe-index:v4.12
+    imageID: quay.io/openshift-qe-optional-operators/aosqe-index@sha256:046b27b4ebe41f957e4459f3a4be75384e38e3af528e1c6a4035c3e8dc494984
+    lastState: {}
+    name: registry-server
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T05:30:41Z"
+  hostIP: 10.0.144.137
+  phase: Running
+  podIP: 10.129.2.21
+  podIPs:
+  - ip: 10.129.2.21
+  qosClass: Burstable
+  startTime: "2023-01-09T05:30:33Z"

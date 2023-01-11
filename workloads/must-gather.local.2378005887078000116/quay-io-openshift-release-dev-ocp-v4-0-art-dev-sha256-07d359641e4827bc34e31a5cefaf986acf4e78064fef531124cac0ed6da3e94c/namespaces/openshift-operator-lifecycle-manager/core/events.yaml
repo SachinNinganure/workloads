@@ -1,0 +1,5154 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T12:45:00.150974Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887805-pnnl8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203983"
+    uid: ccd8c908-a602-4fe0-8d5b-34e893dcb04e
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887805-pnnl8
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805-pnnl8.1738a4a7546bbbed
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203987"
+    uid: eb9e180b-e60f-4bc7-b57f-7fd2d91c4a42
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887805-pnnl8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203989"
+    uid: ccd8c908-a602-4fe0-8d5b-34e893dcb04e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: Add eth0 [10.129.2.102/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805-pnnl8.1738a4a7757c100f
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203992"
+    uid: aa19f6cd-61d8-4be6-9a2d-d91b9f2c0f29
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887805-pnnl8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203984"
+    uid: ccd8c908-a602-4fe0-8d5b-34e893dcb04e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805-pnnl8.1738a4a776ba1284
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203994"
+    uid: 1456fa31-a3a7-4d17-a4b5-48772288aef2
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887805-pnnl8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203984"
+    uid: ccd8c908-a602-4fe0-8d5b-34e893dcb04e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805-pnnl8.1738a4a78158d1d3
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203995"
+    uid: cdf29843-b40b-40f8-8dde-23d4e72701dd
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887805-pnnl8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203984"
+    uid: ccd8c908-a602-4fe0-8d5b-34e893dcb04e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805-pnnl8.1738a4a7834dcd94
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203996"
+    uid: 54a69162-a604-4ccd-aa8a-a1c8866ef58b
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887805
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203980"
+    uid: daa04300-9b3a-420e-b9c0-277c9d99d600
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: 'Created pod: collect-profiles-27887805-pnnl8'
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles-27887805.1738a4a7540ce63e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203985"
+    uid: 9ac037e3-f832-4611-b30a-bd2f95df36f4
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887805
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "204025"
+    uid: daa04300-9b3a-420e-b9c0-277c9d99d600
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:05Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:45:05Z"
+    name: collect-profiles-27887805.1738a4a876e118cf
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "204027"
+    uid: 0aa1c3bc-1ac1-4d8a-9a06-2261d94ccd91
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T13:00:00.179176Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887820-s6nft
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209342"
+    uid: 763ca856-d041-48bb-89f9-6caf300332f0
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887820-s6nft
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles-27887820-s6nft.1738a578e2483c5a
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209346"
+    uid: 9b8638bc-b0bb-425a-859a-a3976655c492
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887820-s6nft
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209348"
+    uid: 763ca856-d041-48bb-89f9-6caf300332f0
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: Add eth0 [10.129.2.104/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles-27887820-s6nft.1738a57903562671
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209358"
+    uid: 84ed2138-42cd-4b7d-9988-3911e5784744
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887820-s6nft
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209344"
+    uid: 763ca856-d041-48bb-89f9-6caf300332f0
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles-27887820-s6nft.1738a57904d41d0c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209360"
+    uid: 55bbc571-8f41-4b1f-8d0a-0116d6e423b7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887820-s6nft
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209344"
+    uid: 763ca856-d041-48bb-89f9-6caf300332f0
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles-27887820-s6nft.1738a5791071b6f6
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209363"
+    uid: e454673e-3950-4c2c-a48a-b823b69f1c61
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887820-s6nft
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209344"
+    uid: 763ca856-d041-48bb-89f9-6caf300332f0
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:00:01Z"
+    name: collect-profiles-27887820-s6nft.1738a579132901c9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209366"
+    uid: 67e9da82-996a-4739-a6b8-2d354e0f38fb
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887820
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209339"
+    uid: f9951136-d275-4ce3-867e-5cc8e380a009
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: 'Created pod: collect-profiles-27887820-s6nft'
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles-27887820.1738a578e1d8aa69
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209343"
+    uid: e69d4393-436c-4bc4-a367-5ec940facec8
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887820
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209413"
+    uid: f9951136-d275-4ce3-867e-5cc8e380a009
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:06Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:00:06Z"
+    name: collect-profiles-27887820.1738a57a4836db4e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209417"
+    uid: 7b9902e9-cab1-4f3c-a3ba-c96857def7d0
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T13:15:00.151403Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887835-7lvl5
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215055"
+    uid: 1c5cfe91-c90f-4a20-a7a5-7a68839a4d60
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887835-7lvl5
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835-7lvl5.1738a64a6cce96e6
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215059"
+    uid: 86641bed-f260-459f-9e34-ea641239cffc
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887835-7lvl5
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215061"
+    uid: 1c5cfe91-c90f-4a20-a7a5-7a68839a4d60
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: Add eth0 [10.129.2.106/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835-7lvl5.1738a64a8ed0e667
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215070"
+    uid: f6419a7b-d59c-4a92-b42b-0025260d42b6
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887835-7lvl5
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215057"
+    uid: 1c5cfe91-c90f-4a20-a7a5-7a68839a4d60
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835-7lvl5.1738a64a908760a1
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215074"
+    uid: 51bac025-50c6-46ab-80e9-b26eeb43c9b5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887835-7lvl5
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215057"
+    uid: 1c5cfe91-c90f-4a20-a7a5-7a68839a4d60
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835-7lvl5.1738a64a9b2edb35
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215077"
+    uid: 38eefe25-d92f-47fd-851c-c91fd24ab9e6
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887835-7lvl5
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215057"
+    uid: 1c5cfe91-c90f-4a20-a7a5-7a68839a4d60
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835-7lvl5.1738a64a9d144c1d
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215078"
+    uid: 3d025011-ecdf-40ec-98f2-5acca2cd5fb1
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887835
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215052"
+    uid: b7c3e95b-80af-48de-84b1-a53a19d71f04
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: 'Created pod: collect-profiles-27887835-7lvl5'
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles-27887835.1738a64a6c4ceddc
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215056"
+    uid: 8cc9804f-7cb5-4797-adf9-b19988f2e48d
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:09Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887835
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215125"
+    uid: b7c3e95b-80af-48de-84b1-a53a19d71f04
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:09Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:15:09Z"
+    name: collect-profiles-27887835.1738a64c9743d698
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215127"
+    uid: dc53ed98-b22d-42fb-bb2d-7418bf87c427
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T13:30:00.148280Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887850-5bvlv
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220434"
+    uid: a3cc83b1-7d3c-495b-8692-4f7e6dd03f72
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887850-5bvlv
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850-5bvlv.1738a71bf8cd1531
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220438"
+    uid: 064537f7-8a63-4052-83a3-c3841944a836
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887850-5bvlv
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220440"
+    uid: a3cc83b1-7d3c-495b-8692-4f7e6dd03f72
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: Add eth0 [10.129.2.108/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850-5bvlv.1738a71c1a4b9cf9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220447"
+    uid: be1c43bd-f6e0-4201-94bb-75f6b1daae54
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887850-5bvlv
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220436"
+    uid: a3cc83b1-7d3c-495b-8692-4f7e6dd03f72
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850-5bvlv.1738a71c1c0b2062
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220449"
+    uid: 23f0bc13-f25a-4267-93a5-250db80cb37d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887850-5bvlv
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220436"
+    uid: a3cc83b1-7d3c-495b-8692-4f7e6dd03f72
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850-5bvlv.1738a71c272057c9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220452"
+    uid: db328c7d-06d9-4036-a275-a8350ef0c46a
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887850-5bvlv
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220436"
+    uid: a3cc83b1-7d3c-495b-8692-4f7e6dd03f72
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850-5bvlv.1738a71c290fde67
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220453"
+    uid: c770a0bb-9682-4b99-8581-eaefde6a2cc0
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887850
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220431"
+    uid: 2a0c548e-eb3d-44ff-a2d3-f00d2cb727dd
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: 'Created pod: collect-profiles-27887850-5bvlv'
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles-27887850.1738a71bf861128f
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220435"
+    uid: 851eb9b6-49a5-425e-a275-0cbe8d030400
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887850
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220490"
+    uid: 2a0c548e-eb3d-44ff-a2d3-f00d2cb727dd
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:05Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:30:05Z"
+    name: collect-profiles-27887850.1738a71d3d5110f7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220492"
+    uid: afee1f38-75e1-479d-82e2-4c032b682d0c
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T13:45:00.141766Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887865-gplj9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225822"
+    uid: 8764e9fe-3c8c-4650-b32b-b782b1f76020
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887865-gplj9
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865-gplj9.1738a7ed8497d926
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225826"
+    uid: 79a013a8-2a7f-486a-b668-aa0efa3a909f
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887865-gplj9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225828"
+    uid: 8764e9fe-3c8c-4650-b32b-b782b1f76020
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: Add eth0 [10.129.2.111/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865-gplj9.1738a7eda5cd0ee1
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225830"
+    uid: 40b64d1b-8807-40e0-83bd-32240c766f10
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887865-gplj9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225824"
+    uid: 8764e9fe-3c8c-4650-b32b-b782b1f76020
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865-gplj9.1738a7eda7228bd7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225832"
+    uid: c94b233e-f4ea-44de-be8c-b7f915252cf6
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887865-gplj9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225824"
+    uid: 8764e9fe-3c8c-4650-b32b-b782b1f76020
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865-gplj9.1738a7edb16f2128
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225837"
+    uid: e9cbba55-0d85-4dac-b728-bb8eea175a2d
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887865-gplj9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225824"
+    uid: 8764e9fe-3c8c-4650-b32b-b782b1f76020
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865-gplj9.1738a7edb359046a
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225838"
+    uid: c2a36f0c-3f41-44b3-b052-4d1001f4b7f8
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887865
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225819"
+    uid: 21f154ab-30f1-42bb-8299-fbf21e0650e9
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: 'Created pod: collect-profiles-27887865-gplj9'
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles-27887865.1738a7ed841de877
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225823"
+    uid: 4253e0a3-2f54-4329-95b0-4c9d32099028
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887865
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225864"
+    uid: 21f154ab-30f1-42bb-8299-fbf21e0650e9
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:05Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:45:05Z"
+    name: collect-profiles-27887865.1738a7eed8ae0823
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225867"
+    uid: 7bb3796a-28ae-412f-8e8a-f3b637b0f1b3
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:00:00.179625Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887880-lw8r7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231219"
+    uid: a45b0389-dad4-4fa0-8c86-5643657ef13d
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887880-lw8r7
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880-lw8r7.1738a8bf1307b9f1
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231223"
+    uid: 6607dc33-30dc-4b99-8fee-c218330b6ddb
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887880-lw8r7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231225"
+    uid: a45b0389-dad4-4fa0-8c86-5643657ef13d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: Add eth0 [10.129.2.113/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880-lw8r7.1738a8bf33e2a20c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231231"
+    uid: bf259cd3-dabd-4284-86a6-c5daec74c3ff
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887880-lw8r7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231221"
+    uid: a45b0389-dad4-4fa0-8c86-5643657ef13d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880-lw8r7.1738a8bf35643d92
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231233"
+    uid: d6be8f9f-8938-4377-80ec-37a92526b1b7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887880-lw8r7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231221"
+    uid: a45b0389-dad4-4fa0-8c86-5643657ef13d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880-lw8r7.1738a8bf3eee4bdc
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231235"
+    uid: 7983aea7-01c6-490b-9190-a7735fc32e12
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887880-lw8r7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231221"
+    uid: a45b0389-dad4-4fa0-8c86-5643657ef13d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880-lw8r7.1738a8bf40e896d0
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231237"
+    uid: 6898a8c5-a842-4bb7-97f1-4639b1e3e232
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887880
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231216"
+    uid: 3fdbd6f3-067f-4fae-ada6-ac300d07ad66
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: 'Created pod: collect-profiles-27887880-lw8r7'
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles-27887880.1738a8bf1263bc5e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231220"
+    uid: 212f6082-80c8-4b54-91d6-28b2267067e0
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:04Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887880
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231262"
+    uid: 3fdbd6f3-067f-4fae-ada6-ac300d07ad66
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:04Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:00:05Z"
+    name: collect-profiles-27887880.1738a8c0324b11ae
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231264"
+    uid: 937c671e-3d12-4843-9a61-8a91c1d242a5
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:15:00.155858Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887895-jp8ch
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236930"
+    uid: b4af9fd7-d917-4ca9-9bfc-4297b5614367
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887895-jp8ch
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895-jp8ch.1738a9909dcb3634
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236934"
+    uid: 29cbc235-59f7-43f3-89e5-9a1b83c4692e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887895-jp8ch
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236936"
+    uid: b4af9fd7-d917-4ca9-9bfc-4297b5614367
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: Add eth0 [10.129.2.115/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895-jp8ch.1738a990bedd0c81
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236938"
+    uid: b29a3a79-e212-4368-9589-e6ce05980305
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887895-jp8ch
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236933"
+    uid: b4af9fd7-d917-4ca9-9bfc-4297b5614367
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895-jp8ch.1738a990c04376f0
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236940"
+    uid: 8c6bbbf9-ae2d-42af-b17a-bd632b6cd087
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887895-jp8ch
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236933"
+    uid: b4af9fd7-d917-4ca9-9bfc-4297b5614367
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895-jp8ch.1738a990caa30770
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236941"
+    uid: 7977d972-b07b-4edf-a3e9-344ca60042d8
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887895-jp8ch
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236933"
+    uid: b4af9fd7-d917-4ca9-9bfc-4297b5614367
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895-jp8ch.1738a990cca9bc90
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236943"
+    uid: 13ce590c-fb71-4e5c-8e0b-15de7829a002
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887895
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236926"
+    uid: 5916aa54-16a9-4d87-88fb-fbd2cc4bf74d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: 'Created pod: collect-profiles-27887895-jp8ch'
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles-27887895.1738a9909d2ddac9
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236932"
+    uid: 98ea87c3-aa72-4388-92a6-664e1f2534ff
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887895
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "237005"
+    uid: 5916aa54-16a9-4d87-88fb-fbd2cc4bf74d
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:06Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:15:06Z"
+    name: collect-profiles-27887895.1738a99201b32f72
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "237008"
+    uid: 0bc42abc-336c-4b7e-b59a-0b770eeddef7
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:30:00.146982Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887910-d8fwp
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242367"
+    uid: a86b00a6-7ec1-441e-98ee-2f8f587cbc2e
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887910-d8fwp
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910-d8fwp.1738aa622971ef73
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242371"
+    uid: 6ee80d17-9d9e-4bf3-bcb3-8f5b891e0297
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887910-d8fwp
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242373"
+    uid: a86b00a6-7ec1-441e-98ee-2f8f587cbc2e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: Add eth0 [10.129.2.117/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910-d8fwp.1738aa624a98bdca
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242378"
+    uid: 3cddef1a-960d-421d-994c-0ef575a9bd92
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887910-d8fwp
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242369"
+    uid: a86b00a6-7ec1-441e-98ee-2f8f587cbc2e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910-d8fwp.1738aa624c07470c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242380"
+    uid: 0d56ae81-58ad-4f54-9902-d82170d1feb3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887910-d8fwp
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242369"
+    uid: a86b00a6-7ec1-441e-98ee-2f8f587cbc2e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910-d8fwp.1738aa6257cbea17
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242381"
+    uid: dec77f64-905d-4ab1-8eea-98e72dd9927c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887910-d8fwp
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242369"
+    uid: a86b00a6-7ec1-441e-98ee-2f8f587cbc2e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910-d8fwp.1738aa6259b21a89
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242382"
+    uid: 843f322c-eab8-4b9f-bbb0-b14820b74d0a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887910
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242364"
+    uid: be07d77b-9f0e-4e87-8e1c-9b0712accd54
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: 'Created pod: collect-profiles-27887910-d8fwp'
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles-27887910.1738aa6229098392
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242368"
+    uid: 7e075778-2b0e-4929-91b2-5814aba296fe
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:08Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887910
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242426"
+    uid: be07d77b-9f0e-4e87-8e1c-9b0712accd54
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:08Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:30:08Z"
+    name: collect-profiles-27887910.1738aa640e6d4e84
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242428"
+    uid: 6dc87e29-0080-4aa5-845f-eaf451ecb81d
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T14:45:00.150535Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887925-698np
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247838"
+    uid: be62adfd-36c0-409f-a21a-918d5effd529
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887925-698np
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925-698np.1738ab33b5d64878
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247842"
+    uid: ab01d36e-5aac-4e13-b3ea-bb98b91f120b
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887925-698np
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247844"
+    uid: be62adfd-36c0-409f-a21a-918d5effd529
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: Add eth0 [10.129.2.121/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925-698np.1738ab33d681c51c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247848"
+    uid: c7555a19-49b3-47f4-b3ab-a8060fd727c7
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887925-698np
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247841"
+    uid: be62adfd-36c0-409f-a21a-918d5effd529
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925-698np.1738ab33d7e29d19
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247850"
+    uid: 67db6b67-b962-4c5c-a330-05dc6aad7be8
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887925-698np
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247841"
+    uid: be62adfd-36c0-409f-a21a-918d5effd529
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925-698np.1738ab33e1fac5de
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247853"
+    uid: e63be378-b737-4a2f-93cc-cb27e92c7b09
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887925-698np
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247841"
+    uid: be62adfd-36c0-409f-a21a-918d5effd529
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925-698np.1738ab33e3dc6b00
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247854"
+    uid: 143770d7-db38-41b6-84c9-2398fc009a21
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887925
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247835"
+    uid: 97305463-ecb7-4910-b97d-1fe258a119cf
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: 'Created pod: collect-profiles-27887925-698np'
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles-27887925.1738ab33b53e8067
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247839"
+    uid: 81968bec-beff-4f65-85ac-043c88770ce9
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:07Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887925
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247904"
+    uid: 97305463-ecb7-4910-b97d-1fe258a119cf
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:07Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:45:07Z"
+    name: collect-profiles-27887925.1738ab3551631c21
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247906"
+    uid: 7a5140c7-7728-40d0-83b5-65a3e3d24596
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T15:00:00.190568Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887940-94n2l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253225"
+    uid: 43a1d0b7-5cba-4691-baaf-9d701f0d4dd9
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887940-94n2l
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles-27887940-94n2l.1738ac0544675197
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253229"
+    uid: aaa4cb53-bbea-4818-82da-04adab8d0cfb
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887940-94n2l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253231"
+    uid: 43a1d0b7-5cba-4691-baaf-9d701f0d4dd9
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: Add eth0 [10.129.2.123/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles-27887940-94n2l.1738ac05650af412
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253233"
+    uid: 2ee03b3d-0d72-4b13-a472-d7afb97f037f
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887940-94n2l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253226"
+    uid: 43a1d0b7-5cba-4691-baaf-9d701f0d4dd9
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles-27887940-94n2l.1738ac056668c5fc
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253235"
+    uid: 99cb0b41-dfaa-4bc4-9940-c8a48e70e0b6
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887940-94n2l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253226"
+    uid: 43a1d0b7-5cba-4691-baaf-9d701f0d4dd9
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles-27887940-94n2l.1738ac0571e3626e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253236"
+    uid: 0be24c85-6c66-4a30-a48a-b15047b45bdf
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887940-94n2l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253226"
+    uid: 43a1d0b7-5cba-4691-baaf-9d701f0d4dd9
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:00:01Z"
+    name: collect-profiles-27887940-94n2l.1738ac0574914765
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253237"
+    uid: 8ae8045e-5413-4a93-9a8f-5558fbcda357
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887940
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253222"
+    uid: c017d172-0601-4176-9885-7306bea20b3e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: 'Created pod: collect-profiles-27887940-94n2l'
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles-27887940.1738ac05440715b1
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253228"
+    uid: 0d0f979e-9b3c-47a3-9d86-0b0518b9a9e5
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887940
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253272"
+    uid: c017d172-0601-4176-9885-7306bea20b3e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:06Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:00:06Z"
+    name: collect-profiles-27887940.1738ac06bc90f47c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253274"
+    uid: b3c9a495-6f65-4255-b80d-c78601831462
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T15:15:00.148448Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887955-scl9l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258953"
+    uid: 38ae2751-aadb-46bf-85ca-414cf3efc625
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887955-scl9l
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955-scl9l.1738acd6ce12cd62
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258957"
+    uid: 65913d9a-4406-4d8c-8aeb-13b44f16ff6e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887955-scl9l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258959"
+    uid: 38ae2751-aadb-46bf-85ca-414cf3efc625
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: Add eth0 [10.129.2.125/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955-scl9l.1738acd6ef35f00b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258962"
+    uid: 945ee8cc-634f-43c9-87bb-8fa24ef171fd
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887955-scl9l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258954"
+    uid: 38ae2751-aadb-46bf-85ca-414cf3efc625
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955-scl9l.1738acd6f07dd079
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258964"
+    uid: a230174f-be6d-487f-ba32-377453de32b5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887955-scl9l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258954"
+    uid: 38ae2751-aadb-46bf-85ca-414cf3efc625
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955-scl9l.1738acd6fa49a8e0
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258967"
+    uid: 74892bc4-418a-4e75-88ed-ef5927b9b4ca
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887955-scl9l
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258954"
+    uid: 38ae2751-aadb-46bf-85ca-414cf3efc625
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955-scl9l.1738acd6fc4d9ff8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258968"
+    uid: e2e356de-9a44-45a7-a249-47d17e77936a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887955
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258950"
+    uid: 9d660354-fa23-4268-8611-a7b36a13a01c
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: 'Created pod: collect-profiles-27887955-scl9l'
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles-27887955.1738acd6cdba205e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258955"
+    uid: 131be039-5fda-42c5-8f70-d531a31fcae1
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887955
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "259010"
+    uid: 9d660354-fa23-4268-8611-a7b36a13a01c
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:06Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:15:06Z"
+    name: collect-profiles-27887955.1738acd850d207db
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "259012"
+    uid: 6f663eb1-98be-45d9-9bb4-65daa623e6e1
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-01-09T15:30:00.154246Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887970-9svwx
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264374"
+    uid: b3505a1c-acd4-4ff8-8b67-8a11553f6006
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27887970-9svwx
+    to ip-10-0-144-137.us-east-2.compute.internal
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970-9svwx.1738ada85a996492
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264379"
+    uid: 582777a3-126f-44d7-ac23-5bb03725784a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-199-219
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: collect-profiles-27887970-9svwx
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264382"
+    uid: b3505a1c-acd4-4ff8-8b67-8a11553f6006
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: Add eth0 [10.129.2.128/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970-9svwx.1738ada87b5343b0
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264383"
+    uid: a6b569da-95ff-440f-8d28-951d637b3972
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887970-9svwx
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264376"
+    uid: b3505a1c-acd4-4ff8-8b67-8a11553f6006
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1d71ba084c63e2d6b3140b9cbada2b50bb6589a39a526dedb466945d284c73e"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970-9svwx.1738ada87cab0355
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264385"
+    uid: 18358916-cd58-4a8f-bb40-405993c957d2
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887970-9svwx
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264376"
+    uid: b3505a1c-acd4-4ff8-8b67-8a11553f6006
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: Created container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970-9svwx.1738ada88685a180
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264388"
+    uid: 63947abc-16a4-4f60-a91e-8f669c3197dc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{collect-profiles}
+    kind: Pod
+    name: collect-profiles-27887970-9svwx
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264376"
+    uid: b3505a1c-acd4-4ff8-8b67-8a11553f6006
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: Started container collect-profiles
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970-9svwx.1738ada88866627e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264389"
+    uid: e2ddf09f-6c68-4e97-8cd6-a65af0cf43c8
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ip-10-0-144-137.us-east-2.compute.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887970
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264371"
+    uid: 12331976-4141-48ef-8781-6330d8c51be5
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: 'Created pod: collect-profiles-27887970-9svwx'
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles-27887970.1738ada85a13d2fa
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264375"
+    uid: 9ce10928-d446-4d1c-979b-706d9b7eb6c5
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: collect-profiles-27887970
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264449"
+    uid: 12331976-4141-48ef-8781-6330d8c51be5
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:05Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:30:05Z"
+    name: collect-profiles-27887970.1738ada9a904398e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264452"
+    uid: 1b9e777c-7176-444a-afcb-ba54fb9c596d
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "198635"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:00Z"
+  message: Created job collect-profiles-27887805
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:45:00Z"
+    name: collect-profiles.1738a4a7528b666c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203982"
+    uid: a050b880-f35c-4f6d-aaf1-11898f9ded52
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203981"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:05Z"
+  message: 'Saw completed job: collect-profiles-27887805, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:45:05Z"
+    name: collect-profiles.1738a4a87768b357
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "204029"
+    uid: 303a0198-15f9-4c0f-9087-785fb41c9fde
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T12:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "203981"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T12:45:05Z"
+  message: Deleted job collect-profiles-27887760
+  metadata:
+    creationTimestamp: "2023-01-09T12:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T12:45:05Z"
+    name: collect-profiles.1738a4a877d75a1a
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "204031"
+    uid: 8feae4da-dd5c-4a86-9bdd-14e2c34d2621
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "204033"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:00Z"
+  message: Created job collect-profiles-27887820
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:00:00Z"
+    name: collect-profiles.1738a578dfdcadec
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209341"
+    uid: 8814dc8e-e72d-43f6-afd7-5c5b4d58d91d
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209340"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:06Z"
+  message: 'Saw completed job: collect-profiles-27887820, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:00:06Z"
+    name: collect-profiles.1738a57a48c21af7
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209419"
+    uid: 5c23af19-5c3d-4f46-9029-5a1a562c6f82
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209340"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:00:06Z"
+  message: Deleted job collect-profiles-27887775
+  metadata:
+    creationTimestamp: "2023-01-09T13:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:00:06Z"
+    name: collect-profiles.1738a57a49392043
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209421"
+    uid: 8946fa5e-5c67-4f2d-b4bc-8c5a4f0c4a5f
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "209423"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:00Z"
+  message: Created job collect-profiles-27887835
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:15:00Z"
+    name: collect-profiles.1738a64a6b057eb8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215053"
+    uid: 585f3ca9-6c0c-43aa-83c0-f7eda78b7e1d
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:09Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215054"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:09Z"
+  message: 'Saw completed job: collect-profiles-27887835, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:15:09Z"
+    name: collect-profiles.1738a64c97ad4d13
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215133"
+    uid: 1f892e91-3915-4d18-aaed-a48725ba3660
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:15:09Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215054"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:15:09Z"
+  message: Deleted job collect-profiles-27887790
+  metadata:
+    creationTimestamp: "2023-01-09T13:15:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:15:09Z"
+    name: collect-profiles.1738a64c98116b75
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215132"
+    uid: 2dd9b6d1-986d-45cd-a00d-f1776484d0e1
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "215134"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:00Z"
+  message: Created job collect-profiles-27887850
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:30:00Z"
+    name: collect-profiles.1738a71bf6e2206b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220433"
+    uid: c0fefa22-e1ac-4f43-bb70-11afee6c6066
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220432"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:05Z"
+  message: 'Saw completed job: collect-profiles-27887850, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:30:05Z"
+    name: collect-profiles.1738a71d3dccdafb
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220494"
+    uid: c5b71ee2-efb2-4f26-9e74-bdc64618f499
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220432"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:30:05Z"
+  message: Deleted job collect-profiles-27887805
+  metadata:
+    creationTimestamp: "2023-01-09T13:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:30:05Z"
+    name: collect-profiles.1738a71d3e55b09d
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220496"
+    uid: d2a20023-ab21-4791-a043-9491a5cf3e60
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "220498"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:00Z"
+  message: Created job collect-profiles-27887865
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:45:00Z"
+    name: collect-profiles.1738a7ed83204c1b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225821"
+    uid: eb521b82-ba43-4729-80e7-8a2b564b38b5
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225820"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:05Z"
+  message: 'Saw completed job: collect-profiles-27887865, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:45:05Z"
+    name: collect-profiles.1738a7eed910231c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225868"
+    uid: f8f2722c-d4a5-4b27-81e0-35abe70072ab
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T13:45:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225820"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T13:45:05Z"
+  message: Deleted job collect-profiles-27887820
+  metadata:
+    creationTimestamp: "2023-01-09T13:45:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T13:45:05Z"
+    name: collect-profiles.1738a7eed99c0441
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225870"
+    uid: d27361f2-c2a7-4192-ba71-a1ba8cb83ab2
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "225872"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:00Z"
+  message: Created job collect-profiles-27887880
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:00:00Z"
+    name: collect-profiles.1738a8bf1043b1bc
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231217"
+    uid: da0c4a13-306e-4187-a6f8-693f1bf74c2a
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231218"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:05Z"
+  message: 'Saw completed job: collect-profiles-27887880, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:00:05Z"
+    name: collect-profiles.1738a8c032bcd3b8
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231270"
+    uid: a5cf55bd-0cfd-40e3-8c79-11e5026723c6
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:00:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231218"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:00:05Z"
+  message: Deleted job collect-profiles-27887835
+  metadata:
+    creationTimestamp: "2023-01-09T14:00:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:00:05Z"
+    name: collect-profiles.1738a8c03348710e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231269"
+    uid: c63fd997-1efb-4ee5-8cce-56786e1db917
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "231271"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:00Z"
+  message: Created job collect-profiles-27887895
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:15:00Z"
+    name: collect-profiles.1738a9909ba1c581
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236928"
+    uid: 97dbc647-9b79-4832-8054-46bf07e9c674
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236927"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:06Z"
+  message: 'Saw completed job: collect-profiles-27887895, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:15:06Z"
+    name: collect-profiles.1738a99202276318
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "237013"
+    uid: ce1275cb-ea9c-41e5-9060-072c7a1b79be
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "236927"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:15:06Z"
+  message: Deleted job collect-profiles-27887850
+  metadata:
+    creationTimestamp: "2023-01-09T14:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:15:06Z"
+    name: collect-profiles.1738a99202afb838
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "237011"
+    uid: 6ebbd45b-0479-45bb-92ad-229262874382
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "237015"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:00Z"
+  message: Created job collect-profiles-27887910
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:30:00Z"
+    name: collect-profiles.1738aa6227c79a85
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242365"
+    uid: 4d0c12bf-c64c-4cd3-ab34-4e41de76a91c
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:08Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242366"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:08Z"
+  message: 'Saw completed job: collect-profiles-27887910, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:30:08Z"
+    name: collect-profiles.1738aa640ee77232
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242430"
+    uid: 8e6ba0d9-6a6c-43fe-878f-c1103e6dd5ea
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:30:08Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242366"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:30:08Z"
+  message: Deleted job collect-profiles-27887865
+  metadata:
+    creationTimestamp: "2023-01-09T14:30:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:30:08Z"
+    name: collect-profiles.1738aa640f71929b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242432"
+    uid: bc285178-9239-4000-ba1a-824c8677bb8e
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "242434"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:00Z"
+  message: Created job collect-profiles-27887925
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:45:00Z"
+    name: collect-profiles.1738ab33b41c51dc
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247836"
+    uid: a988cde3-da13-4856-a075-9aa87e2bf1fe
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:07Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247837"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:07Z"
+  message: 'Saw completed job: collect-profiles-27887925, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:45:07Z"
+    name: collect-profiles.1738ab3551dc590f
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247909"
+    uid: 76754cec-adc1-48ad-840e-fc7763b8e9fe
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T14:45:07Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247837"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T14:45:07Z"
+  message: Deleted job collect-profiles-27887880
+  metadata:
+    creationTimestamp: "2023-01-09T14:45:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T14:45:07Z"
+    name: collect-profiles.1738ab355238c25c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247911"
+    uid: a4078447-cf32-41ef-b6a0-02aa9895b3a0
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "247913"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:00Z"
+  message: Created job collect-profiles-27887940
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:00:00Z"
+    name: collect-profiles.1738ac054182e77b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253224"
+    uid: 8f65109e-8e31-41d3-81f3-839052b7676d
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253223"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:06Z"
+  message: 'Saw completed job: collect-profiles-27887940, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:00:06Z"
+    name: collect-profiles.1738ac06bcf2485b
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253276"
+    uid: 295851a6-05d6-4090-a5c4-758df6b1b083
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:00:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253223"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:00:06Z"
+  message: Deleted job collect-profiles-27887895
+  metadata:
+    creationTimestamp: "2023-01-09T15:00:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:00:06Z"
+    name: collect-profiles.1738ac06bd7ff043
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253278"
+    uid: 0641605e-2548-46f9-b4fa-07c32ed9fd27
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "253280"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:00Z"
+  message: Created job collect-profiles-27887955
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:15:00Z"
+    name: collect-profiles.1738acd6cc53731c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258951"
+    uid: efd9db41-e10f-4e18-80fd-3597d89524bf
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258952"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:06Z"
+  message: 'Saw completed job: collect-profiles-27887955, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:15:06Z"
+    name: collect-profiles.1738acd85145b137
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "259018"
+    uid: 4ebde39a-6c43-4f0d-8588-73093b6a469a
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:15:06Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "258952"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:15:06Z"
+  message: Deleted job collect-profiles-27887910
+  metadata:
+    creationTimestamp: "2023-01-09T15:15:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:15:06Z"
+    name: collect-profiles.1738acd851c0c9e3
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "259016"
+    uid: a24966e0-86cf-42dd-92f9-d17e48f36048
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:00Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "259019"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:00Z"
+  message: Created job collect-profiles-27887970
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:30:00Z"
+    name: collect-profiles.1738ada8586a9b83
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264373"
+    uid: ef5d74e4-2b89-43bc-abf4-a686bd5947ba
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264372"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:05Z"
+  message: 'Saw completed job: collect-profiles-27887970, status: Complete'
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:30:05Z"
+    name: collect-profiles.1738ada9a97e680e
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264457"
+    uid: b0ad6dcc-a471-4689-83c7-f580ad5d7b1e
+  reason: SawCompletedJob
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-01-09T15:30:05Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: CronJob
+    name: collect-profiles
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264372"
+    uid: f0380c30-24a9-4f0b-aa39-618ab7b6e39e
+  kind: Event
+  lastTimestamp: "2023-01-09T15:30:05Z"
+  message: Deleted job collect-profiles-27887925
+  metadata:
+    creationTimestamp: "2023-01-09T15:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T15:30:05Z"
+    name: collect-profiles.1738ada9aa02611c
+    namespace: openshift-operator-lifecycle-manager
+    resourceVersion: "264455"
+    uid: be912cb0-221d-47b9-b76d-b778f1222724
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cronjob-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "268779"

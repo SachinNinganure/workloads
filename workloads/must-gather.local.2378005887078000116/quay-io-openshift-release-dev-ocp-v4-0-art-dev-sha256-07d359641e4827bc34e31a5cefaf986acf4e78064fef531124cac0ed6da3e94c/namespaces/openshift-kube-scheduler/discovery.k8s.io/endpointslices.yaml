@@ -1,0 +1,97 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.145.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-ip-10-0-145-4.us-east-2.compute.internal
+      namespace: openshift-kube-scheduler
+      uid: 46427efc-f91b-4b38-ad0b-f4d0a492effd
+    zone: us-east-2a
+  - addresses:
+    - 10.0.199.219
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-ip-10-0-199-219.us-east-2.compute.internal
+      namespace: openshift-kube-scheduler
+      uid: 824883c0-ddcb-457f-8600-8366162d43c5
+    zone: us-east-2c
+  - addresses:
+    - 10.0.160.211
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-ip-10-0-160-211.us-east-2.compute.internal
+      namespace: openshift-kube-scheduler
+      uid: bbd014a6-a07c-422d-bf40-aa5bcd8aa31f
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:50:59Z"
+    creationTimestamp: "2023-01-09T04:41:09Z"
+    generateName: scheduler-
+    generation: 19
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: scheduler
+      prometheus: kube-scheduler
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8bd3d601-5269-4f0e-851a-a961f7c5bb9e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:50:59Z"
+    name: scheduler-6jj2f
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: scheduler
+      uid: 8bd3d601-5269-4f0e-851a-a961f7c5bb9e
+    resourceVersion: "25870"
+    uid: a7f76370-cb19-4972-93f9-e27e47429077
+  ports:
+  - name: https
+    port: 10259
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268636"

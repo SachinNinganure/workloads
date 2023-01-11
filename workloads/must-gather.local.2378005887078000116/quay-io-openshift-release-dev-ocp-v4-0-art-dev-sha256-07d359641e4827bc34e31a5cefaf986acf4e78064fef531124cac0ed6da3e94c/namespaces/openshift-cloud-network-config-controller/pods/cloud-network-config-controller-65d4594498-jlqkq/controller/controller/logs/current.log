@@ -1,0 +1,120 @@
+2023-01-09T04:41:01.936918726Z W0109 04:41:01.936689       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-01-09T04:41:01.938069029Z I0109 04:41:01.938037       1 leaderelection.go:248] attempting to acquire leader lease openshift-cloud-network-config-controller/cloud-network-config-controller-lock...
+2023-01-09T04:41:31.954249869Z E0109 04:41:31.953387       1 leaderelection.go:330] error retrieving resource lock openshift-cloud-network-config-controller/cloud-network-config-controller-lock: Get "https://api-int.sn-loggvls-jsm.qe.devcluster.openshift.com:6443/api/v1/namespaces/openshift-cloud-network-config-controller/configmaps/cloud-network-config-controller-lock": dial tcp: lookup api-int.sn-loggvls-jsm.qe.devcluster.openshift.com: i/o timeout
+2023-01-09T04:42:16.846059393Z I0109 04:42:16.845678       1 leaderelection.go:258] successfully acquired lease openshift-cloud-network-config-controller/cloud-network-config-controller-lock
+2023-01-09T04:42:16.846608281Z I0109 04:42:16.846579       1 controller.go:88] Starting node controller
+2023-01-09T04:42:16.846608281Z I0109 04:42:16.846592       1 controller.go:91] Waiting for informer caches to sync for node workqueue
+2023-01-09T04:42:16.846664526Z I0109 04:42:16.846642       1 controller.go:88] Starting secret controller
+2023-01-09T04:42:16.846664526Z I0109 04:42:16.846657       1 controller.go:91] Waiting for informer caches to sync for secret workqueue
+2023-01-09T04:42:16.846679518Z I0109 04:42:16.846660       1 controller.go:88] Starting cloud-private-ip-config controller
+2023-01-09T04:42:16.846679518Z I0109 04:42:16.846671       1 controller.go:91] Waiting for informer caches to sync for cloud-private-ip-config workqueue
+2023-01-09T04:42:16.851810364Z I0109 04:42:16.851759       1 controller.go:182] Assigning key: ip-10-0-199-219.us-east-2.compute.internal to node workqueue
+2023-01-09T04:42:16.851864584Z I0109 04:42:16.851853       1 controller.go:182] Assigning key: ip-10-0-160-211.us-east-2.compute.internal to node workqueue
+2023-01-09T04:42:16.852273607Z I0109 04:42:16.852250       1 controller.go:182] Assigning key: ip-10-0-145-4.us-east-2.compute.internal to node workqueue
+2023-01-09T04:42:16.947382809Z I0109 04:42:16.947327       1 controller.go:96] Starting cloud-private-ip-config workers
+2023-01-09T04:42:16.947382809Z I0109 04:42:16.947346       1 controller.go:96] Starting node workers
+2023-01-09T04:42:16.947382809Z I0109 04:42:16.947361       1 controller.go:96] Starting secret workers
+2023-01-09T04:42:16.947382809Z I0109 04:42:16.947372       1 controller.go:102] Started cloud-private-ip-config workers
+2023-01-09T04:42:16.947419307Z I0109 04:42:16.947381       1 controller.go:102] Started secret workers
+2023-01-09T04:42:16.947459016Z I0109 04:42:16.947431       1 controller.go:102] Started node workers
+2023-01-09T04:42:17.134870554Z I0109 04:42:17.134835       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-0ed5b3c8a2e0eaf1e","ifaddr":{"ipv4":"10.0.192.0/19"},"capacity":{"ipv4":14,"ipv6":15}}]' on node: ip-10-0-199-219.us-east-2.compute.internal
+2023-01-09T04:42:17.136450634Z I0109 04:42:17.136420       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-067ab492771e255b8","ifaddr":{"ipv4":"10.0.128.0/19"},"capacity":{"ipv4":14,"ipv6":15}}]' on node: ip-10-0-145-4.us-east-2.compute.internal
+2023-01-09T04:42:17.151766436Z I0109 04:42:17.151729       1 controller.go:160] Dropping key 'ip-10-0-199-219.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:42:17.152945544Z I0109 04:42:17.152899       1 controller.go:160] Dropping key 'ip-10-0-145-4.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:42:17.160216011Z I0109 04:42:17.160186       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-0c5b731232de832b8","ifaddr":{"ipv4":"10.0.160.0/19"},"capacity":{"ipv4":14,"ipv6":15}}]' on node: ip-10-0-160-211.us-east-2.compute.internal
+2023-01-09T04:42:17.241829202Z I0109 04:42:17.241783       1 controller.go:160] Dropping key 'ip-10-0-160-211.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:44:38.587778730Z I0109 04:44:38.587740       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T04:44:38.730430092Z I0109 04:44:38.730391       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-0f4349bca6b29eb68","ifaddr":{"ipv4":"10.0.192.0/19"},"capacity":{"ipv4":29,"ipv6":30}}]' on node: ip-10-0-200-52.us-east-2.compute.internal
+2023-01-09T04:44:38.776769418Z I0109 04:44:38.776709       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:44:40.406758117Z I0109 04:44:40.406721       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T04:44:40.406790860Z I0109 04:44:40.406768       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:44:57.945679394Z I0109 04:44:57.945642       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:44:58.062378421Z I0109 04:44:58.062339       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-0bcc421ae3c9cdf28","ifaddr":{"ipv4":"10.0.128.0/19"},"capacity":{"ipv4":29,"ipv6":30}}]' on node: ip-10-0-130-201.us-east-2.compute.internal
+2023-01-09T04:44:58.117691671Z I0109 04:44:58.117419       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:44:58.688427509Z I0109 04:44:58.688368       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:44:58.784063043Z I0109 04:44:58.784021       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-034d116c8ab4deee7","ifaddr":{"ipv4":"10.0.128.0/19"},"capacity":{"ipv4":29,"ipv6":30}}]' on node: ip-10-0-144-137.us-east-2.compute.internal
+2023-01-09T04:44:58.814973741Z I0109 04:44:58.814929       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:00.437717603Z I0109 04:45:00.437675       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:00.437717603Z I0109 04:45:00.437703       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:02.977300671Z I0109 04:45:02.977247       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:02.977300671Z I0109 04:45:02.977284       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:08.003015394Z I0109 04:45:08.002952       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:08.003015394Z I0109 04:45:08.003007       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:08.689271115Z I0109 04:45:08.689235       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:08.689322215Z I0109 04:45:08.689267       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:10.413260492Z I0109 04:45:10.413206       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:10.413260492Z I0109 04:45:10.413238       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:10.507306347Z I0109 04:45:10.507266       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:10.507306347Z I0109 04:45:10.507299       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:28.103101911Z I0109 04:45:28.101513       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:28.103101911Z I0109 04:45:28.101545       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:45:30.428602178Z I0109 04:45:30.428544       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:45:30.428602178Z I0109 04:45:30.428579       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:46:15.034347070Z I0109 04:46:15.034312       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:46:15.034378738Z I0109 04:46:15.034344       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:46:15.225841645Z I0109 04:46:15.225791       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T04:46:15.225942062Z I0109 04:46:15.225913       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:47:35.822373490Z I0109 04:47:35.822326       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:47:36.019212737Z I0109 04:47:36.019168       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-014c19d715fe81ed4","ifaddr":{"ipv4":"10.0.160.0/19"},"capacity":{"ipv4":29,"ipv6":30}}]' on node: ip-10-0-162-201.us-east-2.compute.internal
+2023-01-09T04:47:36.044702613Z I0109 04:47:36.041615       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:47:40.290233189Z I0109 04:47:40.290177       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:47:40.290233189Z I0109 04:47:40.290215       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:47:40.846571135Z I0109 04:47:40.846518       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:47:40.846571135Z I0109 04:47:40.846555       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:48:07.792124341Z I0109 04:48:07.792076       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:48:07.793123240Z I0109 04:48:07.793086       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:48:26.679983186Z I0109 04:48:26.679365       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:48:26.679983186Z I0109 04:48:26.679400       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:48:48.237784512Z E0109 04:48:48.237732       1 leaderelection.go:330] error retrieving resource lock openshift-cloud-network-config-controller/cloud-network-config-controller-lock: Get "https://api-int.sn-loggvls-jsm.qe.devcluster.openshift.com:6443/api/v1/namespaces/openshift-cloud-network-config-controller/configmaps/cloud-network-config-controller-lock": dial tcp 10.0.131.80:6443: connect: connection refused
+2023-01-09T04:49:19.353425928Z I0109 04:49:19.353384       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T04:49:19.353532367Z I0109 04:49:19.353482       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T04:56:17.696013651Z E0109 04:56:17.695947       1 leaderelection.go:367] Failed to update lock: etcdserver: request timed out
+2023-01-09T05:30:00.079786930Z I0109 05:30:00.079721       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:00.079786930Z I0109 05:30:00.079769       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:32.425198539Z I0109 05:30:32.425143       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:32.425308041Z I0109 05:30:32.425293       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:36.789726489Z I0109 05:30:36.789648       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:36.789726489Z I0109 05:30:36.789685       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:42.051812097Z I0109 05:30:42.051746       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:42.051812097Z I0109 05:30:42.051782       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:42.427717812Z I0109 05:30:42.427672       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:42.427756715Z I0109 05:30:42.427716       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:42.452204988Z I0109 05:30:42.452154       1 controller.go:182] Assigning key: ip-10-0-162-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:42.452204988Z I0109 05:30:42.452191       1 controller.go:160] Dropping key 'ip-10-0-162-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:42.470275938Z I0109 05:30:42.470229       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:42.470437249Z I0109 05:30:42.470388       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:42.491140433Z I0109 05:30:42.491097       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:42.491140433Z I0109 05:30:42.491135       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:43.675609881Z I0109 05:30:43.674905       1 controller.go:182] Assigning key: ip-10-0-199-219.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:43.675609881Z I0109 05:30:43.674940       1 controller.go:160] Dropping key 'ip-10-0-199-219.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:43.698837400Z I0109 05:30:43.698791       1 controller.go:182] Assigning key: ip-10-0-160-211.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:43.698837400Z I0109 05:30:43.698823       1 controller.go:160] Dropping key 'ip-10-0-160-211.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:43.720582947Z I0109 05:30:43.720539       1 controller.go:182] Assigning key: ip-10-0-145-4.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:43.720667375Z I0109 05:30:43.720654       1 controller.go:160] Dropping key 'ip-10-0-145-4.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:30:48.706043737Z I0109 05:30:48.705970       1 controller.go:182] Assigning key: ip-10-0-145-4.us-east-2.compute.internal to node workqueue
+2023-01-09T05:30:48.706043737Z I0109 05:30:48.706020       1 controller.go:160] Dropping key 'ip-10-0-145-4.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:31:09.895172521Z I0109 05:31:09.895126       1 controller.go:182] Assigning key: ip-10-0-160-211.us-east-2.compute.internal to node workqueue
+2023-01-09T05:31:09.895237131Z I0109 05:31:09.895168       1 controller.go:160] Dropping key 'ip-10-0-160-211.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:31:32.074716697Z I0109 05:31:32.074664       1 controller.go:182] Assigning key: ip-10-0-199-219.us-east-2.compute.internal to node workqueue
+2023-01-09T05:31:32.074716697Z I0109 05:31:32.074699       1 controller.go:160] Dropping key 'ip-10-0-199-219.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:32:17.077172010Z I0109 05:32:17.077124       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T05:32:17.077172010Z I0109 05:32:17.077160       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:32:22.390172650Z I0109 05:32:22.386806       1 controller.go:182] Assigning key: ip-10-0-200-52.us-east-2.compute.internal to node workqueue
+2023-01-09T05:32:22.390172650Z I0109 05:32:22.386867       1 controller.go:160] Dropping key 'ip-10-0-200-52.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:32:57.554472290Z I0109 05:32:57.554425       1 controller.go:182] Assigning key: ip-10-0-130-201.us-east-2.compute.internal to node workqueue
+2023-01-09T05:32:57.554516483Z I0109 05:32:57.554469       1 controller.go:160] Dropping key 'ip-10-0-130-201.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:32:59.164610795Z I0109 05:32:59.164548       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:32:59.327583508Z I0109 05:32:59.327530       1 node_controller.go:146] Setting annotation: 'cloud.network.openshift.io/egress-ipconfig: [{"interface":"eni-0a89c79809429801e","ifaddr":{"ipv4":"10.0.160.0/19"},"capacity":{"ipv4":14,"ipv6":15}}]' on node: ip-10-0-190-242.us-east-2.compute.internal
+2023-01-09T05:32:59.371467771Z I0109 05:32:59.371418       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:33:02.362304647Z I0109 05:33:02.362257       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:33:02.362304647Z I0109 05:33:02.362292       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:33:02.583489685Z I0109 05:33:02.583435       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:33:02.583601939Z I0109 05:33:02.583587       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:33:39.400071700Z I0109 05:33:39.400023       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:33:39.400156359Z I0109 05:33:39.400141       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:33:42.370521252Z I0109 05:33:42.370455       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:33:42.370628405Z I0109 05:33:42.370614       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:33:49.418202342Z I0109 05:33:49.418153       1 controller.go:182] Assigning key: ip-10-0-144-137.us-east-2.compute.internal to node workqueue
+2023-01-09T05:33:49.418202342Z I0109 05:33:49.418194       1 controller.go:160] Dropping key 'ip-10-0-144-137.us-east-2.compute.internal' from the node workqueue
+2023-01-09T05:34:09.339941040Z I0109 05:34:09.339888       1 controller.go:182] Assigning key: ip-10-0-190-242.us-east-2.compute.internal to node workqueue
+2023-01-09T05:34:09.339941040Z I0109 05:34:09.339918       1 controller.go:160] Dropping key 'ip-10-0-190-242.us-east-2.compute.internal' from the node workqueue

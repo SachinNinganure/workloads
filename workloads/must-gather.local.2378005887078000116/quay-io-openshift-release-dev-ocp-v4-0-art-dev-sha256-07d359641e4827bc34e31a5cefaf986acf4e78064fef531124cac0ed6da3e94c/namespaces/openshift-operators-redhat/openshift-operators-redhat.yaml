@@ -1,0 +1,70 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c26,c15
+    openshift.io/sa.scc.supplemental-groups: 1000680000/10000
+    openshift.io/sa.scc.uid-range: 1000680000/10000
+  creationTimestamp: "2023-01-09T05:30:44Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-operators-redhat
+    olm.operatorgroup.uid/3f6ad079-48d2-4579-acca-00ecd1f4e35d: ""
+    openshift.io/cluster-logging: "true"
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-logging: {}
+          f:openshift.io/cluster-monitoring: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:30:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-01-09T05:32:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/3f6ad079-48d2-4579-acca-00ecd1f4e35d: {}
+          f:security.openshift.io/scc.podSecurityLabelSync: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:17Z"
+  name: openshift-operators-redhat
+  resourceVersion: "43752"
+  uid: 432c8544-32a5-49c5-8533-1eb775cbd54e
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

@@ -1,0 +1,28 @@
+2023-01-09T04:41:46.925419767Z I0109 04:41:46.925257    8893 controller.go:1274] starting openshift-tuned v4.12.0-202301042354.p0.g2488b98.assembly.stream-0-g6840ad9-dirty
+2023-01-09T04:41:46.938304367Z I0109 04:41:46.938262    8893 controller.go:348] disabling system tuned...
+2023-01-09T04:41:47.026739637Z I0109 04:41:47.026697    8893 controller.go:1068] started events processors
+2023-01-09T04:41:47.026770467Z I0109 04:41:47.026740    8893 controller.go:378] extracting TuneD profiles
+2023-01-09T04:41:47.027181561Z I0109 04:41:47.027167    8893 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-01-09T04:41:47.027389963Z I0109 04:41:47.027373    8893 controller.go:1106] started controller
+2023-01-09T04:41:47.027545877Z I0109 04:41:47.027518    8893 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2023-01-09T04:41:47.027609767Z I0109 04:41:47.027598    8893 controller.go:522] starting tuned...
+2023-01-09T04:41:47.336105925Z 2023-01-09 04:41:47,335 INFO     tuned.daemon.application: TuneD: 2.19.0, kernel: 4.18.0-372.40.1.el8_6.x86_64
+2023-01-09T04:41:47.336105925Z 2023-01-09 04:41:47,336 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2023-01-09T04:41:47.353362914Z 2023-01-09 04:41:47,353 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2023-01-09T04:41:47.353677755Z 2023-01-09 04:41:47,353 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2023-01-09T04:41:47.354199719Z 2023-01-09 04:41:47,354 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2023-01-09T04:41:47.355079142Z 2023-01-09 04:41:47,354 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2023-01-09T04:41:47.401781358Z 2023-01-09 04:41:47,401 INFO     tuned.daemon.controller: starting controller
+2023-01-09T04:41:47.401822041Z 2023-01-09 04:41:47,401 INFO     tuned.daemon.daemon: starting tuning
+2023-01-09T04:41:47.412566386Z 2023-01-09 04:41:47,412 INFO     tuned.plugins.base: instance cpu: assigning devices cpu4, cpu1, cpu7, cpu2, cpu3, cpu6, cpu5, cpu0
+2023-01-09T04:41:47.417925297Z 2023-01-09 04:41:47,417 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2023-01-09T04:41:47.420319626Z 2023-01-09 04:41:47,420 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2023-01-09T04:41:47.423613624Z 2023-01-09 04:41:47,423 INFO     tuned.plugins.plugin_disk: Device 'nvme0n1' not supported by hdparm
+2023-01-09T04:41:47.424139669Z 2023-01-09 04:41:47,424 INFO     tuned.plugins.base: instance disk: assigning devices nvme0n1
+2023-01-09T04:41:47.427084993Z 2023-01-09 04:41:47,427 INFO     tuned.plugins.base: instance net: assigning devices ens5
+2023-01-09T04:41:47.482310989Z 2023-01-09 04:41:47,481 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2023-01-09T04:41:47.534102973Z 2023-01-09 04:41:47,533 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2023-01-09T04:41:47.539521433Z I0109 04:41:47.539502    8893 controller.go:949] updated Profile ip-10-0-199-219.us-east-2.compute.internal bootcmdline: 
+2023-01-09T04:41:47.539675951Z I0109 04:41:47.539657    8893 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-01-09T04:41:47.541493843Z I0109 04:41:47.541477    8893 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2023-01-09T04:41:47.541557382Z I0109 04:41:47.541545    8893 controller.go:795] active and recommended profile (openshift-control-plane) match; profile change will not trigger profile reload

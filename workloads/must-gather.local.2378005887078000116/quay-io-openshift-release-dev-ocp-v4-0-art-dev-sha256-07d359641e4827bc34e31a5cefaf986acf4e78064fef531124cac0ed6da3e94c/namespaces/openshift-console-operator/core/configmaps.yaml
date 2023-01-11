@@ -1,0 +1,277 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    controller-config.yaml: |
+      apiVersion: operator.openshift.io/v1alpha1
+      kind: GenericOperatorConfig
+      leaderElection:
+        namespace: openshift-console-operator
+      servingInfo:
+        bindNetwork: "tcp"
+  kind: ConfigMap
+  metadata:
+    annotations:
+      capability.openshift.io/name: Console
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2023-01-09T04:46:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:controller-config.yaml: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-01-09T04:46:21Z"
+    name: console-operator-config
+    namespace: openshift-console-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+    resourceVersion: "18417"
+    uid: e02a0110-1361-46d3-baea-976417a33401
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"console-operator-65744cc449-n9n6z_8087e7d9-4931-481e-829a-8b1d6f701e03","leaseDurationSeconds":137,"acquireTime":"2023-01-09T04:46:25Z","renewTime":"2023-01-09T15:40:07Z","leaderTransitions":0}'
+    creationTimestamp: "2023-01-09T04:46:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:control-plane.alpha.kubernetes.io/leader: {}
+      manager: console
+      operation: Update
+      time: "2023-01-09T15:40:07Z"
+    name: console-operator-lock
+    namespace: openshift-console-operator
+    resourceVersion: "268069"
+    uid: 65ded4db-71aa-46cb-b98f-7647ea3012d0
+- apiVersion: v1
+  data:
+    ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDMjCCAhqgAwIBAgIIe4qZfnP8FIcwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+      HhcNMjMwMTA5MDQyODIyWhcNMzMwMTA2MDQyODIyWjA3MRIwEAYDVQQLEwlvcGVu
+      c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+      KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMi+ARLBAMCPrxFaUzMxvf0tDvci8VUv
+      VNhlAlYYRZRSf8LBAxGVeFkDvmnow3WvUMDG70f8EWnaPrW38H5vTfeBX68OKsrX
+      3v86bK3TX8zRWpAXp7+FV8BqCJq9u6YbK5ksijv6Gew76YL86kkbK+TYWN1bRmBj
+      4clPc7RZ5XWinO8zR0jsytjy3s4TAuV73eWh6fWp0zyD9QeF/EGwSg7MnGmG7t/P
+      mlQsQq9v2vS6cPnGH7btF2L3r0eh71wB+lX6W4GJsu5dB/Czlpc/xg2I7IwiiWso
+      L7Cu5uRogx0AJTheTXVOmPpgljO9JFc6EIQANuSfbgW0dyWdvfLfKR8CAwEAAaNC
+      MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFIxR
+      SLa/8aat8+3cDI0wYZJSg/b/MA0GCSqGSIb3DQEBCwUAA4IBAQDBZsf6+5Xx8Oqy
+      JhF+0GFxo8DRWi9wLg4XQ5r/zRIxzLqpfEvN/k3m/gdLuN40nOCKSmiLNlu5p7A1
+      fYl/78IwEd6mxE8GFph/4BtqWzJwi5Tuq8nm1hNqSFj+At5NquQ6RBqEYO5d2mz1
+      6rMJOejMLgfwp9fq2zlLE1SNexlzvQp60tVnYKAkkBYfwjuOlqEszvJXIkh8WLjm
+      4WfAru0wrlDakx8XCYid/L2/nZYYttpnCosIzW99dbsvZ3phuktrVGOpKqUWQOEJ
+      YdQUNLFArb8erdK4d6+6k6lD1rKaYilYj1C+fFeZz9O7ZBbx+FNKy3PsgAD8vkaW
+      icRHLB71
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDQDCCAiigAwIBAgIILeTKX/cdqP0wDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMB4XDTIzMDEwOTA0MjgyMVoXDTMzMDEwNjA0MjgyMVowPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyJqCWcJ2hfaM
+      ojkbBp9Zabx4xvQFqdC26Om24Q/hnFmsMm316L3OxVcu26vE5tdPgKUs5Y/uUu/C
+      jm/m6HxZf8Id86P9vhr2BYP/uS0Erq9daq+UoNnZaPB4UHfkJs0Af1/i98fJVQGt
+      vs3IZE7f7mt9DvOa/05ztgUv1gvBAnP8J4DLEbTBelOn5CWzzFqyevD81GSua6Ot
+      641UOdWY+oChxSBoKVi1SnjlgrZMl0ffGFqVApCrsvwTPhNjeM60VXMSI93aQJHg
+      V5YgAA8/xBGcHS9JnEIWyyXzp1VE3RKuijTs+t6XRwbdfgD/YoXvps9WMNIr0LmP
+      LJcBnYpStQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+      /zAdBgNVHQ4EFgQU77ALOZ0kxGfv6O3VU2rK6b7ULnkwDQYJKoZIhvcNAQELBQAD
+      ggEBAKCxcGE/rRhnbLuIIXQ+7YxCJSJ5q8zvBZHxOsWDbW2rcUwuuvvAKXBUYTZx
+      6bfyJq8COu70tOoJ7NMeaKBeMA08YBYzIN7d3V9z/2fm2bYJkOQ9XA1+Kphg4wni
+      wpeGcKcODeYY0rabIjCeIp63KK84lhoMeWqJdB+sjRJrI83NOlYx9y2fphsrimHF
+      EXMWKCdr/1l7SBVtnEZaqo3+MRext8UGzbfTqSflD5WyqoZVQd+WTCtRgsjHN4o0
+      MhXmZFug0uUnATKbC0WXa/UT2PJeLG3aIIn+/H8LzLO0G0wmJXF/iB0naozNfnUT
+      L6+q0kdSpXwof4Cz52Gmy5pr8i4=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDTDCCAjSgAwIBAgIIS2wsrVB+u0QwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+      dHdvcmstc2lnbmVyMB4XDTIzMDEwOTA0MjgyMVoXDTMzMDEwNjA0MjgyMVowRDES
+      MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+      aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEAs4/ZcjJgNXXHRyfYbuOf5g6KiV5LZvyXRerjm/cCmXrXyiDDUtUEMiKJN28Y
+      IQ+aMT6zGofXUe0FuGw8Gx8jyI6nXftKDw9kkV/+HLIFwBA8+YhBLk2Sy7Yhzxtn
+      DH0NO51BmGtUtkYDK3XCo2LmERUF7aEyxwWEPvSOr4Rpp9ccIlo/tajMjwJbTNiz
+      SkmUD2K0+MnhRWcdU+aK/a2UaMrwUvmcj7rbLiLFWPd6kRcilHoYWj573AFnSgZq
+      h79D6mpHhlrBtjjr26shPICacc81yieW/Rvr+ORQEPA8V3URRFj/3lOtTLWhe3Nq
+      y6E87UNsejuKSNizgVosG8zVBQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+      VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUALk7CI1uIhmz3HF6sEQ3DXRjdUswDQYJ
+      KoZIhvcNAQELBQADggEBAKbGuLzjzS3pf0AmcBODHun2LH4DuTpfdZ386OHNiehQ
+      F8xda9WBNlibeInG/5ccxfUThFLFBrL6GI19IECF2XqjiR2k6CMNw/+m6RhLmCDw
+      3/6IfLt0Oz4/wrucuPy5x4/Lreep5imGWxHP7uF+1vzY9LC8CTLgrEYDBcTED1Ag
+      ksUA+i5Tq+g9BuklV4MrPKUrOlratoLUEaubqBDGymGVxSg69fILEN3zwiDWNBnt
+      RJ7w/ZNx7dvVpEpWqvqg6AWP4JXAtzkZzDUhqgOB7uZTvWrBDEaGfYe99Te5JkZk
+      qESsshuEwE05rL2nrZVYYicR/p9HjKVfW58Xnu83QUg=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDlzCCAn+gAwIBAgIIdSOnzhV+LiowDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+      AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+      ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNjczMjM5MjY2MB4XDTIzMDEwOTA0NDEw
+      NloXDTMzMDEwNjA0NDEwN1owWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+      c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+      ckAxNjczMjM5MjY2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArnA7
+      YPPT7eANG25R21vk0K9cUHN+zHCXwZqelniz8A50wfyO7akkrO6uXUaXnFqBiqua
+      gpkcroAWF8Yg/1WEPov9cEoTVIeLoSL1txd9Xz99weu9qHV6Cw8O+/mJHkjQhmEP
+      oHC9qgkqJX3qERiagTlt5TDLIYV6LD9Rmv9s7yN6iWMgzRM39ibJUGQcUICB6Foy
+      bM/hbq63WbN/U6Rw1D/JA+vBxiK6f/GXahQpOqjGLaKlCPGpPsE1hRRpWZuOTCF2
+      ymwFq0B2DKlBaAoUR1ZAIKBIQkd9ih1ehfVoyBsZZd36kVDutup+wqPtK2WW07qn
+      f0wW6dQMPfsIWyrxkQIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+      BAUwAwEB/zAdBgNVHQ4EFgQUe/6IiGRfoxz+tc8uEl+W/6/nsEowHwYDVR0jBBgw
+      FoAUe/6IiGRfoxz+tc8uEl+W/6/nsEowDQYJKoZIhvcNAQELBQADggEBAEPpbZ8x
+      q6HnPaEmBp8UPyYX2kcZImc5rXTZXpmDoPelf1+35ws9oA2LrQPS8xHNQxG129lm
+      QveMGN3VG8Gqt+W4X7zhBwbg697nA3ju0q2CxKFqhjtOkNM8OYxp94rWutcci44I
+      f2edOQj10T8tQuFFBiZWKOq8S+nILmYdLeWTMuAeEmcRG3My5YgSKNcpt3fdZIx1
+      RYdTRKpgygiUm1CG9eM/ToPjKDbU4e9p+JZvWYkgjCuV/pJi/8pl8abGYJxYn4uj
+      Up1VRnY6TcHuIDMqjHkvx/m3jDLW2zc2vPZyQvudO6Lv9XrUtZRdjWh+R2whob2J
+      qWo7gSGF1XJAIjI=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDmTCCAoGgAwIBAgIINUrcM2nL/s0wDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+      AwwbaW5ncmVzcy1vcGVyYXRvckAxNjczMjM5MzExMB4XDTIzMDEwOTA0NDE1MFoX
+      DTI1MDEwODA0NDE1MVowPDE6MDgGA1UEAwwxKi5hcHBzLnNuLWxvZ2d2bHMtanNt
+      LnFlLmRldmNsdXN0ZXIub3BlbnNoaWZ0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD
+      ggEPADCCAQoCggEBALojMuZ0Y/zPNL4jL1SU0mRkVLjejzO9QmwPuWm7ort4o0E1
+      6LFiDpI3gbn9T+XZgj9oRt6k9oo8YqQSgGfuhQ+9YoSf231X7kMVlKCjhtGlQgsX
+      OZf7DgpeJ3HbAH7NvrwksTn2Q19QiWhWXoOdqGSFO8AeiBHHl/aOPFDInh8e9dY4
+      bZlmy/Y5NEZ6bFZhiCVVhFT74Q+ygwhQ3mX5HOBLqhPjnPC16fNpNZEBxTZ47sjR
+      dtBXldkhkDkFrXNrvJoHPmZrEdfmp1xPM7+0tFvMPiOIpsqI064unKLPQshxJNXI
+      oszzQnOMELK7oT8NFSPrBKQ7LqJssV9F8UztvXkCAwEAAaOBtDCBsTAOBgNVHQ8B
+      Af8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYDVR0TAQH/BAIwADAdBgNV
+      HQ4EFgQU5LzPT46o+8cIQFgleVb5h8WLpEUwHwYDVR0jBBgwFoAU9Ggn3dwjlLtb
+      6eqbJiVBTHxEX+EwPAYDVR0RBDUwM4IxKi5hcHBzLnNuLWxvZ2d2bHMtanNtLnFl
+      LmRldmNsdXN0ZXIub3BlbnNoaWZ0LmNvbTANBgkqhkiG9w0BAQsFAAOCAQEAQgBX
+      DyDkfG1AzNGiveTx5vdAKVjKsUMb9q6cW2LE5JUzoNXhVzvmziaUZNECOngiE6Nx
+      Nw+fF7dIOzeaEvDnFCfOeasM7MUe1z49P03nKFpd/GJmqhCRvj2/2ZbCOEVI8vPk
+      c7cYcfqKa6caCOLRtL0Y9znloyoSGP/nxwq1aQEdE0FEWAyETnCtRldPaur08V8t
+      3mju25z+0kFMGDghkUqYI4PWjGd3bui7CaBffBDwS+qj6rUKJ+Xy17ZGHEEn0Kt2
+      j5nS5e6YQp6q6Z0eDgkqihgcy5/j0vLlEYxnR/58BuJ5qPA4qqqtZYtmxE3QZmV8
+      3UNqdys8j/No2dC5CQ==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+      ZXNzLW9wZXJhdG9yQDE2NzMyMzkzMTEwHhcNMjMwMTA5MDQ0MTUwWhcNMjUwMTA4
+      MDQ0MTUxWjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2NzMyMzkzMTEw
+      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDdArhnIBdFvACv4HWIRPK
+      p3ZaArekwuaIV4Gg3R3CB11vyHZa2GQqZ785zocIKTWsenWS/d+Hc1LxdEKU0xY5
+      ZnH2AKvVfojseWowvvSRwhCOKvzXZgxKSCrTl8L+6ZvK+t4rLRvRmbkRYNRpk72M
+      k+/3n4mthKEqjeDSMdcmtZ1p97Fx8GhS5rhOchKkuwYyw1DZik/jHMV3YvBYKXhE
+      y7e5nIVRaDTCKjqpuEvDVNavUvLE6vj6Md6K9ThoVkAGtMIZWNVgugbG400zy9X+
+      XKYnuC2Tz/yCeaT+xSPUGylAapd4d1ns0/n/VlP5tDx+6dU0Ul8sF4me5Ifsdbo7
+      AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+      A1UdDgQWBBT0aCfd3COUu1vp6psmJUFMfERf4TANBgkqhkiG9w0BAQsFAAOCAQEA
+      K4M7xq1PnQRXSV1IXV8e3SlFU0Z2BfBy67oqhV4qhnyWkgzQe6KXVzPyjUEJf2nx
+      EecB1MMe95XL1ZqR60ZuXYKGoc6E0KJIqtLwwTbHN893fG+F4ujhI6BQbTMcUiA1
+      HTmozp86oREIfAKIVEHxK1G1jL0hqPehf8f9aAJneMNRAwAvxu/nYa/UVaK9Q9D/
+      8vB7kavvGYsRjxVzH01JPWOg+v6okZVcGACyrw1vYGuUmG3r6hh6Wjek611zY4i7
+      YOle5kF1gDkDTDJciOARkHaW+NOwdJ5Ma1lMeHLVW02S+veexZ7Re5WwUSdSjhwR
+      X6Iefn92dFZAlgnwnv/DdQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    annotations:
+      kubernetes.io/description: Contains a CA bundle that can be used to verify the
+        kube-apiserver when using internal endpoints such as the internal service
+        IP or kubernetes.default.svc. No other usage is guaranteed across distributions
+        of Kubernetes clusters.
+    creationTimestamp: "2023-01-09T04:46:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca.crt: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubernetes.io/description: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:46:16Z"
+    name: kube-root-ca.crt
+    namespace: openshift-console-operator
+    resourceVersion: "18244"
+    uid: 84c1e447-9d92-4c31-aec5-5696289b9262
+- apiVersion: v1
+  data:
+    service-ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDUTCCAjmgAwIBAgIIMYqbBAwc2L0wDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UE
+      Awwrb3BlbnNoaWZ0LXNlcnZpY2Utc2VydmluZy1zaWduZXJAMTY3MzIzOTI2NDAe
+      Fw0yMzAxMDkwNDQxMDNaFw0yNTAzMDkwNDQxMDRaMDYxNDAyBgNVBAMMK29wZW5z
+      aGlmdC1zZXJ2aWNlLXNlcnZpbmctc2lnbmVyQDE2NzMyMzkyNjQwggEiMA0GCSqG
+      SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDTcc5bVht/QXo9+QSTDfh+u9bzpsPU9w1b
+      W/nnoNlp6UiOyJlBpszLj6Wj38OdKoKLOclh6sgXIrvAr6yZ+Lv/NZEcUIB/UdmU
+      XdOC8gDBLnaAfIcdJp2WQ9Ax/xWNY7MB2jhNCMkgIIsuSN7ByRIyCrbWaBsYFOBk
+      Bcdo0cmzfliLryN0mbztW2mguc7Hto9irXK/DZ9zBfnWpvLT9FmlgQf/QyTkT6J5
+      fy8ibbcN5Rm+Vy7xvoW+hoIwt3bHHGR5BppfcHOww5sgXmQB+57R6+2t0wsppqzy
+      vRVZ5xePI0lsjZKd8kXfug7nufCIAvMXrW3YYL0Sw6uMlLyIYDZJAgMBAAGjYzBh
+      MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQJc3ob
+      Hjn57V6OWYOEqQstarj+BzAfBgNVHSMEGDAWgBQJc3obHjn57V6OWYOEqQstarj+
+      BzANBgkqhkiG9w0BAQsFAAOCAQEAmnBbNizV4cMcSwrmS92FjzAoMuBqHZllawAd
+      37G88YI5KS1SYUfQd1kDHVfqa73nfNzwWHK0HdfnJsBWIyjFcynCjqnxhzIsMIHw
+      45HPUt2sfYM7e40Lk9+KOXxYEM3PKdyLWN44QmI7iU9YUlJ1N7DklK0wPUa2hT+9
+      pLRd33OJYilP8kuD5zNuyiIPtOePW6LdwW5tU0viQy+ilq9yW956WN+NoAYEWYp+
+      LiOGHNiyqcqFWwTmiXIaE9IGdPFlTvqSmrFhfNAF2dOcJ0y9Kn9ckJoy+iTigGzE
+      S4aZY6eiYxCmMfAS3zDquXnfOLhhLDQajOUJkYyIl08jL2ZwDA==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-01-09T04:46:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/inject-cabundle: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:46:16Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          f:service-ca.crt: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-01-09T04:46:16Z"
+    name: openshift-service-ca.crt
+    namespace: openshift-console-operator
+    resourceVersion: "18266"
+    uid: 99a5a175-60de-4330-babb-a316e52c0bc3
+kind: ConfigMapList
+metadata:
+  resourceVersion: "268368"

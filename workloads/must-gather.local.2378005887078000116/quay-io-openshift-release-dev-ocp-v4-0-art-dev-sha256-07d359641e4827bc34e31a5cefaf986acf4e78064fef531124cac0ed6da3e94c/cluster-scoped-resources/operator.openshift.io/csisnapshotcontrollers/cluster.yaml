@@ -1,0 +1,113 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: CSISnapshotController
+metadata:
+  annotations:
+    capability.openshift.io/name: CSISnapshot
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-01-09T04:36:51Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:36:51Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:readyReplicas: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T04:41:23Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "6562"
+  uid: 055e157a-3727-414c-b42f-5ba0f8d9a75b
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    reason: AsExpected
+    status: "False"
+    type: WebhookControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    status: "True"
+    type: CSISnapshotControllerUpgradeable
+  - lastTransitionTime: "2023-01-09T04:41:07Z"
+    status: "True"
+    type: CSISnapshotControllerAvailable
+  - lastTransitionTime: "2023-01-09T04:41:07Z"
+    status: "False"
+    type: CSISnapshotControllerProgressing
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotGuestStaticResourceControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:04Z"
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotStaticResourceControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:23Z"
+    status: "True"
+    type: CSISnapshotWebhookControllerAvailable
+  - lastTransitionTime: "2023-01-09T04:41:23Z"
+    status: "False"
+    type: CSISnapshotWebhookControllerProgressing
+  - lastTransitionTime: "2023-01-09T04:41:05Z"
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotControllerDegraded
+  - lastTransitionTime: "2023-01-09T04:41:06Z"
+    reason: AsExpected
+    status: "False"
+    type: CSISnapshotWebhookControllerDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: csi-snapshot-controller
+    namespace: openshift-cluster-storage-operator
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: csi-snapshot-webhook
+    namespace: openshift-cluster-storage-operator
+    resource: deployments
+  readyReplicas: 0

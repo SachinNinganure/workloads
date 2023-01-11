@@ -1,0 +1,30 @@
+---
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  creationTimestamp: "2023-01-09T05:30:33Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:repositoryDigestMirrors: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-01-09T05:30:33Z"
+  name: brew-registry
+  resourceVersion: "42154"
+  uid: 3742527f-4a53-4aff-b62c-5457b2b1e5ad
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - brew.registry.redhat.io
+    source: registry.redhat.io
+  - mirrors:
+    - brew.registry.redhat.io
+    source: registry.stage.redhat.io
+  - mirrors:
+    - brew.registry.redhat.io
+    source: registry-proxy.engineering.redhat.com

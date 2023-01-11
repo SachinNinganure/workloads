@@ -1,0 +1,382 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:47:10Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: alert-router
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.24.0
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:maxUnavailable: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:10Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:31:05Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "42919"
+    uid: 6d74b9f3-00c0-465d-8780-3d4c5ab8efd6
+  spec:
+    maxUnavailable: 1
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: alert-router
+        app.kubernetes.io/instance: main
+        app.kubernetes.io/name: alertmanager
+        app.kubernetes.io/part-of: openshift-monitoring
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:31:05Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:49:55Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: metrics-adapter
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.10.0
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:49:55Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:31:07Z"
+    name: prometheus-adapter
+    namespace: openshift-monitoring
+    resourceVersion: "42945"
+    uid: 857f0645-1766-4232-8f0a-49e7518589f3
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: metrics-adapter
+        app.kubernetes.io/name: prometheus-adapter
+        app.kubernetes.io/part-of: openshift-monitoring
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:31:07Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:47:15Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.39.1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:15Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:30:51Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "42752"
+    uid: 77730caa-dd0f-4bcd-86a1-7b4217db6fae
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: prometheus
+        app.kubernetes.io/instance: k8s
+        app.kubernetes.io/name: prometheus
+        app.kubernetes.io/part-of: openshift-monitoring
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:30:51Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:42:01Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/name: prometheus-operator-admission-webhook
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.60.1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:42:01Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:30:38Z"
+    name: prometheus-operator-admission-webhook
+    namespace: openshift-monitoring
+    resourceVersion: "42447"
+    uid: 2296cbce-25af-42b9-aa96-c062b24199ba
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app.kubernetes.io/name: prometheus-operator-admission-webhook
+        app.kubernetes.io/part-of: openshift-monitoring
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:30:38Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2023-01-09T04:47:32Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.28.1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:32Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-01-09T05:30:38Z"
+    name: thanos-querier-pdb
+    namespace: openshift-monitoring
+    resourceVersion: "42437"
+    uid: 22838bbb-8f6d-4178-895a-5c15409333e3
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: query-layer
+        app.kubernetes.io/instance: thanos-querier
+        app.kubernetes.io/name: thanos-query
+        app.kubernetes.io/part-of: openshift-monitoring
+  status:
+    conditions:
+    - lastTransitionTime: "2023-01-09T05:30:38Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "268578"

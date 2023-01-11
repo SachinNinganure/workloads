@@ -1,0 +1,11 @@
+2023-01-09T04:41:37.884106969Z 2023/01/09 04:41:37 provider.go:129: Defaulting client-id to system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+2023-01-09T04:41:37.884106969Z 2023/01/09 04:41:37 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-01-09T04:41:37.885109351Z 2023/01/09 04:41:37 provider.go:358: Delegation of authentication and authorization to OpenShift is enabled for bearer tokens and client certificates.
+2023-01-09T04:41:37.898801340Z 2023/01/09 04:41:37 oauthproxy.go:203: mapping path "/" => upstream "http://127.0.0.1:8797/"
+2023-01-09T04:41:37.898801340Z 2023/01/09 04:41:37 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+2023-01-09T04:41:37.898801340Z 2023/01/09 04:41:37 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-01-09T04:41:37.899129917Z 2023/01/09 04:41:37 http.go:61: HTTP: listening on 127.0.0.1:4180
+2023-01-09T04:41:37.899290280Z I0109 04:41:37.899262       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key
+2023-01-09T04:41:37.899311844Z 2023/01/09 04:41:37 http.go:107: HTTPS: listening on [::]:9001
+2023-01-09T04:48:37.485863942Z E0109 04:48:37.485822       1 webhook.go:111] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2023-01-09T04:48:37.485903137Z 2023/01/09 04:48:37 oauthproxy.go:791: requestauth: 10.131.0.14:57768 Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused

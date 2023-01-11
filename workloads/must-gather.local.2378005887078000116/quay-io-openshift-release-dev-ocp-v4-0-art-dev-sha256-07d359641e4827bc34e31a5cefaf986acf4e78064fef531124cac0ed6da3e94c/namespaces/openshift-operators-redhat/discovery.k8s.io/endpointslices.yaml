@@ -1,0 +1,221 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: loki-operator-controller-manager-565db69ff8-lkx27
+      namespace: openshift-operators-redhat
+      uid: 8914fc06-8ce4-4780-a2cf-ec9b76241252
+    zone: us-east-2a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:34:20Z"
+    creationTimestamp: "2023-01-09T05:32:17Z"
+    generateName: loki-operator-controller-manager-metrics-service-
+    generation: 3
+    labels:
+      app.kubernetes.io/instance: loki-operator-v5.6.0
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      app.kubernetes.io/version: 5.6.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: loki-operator-controller-manager-metrics-service
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ee77cfe7-b204-450d-a3aa-407e72e22cfd"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:34:20Z"
+    name: loki-operator-controller-manager-metrics-service-vv7k2
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: loki-operator-controller-manager-metrics-service
+      uid: ee77cfe7-b204-450d-a3aa-407e72e22cfd
+    resourceVersion: "45511"
+    uid: c9cd7490-11f0-4d70-a77c-5f78f8440cc0
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: loki-operator-controller-manager-565db69ff8-lkx27
+      namespace: openshift-operators-redhat
+      uid: 8914fc06-8ce4-4780-a2cf-ec9b76241252
+    zone: us-east-2a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:34:20Z"
+    creationTimestamp: "2023-01-09T05:32:20Z"
+    generateName: loki-operator-controller-manager-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: loki-operator-controller-manager-service
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"83478455-a72c-4d88-b352-45a8b098e3bf"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:34:20Z"
+    name: loki-operator-controller-manager-service-n7gb9
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: loki-operator-controller-manager-service
+      uid: 83478455-a72c-4d88-b352-45a8b098e3bf
+    resourceVersion: "45513"
+    uid: 58bd1309-f49e-4ed1-8df0-8eb3e570b0bc
+  ports:
+  - name: "443"
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-144-137.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: loki-operator-controller-manager-565db69ff8-lkx27
+      namespace: openshift-operators-redhat
+      uid: 8914fc06-8ce4-4780-a2cf-ec9b76241252
+    zone: us-east-2a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T05:34:20Z"
+    creationTimestamp: "2023-01-09T05:32:18Z"
+    generateName: loki-operator-webhook-service-
+    generation: 3
+    labels:
+      app.kubernetes.io/instance: loki-operator-v5.6.0
+      app.kubernetes.io/managed-by: operator-lifecycle-manager
+      app.kubernetes.io/name: loki-operator
+      app.kubernetes.io/part-of: cluster-logging
+      app.kubernetes.io/version: 5.6.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: loki-operator-webhook-service
+      operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8fc6e2fe-cba7-4821-bc2b-db71b6bd9d69"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T05:34:20Z"
+    name: loki-operator-webhook-service-2r8f4
+    namespace: openshift-operators-redhat
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: loki-operator-webhook-service
+      uid: 8fc6e2fe-cba7-4821-bc2b-db71b6bd9d69
+    resourceVersion: "45514"
+    uid: 8cbd464e-da3a-48cd-afa3-e5c98e07c4e9
+  ports:
+  - name: ""
+    port: 9443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268591"

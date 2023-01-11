@@ -1,0 +1,724 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "loki.grafana.com/v1",
+          "kind": "LokiStack",
+          "metadata": {
+            "name": "lokistack-sample"
+          },
+          "spec": {
+            "size": "1x.small",
+            "storage": {
+              "secret": {
+                "name": "test"
+              }
+            },
+            "storageClassName": "standard"
+          }
+        },
+        {
+          "apiVersion": "loki.grafana.com/v1beta1",
+          "kind": "AlertingRule",
+          "metadata": {
+            "name": "alertingrule-sample"
+          },
+          "spec": {
+            "groups": [
+              {
+                "interval": "10m",
+                "name": "alerting-rules-group",
+                "rules": [
+                  {
+                    "alert": "HighPercentageError",
+                    "annotations": {
+                      "summary": "High request latency"
+                    },
+                    "expr": "sum(rate({app=\"foo\", env=\"production\"} |= \"error\" [5m])) by (job)\n  /\nsum(rate({app=\"foo\", env=\"production\"}[5m])) by (job)\n  \u003e 0.05\n",
+                    "for": "10m",
+                    "labels": {
+                      "severity": "page"
+                    }
+                  },
+                  {
+                    "alert": "HttpCredentialsLeaked",
+                    "annotations": {
+                      "message": "{{ $labels.job }} is leaking http basic auth credentials."
+                    },
+                    "expr": "sum by (cluster, job, pod) (count_over_time({namespace=\"prod\"} |~ \"http(s?)://(\\\\w+):(\\\\w+)@\" [5m]) \u003e 0)",
+                    "for": "10m",
+                    "labels": {
+                      "severity": "critical"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tenantID": "test-tenant"
+          }
+        },
+        {
+          "apiVersion": "loki.grafana.com/v1beta1",
+          "kind": "RecordingRule",
+          "metadata": {
+            "name": "recordingrule-sample"
+          },
+          "spec": {
+            "groups": [
+              {
+                "interval": "10m",
+                "name": "recording-rules-group",
+                "rules": [
+                  {
+                    "expr": "sum(rate({container=\"myservice\"}[10m]))\n",
+                    "record": "myservice:requests:rate10m"
+                  },
+                  {
+                    "expr": "sum(rate({container=\"otherservice\"}[1m]))\n",
+                    "record": "otherservice:requests:rate1m"
+                  }
+                ]
+              }
+            ],
+            "tenantID": "test-tenant"
+          }
+        },
+        {
+          "apiVersion": "loki.grafana.com/v1beta1",
+          "kind": "RulerConfig",
+          "metadata": {
+            "name": "rulerconfig-sample"
+          },
+          "spec": {
+            "alertmanager": {
+              "discovery": {
+                "enableSRV": true,
+                "refreshInterval": "1m"
+              },
+              "enableV2": true,
+              "endpoints": [
+                "http://alertmanager-host1.mycompany.org",
+                "http://alertmanager-host2.mycompany.org"
+              ],
+              "externalLabels": {
+                "environment": "production",
+                "region": "us-east-2"
+              },
+              "externalUrl": "http://www.mycompany.org/alerts",
+              "notificationQueue": {
+                "capacity": 1000,
+                "forGracePeriod": "10m",
+                "forOutageTolerance": "1h",
+                "resendDelay": "1m",
+                "timeout": "30s"
+              }
+            },
+            "evaluationInterval": "1m",
+            "pollInterval": "1m",
+            "remoteWrite": {
+              "client": {
+                "authorization": "basic",
+                "authorizationSecretName": "my-secret-resource",
+                "name": "remote-write-log-metrics",
+                "proxyUrl": "http://proxy-host.mycompany.org",
+                "relabelConfigs": [
+                  {
+                    "action": "replace",
+                    "regex": "ALERTS.*",
+                    "replacement": "$1",
+                    "separator": "",
+                    "sourceLabels": [
+                      "labelc",
+                      "labeld"
+                    ],
+                    "targetLabel": "labelnew"
+                  }
+                ],
+                "timeout": "30s",
+                "url": "http://remote-write-host.mycompany.org"
+              },
+              "enabled": true,
+              "refreshPeriod": "10s"
+            }
+          }
+        }
+      ]
+    capabilities: Full Lifecycle
+    categories: OpenShift Optional, Logging & Tracing
+    certified: "false"
+    containerImage: registry.redhat.io/openshift-logging/loki-rhel8-operator@sha256:2170a62446189c30c3bb8d31bee6479979af8a1a73cbbcf66fdb80e5784530bc
+    description: |
+      The Loki Operator for OCP provides a means for configuring and managing a Loki stack for cluster logging.
+      ## Prerequisites and Requirements
+      ### Loki Operator Namespace
+      The Loki Operator must be deployed to the global operator group namespace `openshift-operators-redhat`.
+      ### Memory Considerations
+      Loki is a memory intensive application.  The initial
+      set of OCP nodes may not be large enough to support the Loki stack.  Additional OCP nodes must be added
+      to the OCP cluster if you desire to run with the recommended (or better) memory.
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.26/23"],"mac_address":"0a:58:0a:81:02:1a","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.26/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.26"
+          ],
+          "mac": "0a:58:0a:81:02:1a",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.26"
+          ],
+          "mac": "0a:58:0a:81:02:1a",
+          "default": true,
+          "dns": {}
+      }]
+    kubectl.kubernetes.io/default-container: manager
+    olm.operatorGroup: openshift-operators-redhat
+    olm.operatorNamespace: openshift-operators-redhat
+    olm.skipRange: '>=5.4.0-0 <5.6.0'
+    olm.targetNamespaces: ""
+    olmcahash: b224c209ba78897a5c08e663cc66301a5e703eca6702d34c79330f0b42d5bf26
+    openshift.io/scc: restricted-v2
+    operatorframework.io/cluster-monitoring: "true"
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"AlertingRule","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"LokiStack","version":"v1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"LokiStack","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"RecordingRule","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"loki.grafana.com","kind":"RulerConfig","version":"v1beta1"}},{"type":"olm.maxOpenShiftVersion","value":4.12},{"type":"olm.package","value":{"packageName":"loki-operator","version":"5.6.0"}}]}'
+    operatorframework.io/suggested-namespace: openshift-operators-redhat
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    operators.operatorframework.io/builder: operator-sdk-unknown
+    operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: AOS Cluster Logging
+  creationTimestamp: "2023-01-09T05:32:20Z"
+  generateName: loki-operator-controller-manager-565db69ff8-
+  labels:
+    app.kubernetes.io/managed-by: operator-lifecycle-manager
+    app.kubernetes.io/name: loki-operator
+    app.kubernetes.io/part-of: cluster-logging
+    name: loki-operator-controller-manager
+    pod-template-hash: 565db69ff8
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-145-4
+    operation: Update
+    time: "2023-01-09T05:32:20Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:containerImage: {}
+          f:description: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:olmcahash: {}
+          f:operatorframework.io/cluster-monitoring: {}
+          f:operatorframework.io/properties: {}
+          f:operatorframework.io/suggested-namespace: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:operators.operatorframework.io/builder: {}
+          f:operators.operatorframework.io/project_layout: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e8c9841b-7777-4e2d-a492-52207daf12fb"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/apiserver.local.config/certificates"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"manager"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_GATEWAY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_LOKI"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_OPA"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/apiserver.local.config/certificates"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/controller_manager_config.yaml"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:subPath: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"apiservice-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"loki-operator-metrics-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"manager-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-01-09T05:32:20Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:32:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.26"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-01-09T05:34:20Z"
+  name: loki-operator-controller-manager-565db69ff8-lkx27
+  namespace: openshift-operators-redhat
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: loki-operator-controller-manager-565db69ff8
+    uid: e8c9841b-7777-4e2d-a492-52207daf12fb
+  resourceVersion: "45508"
+  uid: 8914fc06-8ce4-4780-a2cf-ec9b76241252
+spec:
+  containers:
+  - args:
+    - --config=controller_manager_config.yaml
+    command:
+    - /manager
+    env:
+    - name: RELATED_IMAGE_LOKI
+      value: registry.redhat.io/openshift-logging/logging-loki-rhel8@sha256:f0719fcbac0269850652510946d8c974a2c31043e66040d966f60430765cf7ba
+    - name: RELATED_IMAGE_GATEWAY
+      value: registry.redhat.io/openshift-logging/lokistack-gateway-rhel8@sha256:23ec256d50440dabde48fad25659872e21d32172a5311b269d69447ea47ba736
+    - name: RELATED_IMAGE_OPA
+      value: registry.redhat.io/openshift-logging/opa-openshift-rhel8@sha256:dfba8e3edc3c6a77d081f8f5cd210f236aacae890191160da61a65ca9830f953
+    - name: OPERATOR_CONDITION_NAME
+      value: loki-operator.v5.6.0
+    image: registry.redhat.io/openshift-logging/loki-rhel8-operator@sha256:2170a62446189c30c3bb8d31bee6479979af8a1a73cbbcf66fdb80e5784530bc
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 15
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: manager
+    ports:
+    - containerPort: 9443
+      name: webhook-server
+      protocol: TCP
+    - containerPort: 8080
+      name: metrics
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+      readOnly: true
+    - mountPath: /controller_manager_config.yaml
+      name: manager-config
+      subPath: controller_manager_config.yaml
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-skqlg
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8443
+    - --upstream=http://127.0.0.1:8080/
+    - --logtostderr=true
+    - --tls-cert-file=/var/run/secrets/serving-cert/tls.crt
+    - --tls-private-key-file=/var/run/secrets/serving-cert/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA256
+    - --tls-min-version=VersionTLS12
+    - --v=0
+    env:
+    - name: OPERATOR_CONDITION_NAME
+      value: loki-operator.v5.6.0
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:7b7e6458e11260b217f2b96f2ce6618d0f6739f8041b28174b31258aecf8fcfb
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/serving-cert
+      name: loki-operator-metrics-cert
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-skqlg
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: default-dockercfg-2zdc9
+  nodeName: ip-10-0-144-137.us-east-2.compute.internal
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000680000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c26,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 10
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: loki-operator-controller-manager-service-cert
+  - configMap:
+      defaultMode: 420
+      name: loki-operator-manager-config
+    name: manager-config
+  - name: loki-operator-metrics-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: loki-operator-metrics
+  - name: apiservice-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: apiserver.crt
+      - key: tls.key
+        path: apiserver.key
+      secretName: loki-operator-controller-manager-service-cert
+  - name: kube-api-access-skqlg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:32:20Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:34:20Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:34:20Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-01-09T05:32:20Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://e1feb5f9ad5bbe0ae3a3041e122b88f2914710ed411200df4e6cd47bd08a41fb
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:7b7e6458e11260b217f2b96f2ce6618d0f6739f8041b28174b31258aecf8fcfb
+    imageID: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:020350b3eaadb999a7257aeba9f17486e1baf4de4ce9a3c60a3bd122c36b7992
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T05:32:28Z"
+  - containerID: cri-o://b93c8fdfbcfc80e1dff8a8b428e1cf5b51bb6f8445a8cd740e58cd145c0f2224
+    image: registry.redhat.io/openshift-logging/loki-rhel8-operator@sha256:2170a62446189c30c3bb8d31bee6479979af8a1a73cbbcf66fdb80e5784530bc
+    imageID: registry.redhat.io/openshift-logging/loki-rhel8-operator@sha256:2170a62446189c30c3bb8d31bee6479979af8a1a73cbbcf66fdb80e5784530bc
+    lastState: {}
+    name: manager
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-01-09T05:34:08Z"
+  hostIP: 10.0.144.137
+  phase: Running
+  podIP: 10.129.2.26
+  podIPs:
+  - ip: 10.129.2.26
+  qosClass: BestEffort
+  startTime: "2023-01-09T05:32:20Z"

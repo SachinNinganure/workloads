@@ -1,0 +1,25 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-01-09T04:47:21Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: cloud-credential-operator
+    operation: Update
+    time: "2023-01-09T04:47:21Z"
+  name: pod-identity-webhook
+  resourceVersion: "20322"
+  uid: 5ea36664-b082-4abf-ab31-dc07b7f76380
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - serviceaccounts
+  verbs:
+  - get
+  - watch
+  - list

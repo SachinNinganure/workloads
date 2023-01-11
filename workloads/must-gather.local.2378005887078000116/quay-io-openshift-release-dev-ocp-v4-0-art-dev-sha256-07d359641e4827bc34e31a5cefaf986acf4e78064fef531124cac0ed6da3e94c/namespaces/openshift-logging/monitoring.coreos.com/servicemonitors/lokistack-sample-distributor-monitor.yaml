@@ -1,0 +1,80 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-01-09T06:12:41Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: distributor
+    app.kubernetes.io/created-by: lokistack-controller
+    app.kubernetes.io/instance: lokistack-sample
+    app.kubernetes.io/managed-by: lokistack-controller
+    app.kubernetes.io/name: lokistack
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/created-by: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e6be9cef-636c-40da-84a6-52015a525cc4"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:selector: {}
+    manager: manager
+    operation: Update
+    time: "2023-01-09T06:12:41Z"
+  name: lokistack-sample-distributor-monitor
+  namespace: openshift-logging
+  ownerReferences:
+  - apiVersion: loki.grafana.com/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: LokiStack
+    name: lokistack-sample
+    uid: e6be9cef-636c-40da-84a6-52015a525cc4
+  resourceVersion: "60211"
+  uid: f322e457-c4ff-47b8-83ce-512ddf86253e
+spec:
+  endpoints:
+  - bearerTokenSecret:
+      key: ""
+    path: /metrics
+    port: metrics
+    scheme: https
+    tlsConfig:
+      ca:
+        configMap:
+          key: service-ca.crt
+          name: lokistack-sample-ca-bundle
+      cert:
+        secret:
+          key: tls.crt
+          name: lokistack-sample-distributor-http
+      keySecret:
+        key: tls.key
+        name: lokistack-sample-distributor-http
+      serverName: lokistack-sample-distributor-http.openshift-logging.svc.cluster.local
+  jobLabel: loki.grafana.com/component
+  namespaceSelector:
+    matchNames:
+    - openshift-logging
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: distributor
+      app.kubernetes.io/created-by: lokistack-controller
+      app.kubernetes.io/instance: lokistack-sample
+      app.kubernetes.io/managed-by: lokistack-controller
+      app.kubernetes.io/name: lokistack

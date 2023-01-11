@@ -1,0 +1,76 @@
+---
+apiVersion: tuned.openshift.io/v1
+kind: Profile
+metadata:
+  annotations:
+    tuned.openshift.io/generated-by-operand-version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:46:55Z"
+  generation: 3
+  managedFields:
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8a603018-9935-40c4-943b-91f41f449ae4"}: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:debug: {}
+          f:providerName: {}
+          f:tunedConfig: {}
+          f:tunedProfile: {}
+      f:status:
+        .: {}
+        f:bootcmdline: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    time: "2023-01-09T04:46:55Z"
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:tuned.openshift.io/generated-by-operand-version: {}
+      f:status:
+        f:conditions: {}
+        f:tunedProfile: {}
+    manager: openshift-tuned
+    operation: Update
+    time: "2023-01-09T04:47:01Z"
+  name: ip-10-0-130-201.us-east-2.compute.internal
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: tuned.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Tuned
+    name: default
+    uid: 8a603018-9935-40c4-943b-91f41f449ae4
+  resourceVersion: "19456"
+  uid: 45e10cd0-0f2c-4b5c-9aa5-cb35b0403ffa
+spec:
+  config:
+    debug: false
+    providerName: aws
+    tunedConfig: {}
+    tunedProfile: openshift-node
+status:
+  bootcmdline: ""
+  conditions:
+  - lastTransitionTime: "2023-01-09T04:46:56Z"
+    message: TuneD profile applied.
+    reason: AsExpected
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2023-01-09T04:46:56Z"
+    message: 'No error messages observed by applying the TuneD daemon profile, only
+      warning(s). TuneD stderr:  WARNING  tuned.plugins.plugin_cpu: your CPU doesn''t
+      support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias'
+    reason: TunedWarning
+    status: "False"
+    type: Degraded
+  tunedProfile: openshift-node

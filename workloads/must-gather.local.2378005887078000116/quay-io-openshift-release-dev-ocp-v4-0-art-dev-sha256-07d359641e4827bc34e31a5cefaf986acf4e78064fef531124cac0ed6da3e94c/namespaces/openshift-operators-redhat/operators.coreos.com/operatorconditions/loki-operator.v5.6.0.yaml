@@ -1,0 +1,43 @@
+---
+apiVersion: operators.coreos.com/v2
+kind: OperatorCondition
+metadata:
+  creationTimestamp: "2023-01-09T05:32:17Z"
+  generation: 1
+  labels:
+    operators.coreos.com/loki-operator.openshift-operators-redhat: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operators.coreos.com/loki-operator.openshift-operators-redhat: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"ab6c364d-ccd8-475a-ab69-00b55d883bdf"}: {}
+      f:spec:
+        .: {}
+        f:deployments: {}
+        f:serviceAccounts: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T05:32:17Z"
+  name: loki-operator.v5.6.0
+  namespace: openshift-operators-redhat
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ClusterServiceVersion
+    name: loki-operator.v5.6.0
+    uid: ab6c364d-ccd8-475a-ab69-00b55d883bdf
+  resourceVersion: "43811"
+  uid: 9dc59d48-ba79-4bfa-8998-efad533be92e
+spec:
+  deployments:
+  - loki-operator-controller-manager
+  serviceAccounts:
+  - default
+  - default

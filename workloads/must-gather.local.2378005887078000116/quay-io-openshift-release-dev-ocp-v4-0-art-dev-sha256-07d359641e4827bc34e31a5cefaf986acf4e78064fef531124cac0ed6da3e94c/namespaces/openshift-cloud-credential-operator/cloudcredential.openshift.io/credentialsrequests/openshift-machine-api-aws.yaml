@@ -1,0 +1,142 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2023-01-09T04:36:52Z"
+  finalizers:
+  - cloudcredential.openshift.io/deprovision
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f3a03fe4-e8d1-4fcc-92c7-00d0f120f589"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:statementEntries: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-01-09T04:36:52Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cloudcredential.openshift.io/deprovision": {}
+    manager: cloud-credential-operator
+    operation: Update
+    time: "2023-01-09T04:38:06Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastSyncCloudCredsSecretResourceVersion: {}
+        f:lastSyncGeneration: {}
+        f:lastSyncTimestamp: {}
+        f:providerStatus:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:policy: {}
+          f:user: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-01-09T15:17:24Z"
+  name: openshift-machine-api-aws
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f3a03fe4-e8d1-4fcc-92c7-00d0f120f589
+  resourceVersion: "259873"
+  uid: 7cf8a2cf-cc37-452d-89dc-0c2f791fb487
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderSpec
+    statementEntries:
+    - action:
+      - ec2:CreateTags
+      - ec2:DescribeAvailabilityZones
+      - ec2:DescribeDhcpOptions
+      - ec2:DescribeImages
+      - ec2:DescribeInstances
+      - ec2:DescribeInstanceTypes
+      - ec2:DescribeInternetGateways
+      - ec2:DescribeSecurityGroups
+      - ec2:DescribeRegions
+      - ec2:DescribeSubnets
+      - ec2:DescribeVpcs
+      - ec2:RunInstances
+      - ec2:TerminateInstances
+      - elasticloadbalancing:DescribeLoadBalancers
+      - elasticloadbalancing:DescribeTargetGroups
+      - elasticloadbalancing:DescribeTargetHealth
+      - elasticloadbalancing:RegisterInstancesWithLoadBalancer
+      - elasticloadbalancing:RegisterTargets
+      - elasticloadbalancing:DeregisterTargets
+      - iam:PassRole
+      - iam:CreateServiceLinkedRole
+      effect: Allow
+      resource: '*'
+    - action:
+      - kms:Decrypt
+      - kms:Encrypt
+      - kms:GenerateDataKey
+      - kms:GenerateDataKeyWithoutPlainText
+      - kms:DescribeKey
+      effect: Allow
+      resource: '*'
+    - action:
+      - kms:RevokeGrant
+      - kms:CreateGrant
+      - kms:ListGrants
+      effect: Allow
+      policyCondition:
+        Bool:
+          kms:GrantIsForAWSResource: true
+      resource: '*'
+  secretRef:
+    name: aws-cloud-credentials
+    namespace: openshift-machine-api
+  serviceAccountNames:
+  - machine-api-controllers
+status:
+  lastSyncCloudCredsSecretResourceVersion: "2281"
+  lastSyncGeneration: 1
+  lastSyncTimestamp: "2023-01-09T15:17:24Z"
+  providerStatus:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderStatus
+    policy: sn-loggvls-jsm-pkkrc-openshift-machine-api-aws-qhs8r-policy
+    user: sn-loggvls-jsm-pkkrc-openshift-machine-api-aws-qhs8r
+  provisioned: true

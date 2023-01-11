@@ -1,0 +1,37 @@
+---
+apiVersion: operators.coreos.com/v2
+kind: OperatorCondition
+metadata:
+  creationTimestamp: "2023-01-09T04:41:24Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4e61d051-fcb5-4761-872d-48a6b972291b"}: {}
+      f:spec:
+        .: {}
+        f:deployments: {}
+        f:serviceAccounts: {}
+    manager: olm
+    operation: Update
+    time: "2023-01-09T04:41:24Z"
+  name: packageserver
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ClusterServiceVersion
+    name: packageserver
+    uid: 4e61d051-fcb5-4761-872d-48a6b972291b
+  resourceVersion: "6680"
+  uid: fb616ecc-e913-4d2a-b003-a4a53cb71637
+spec:
+  deployments:
+  - packageserver
+  serviceAccounts:
+  - olm-operator-serviceaccount

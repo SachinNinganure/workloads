@@ -1,0 +1,83 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: PostgreSQL
+    openshift.io/image.dockerRepositoryCheck: "2023-01-09T04:47:50Z"
+    samples.operator.openshift.io/version: 4.12.0-0.nightly-2023-01-08-142418
+  creationTimestamp: "2023-01-09T04:47:50Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"13-el8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-01-09T04:47:50Z"
+  name: postgresql13-for-sso75-openshift-rhel8
+  namespace: openshift
+  resourceVersion: "21833"
+  uid: b84dc06b-80c1-46aa-ad39-b11304cfd62d
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Provides a PostgreSQL 13 database on RHEL 8. For more information
+        about using this database image, including OpenShift considerations, see https://github.com/sclorg/postgresql-container/blob/master/README.md.
+      iconClass: icon-postgresql
+      openshift.io/display-name: PostgreSQL 13 (RHEL 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: database,postgresql
+      version: "13"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel8/postgresql-13:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 13-el8
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/postgresql13-for-sso75-openshift-rhel8
+  tags:
+  - items:
+    - created: "2023-01-09T04:47:50Z"
+      dockerImageReference: registry.redhat.io/rhel8/postgresql-13@sha256:1774ffbf7472dfb8ae8d6edf42e04e7e912bd606e4b877e9485c59054f0c1ea5
+      generation: 2
+      image: sha256:1774ffbf7472dfb8ae8d6edf42e04e7e912bd606e4b877e9485c59054f0c1ea5
+    tag: 13-el8

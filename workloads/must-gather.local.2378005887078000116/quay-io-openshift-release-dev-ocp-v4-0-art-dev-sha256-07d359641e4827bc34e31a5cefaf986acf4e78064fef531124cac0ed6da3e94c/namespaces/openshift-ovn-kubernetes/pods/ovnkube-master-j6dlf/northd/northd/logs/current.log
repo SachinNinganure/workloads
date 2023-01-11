@@ -1,0 +1,59 @@
+2023-01-09T04:39:16.032473423Z + [[ -f /env/_master ]]
+2023-01-09T04:39:16.032682163Z + trap quit TERM INT
+2023-01-09T04:39:16.033007995Z ++ date -Iseconds
+2023-01-09T04:39:16.035386518Z + echo '2023-01-09T04:39:16+00:00 - starting ovn-northd'
+2023-01-09T04:39:16.035409790Z 2023-01-09T04:39:16+00:00 - starting ovn-northd
+2023-01-09T04:39:16.035677061Z + wait 9
+2023-01-09T04:39:16.035769770Z + exec ovn-northd --no-chdir -vconsole:info -vfile:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' --ovnnb-db ssl:10.0.145.4:9641,ssl:10.0.160.211:9641,ssl:10.0.199.219:9641 --ovnsb-db ssl:10.0.145.4:9642,ssl:10.0.160.211:9642,ssl:10.0.199.219:9642 --pidfile /var/run/ovn/ovn-northd.pid --n-threads=4 -p /ovn-cert/tls.key -c /ovn-cert/tls.crt -C /ovn-ca/ca-bundle.crt
+2023-01-09T04:39:16.040040788Z 2023-01-09T04:39:16.039Z|00001|ovn_northd|INFO|Using 4 threads
+2023-01-09T04:39:16.040476157Z 2023-01-09T04:39:16.040Z|00002|ovn_northd|INFO|OVN internal version is : [22.09.1-20.25.0-68.4]
+2023-01-09T04:39:16.041270795Z 2023-01-09T04:39:16.041Z|00003|ovn_parallel_hmap|INFO|Setting thread count to 4
+2023-01-09T04:39:16.041297262Z 2023-01-09T04:39:16.041Z|00004|ovn_parallel_hmap|INFO|Creating new pool with size 4
+2023-01-09T04:39:16.046552990Z 2023-01-09T04:39:16.046Z|00005|reconnect|INFO|ssl:10.0.199.219:9641: connecting...
+2023-01-09T04:39:16.046590824Z 2023-01-09T04:39:16.046Z|00006|reconnect|INFO|ssl:10.0.199.219:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:16.046666949Z 2023-01-09T04:39:16.046Z|00007|reconnect|INFO|ssl:10.0.160.211:9641: connecting...
+2023-01-09T04:39:16.046695772Z 2023-01-09T04:39:16.046Z|00008|ovn_northd|INFO|OVN NB IDL reconnected, force recompute.
+2023-01-09T04:39:16.046788975Z 2023-01-09T04:39:16.046Z|00009|reconnect|INFO|ssl:10.0.145.4:9642: connecting...
+2023-01-09T04:39:16.046814481Z 2023-01-09T04:39:16.046Z|00010|ovn_northd|INFO|OVN SB IDL reconnected, force recompute.
+2023-01-09T04:39:16.047281471Z 2023-01-09T04:39:16.047Z|00011|reconnect|INFO|ssl:10.0.160.211:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:16.047374221Z 2023-01-09T04:39:16.047Z|00012|reconnect|INFO|ssl:10.0.145.4:9641: connecting...
+2023-01-09T04:39:16.048053630Z 2023-01-09T04:39:16.048Z|00013|reconnect|INFO|ssl:10.0.145.4:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:16.048136388Z 2023-01-09T04:39:16.048Z|00014|reconnect|INFO|ssl:10.0.199.219:9642: connecting...
+2023-01-09T04:39:16.048164370Z 2023-01-09T04:39:16.048Z|00015|reconnect|INFO|ssl:10.0.199.219:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:16.048218889Z 2023-01-09T04:39:16.048Z|00016|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T04:39:16.048430702Z 2023-01-09T04:39:16.048Z|00017|reconnect|INFO|ssl:10.0.145.4:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:16.048517002Z 2023-01-09T04:39:16.048Z|00018|reconnect|INFO|ssl:10.0.160.211:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:17.049752544Z 2023-01-09T04:39:17.049Z|00019|reconnect|INFO|ssl:10.0.199.219:9641: connecting...
+2023-01-09T04:39:17.049794488Z 2023-01-09T04:39:17.049Z|00020|reconnect|INFO|ssl:10.0.199.219:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:17.049806545Z 2023-01-09T04:39:17.049Z|00021|reconnect|INFO|ssl:10.0.199.219:9641: waiting 2 seconds before reconnect
+2023-01-09T04:39:17.049875345Z 2023-01-09T04:39:17.049Z|00022|reconnect|INFO|ssl:10.0.145.4:9642: connecting...
+2023-01-09T04:39:17.050936241Z 2023-01-09T04:39:17.050Z|00023|reconnect|INFO|ssl:10.0.145.4:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:17.050969591Z 2023-01-09T04:39:17.050Z|00024|reconnect|INFO|ssl:10.0.145.4:9642: waiting 2 seconds before reconnect
+2023-01-09T04:39:19.052178639Z 2023-01-09T04:39:19.052Z|00025|reconnect|INFO|ssl:10.0.160.211:9641: connecting...
+2023-01-09T04:39:19.052265182Z 2023-01-09T04:39:19.052Z|00026|reconnect|INFO|ssl:10.0.199.219:9642: connecting...
+2023-01-09T04:39:19.052299585Z 2023-01-09T04:39:19.052Z|00027|reconnect|INFO|ssl:10.0.199.219:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:19.052325323Z 2023-01-09T04:39:19.052Z|00028|reconnect|INFO|ssl:10.0.199.219:9642: waiting 4 seconds before reconnect
+2023-01-09T04:39:19.052487519Z 2023-01-09T04:39:19.052Z|00029|reconnect|INFO|ssl:10.0.160.211:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:19.052519634Z 2023-01-09T04:39:19.052Z|00030|reconnect|INFO|ssl:10.0.160.211:9641: waiting 4 seconds before reconnect
+2023-01-09T04:39:23.055742776Z 2023-01-09T04:39:23.055Z|00031|reconnect|INFO|ssl:10.0.145.4:9641: connecting...
+2023-01-09T04:39:23.055820169Z 2023-01-09T04:39:23.055Z|00032|reconnect|INFO|ssl:10.0.160.211:9642: connecting...
+2023-01-09T04:39:23.056125515Z 2023-01-09T04:39:23.056Z|00033|reconnect|INFO|ssl:10.0.160.211:9642: connection attempt failed (Connection refused)
+2023-01-09T04:39:23.056140648Z 2023-01-09T04:39:23.056Z|00034|reconnect|INFO|ssl:10.0.160.211:9642: continuing to reconnect in the background but suppressing further logging
+2023-01-09T04:39:23.056792772Z 2023-01-09T04:39:23.056Z|00035|reconnect|INFO|ssl:10.0.145.4:9641: connection attempt failed (Connection refused)
+2023-01-09T04:39:23.056810942Z 2023-01-09T04:39:23.056Z|00036|reconnect|INFO|ssl:10.0.145.4:9641: continuing to reconnect in the background but suppressing further logging
+2023-01-09T04:39:31.063932122Z 2023-01-09T04:39:31.063Z|00037|memory|INFO|13452 kB peak resident set size after 15.0 seconds
+2023-01-09T04:39:55.090637577Z 2023-01-09T04:39:55.090Z|00038|reconnect|INFO|ssl:10.0.199.219:9641: connected
+2023-01-09T04:39:55.091497401Z 2023-01-09T04:39:55.091Z|00039|ovsdb_cs|INFO|ssl:10.0.199.219:9641: clustered database server is not cluster leader; trying another server
+2023-01-09T04:40:03.101691016Z 2023-01-09T04:40:03.101Z|00040|reconnect|INFO|ssl:10.0.160.211:9641: connected
+2023-01-09T04:40:03.103266684Z 2023-01-09T04:40:03.103Z|00041|ovsdb_cs|INFO|ssl:10.0.160.211:9641: clustered database server is not cluster leader; trying another server
+2023-01-09T04:40:11.110939016Z 2023-01-09T04:40:11.110Z|00042|reconnect|INFO|ssl:10.0.145.4:9641: connected
+2023-01-09T04:40:27.121247740Z 2023-01-09T04:40:27.121Z|00043|reconnect|INFO|ssl:10.0.199.219:9642: connected
+2023-01-09T04:40:27.121783856Z 2023-01-09T04:40:27.121Z|00044|ovn_northd|INFO|ovn-northd lock acquired. This ovn-northd instance is now active.
+2023-01-09T04:40:27.122131281Z 2023-01-09T04:40:27.122Z|00045|ovsdb_cs|INFO|ssl:10.0.199.219:9642: clustered database server is not cluster leader; trying another server
+2023-01-09T04:40:27.122209002Z 2023-01-09T04:40:27.122Z|00046|ovn_northd|INFO|ovn-northd lock lost. This ovn-northd instance is now on standby.
+2023-01-09T04:40:35.125612545Z 2023-01-09T04:40:35.125Z|00047|reconnect|INFO|ssl:10.0.160.211:9642: connected
+2023-01-09T04:40:35.126370948Z 2023-01-09T04:40:35.126Z|00048|ovn_northd|INFO|ovn-northd lock acquired. This ovn-northd instance is now active.
+2023-01-09T04:40:35.126922964Z 2023-01-09T04:40:35.126Z|00049|ovsdb_cs|INFO|ssl:10.0.160.211:9642: clustered database server is not cluster leader; trying another server
+2023-01-09T04:40:35.126997001Z 2023-01-09T04:40:35.126Z|00050|ovn_northd|INFO|ovn-northd lock lost. This ovn-northd instance is now on standby.
+2023-01-09T04:40:43.133800173Z 2023-01-09T04:40:43.133Z|00051|reconnect|INFO|ssl:10.0.145.4:9642: connected
+2023-01-09T04:45:28.849618360Z 2023-01-09T04:45:28.849Z|00052|memory|INFO|peak resident set size grew 51% in last 357.8 seconds, from 13452 kB to 20252 kB

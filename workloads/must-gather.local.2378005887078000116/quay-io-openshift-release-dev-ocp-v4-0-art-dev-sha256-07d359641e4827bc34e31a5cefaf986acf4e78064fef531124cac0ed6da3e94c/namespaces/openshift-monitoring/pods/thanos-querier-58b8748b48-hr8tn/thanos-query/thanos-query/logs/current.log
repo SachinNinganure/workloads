@@ -1,0 +1,12 @@
+2023-01-09T05:30:33.482145168Z level=info ts=2023-01-09T05:30:33.482074551Z caller=client.go:56 msg="enabling client to server TLS"
+2023-01-09T05:30:33.482250473Z level=info ts=2023-01-09T05:30:33.482178224Z caller=options.go:114 msg="TLS client using provided certificate pool"
+2023-01-09T05:30:33.482250473Z level=info ts=2023-01-09T05:30:33.482188917Z caller=options.go:147 msg="TLS client authentication enabled"
+2023-01-09T05:30:33.485249274Z level=info ts=2023-01-09T05:30:33.485195257Z caller=options.go:26 protocol=gRPC msg="disabled TLS, key and cert must be set to enable"
+2023-01-09T05:30:33.485646368Z level=info ts=2023-01-09T05:30:33.485618256Z caller=query.go:724 msg="starting query node"
+2023-01-09T05:30:33.485766865Z level=info ts=2023-01-09T05:30:33.485721077Z caller=intrumentation.go:56 msg="changing probe status" status=ready
+2023-01-09T05:30:33.485894430Z level=info ts=2023-01-09T05:30:33.485864407Z caller=grpc.go:131 service=gRPC/server component=query msg="listening for serving gRPC" address=127.0.0.1:10901
+2023-01-09T05:30:33.485905530Z level=info ts=2023-01-09T05:30:33.485863918Z caller=intrumentation.go:75 msg="changing probe status" status=healthy
+2023-01-09T05:30:33.485912811Z level=info ts=2023-01-09T05:30:33.485901749Z caller=http.go:73 service=http/server component=query msg="listening for requests and metrics" address=127.0.0.1:9090
+2023-01-09T05:30:33.485969803Z level=info ts=2023-01-09T05:30:33.485944564Z caller=tls_config.go:195 service=http/server component=query msg="TLS is disabled." http2=false
+2023-01-09T05:30:38.493536275Z level=info ts=2023-01-09T05:30:38.493485242Z caller=endpointset.go:381 component=endpointset msg="adding new sidecar with [storeAPI rulesAPI exemplarsAPI targetsAPI MetricMetadataAPI]" address=10.128.2.13:10901 extLset="{prometheus=\"openshift-monitoring/k8s\", prometheus_replica=\"prometheus-k8s-0\"}"
+2023-01-09T05:31:08.495067344Z level=info ts=2023-01-09T05:31:08.495008948Z caller=endpointset.go:381 component=endpointset msg="adding new sidecar with [storeAPI rulesAPI exemplarsAPI targetsAPI MetricMetadataAPI]" address=10.129.2.22:10901 extLset="{prometheus=\"openshift-monitoring/k8s\", prometheus_replica=\"prometheus-k8s-1\"}"

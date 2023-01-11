@@ -1,0 +1,42 @@
+2023-01-09T04:42:01.357237101Z I0109 04:42:01.357100       1 main.go:13] Go Version: go1.19.4
+2023-01-09T04:42:01.357339698Z I0109 04:42:01.357325       1 main.go:14] Go OS/Arch: linux/amd64
+2023-01-09T04:42:01.357382731Z I0109 04:42:01.357358       1 main.go:15] Version: cluster-autoscaler-operator v4.12.0-202301042354.p0.g8b23225.assembly.stream-dirty
+2023-01-09T04:42:01.373232028Z W0109 04:42:01.373175       1 leaderelection.go:51] unable to get cluster infrastructure status, using HA cluster values for leader election: infrastructures.config.openshift.io "cluster" is forbidden: User "system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator" cannot get resource "infrastructures" in API group "config.openshift.io" at the cluster scope
+2023-01-09T04:42:02.382600355Z I0109 04:42:02.382560       1 request.go:682] Waited for 1.002342556s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/tuned.openshift.io/v1?timeout=32s
+2023-01-09T04:42:12.423549956Z I0109 04:42:12.423499       1 request.go:682] Waited for 2.99717243s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/operator.openshift.io/v1alpha1?timeout=32s
+2023-01-09T04:42:12.476383412Z W0109 04:42:12.476334       1 machineautoscaler_controller.go:150] Removing support for unregistered target type: cluster.k8s.io/v1beta1, Kind=MachineDeployment
+2023-01-09T04:42:18.776969252Z W0109 04:42:18.776924       1 machineautoscaler_controller.go:150] Removing support for unregistered target type: cluster.k8s.io/v1beta1, Kind=MachineSet
+2023-01-09T04:42:23.074153789Z I0109 04:42:23.074120       1 request.go:682] Waited for 1.048784025s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/operators.coreos.com/v1alpha2?timeout=32s
+2023-01-09T04:42:25.077440754Z W0109 04:42:25.077396       1 machineautoscaler_controller.go:150] Removing support for unregistered target type: machine.openshift.io/v1beta1, Kind=MachineDeployment
+2023-01-09T04:42:25.077739079Z I0109 04:42:25.077723       1 main.go:36] Starting cluster-autoscaler-operator
+2023-01-09T04:42:25.077930377Z I0109 04:42:25.077916       1 leaderelection.go:248] attempting to acquire leader lease openshift-machine-api/cluster-autoscaler-operator-leader...
+2023-01-09T04:42:25.084934824Z I0109 04:42:25.084918       1 leaderelection.go:258] successfully acquired lease openshift-machine-api/cluster-autoscaler-operator-leader
+2023-01-09T04:42:25.089669147Z I0109 04:42:25.089609       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:42:25.089669147Z W0109 04:42:25.089631       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:42:25.196958145Z I0109 04:42:25.196912       1 webhookconfig.go:72] Webhook configuration status: created
+2023-01-09T04:42:40.101125976Z I0109 04:42:40.101085       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:42:40.101125976Z W0109 04:42:40.101103       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:42:55.099891779Z I0109 04:42:55.099844       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:42:55.099891779Z W0109 04:42:55.099862       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:43:10.101403211Z I0109 04:43:10.101360       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:43:10.101403211Z W0109 04:43:10.101380       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:43:25.099705592Z I0109 04:43:25.099666       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:43:25.099705592Z W0109 04:43:25.099686       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:43:40.102221547Z I0109 04:43:40.102185       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:43:40.102221547Z W0109 04:43:40.102202       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:43:55.102188691Z I0109 04:43:55.102144       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:43:55.102188691Z W0109 04:43:55.102164       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:44:10.101385609Z I0109 04:44:10.101339       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:44:10.101385609Z W0109 04:44:10.101359       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:44:25.101049701Z I0109 04:44:25.100986       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:44:25.101049701Z W0109 04:44:25.101022       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:44:40.101632334Z I0109 04:44:40.101589       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:44:40.101632334Z W0109 04:44:40.101608       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:44:55.103048531Z I0109 04:44:55.102982       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:44:55.103048531Z W0109 04:44:55.103022       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:45:10.101853853Z I0109 04:45:10.101810       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:45:10.101853853Z W0109 04:45:10.101828       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:45:25.101132054Z I0109 04:45:25.101093       1 status.go:373] machine-api-operator not ready yet
+2023-01-09T04:45:25.101132054Z W0109 04:45:25.101113       1 status.go:261] Operator status degraded: machine-api not ready
+2023-01-09T04:45:40.102175223Z I0109 04:45:40.102135       1 status.go:386] No ClusterAutoscaler. Reporting available.
+2023-01-09T04:45:40.102175223Z I0109 04:45:40.102153       1 status.go:234] Operator status available: at version 4.12.0-0.nightly-2023-01-08-142418

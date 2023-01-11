@@ -1,0 +1,51 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: DNS
+  metadata:
+    creationTimestamp: "2023-01-09T04:36:34Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:baseDomain: {}
+          f:privateZone:
+            .: {}
+            f:tags:
+              .: {}
+              f:Name: {}
+              f:kubernetes.io/cluster/sn-loggvls-jsm-pkkrc: {}
+          f:publicZone:
+            .: {}
+            f:id: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2023-01-09T04:36:34Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status: {}
+      manager: cluster-bootstrap
+      operation: Update
+      subresource: status
+      time: "2023-01-09T04:36:34Z"
+    name: cluster
+    resourceVersion: "514"
+    uid: 58959b56-5ff2-4227-bfed-6b7c2feef220
+  spec:
+    baseDomain: sn-loggvls-jsm.qe.devcluster.openshift.com
+    privateZone:
+      tags:
+        Name: sn-loggvls-jsm-pkkrc-int
+        kubernetes.io/cluster/sn-loggvls-jsm-pkkrc: owned
+    publicZone:
+      id: Z3B3KOVA3TRCWP
+  status: {}
+kind: DNSList
+metadata:
+  continue: ""
+  resourceVersion: "268263"

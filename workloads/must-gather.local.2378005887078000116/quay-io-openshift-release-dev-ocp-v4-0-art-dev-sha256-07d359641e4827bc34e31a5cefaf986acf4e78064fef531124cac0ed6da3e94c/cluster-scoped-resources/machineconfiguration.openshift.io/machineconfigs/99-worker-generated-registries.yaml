@@ -1,0 +1,69 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  annotations:
+    machineconfiguration.openshift.io/generated-by-controller-version: 2b3eba74dd9e4371f35ab41dbda02642f60707ec
+  creationTimestamp: "2023-01-09T04:41:39Z"
+  generation: 2
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/role: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c6970a2c-541f-419d-992d-b44ac7eefb8d"}: {}
+      f:spec:
+        .: {}
+        f:baseOSExtensionsContainerImage: {}
+        f:config:
+          .: {}
+          f:ignition:
+            .: {}
+            f:version: {}
+          f:storage:
+            .: {}
+            f:files: {}
+        f:extensions: {}
+        f:fips: {}
+        f:kernelArguments: {}
+        f:kernelType: {}
+        f:osImageURL: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-01-09T05:30:33Z"
+  name: 99-worker-generated-registries
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: Image
+    name: cluster
+    uid: c6970a2c-541f-419d-992d-b44ac7eefb8d
+  resourceVersion: "42163"
+  uid: e053a593-9c85-4d67-a90f-31246a07c3dc
+spec:
+  baseOSExtensionsContainerImage: ""
+  config:
+    ignition:
+      version: 3.2.0
+    storage:
+      files:
+      - contents:
+          compression: ""
+          source: data:text/plain;charset=utf-8;base64,dW5xdWFsaWZpZWQtc2VhcmNoLXJlZ2lzdHJpZXMgPSBbInJlZ2lzdHJ5LmFjY2Vzcy5yZWRoYXQuY29tIiwgImRvY2tlci5pbyJdCnNob3J0LW5hbWUtbW9kZSA9ICIiCgpbW3JlZ2lzdHJ5XV0KICBwcmVmaXggPSAiIgogIGxvY2F0aW9uID0gInJlZ2lzdHJ5LXByb3h5LmVuZ2luZWVyaW5nLnJlZGhhdC5jb20iCiAgbWlycm9yLWJ5LWRpZ2VzdC1vbmx5ID0gdHJ1ZQoKICBbW3JlZ2lzdHJ5Lm1pcnJvcl1dCiAgICBsb2NhdGlvbiA9ICJicmV3LnJlZ2lzdHJ5LnJlZGhhdC5pbyIKCltbcmVnaXN0cnldXQogIHByZWZpeCA9ICIiCiAgbG9jYXRpb24gPSAicmVnaXN0cnkucmVkaGF0LmlvIgogIG1pcnJvci1ieS1kaWdlc3Qtb25seSA9IHRydWUKCiAgW1tyZWdpc3RyeS5taXJyb3JdXQogICAgbG9jYXRpb24gPSAiYnJldy5yZWdpc3RyeS5yZWRoYXQuaW8iCgpbW3JlZ2lzdHJ5XV0KICBwcmVmaXggPSAiIgogIGxvY2F0aW9uID0gInJlZ2lzdHJ5LnN0YWdlLnJlZGhhdC5pbyIKICBtaXJyb3ItYnktZGlnZXN0LW9ubHkgPSB0cnVlCgogIFtbcmVnaXN0cnkubWlycm9yXV0KICAgIGxvY2F0aW9uID0gImJyZXcucmVnaXN0cnkucmVkaGF0LmlvIgo=
+        mode: 420
+        overwrite: true
+        path: /etc/containers/registries.conf
+  extensions: null
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""

@@ -1,0 +1,71 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.10
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: dns-operator-7468bd8b56-jcnl6
+      namespace: openshift-dns-operator
+      uid: 72d472a0-4da6-4ebf-8981-fbd7963f3ec6
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:33Z"
+    creationTimestamp: "2023-01-09T04:37:04Z"
+    generateName: metrics-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+      name: dns-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e0ee19ed-12cd-4fd4-ad64-c2b1b2f104e5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:33Z"
+    name: metrics-mzzk8
+    namespace: openshift-dns-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: e0ee19ed-12cd-4fd4-ad64-c2b1b2f104e5
+    resourceVersion: "7177"
+    uid: 1f714f76-8f49-42bf-93f2-68457255253f
+  ports:
+  - name: metrics
+    port: 9393
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268397"

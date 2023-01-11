@@ -1,0 +1,236 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-01-09T04:47:09Z"
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:09Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "23835"
+    uid: f313fb43-7ecf-4ed7-83fa-6a2c134a9f46
+  spec:
+    host: alertmanager-main-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: alertmanager-main
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-01-09T04:47:09Z"
+        status: "True"
+        type: Admitted
+      host: alertmanager-main-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerCanonicalHostname: router-default.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-01-09T04:47:09Z"
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:09Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "23837"
+    uid: 45355933-8237-40ec-acfe-6a4f16670ec7
+  spec:
+    host: prometheus-k8s-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-01-09T04:47:09Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerCanonicalHostname: router-default.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-01-09T04:47:10Z"
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:10Z"
+    name: prometheus-k8s-federate
+    namespace: openshift-monitoring
+    resourceVersion: "23875"
+    uid: 21165cfd-95ea-4e7a-aa78-a683929d78b8
+  spec:
+    host: prometheus-k8s-federate-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+    path: /federate
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-01-09T04:47:10Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-federate-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerCanonicalHostname: router-default.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-01-09T04:47:09Z"
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.28.1
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2023-01-09T04:47:09Z"
+    name: thanos-querier
+    namespace: openshift-monitoring
+    resourceVersion: "23836"
+    uid: 1ea49626-44da-4103-b545-aa433fa27993
+  spec:
+    host: thanos-querier-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: thanos-querier
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-01-09T04:47:09Z"
+        status: "True"
+        type: Admitted
+      host: thanos-querier-openshift-monitoring.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerCanonicalHostname: router-default.apps.sn-loggvls-jsm.qe.devcluster.openshift.com
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "268567"

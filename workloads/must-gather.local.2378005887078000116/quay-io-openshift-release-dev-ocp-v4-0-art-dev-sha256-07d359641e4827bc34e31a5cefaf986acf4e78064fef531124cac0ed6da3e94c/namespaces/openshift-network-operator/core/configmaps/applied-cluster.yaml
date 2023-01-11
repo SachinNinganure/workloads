@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+data:
+  applied: '{"managementState":"Managed","logLevel":"Normal","operatorLogLevel":"Normal","unsupportedConfigOverrides":null,"observedConfig":null,"clusterNetwork":[{"cidr":"10.128.0.0/14","hostPrefix":23}],"serviceNetwork":["172.30.0.0/16"],"defaultNetwork":{"type":"OVNKubernetes","ovnKubernetesConfig":{"mtu":8901,"genevePort":6081,"policyAuditConfig":{"rateLimit":20,"maxFileSize":50,"destination":"null","syslogFacility":"local0"},"gatewayConfig":{},"egressIPConfig":{}}},"disableMultiNetwork":false,"useMultiNetworkPolicy":false,"deployKubeProxy":false,"disableNetworkDiagnostics":false}'
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-01-09T04:38:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:applied: {}
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"b8592153-d60b-43d6-8417-eb32b9b3af15"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-01-09T15:40:52Z"
+  name: applied-cluster
+  namespace: openshift-network-operator
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: b8592153-d60b-43d6-8417-eb32b9b3af15
+  resourceVersion: "268626"
+  uid: 934599f3-99f2-40f3-8fa3-c70a7f15d818

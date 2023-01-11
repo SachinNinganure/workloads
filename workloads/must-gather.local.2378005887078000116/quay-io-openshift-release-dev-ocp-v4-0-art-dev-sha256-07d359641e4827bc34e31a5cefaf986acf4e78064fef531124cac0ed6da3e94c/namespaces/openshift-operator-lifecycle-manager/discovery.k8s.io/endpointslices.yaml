@@ -1,0 +1,212 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.28
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: catalog-operator-5d5449d6d8-rhpql
+      namespace: openshift-operator-lifecycle-manager
+      uid: 78e67c01-1ba8-44fb-a4d2-ad273f9f71da
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:22Z"
+    creationTimestamp: "2023-01-09T04:37:28Z"
+    generateName: catalog-operator-metrics-
+    generation: 3
+    labels:
+      app: catalog-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: catalog-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"20f55e28-573c-471e-9a53-d73c52810b37"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:22Z"
+    name: catalog-operator-metrics-8z5pc
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: catalog-operator-metrics
+      uid: 20f55e28-573c-471e-9a53-d73c52810b37
+    resourceVersion: "6499"
+    uid: b5baad46-136b-4253-877d-fa3972c3cf53
+  ports:
+  - name: https-metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-160-211.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: olm-operator-554f75fcb8-m4vww
+      namespace: openshift-operator-lifecycle-manager
+      uid: a80ffda5-cf8c-4dc0-be57-a5b08e21aea6
+    zone: us-east-2b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:21Z"
+    creationTimestamp: "2023-01-09T04:37:28Z"
+    generateName: olm-operator-metrics-
+    generation: 3
+    labels:
+      app: olm-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: olm-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f1fccf53-0641-4107-8605-1e8363f0db71"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:21Z"
+    name: olm-operator-metrics-d82qj
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: olm-operator-metrics
+      uid: f1fccf53-0641-4107-8605-1e8363f0db71
+    resourceVersion: "6426"
+    uid: c07072c8-b696-4130-90e8-4659fe2f0703
+  ports:
+  - name: https-metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.11
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-145-4.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: packageserver-664d76455b-p5v4v
+      namespace: openshift-operator-lifecycle-manager
+      uid: 78ad15d4-adc3-4ab0-9c7c-d6ca6d053468
+    zone: us-east-2a
+  - addresses:
+    - 10.129.0.12
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-199-219.us-east-2.compute.internal
+    targetRef:
+      kind: Pod
+      name: packageserver-664d76455b-9h86r
+      namespace: openshift-operator-lifecycle-manager
+      uid: 89f14cce-4e32-4d81-b875-09ab314f17bd
+    zone: us-east-2c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-09T04:41:37Z"
+    creationTimestamp: "2023-01-09T04:41:24Z"
+    generateName: packageserver-service-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: packageserver-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c44324c2-a047-4913-af52-f98fa8d4121e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-09T04:41:37Z"
+    name: packageserver-service-xhchk
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: packageserver-service
+      uid: c44324c2-a047-4913-af52-f98fa8d4121e
+    resourceVersion: "7485"
+    uid: a02fee9f-92d7-4f91-a844-92f49a1970cc
+  ports:
+  - name: "5443"
+    port: 5443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "268779"
