@@ -80,14 +80,13 @@
     - name: Check for test completion for up to "{{ PAUSE_OFFSET }}" min -  "{{ (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int) }}" logs
       shell: |
         curl -L -o /tmp/logcli-linux-amd64.zip https://github.com/grafana/loki/releases/download/v2.7.1/logcli-linux-amd64.zip && unzip -o /tmp/logcli-linux-amd64.zip -d /tmp && mv /tmp/logcli-linux-amd64 /tmp/logcli;sleep 5
-        TOKEN=$(oc create token logcollector);
+        bearer_token=$(oc create token logcollector);
         lokistack_name="${1:-lokistack-sample}"
         lokistack_namespace="${2:-openshift-logging}"
         lokistack_route=$(oc get route ${lokistack_name} -n ${lokistack_namespace} -o json |jq '.spec.host' -r)
-        bearer_token=$(oc whoami -t)
 
         /tmp/logcli -o raw --tls-skip-verify --bearer-token="${bearer_token}" --addr="https://${lokistack_route}/api/logs/v1/application" \ 
-        query 'count_over_time({log_type="application",kubernetes_namespace_name="logtesta0"}[24h])'|jq '.[].values[-1][1]'      
+        query 'count_over_time({log_type="application",kubernetes_container_name="centos-logtest"}[24h])'|jq '.[].values[-1][1]'|sed ':a;N;$!ba;s/\n/+/g' | xargs echo | bc      
       register: num_indexed
       until: num_indexed.stdout|int  ==  (NUM_LINES|int) * (NUM_PROJECTS|int) * (REPLICAS|int)
       retries: "{{ (12 * PAUSE_OFFSET | int) }}"
